@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CharacterScriptEasWinRon" xml:space="preserve">
+    <value>罗恩</value>
+  </data>
+  <data name="CharacterScriptReginaGameStart" xml:space="preserve">
+    <value>您是否能够</value>
+  </data>
+  <data name="CharacterScriptReginaDraw" xml:space="preserve">
+    <value>下一次</value>
+  </data>
+  <data name="CharacterScriptEasLose" xml:space="preserve">
+    <value>你贏了！</value>
+  </data>
+  <data name="CharacterScriptEasWinDraw" xml:space="preserve">
+    <value>哦, 亲爱的。这是无聊的时间。</value>
+  </data>
+  <data name="CharacterScriptReginaLose" xml:space="preserve">
+    <value>不可能！法力比你强得多!!</value>
+  </data>
+  <data name="CharacterScriptReginaWinDraw" xml:space="preserve">
+    <value>是的 ，我懂。</value>
+  </data>
+  <data name="CharacterScriptReginaWinRon" xml:space="preserve">
+    <value>是的 ，我懂。</value>
+  </data>
+  <data name="LabelGameTitle" xml:space="preserve">
+    <value>CureJong!</value>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>不行！</value>
+  </data>
+  <data name="LabelYes" xml:space="preserve">
+    <value>是了！</value>
+  </data>
+  <data name="SystemScriptConfirmConcede" xml:space="preserve">
+    <value>你真的认输了吗？!</value>
+  </data>
+  <data name="SystemScriptConfirmFinish" xml:space="preserve">
+    <value>你能用这只手完成吗？!</value>
+  </data>
+  <data name="SystemScriptConfirmPong" xml:space="preserve">
+    <value>你会打乒乓球吗？</value>
+  </data>
+  <data name="SystemScriptConfirmRon" xml:space="preserve">
+    <value>你要罗恩吗？</value>
+  </data>
+  <data name="SystemScriptDrawnGame" xml:space="preserve">
+    <value>绘制的游戏。</value>
+  </data>
+  <data name="CharacterScriptEasDraw" xml:space="preserve">
+    <value>画.下一次我会赢的!</value>
+  </data>
+  <data name="IDProcessTypeUA" xml:space="preserve">
+    <value>UA</value>
+  </data>
+  <data name="IDProcessTypeUN" xml:space="preserve">
+    <value>UN</value>
+  </data>
+  <data name="IDProcessTypeRD" xml:space="preserve">
+    <value>RD</value>
+  </data>
+  <data name="IDProcessSelectOpponent" xml:space="preserve">
+    <value>SelectOpponent</value>
+  </data>
+  <data name="IDProcessDiscardTile" xml:space="preserve">
+    <value>DiscardTile</value>
+  </data>
+  <data name="IDProcessChow" xml:space="preserve">
+    <value>Chow</value>
+  </data>
+  <data name="IDProcessMeesageWindowChoice" xml:space="preserve">
+    <value>MeesageWindowChoice</value>
+  </data>
+  <data name="IDProcessUseSkill" xml:space="preserve">
+    <value>UseSkill</value>
+  </data>
+  <data name="IDProcessChoiceForSkill" xml:space="preserve">
+    <value>ChoiceForSkill</value>
+  </data>
+  <data name="IDProcessHaipai_Wall" xml:space="preserve">
+    <value>Haipai-Wall</value>
+  </data>
+  <data name="IDProcessHaipai_P0" xml:space="preserve">
+    <value>Haipai-P0</value>
+  </data>
+  <data name="IDProcessHaipai_P1" xml:space="preserve">
+    <value>Haipai-P1</value>
+  </data>
+  <data name="IDPlayerHuman" xml:space="preserve">
+    <value>Human</value>
+  </data>
+  <data name="IDPlayerCOM" xml:space="preserve">
+    <value>COM</value>
+  </data>
+  <data name="IDProcessNextRoundButton" xml:space="preserve">
+    <value>NextRoundButton</value>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LabelYou" xml:space="preserve">
+    <value>你</value>
+  </data>
+  <data name="IDProcessRiichi" xml:space="preserve">
+    <value>Riichi</value>
+  </data>
+</root>

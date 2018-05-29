@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<updates total ="1">
+   <file name="TestProgram.exe">
+      <server>TestProgram.exe</server>
+      <local>TestProgram.exe</local>
+      <update>1</update>
+   </file>
+</updates>

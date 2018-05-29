@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F0056CC-9BFF-4DFD-8ACC-A93A0DC39B8C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ChiriNulluo.Mahjong.Precure</RootNamespace>
+    <AssemblyName>ChiriNulluo.Mahjong.Precure</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ChiriNulluo.Mahjong.Precure.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ChiriNulluo.Mahjong.Precure.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\Constants.vb" />
+    <Compile Include="HandChecker\PrecureHandChecker.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Players\COM\PrecureCOMHandFactory.vb" />
+    <Compile Include="Players\COM\PrecureCOMPlayerAlgorithm.vb" />
+    <Compile Include="DataAccess\PrecureXMLAccess.vb" />
+    <Compile Include="Players\COM\PrecurePlayer.vb" />
+    <Compile Include="Suits\PrecureSuit.vb" />
+    <Compile Include="Tiles\PrecureCharacterTile.vb" />
+    <Compile Include="Tiles\PrecureCharacterSet.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TileEnlarged1303.png" />
+    <None Include="Resources\TileEnlarged1302.png" />
+    <None Include="Resources\TileEnlarged1301.png" />
+    <None Include="Resources\TileEnlarged0500.png" />
+    <None Include="Resources\TileEnlarged1206.png" />
+    <None Include="Resources\TileEnlarged1205.png" />
+    <None Include="Resources\TileEnlarged1204.png" />
+    <None Include="Resources\TileEnlarged1203.png" />
+    <None Include="Resources\TileEnlarged1202.png" />
+    <None Include="Resources\TileEnlarged1201.png" />
+    <None Include="Resources\TileEnlarged0900.png" />
+    <None Include="Resources\TileEnlarged0800.png" />
+    <None Include="Resources\TileEnlarged0706.png" />
+    <None Include="Resources\TileEnlarged0700.png" />
+    <None Include="Resources\TileEnlarged0605.png" />
+    <None Include="Resources\TileEnlarged0600.png" />
+    <None Include="Resources\TileEnlarged0400.png" />
+    <None Include="Resources\TileEnlarged0300.png" />
+    <None Include="Resources\TileEnlarged0203.png" />
+    <None Include="Resources\TileEnlarged0200.png" />
+    <None Include="Resources\TileEnlarged0000.png" />
+    <None Include="Resources\TileEnlarged0103.png" />
+    <None Include="Resources\TileEnlarged0102.png" />
+    <None Include="Resources\TileEnlarged1103.png" />
+    <None Include="Resources\TileEnlarged1102.png" />
+    <None Include="Resources\TileEnlarged1101.png" />
+    <None Include="Resources\TileEnlarged1004.png" />
+    <None Include="Resources\TileEnlarged1003.png" />
+    <None Include="Resources\TileEnlarged1002.png" />
+    <None Include="Resources\TileEnlarged1001.png" />
+    <None Include="Resources\TileEnlarged0904.png" />
+    <None Include="Resources\TileEnlarged0903.png" />
+    <None Include="Resources\TileEnlarged0902.png" />
+    <None Include="Resources\TileEnlarged0901.png" />
+    <None Include="Resources\TileEnlarged0805.png" />
+    <None Include="Resources\TileEnlarged0804.png" />
+    <None Include="Resources\TileEnlarged0803.png" />
+    <None Include="Resources\TileEnlarged0802.png" />
+    <None Include="Resources\TileEnlarged0801.png" />
+    <None Include="Resources\TileEnlarged0705.png" />
+    <None Include="Resources\TileEnlarged0704.png" />
+    <None Include="Resources\TileEnlarged0703.png" />
+    <None Include="Resources\TileEnlarged0702.png" />
+    <None Include="Resources\TileEnlarged0701.png" />
+    <None Include="Resources\TileEnlarged0604.png" />
+    <None Include="Resources\TileEnlarged0603.png" />
+    <None Include="Resources\TileEnlarged0602.png" />
+    <None Include="Resources\TileEnlarged0601.png" />
+    <None Include="Resources\TileEnlarged0504.png" />
+    <None Include="Resources\TileEnlarged0503.png" />
+    <None Include="Resources\TileEnlarged0502.png" />
+    <None Include="Resources\TileEnlarged0501.png" />
+    <None Include="Resources\TileEnlarged0404.png" />
+    <None Include="Resources\TileEnlarged0403.png" />
+    <None Include="Resources\TileEnlarged0402.png" />
+    <None Include="Resources\TileEnlarged0401.png" />
+    <None Include="Resources\TileEnlarged0306.png" />
+    <None Include="Resources\TileEnlarged0305.png" />
+    <None Include="Resources\TileEnlarged0304.png" />
+    <None Include="Resources\TileEnlarged0303.png" />
+    <None Include="Resources\TileEnlarged0302.png" />
+    <None Include="Resources\TileEnlarged0301.png" />
+    <None Include="Resources\TileEnlarged0202.png" />
+    <None Include="Resources\TileEnlarged0201.png" />
+    <None Include="Resources\TileEnlarged0101.png" />
+    <None Include="ChiriNulluo.Mahjong.Precure.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChiriNulluo.Mahjong.Core\ChiriNulluo.Mahjong.Core.vbproj">
+      <Project>{6f1b2390-4809-4d03-a4f5-7733364165d0}</Project>
+      <Name>ChiriNulluo.Mahjong.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\tileIcon\Diff\Precure0101.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0102.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0103.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0201.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0202.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0301.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0302.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0303.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0304.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0305.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0306.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0401.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0402.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0403.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0404.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0501.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0502.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0503.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0504.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0601.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0602.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0603.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0604.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0701.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0702.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0703.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0704.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0705.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0801.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0802.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0803.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0804.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0805.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0901.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0902.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0903.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0904.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1001.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1002.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1003.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1004.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1101.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1102.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1103.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1201.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1202.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1203.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1204.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1205.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1206.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0203.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0200.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0300.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0605.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1000.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0800.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0706.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0700.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0600.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0500.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0400.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0000.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0900.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1301.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1302.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure1303.png" />
+    <Content Include="PreJongConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="comPointField.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="comPointField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 21.75pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="comPointField.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="comPointField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 280</value>
+  </data>
+  <data name="comPointField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 31</value>
+  </data>
+  <data name="comPointField.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="comPointField.Text" xml:space="preserve">
+    <value>******</value>
+  </data>
+  <data name="&gt;&gt;comPointField.Name" xml:space="preserve">
+    <value>comPointField</value>
+  </data>
+  <data name="&gt;&gt;comPointField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comPointField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comPointField.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 14.25pt</value>
+  </data>
+  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 359</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>YOU</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="humanPointField.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="humanPointField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 21.75pt</value>
+  </data>
+  <data name="humanPointField.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="humanPointField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 378</value>
+  </data>
+  <data name="humanPointField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 31</value>
+  </data>
+  <data name="humanPointField.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="humanPointField.Text" xml:space="preserve">
+    <value>******</value>
+  </data>
+  <data name="&gt;&gt;humanPointField.Name" xml:space="preserve">
+    <value>humanPointField</value>
+  </data>
+  <data name="&gt;&gt;humanPointField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;humanPointField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;humanPointField.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 15.75pt</value>
+  </data>
+  <data name="Label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 388</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 21</value>
+  </data>
+  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>点</value>
+  </data>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 15.75pt</value>
+  </data>
+  <data name="Label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 290</value>
+  </data>
+  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 21</value>
+  </data>
+  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>点</value>
+  </data>
+  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
+    <value>Label10</value>
+  </data>
+  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="OpponentLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="OpponentLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 14.25pt</value>
+  </data>
+  <data name="OpponentLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OpponentLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 257</value>
+  </data>
+  <data name="OpponentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 19</value>
+  </data>
+  <data name="OpponentLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="OpponentLabel.Text" xml:space="preserve">
+    <value>XXXXXXXXXX</value>
+  </data>
+  <data name="&gt;&gt;OpponentLabel.Name" xml:space="preserve">
+    <value>OpponentLabel</value>
+  </data>
+  <data name="&gt;&gt;OpponentLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpponentLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;OpponentLabel.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="endRoundButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="endRoundButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 9pt</value>
+  </data>
+  <data name="endRoundButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="endRoundButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>799, 247</value>
+  </data>
+  <data name="endRoundButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 34</value>
+  </data>
+  <data name="endRoundButton.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="endRoundButton.Text" xml:space="preserve">
+    <value>降参(&amp;L)</value>
+  </data>
+  <data name="endRoundButton.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;endRoundButton.Name" xml:space="preserve">
+    <value>endRoundButton</value>
+  </data>
+  <data name="&gt;&gt;endRoundButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;endRoundButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;endRoundButton.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="allTilesOpenField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="allTilesOpenField.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="allTilesOpenField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 9pt</value>
+  </data>
+  <data name="allTilesOpenField.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="allTilesOpenField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>911, 257</value>
+  </data>
+  <data name="allTilesOpenField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 16</value>
+  </data>
+  <data name="allTilesOpenField.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="allTilesOpenField.Text" xml:space="preserve">
+    <value>全牌オープン</value>
+  </data>
+  <data name="allTilesOpenField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;allTilesOpenField.Name" xml:space="preserve">
+    <value>allTilesOpenField</value>
+  </data>
+  <data name="&gt;&gt;allTilesOpenField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;allTilesOpenField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;allTilesOpenField.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="restDrawCountField.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="restDrawCountField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 18pt, style=Bold, Italic</value>
+  </data>
+  <data name="restDrawCountField.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="restDrawCountField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 322</value>
+  </data>
+  <data name="restDrawCountField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 26</value>
+  </data>
+  <data name="restDrawCountField.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="restDrawCountField.Text" xml:space="preserve">
+    <value>00</value>
+  </data>
+  <data name="&gt;&gt;restDrawCountField.Name" xml:space="preserve">
+    <value>restDrawCountField</value>
+  </data>
+  <data name="&gt;&gt;restDrawCountField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;restDrawCountField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;restDrawCountField.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="restRoundsField.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="restRoundsField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 18pt, style=Bold, Italic</value>
+  </data>
+  <data name="restRoundsField.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="restRoundsField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 324</value>
+  </data>
+  <data name="restRoundsField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 26</value>
+  </data>
+  <data name="restRoundsField.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="restRoundsField.Text" xml:space="preserve">
+    <value>00</value>
+  </data>
+  <data name="&gt;&gt;restRoundsField.Name" xml:space="preserve">
+    <value>restRoundsField</value>
+  </data>
+  <data name="&gt;&gt;restRoundsField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;restRoundsField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;restRoundsField.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="RiichiAutoDrawTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="BonusTIlePicture0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BonusTIlePicture0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>837, 319</value>
+  </data>
+  <data name="BonusTIlePicture0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 59</value>
+  </data>
+  <data name="BonusTIlePicture0.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture0.Name" xml:space="preserve">
+    <value>BonusTIlePicture0</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture0.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture0.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="BonusTIlePicture1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BonusTIlePicture1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>899, 319</value>
+  </data>
+  <data name="BonusTIlePicture1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 59</value>
+  </data>
+  <data name="BonusTIlePicture1.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture1.Name" xml:space="preserve">
+    <value>BonusTIlePicture1</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="BonusTIlePicture2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BonusTIlePicture2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>961, 319</value>
+  </data>
+  <data name="BonusTIlePicture2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 59</value>
+  </data>
+  <data name="BonusTIlePicture2.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture2.Name" xml:space="preserve">
+    <value>BonusTIlePicture2</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BonusTIlePicture2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 14.25pt</value>
+  </data>
+  <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>814, 294</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 19</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>ボーナス牌</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 245</value>
+  </data>
+  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 176</value>
+  </data>
+  <data name="PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
+    <value>PictureBox1</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 14.25pt, style=Bold</value>
+  </data>
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 329</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 19</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>残り</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 14.25pt, style=Bold</value>
+  </data>
+  <data name="Label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 329</value>
+  </data>
+  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 19</value>
+  </data>
+  <data name="Label11.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>枚</value>
+  </data>
+  <data name="&gt;&gt;Label11.Name" xml:space="preserve">
+    <value>Label11</value>
+  </data>
+  <data name="&gt;&gt;Label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label11.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 14.25pt, style=Bold</value>
+  </data>
+  <data name="Label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 329</value>
+  </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 19</value>
+  </data>
+  <data name="Label12.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>局目</value>
+  </data>
+  <data name="&gt;&gt;Label12.Name" xml:space="preserve">
+    <value>Label12</value>
+  </data>
+  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="riichiImageHuman.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhWgAZAIcAAPaw1/eUuv74+/vb7P2rt/i+3vrN5vV8qPSczf7z+fSLvP9zd/KIwv7l6v2wu/7U
+        2f2Jk//d3v6dpf1rdfzh8PzAzf3o8//8/ftYZvOMxf/q6vahzPvS4vWYxvebvvt1hP7R1vrD2/h3lfR+
+        sv5VWfap0/29yP3u9vs5SvORx/1kbv/s7PaMtf/29vtOX/q91Pw+TfWj0P7x9PnG4veZwfKFvf/x8vy1
+        w/iEo/68wPe32vmiv/7q7v/l5v9YWv7d4viduv3O19sODvSVx//g4P7DxviNrfOCuvaArfSWyf/v8PpK
+        YfSNwf3Z4f7i5f2lrf3J0fSCtfWRwP7Jy/iXtPvM3fWVwfSGtvSHufSAsPKHwP3K1vqyzvmKpveqzP7f
+        5viRsvzF0fabxPav1fSTxfmqxvi11P7P0faFsPOAt/eJrvSDufhwkvpHXvas0vSFvPefxP1HUv1MVKYq
+        C/5PVfrU6fxFUCVtA/5RV/1KU/xCT/s2SdoPDwCAANkPD////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAB9ACwAAAAAWgAZAAAI/wD7CBw48M4cPwgTKkzIp6HDhw8X
+        Slz4UIjFixEnJpxzh6DHjwY1UnR4saTJjBpJmlwppKHIjR0/Egyp8I/NmzcvCGjRwoaSFRqCCg26QokN
+        ngIu4Myps6eSoD2ISCXipIcGoy2SLsWpkKPMPjT9XBhLtmxTGT81RI3Ati1bIlaLyshqtmnPFWsfgDjD
+        90EEuCuOCkhal2zXmAUP+hnMuHHjFjJ4NHBSZIEPHwty8M1hGXORH04a8FAio3RpJUp48Ojx48GZKUVy
+        PJlw+fKCKVfnOt4tACZBxQmCCx8+PLKT1p1t5+BcG/OZB01AN5hO3cmXH5Wba6+94IvoEzKIi/8PjnBO
+        QYQn0qtfz96CkyYPoJAgYXM+AQLz65MwUQQKiCYABgigXgvMZ6CBOM33gHcWsOfgegjFpJgFFFZo4YUU
+        NAECFCbk98d8Ekjg4XwO3GBCGFsEoeKKW0ARhodbHThBEE0weOGNFZYnEEIU9Ojjj0BSMAAHW1RwAx54
+        2IQkBBAgqSQeTxBQYgVUVkmlCSaogOSWSf7BpQpPhMFBEwMMEOSZPSIEFkJltunmm2XWUUUYJjhABx02
+        3cnknXnSocKdgAYKqAp/CtrnoARUwUEdcDbappqK1SHppJRWWgcHIbxwAwFyyGFTpx980OmnnZZq6qmo
+        jvoHqiqEUIUBi1r/KmsdESJkwK245qrrrTOEYAYXO+SRh03CfjCBsMQiu9VSyi6Lk7AvhDDDrtTiWh5C
+        M2Sr7bbcZpspF2XsEEccNo07gQrjljvuuuy26266f7irwgsFhCBtt/hmq1AB/Pbr77/9/houBnYUbIcL
+        KrhQsE0Fk2DwwxBjQDDEDD+MARBm6KADwBz3W55iGocs8sgamzGGF+F2gYEeerjgAst62MSyCzgYAQYV
+        QOSss85UgIHDBy+zLLMeInRBxQ5ejGFGxiQ3rXGEdyAEwNRUV201AGO44cUGcHiAgwswhB32TWEXbQQV
+        HqSt9toBgCEC2GP/ETbNRgQAhxduuDHGGFf3/z21mn0oVsLghBdueAkxcC1GAHDHbdPcNYMRAA2UVy6G
+        GJQHYATcZMOwBBs4sGD3BjHEcPjphQMetR+lt+7666VvsAHmAaCAAk62276ECGqIbgUNHYjRwfDC02BF
+        ACzYfpPtbYCuBhhWiCE77NS7rqNAiiGg/fbcd699B1ZIsUTu5KPQPBosKCCFFUMM7/7wQ5AhBQvjk988
+        Euiv34H3/HdfHmKrS4IAB0jAAg4hflJgwgGWsIcG7qF5BzgAEq6gACZIgQxDKKAAEaiABTrwfmjAgvow
+        qMESFjBCHlFMClbIwha6cIVMUAAWrhCFLETwhlmIAgWZwIQXtpCHMqwhEpKGmMMriLCHPkziCjcCEsX4
+        IQNQjKIUpcgABmjhDWuIwgi2yMUorOENWqjiFKdoRS2sIYtbTIMXwRjGMbpRir5pokSqSMc6auGONajB
+        EdLAxxHwMQ1HOEIN7hjGOtpRC3kM5B8BuYY83tGQkKziQrzyFYGE5SUMUYlFUIJJhEAEIp3UCCUr6ZFL
+        hvKUqEzlYUgZEAA7
+</value>
+  </data>
+  <data name="riichiImageHuman.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="riichiImageHuman.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 377</value>
+  </data>
+  <data name="riichiImageHuman.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 26</value>
+  </data>
+  <data name="riichiImageHuman.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="riichiImageHuman.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;riichiImageHuman.Name" xml:space="preserve">
+    <value>riichiImageHuman</value>
+  </data>
+  <data name="&gt;&gt;riichiImageHuman.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;riichiImageHuman.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;riichiImageHuman.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="riichiImageCPU.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhWgAZAIcAAPaw1/eUuv74+/vb7P2rt/i+3vrN5vV8qPSczf7z+fSLvP9zd/KIwv7l6v2wu/7U
+        2f2Jk//d3v6dpf1rdfzh8PzAzf3o8//8/ftYZvOMxf/q6vahzPvS4vWYxvebvvt1hP7R1vrD2/h3lfR+
+        sv5VWfap0/29yP3u9vs5SvORx/1kbv/s7PaMtf/29vtOX/q91Pw+TfWj0P7x9PnG4veZwfKFvf/x8vy1
+        w/iEo/68wPe32vmiv/7q7v/l5v9YWv7d4viduv3O19sODvSVx//g4P7DxviNrfOCuvaArfSWyf/v8PpK
+        YfSNwf3Z4f7i5f2lrf3J0fSCtfWRwP7Jy/iXtPvM3fWVwfSGtvSHufSAsPKHwP3K1vqyzvmKpveqzP7f
+        5viRsvzF0fabxPav1fSTxfmqxvi11P7P0faFsPOAt/eJrvSDufhwkvpHXvas0vSFvPefxP1HUv1MVKYq
+        C/5PVfrU6fxFUCVtA/5RV/1KU/xCT/s2SdoPDwCAANkPD////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAB9ACwAAAAAWgAZAAAI/wD7CBw48M4cPwgTKkzIp6HDhw8X
+        Slz4UIjFixEnJpxzh6DHjwY1UnR4saTJjBpJmlwppKHIjR0/Egyp8I/NmzcvCGjRwoaSFRqCCg26QokN
+        ngIu4Myps6eSoD2ISCXipIcGoy2SLsWpkKPMPjT9XBhLtmxTGT81RI3Ati1bIlaLyshqtmnPFWsfgDjD
+        90EEuCuOCkhal2zXmAUP+hnMuHHjFjJ4NHBSZIEPHwty8M1hGXORH04a8FAio3RpJUp48Ojx48GZKUVy
+        PJlw+fKCKVfnOt4tACZBxQmCCx8+PLKT1p1t5+BcG/OZB01AN5hO3cmXH5Wba6+94IvoEzKIi/8PjnBO
+        QYQn0qtfz96CkyYPoJAgYXM+AQLz65MwUQQKiCYABgigXgvMZ6CBOM33gHcWsOfgegjFpJgFFFZo4YUU
+        NAECFCbk98d8Ekjg4XwO3GBCGFsEoeKKW0ARhodbHThBEE0weOGNFZYnEEIU9Ojjj0BSMAAHW1RwAx54
+        2IQkBBAgqSQeTxBQYgVUVkmlCSaogOSWSf7BpQpPhMFBEwMMEOSZPSIEFkJltunmm2XWUUUYJjhABx02
+        3cnknXnSocKdgAYKqAp/CtrnoARUwUEdcDbappqK1SHppJRWWgcHIbxwAwFyyGFTpx980OmnnZZq6qmo
+        jvoHqiqEUIUBi1r/KmsdESJkwK245qrrrTOEYAYXO+SRh03CfjCBsMQiu9VSyi6Lk7AvhDDDrtTiWh5C
+        M2Sr7bbcZpspF2XsEEccNo07gQrjljvuuuy26266f7irwgsFhCBtt/hmq1AB/Pbr77/9/houBnYUbIcL
+        KrhQsE0Fk2DwwxBjQDDEDD+MARBm6KADwBz3W55iGocs8sgamzGGF+F2gYEeerjgAst62MSyCzgYAQYV
+        QOSss85UgIHDBy+zLLMeInRBxQ5ejGFGxiQ3rXGEdyAEwNRUV201AGO44cUGcHiAgwswhB32TWEXbQQV
+        HqSt9toBgCEC2GP/ETbNRgQAhxduuDHGGFf3/z21mn0oVsLghBdueAkxcC1GAHDHbdPcNYMRAA2UVy6G
+        GJQHYATcZMOwBBs4sGD3BjHEcPjphQMetR+lt+7666VvsAHmAaCAAk62276ECGqIbgUNHYjRwfDC02BF
+        ACzYfpPtbYCuBhhWiCE77NS7rqNAiiGg/fbcd699B1ZIsUTu5KPQPBosKCCFFUMM7/7wQ5AhBQvjk988
+        Euiv34H3/HdfHmKrS4IAB0jAAg4hflJgwgGWsIcG7qF5BzgAEq6gACZIgQxDKKAAEaiABTrwfmjAgvow
+        qMESFjBCHlFMClbIwha6cIVMUAAWrhCFLETwhlmIAgWZwIQXtpCHMqwhEpKGmMMriLCHPkziCjcCEsX4
+        IQNQjKIUpcgABmjhDWuIwgi2yMUorOENWqjiFKdoRS2sIYtbTIMXwRjGMbpRir5pokSqSMc6auGONajB
+        EdLAxxHwMQ1HOEIN7hjGOtpRC3kM5B8BuYY83tGQkKziQrzyFYGE5SUMUYlFUIJJhEAEIp3UCCUr6ZFL
+        hvKUqEzlYUgZEAA7
+</value>
+  </data>
+  <data name="riichiImageCPU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="riichiImageCPU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 285</value>
+  </data>
+  <data name="riichiImageCPU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 26</value>
+  </data>
+  <data name="riichiImageCPU.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="riichiImageCPU.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;riichiImageCPU.Name" xml:space="preserve">
+    <value>riichiImageCPU</value>
+  </data>
+  <data name="&gt;&gt;riichiImageCPU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;riichiImageCPU.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;riichiImageCPU.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RiichiButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RiichiButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1044, 371</value>
+  </data>
+  <data name="RiichiButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 50</value>
+  </data>
+  <data name="RiichiButton.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;RiichiButton.Name" xml:space="preserve">
+    <value>RiichiButton</value>
+  </data>
+  <data name="&gt;&gt;RiichiButton.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.RichButton, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RiichiButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RiichiButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="humanPlayerDiscardedPilePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 438</value>
+  </data>
+  <data name="humanPlayerDiscardedPilePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1152, 140</value>
+  </data>
+  <data name="humanPlayerDiscardedPilePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;humanPlayerDiscardedPilePanel.Name" xml:space="preserve">
+    <value>humanPlayerDiscardedPilePanel</value>
+  </data>
+  <data name="&gt;&gt;humanPlayerDiscardedPilePanel.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalDiscardedPilePanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;humanPlayerDiscardedPilePanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;humanPlayerDiscardedPilePanel.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="comPlayerDiscardedPilePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 100</value>
+  </data>
+  <data name="comPlayerDiscardedPilePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1152, 140</value>
+  </data>
+  <data name="comPlayerDiscardedPilePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;comPlayerDiscardedPilePanel.Name" xml:space="preserve">
+    <value>comPlayerDiscardedPilePanel</value>
+  </data>
+  <data name="&gt;&gt;comPlayerDiscardedPilePanel.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalDiscardedPilePanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;comPlayerDiscardedPilePanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comPlayerDiscardedPilePanel.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="comPlayerHandPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="comPlayerHandPanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>720, 80</value>
+  </data>
+  <data name="comPlayerHandPanel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>720, 80</value>
+  </data>
+  <data name="comPlayerHandPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>720, 80</value>
+  </data>
+  <data name="comPlayerHandPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;comPlayerHandPanel.Name" xml:space="preserve">
+    <value>comPlayerHandPanel</value>
+  </data>
+  <data name="&gt;&gt;comPlayerHandPanel.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;comPlayerHandPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comPlayerHandPanel.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="horizontalRevealedHandPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 588</value>
+  </data>
+  <data name="horizontalRevealedHandPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 80</value>
+  </data>
+  <data name="horizontalRevealedHandPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel3.Name" xml:space="preserve">
+    <value>horizontalRevealedHandPanel3</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel3.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel3.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="humanPlayerHandPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 589</value>
+  </data>
+  <data name="humanPlayerHandPanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>720, 80</value>
+  </data>
+  <data name="humanPlayerHandPanel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>720, 80</value>
+  </data>
+  <data name="humanPlayerHandPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>720, 80</value>
+  </data>
+  <data name="humanPlayerHandPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;humanPlayerHandPanel.Name" xml:space="preserve">
+    <value>humanPlayerHandPanel</value>
+  </data>
+  <data name="&gt;&gt;humanPlayerHandPanel.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;humanPlayerHandPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;humanPlayerHandPanel.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="horizontalRevealedHandPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 588</value>
+  </data>
+  <data name="horizontalRevealedHandPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 80</value>
+  </data>
+  <data name="horizontalRevealedHandPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel2.Name" xml:space="preserve">
+    <value>horizontalRevealedHandPanel2</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel2.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel2.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="horizontalRevealedHandPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>889, 588</value>
+  </data>
+  <data name="horizontalRevealedHandPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 80</value>
+  </data>
+  <data name="horizontalRevealedHandPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel1.Name" xml:space="preserve">
+    <value>horizontalRevealedHandPanel1</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel1.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel1.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="horizontalRevealedHandPanel0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1033, 588</value>
+  </data>
+  <data name="horizontalRevealedHandPanel0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 80</value>
+  </data>
+  <data name="horizontalRevealedHandPanel0.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel0.Name" xml:space="preserve">
+    <value>horizontalRevealedHandPanel0</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel0.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel0.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;horizontalRevealedHandPanel0.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="TileDetailInfoPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 245</value>
+  </data>
+  <data name="TileDetailInfoPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 180</value>
+  </data>
+  <data name="TileDetailInfoPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="TileDetailInfoPanel1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TileDetailInfoPanel1.Name" xml:space="preserve">
+    <value>TileDetailInfoPanel1</value>
+  </data>
+  <data name="&gt;&gt;TileDetailInfoPanel1.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.TileDetailInfoPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TileDetailInfoPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TileDetailInfoPanel1.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="openRuleFormButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1045, 263</value>
+  </data>
+  <data name="openRuleFormButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 50</value>
+  </data>
+  <data name="openRuleFormButton.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;openRuleFormButton.Name" xml:space="preserve">
+    <value>openRuleFormButton</value>
+  </data>
+  <data name="&gt;&gt;openRuleFormButton.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.RichButton, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;openRuleFormButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;openRuleFormButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>96</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1176, 681</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>キュア☆ジャン[プロトタイプ版]</value>
+  </data>
+  <data name="&gt;&gt;RiichiAutoDrawTimer.Name" xml:space="preserve">
+    <value>RiichiAutoDrawTimer</value>
+  </data>
+  <data name="&gt;&gt;RiichiAutoDrawTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>RoundForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4FEEBB1-E103-4477-B436-080B99E1F5FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ChiriNulluo.Mahjong.WinFormApplication.My.MyApplication</StartupObject>
+    <RootNamespace>ChiriNulluo.Mahjong.WinFormApplication</RootNamespace>
+    <AssemblyName>CureJong</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\Constants.vb" />
+    <Compile Include="Constants\HandPanelDisplayStyle.vb" />
+    <Compile Include="Constants\PlayerInitialHandState.vb" />
+    <Compile Include="Constants\ReplayModeState.vb" />
+    <Compile Include="Constants\RoundState.vb" />
+    <Compile Include="Logging\LogFactory.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="OpponentManager.vb" />
+    <Compile Include="Replay\ReplayData.vb" />
+    <Compile Include="Replay\ReplayDataManager.vb" />
+    <Compile Include="Logging\ReplayLogger.vb" />
+    <Compile Include="Replay\ReplayLogReader.vb" />
+    <Compile Include="RoundFacade.vb" />
+    <Compile Include="SetOpponentFacade.vb" />
+    <Compile Include="Sounds\SoundManager.vb" />
+    <Compile Include="View\Controls\ControlExtension.vb" />
+    <Compile Include="View\Controls\DataGridViewTileImageCell.vb" />
+    <Compile Include="View\Controls\DataGridViewTileImageColumn.vb" />
+    <Compile Include="View\Controls\HorizontalDiscardedPilePanel.Designer.vb">
+      <DependentUpon>HorizontalDiscardedPilePanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\HorizontalDiscardedPilePanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\HorizontalHandPanel.Designer.vb">
+      <DependentUpon>HorizontalHandPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\HorizontalHandPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\HorizontalRevealedHandPanel.Designer.vb">
+      <DependentUpon>HorizontalRevealedHandPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\HorizontalRevealedHandPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\RichButton.Designer.vb">
+      <DependentUpon>RichButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\RichButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Controls\TileDetailInfoPanel.Designer.vb">
+      <DependentUpon>TileDetailInfoPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\TileDetailInfoPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\TilePictureClickEventArgs.vb" />
+    <Compile Include="View\Controls\TilePictureMouseEnterEventArgs.vb" />
+    <Compile Include="View\Controls\TilePictureMouseLeaveEventArgs.vb" />
+    <Compile Include="View\Controls\YakuDescriptionPanel.Designer.vb">
+      <DependentUpon>YakuDescriptionPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\YakuDescriptionPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\FormTransition.vb" />
+    <Compile Include="View\MatchResultForm.Designer.vb">
+      <DependentUpon>MatchResultForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\MatchResultForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GameTasteWindowTestForm1.Designer.vb">
+      <DependentUpon>GameTasteWindowTestForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\GameTasteWindowTestForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PointForm.Designer.vb">
+      <DependentUpon>PointForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\PointForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GameParameterSettingForm.Designer.vb">
+      <DependentUpon>GameParameterSettingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\GameParameterSettingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HandSelectForm.Designer.vb">
+      <DependentUpon>HandSelectForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\HandSelectForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InitialForm.Designer.vb">
+      <DependentUpon>InitialForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\InitialForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchManagerController.vb" />
+    <Compile Include="View\MessageWindowForm.Designer.vb">
+      <DependentUpon>MessageWindowForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageWindowForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ReplayForm.Designer.vb">
+      <DependentUpon>ReplayForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReplayForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RoundForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RoundForm.Designer.vb">
+      <DependentUpon>RoundForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="View\SelectOpponentForm.Designer.vb">
+      <DependentUpon>SelectOpponentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\SelectOpponentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SelectReplayDataForm.Designer.vb">
+      <DependentUpon>SelectReplayDataForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\SelectReplayDataForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TalkingCharaWindowForm.Designer.vb">
+      <DependentUpon>TalkingCharaWindowForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\TalkingCharaWindowForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TestForm.Designer.vb">
+      <DependentUpon>TestForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\TestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TileSelectWindowForm.Designer.vb">
+      <DependentUpon>TileSelectWindowForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\TileSelectWindowForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WallPIleForm.Designer.vb">
+      <DependentUpon>WallPIleForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\WallPIleForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RuleForm.Designer.vb">
+      <DependentUpon>RuleForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\RuleForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.zh.resx" />
+    <EmbeddedResource Include="View\Controls\HorizontalDiscardedPilePanel.resx">
+      <DependentUpon>HorizontalDiscardedPilePanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\HorizontalHandPanel.resx">
+      <DependentUpon>HorizontalHandPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\HorizontalRevealedHandPanel.resx">
+      <DependentUpon>HorizontalRevealedHandPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\RichButton.resx">
+      <DependentUpon>RichButton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\TileDetailInfoPanel.resx">
+      <DependentUpon>TileDetailInfoPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\YakuDescriptionPanel.resx">
+      <DependentUpon>YakuDescriptionPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MatchResultForm.resx">
+      <DependentUpon>MatchResultForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GameTasteWindowTestForm1.resx">
+      <DependentUpon>GameTasteWindowTestForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PointForm.resx">
+      <DependentUpon>PointForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GameParameterSettingForm.resx">
+      <DependentUpon>GameParameterSettingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HandSelectForm.resx">
+      <DependentUpon>HandSelectForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InitialForm.resx">
+      <DependentUpon>InitialForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MessageWindowForm.resx">
+      <DependentUpon>MessageWindowForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ReplayForm.resx">
+      <DependentUpon>ReplayForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RoundForm.ja.resx">
+      <DependentUpon>RoundForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RoundForm.resx">
+      <DependentUpon>RoundForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SelectOpponentForm.resx">
+      <DependentUpon>SelectOpponentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SelectReplayDataForm.resx">
+      <DependentUpon>SelectReplayDataForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TalkingCharaWindowForm.resx">
+      <DependentUpon>TalkingCharaWindowForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TestForm.resx">
+      <DependentUpon>TestForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TileSelectWindowForm.resx">
+      <DependentUpon>TileSelectWindowForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WallPIleForm.resx">
+      <DependentUpon>WallPIleForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RuleForm.resx">
+      <DependentUpon>RuleForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ChiriNulluo.Mahjong.WinFormApplication.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChiriNulluo.Mahjong.Core\ChiriNulluo.Mahjong.Core.vbproj">
+      <Project>{6f1b2390-4809-4d03-a4f5-7733364165d0}</Project>
+      <Name>ChiriNulluo.Mahjong.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChiriNulluo.Mahjong.Precure\ChiriNulluo.Mahjong.Precure.vbproj">
+      <Project>{5f0056cc-9bff-4dfd-8acc-a93a0dc39b8c}</Project>
+      <Name>ChiriNulluo.Mahjong.Precure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Pictures\charaFace\Face_Eas01.png" />
+    <None Include="Pictures\SystemUI\SystemWindow02.png" />
+    <None Include="Pictures\SystemUI\InitialForm_Back.gif" />
+    <None Include="Pictures\charaFace\Face_Regina01.png" />
+    <None Include="Pictures\charaFace\Face_Regina02.png" />
+    <None Include="Pictures\charaFace\Face_Regina03.png" />
+    <None Include="Pictures\charaFace\Face_Eas02.png" />
+    <None Include="Pictures\charaFace\Face_Eas03.png" />
+    <None Include="Resources\Face_Eas01.png" />
+    <None Include="Resources\Face_Eas02.png" />
+    <None Include="Resources\Face_Eas03.png" />
+    <None Include="Resources\Face_Regina01.png" />
+    <None Include="Resources\Face_Regina02.png" />
+    <None Include="Resources\Face_Regina03.png" />
+    <None Include="Resources\FallenTileBase.png" />
+    <None Include="Resources\Precure0101.png" />
+    <None Include="Resources\Precure0102.png" />
+    <None Include="Resources\Precure0103.png" />
+    <None Include="Resources\Precure0201.png" />
+    <None Include="Resources\Precure0202.png" />
+    <None Include="Resources\Precure0301.png" />
+    <None Include="Resources\Precure0302.png" />
+    <None Include="Resources\Precure0303.png" />
+    <None Include="Resources\Precure0304.png" />
+    <None Include="Resources\Precure0305.png" />
+    <None Include="Resources\Precure0306.png" />
+    <None Include="Resources\Precure0401.png" />
+    <None Include="Resources\Precure0402.png" />
+    <None Include="Resources\Precure0403.png" />
+    <None Include="Resources\Precure0404.png" />
+    <None Include="Resources\Precure0501.png" />
+    <None Include="Resources\Precure0502.png" />
+    <None Include="Resources\Precure0503.png" />
+    <None Include="Resources\Precure0504.png" />
+    <None Include="Resources\Precure0601.png" />
+    <None Include="Resources\Precure0602.png" />
+    <None Include="Resources\Precure0603.png" />
+    <None Include="Resources\Precure0604.png" />
+    <None Include="Resources\Precure0701.png" />
+    <None Include="Resources\Precure0702.png" />
+    <None Include="Resources\Precure0703.png" />
+    <None Include="Resources\Precure0704.png" />
+    <None Include="Resources\Precure0705.png" />
+    <None Include="Resources\Precure0801.png" />
+    <None Include="Resources\Precure0802.png" />
+    <None Include="Resources\Precure0803.png" />
+    <None Include="Resources\Precure0804.png" />
+    <None Include="Resources\Precure0805.png" />
+    <None Include="Resources\Precure0901.png" />
+    <None Include="Resources\Precure0902.png" />
+    <None Include="Resources\Precure0903.png" />
+    <None Include="Resources\Precure0904.png" />
+    <None Include="Resources\Precure1001.png" />
+    <None Include="Resources\Precure1002.png" />
+    <None Include="Resources\Precure1003.png" />
+    <None Include="Resources\Precure1004.png" />
+    <None Include="Resources\Precure1101.png" />
+    <None Include="Resources\Precure1102.png" />
+    <None Include="Resources\Precure1103.png" />
+    <None Include="Resources\Precure1201.png" />
+    <None Include="Resources\Precure1202.png" />
+    <None Include="Resources\Precure1203.png" />
+    <None Include="Resources\Precure1204.png" />
+    <None Include="Resources\Precure1205.png" />
+    <None Include="Resources\Precure1206.png" />
+    <None Include="Resources\StoodTileBase.png" />
+    <None Include="Resources\SystemWindow02.png" />
+    <None Include="Resources\TileStoodBack.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0101.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0102.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0103.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0201.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0202.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0301.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0302.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0303.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0304.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0305.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0306.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0401.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0402.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0403.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0404.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0501.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0502.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0503.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0504.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0601.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0602.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0603.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0604.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0701.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0702.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0703.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0704.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0705.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0801.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0802.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0803.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0804.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0805.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0901.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0902.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0903.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged0904.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged1001.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged1002.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged1003.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged1004.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged1101.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged1102.png" />
+    <None Include="Pictures\tileIcon\Enlarged\TileEnlarged1103.png" />
+    <None Include="Pictures\SystemUI\Frame0.gif" />
+    <None Include="Pictures\SystemUI\Riichi.gif" />
+    <None Include="Pictures\SystemUI\Riichi - コピー.gif" />
+    <None Include="Pictures\SystemUI\Button0.gif" />
+    <None Include="Pictures\SystemUI\Button1.gif" />
+    <None Include="Pictures\SystemUI\Button2.gif" />
+    <None Include="Pictures\SystemUI\RiichiButton0.gif" />
+    <None Include="Pictures\SystemUI\RiichiButton1.gif" />
+    <None Include="Pictures\SystemUI\RiichiButton2.gif" />
+    <None Include="Pictures\SystemUI\RuleButton0.gif" />
+    <None Include="Pictures\SystemUI\RuleButton1.gif" />
+    <None Include="Pictures\SystemUI\RuleButton2.gif" />
+    <None Include="Pictures\charaFace\Face_Riko01.png" />
+    <None Include="Pictures\charaFace\Face_Riko02.png" />
+    <None Include="Pictures\charaFace\Face_Riko03.png" />
+    <Content Include="Pictures\tileIcon\FallenTileBase.png" />
+    <Content Include="Pictures\tileIcon\StoodTileBase.png" />
+    <Content Include="Pictures\tileIcon\TileStoodBack.png" />
+    <None Include="Resources\Button_0.gif" />
+    <Content Include="Resources\InitialForm_Back.gif" />
+    <Content Include="Sounds\BGM\Memory.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\DiscardTile.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\GameClear.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
