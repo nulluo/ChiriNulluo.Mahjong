@@ -224,7 +224,11 @@ Public Class RoundFacade
             End If
         End If
 
-        MatchManagerController.GetInstance.MatchManager.RoundsCount += 1
+        'どちらも上がらなかった場合は局数カウントアップしない
+        If Me.Result <> RoundState.Draw Then
+            MatchManagerController.GetInstance.MatchManager.RoundsCount += 1
+        End If
+
     End Sub
 
     Friend Sub DiscardIfHumanRiichiDone()
