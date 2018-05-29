@@ -281,4 +281,34 @@
   <data name="CharacterScriptRikoDraw" xml:space="preserve">
     <value>あぶない…あぶない…</value>
   </data>
+  <data name="CharacterScriptKotohaDraw" xml:space="preserve">
+    <value>つぎは勝つよっ！</value>
+  </data>
+  <data name="CharacterScriptKotohaGameStart" xml:space="preserve">
+    <value>わくわくもんだしー!</value>
+  </data>
+  <data name="CharacterScriptKotohaLose" xml:space="preserve">
+    <value>えー、もう一息だったのにー！</value>
+  </data>
+  <data name="CharacterScriptKotohaWinDraw" xml:space="preserve">
+    <value>はー！ツモったよ！</value>
+  </data>
+  <data name="CharacterScriptKotohaWinRon" xml:space="preserve">
+    <value>はー！ロンだよっ！</value>
+  </data>
+  <data name="CharacterScriptMiraiGameStart" xml:space="preserve">
+    <value>ワクワクもんだぁ！</value>
+  </data>
+  <data name="CharacterScriptMiraiDraw" xml:space="preserve">
+    <value>しきり直しだねっ！</value>
+  </data>
+  <data name="CharacterScriptMiraiLose" xml:space="preserve">
+    <value>う、うう～っ！</value>
+  </data>
+  <data name="CharacterScriptMiraiWinDraw" xml:space="preserve">
+    <value>ツモあがりもんだぁ！</value>
+  </data>
+  <data name="CharacterScriptMiraiWinRon" xml:space="preserve">
+    <value>いま！その牌捨てました？ロン！</value>
+  </data>
 </root>

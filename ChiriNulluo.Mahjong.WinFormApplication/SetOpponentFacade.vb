@@ -17,14 +17,20 @@ Public Class SetOpponentFacade
 
 
     Public Sub SetOpponent(precurePlayerID As String)
+
+        'UNIMPLEMENTED: 対戦相手の生成手順としてこれが最善じゃない気がする
         Dim _opponentCharacter As PrecurePlayer
         Select Case precurePlayerID
             Case "Eas"
                 _opponentCharacter = New PrecurePlayer("Eas", "イース")
             Case "Regina"
                 _opponentCharacter = New PrecurePlayer("Regina", "レジーナ")
+            Case "Mirai"
+                _opponentCharacter = New PrecurePlayer("Mirai", "朝比奈みらい")
             Case "Riko"
                 _opponentCharacter = New PrecurePlayer("Riko", "十六夜リコ")
+            Case "Kotoha"
+                _opponentCharacter = New PrecurePlayer("Kotoha", "花海ことは")
             Case Else
                 _opponentCharacter = Nothing
         End Select

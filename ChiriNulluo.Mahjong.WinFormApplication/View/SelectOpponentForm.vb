@@ -18,7 +18,7 @@ Public Class SelectOpponentForm
 
     End Sub
 
-    Private Function OpponentButton_Click(sender As Object, e As EventArgs) As Form Handles ButtonRegina.Click, ButtonEas.Click, ButtonRiko.Click
+    Private Function OpponentButton_Click(sender As Object, e As EventArgs) As Form Handles ButtonRegina.Click, ButtonEas.Click, ButtonRiko.Click, ButtonMirai.Click, ButtonKotoha.Click
         Me.Facade.SetOpponent(sender.name.replace("Button", String.Empty))
 
         Dim _nextForm As Form = Me.Facade.GoToNextForm(Me.ManualModeField.Checked)
@@ -37,6 +37,7 @@ Public Class SelectOpponentForm
         FormTransition.Transit(Me, nextForm)
         Return nextForm
     End Function
+
 
 #End Region
 

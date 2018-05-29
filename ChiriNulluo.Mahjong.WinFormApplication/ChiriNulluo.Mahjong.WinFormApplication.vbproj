@@ -488,6 +488,12 @@
     <None Include="Pictures\charaFace\Face_Riko01.png" />
     <None Include="Pictures\charaFace\Face_Riko02.png" />
     <None Include="Pictures\charaFace\Face_Riko03.png" />
+    <None Include="Pictures\charaFace\Face_Kotoha01.png" />
+    <None Include="Pictures\charaFace\Face_Kotoha02.png" />
+    <None Include="Pictures\charaFace\Face_Kotoha03.png" />
+    <None Include="Pictures\charaFace\Face_Mirai01.png" />
+    <None Include="Pictures\charaFace\Face_Mirai02.png" />
+    <None Include="Pictures\charaFace\Face_Mirai03.png" />
     <Content Include="Pictures\tileIcon\FallenTileBase.png" />
     <Content Include="Pictures\tileIcon\StoodTileBase.png" />
     <Content Include="Pictures\tileIcon\TileStoodBack.png" />

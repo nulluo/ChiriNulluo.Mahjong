@@ -136,6 +136,96 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptKotohaDraw() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptKotohaDraw", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptKotohaGameStart() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptKotohaGameStart", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptKotohaLose() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptKotohaLose", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptKotohaWinDraw() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptKotohaWinDraw", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptKotohaWinRon() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptKotohaWinRon", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptMiraiDraw() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptMiraiDraw", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptMiraiGameStart() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptMiraiGameStart", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptMiraiLose() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptMiraiLose", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptMiraiWinDraw() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptMiraiWinDraw", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptMiraiWinRon() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptMiraiWinRon", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Next time ! に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptReginaDraw() As String
@@ -251,6 +341,66 @@ Namespace My.Resources
         Friend ReadOnly Property Face_Eas03() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Face_Eas03", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property Face_Kotoha01() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Face_Kotoha01", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property Face_Kotoha02() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Face_Kotoha02", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property Face_Kotoha03() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Face_Kotoha03", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property Face_Mirai01() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Face_Mirai01", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property Face_Mirai02() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Face_Mirai02", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property Face_Mirai03() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Face_Mirai03", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
