@@ -21,7 +21,8 @@
 
 # プレイ中のゲーム画面(動画)
  https://www.youtube.com/watch?v=Zkam1Pkz-5I
-
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/Zkam1Pkz-5I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+ 
 # 残っている主なタスク
 
 - チュートリアルの作成
