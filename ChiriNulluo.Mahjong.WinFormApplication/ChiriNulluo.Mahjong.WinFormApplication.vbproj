@@ -278,11 +278,17 @@
     <EmbeddedResource Include="View\Controls\YakuDescriptionPanel.resx">
       <DependentUpon>YakuDescriptionPanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\MatchResultForm.ja.resx">
+      <DependentUpon>MatchResultForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MatchResultForm.resx">
       <DependentUpon>MatchResultForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\GameTasteWindowTestForm1.resx">
       <DependentUpon>GameTasteWindowTestForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PointForm.ja.resx">
+      <DependentUpon>PointForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PointForm.resx">
       <DependentUpon>PointForm.vb</DependentUpon>
