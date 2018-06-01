@@ -1,32 +1,31 @@
 # ChiriNulluo.Mahjong
- —lX‚ÈƒLƒƒƒ‰ƒNƒ^[‚Ì”v‚ðŽg—p‚µ‚Ä—V‚Ô–ƒ•—ƒQ[ƒ€ ‚Å‚·
- ŠJ”­’†‚Å‚·
+ æ§˜ã€…ãªã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã®ç‰Œã‚’ä½¿ç”¨ã—ã¦éŠã¶éº»é›€é¢¨ã‚²ãƒ¼ãƒ  ã§ã™
+ é–‹ç™ºä¸­ã§ã™
  
  Mahjon-like game playing with various character's tile.
  This software is under development.
  
-# ƒLƒ…ƒAƒWƒƒƒ“@Ver-0.1.1.22
+# ã‚­ãƒ¥ã‚¢ã‚¸ãƒ£ãƒ³ã€€Ver-0.1.1.22
 
-# ’ˆÓŽ–€
- ƒLƒ…ƒAƒWƒƒƒ“‚Í³Ž®ƒŠƒŠ[ƒX‚ªŠ®—¹‚µ‚Ä‚¢‚È‚¢AŠJ”­’†‚ÌƒQ[ƒ€‚Å‚·B
- ƒQ[ƒ€‚Ìƒ‹[ƒ‹‚É‚Â‚¢‚Ä‚à‚Ü‚¾ŒŸ“¢’†‚Ì‚½‚ßAƒo[ƒWƒ‡ƒ“XV‚É‚æ‚Á‚Äƒ‹[ƒ‹‚Í•ÏX‚³‚ê‚é‰Â”\«‚ª‚ ‚è‚Ü‚·B
- “Á‚ÉAŠe–ð‚Ì“_”‚É‚Â‚¢‚Ä‚ÍA‚Ü‚¾\•ªƒQ[ƒ€ƒoƒ‰ƒ“ƒX‚Ì’²®‚ª‚È‚³‚ê‚Ä‚¢‚È‚¢‰¼‚Ì”’l‚Å‚ ‚èA
- ‘å‚«‚­•Ï‰»‚·‚é‰Â”\«‚ª‚ ‚é‚±‚Æ‚ð‚²—¹³‚­‚¾‚³‚¢B
+# æ³¨æ„äº‹é …
+ ã‚­ãƒ¥ã‚¢ã‚¸ãƒ£ãƒ³ã¯æ­£å¼ãƒªãƒªãƒ¼ã‚¹ãŒå®Œäº†ã—ã¦ã„ãªã„ã€é–‹ç™ºä¸­ã®ã‚²ãƒ¼ãƒ ã§ã™ã€‚
+ ã‚²ãƒ¼ãƒ ã®ãƒ«ãƒ¼ãƒ«ã«ã¤ã„ã¦ã‚‚ã¾ã æ¤œè¨Žä¸­ã®ãŸã‚ã€ãƒãƒ¼ã‚¸ãƒ§ãƒ³æ›´æ–°ã«ã‚ˆã£ã¦ãƒ«ãƒ¼ãƒ«ã¯å¤‰æ›´ã•ã‚Œã‚‹å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™ã€‚
+ ç‰¹ã«ã€å„å½¹ã®ç‚¹æ•°ã«ã¤ã„ã¦ã¯ã€ã¾ã ååˆ†ã‚²ãƒ¼ãƒ ãƒãƒ©ãƒ³ã‚¹ã®èª¿æ•´ãŒãªã•ã‚Œã¦ã„ãªã„ä»®ã®æ•°å€¤ã§ã‚ã‚Šã€
+ å¤§ããå¤‰åŒ–ã™ã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹ã“ã¨ã‚’ã”äº†æ‰¿ãã ã•ã„ã€‚
 
-# ŽÀs•û–@
- ƒrƒ‹ƒh‚µ‚½ƒoƒCƒiƒŠ‚ð”CˆÓ‚ÌƒfƒBƒŒƒNƒgƒŠ‚É’u‚¢‚ÄACureJong.exe‚ðŽÀs‚µ‚Ä‚­‚¾‚³‚¢
+# å®Ÿè¡Œæ–¹æ³•
+ ãƒ“ãƒ«ãƒ‰ã—ãŸãƒã‚¤ãƒŠãƒªã‚’ä»»æ„ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ç½®ã„ã¦ã€CureJong.exeã‚’å®Ÿè¡Œã—ã¦ãã ã•ã„
 
-# —V‚Ñ•û
+# éŠã³æ–¹
  http://www.geocities.jp/nero021/programming/CureJong/CureJong.htm
 
-# ƒvƒŒƒC’†‚ÌƒQ[ƒ€‰æ–Ê(“®‰æ)
- https://www.youtube.com/watch?v=Zkam1Pkz-5I
- <iframe width="560" height="315" src="https://www.youtube.com/embed/Zkam1Pkz-5I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
- 
-# Žc‚Á‚Ä‚¢‚éŽå‚Èƒ^ƒXƒN
+# ãƒ—ãƒ¬ã‚¤ä¸­ã®ã‚²ãƒ¼ãƒ ç”»é¢(å‹•ç”»)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/Zkam1Pkz-5I/0.jpg)](https://www.youtube.com/watch?v=Zkam1Pkz-5I)
+  
+# æ®‹ã£ã¦ã„ã‚‹ä¸»ãªã‚¿ã‚¹ã‚¯
 
-- ƒ`ƒ…[ƒgƒŠƒAƒ‹‚Ìì¬
-- ‚à‚Á‚ÆŒ«‚¢COMŽvlƒAƒ‹ƒSƒŠƒYƒ€‚ÌŽÀ‘•
-- –ð‚ÌoŒ»Šm—¦‚ðŒvŽZ‚µ‚Ä–ð‚Ì“_”‚ðŒˆ’è
-- ‘äŽŒEƒXƒg[ƒŠ[‚Ì’Ç‰Á
-- ƒLƒƒƒ‰ƒOƒ‰ƒtƒBƒbƒN‚Ì’Ç‰Á
+- ãƒãƒ¥ãƒ¼ãƒˆãƒªã‚¢ãƒ«ã®ä½œæˆ
+- ã‚‚ã£ã¨è³¢ã„COMæ€è€ƒã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã®å®Ÿè£…
+- å½¹ã®å‡ºç¾ç¢ºçŽ‡ã‚’è¨ˆç®—ã—ã¦å½¹ã®ç‚¹æ•°ã‚’æ±ºå®š
+- å°è©žãƒ»ã‚¹ãƒˆãƒ¼ãƒªãƒ¼ã®è¿½åŠ 
+- ã‚­ãƒ£ãƒ©ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã®è¿½åŠ 
