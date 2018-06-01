@@ -117,10 +117,424 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="YakuNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="&gt;&gt;ManualModeField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="playerNameField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ManualModeField.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pointField.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ManualModeField.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;YakuNameColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NextRoundButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 35</value>
+  </data>
+  <data name="pointField.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="playerNameField.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;HorizontalHandPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="NextRoundButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="DataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>426, 321</value>
+  </data>
+  <data name="&gt;&gt;DataGridView1.Name" xml:space="preserve">
+    <value>DataGridView1</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="HorizontalHandPanel1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>720, 80</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 80</value>
+  </data>
+  <data name="YakuNameColumn.Width" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="&gt;&gt;DataGridView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 30</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="&gt;&gt;pointField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel3.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="DataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;HorizontalHandPanel1.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;pointField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ManualModeField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 16</value>
+  </data>
+  <data name="HorizontalHandPanel1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>720, 80</value>
+  </data>
+  <data name="pointField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 23</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="pointField.Text" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="ManualModeField.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ManualModeField.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="YakuPointColumn.HeaderText" xml:space="preserve">
+    <value>Point</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>485, 30</value>
+  </data>
+  <data name="&gt;&gt;HorizontalHandPanel1.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>対戦結果表示</value>
+  </data>
+  <data name="playerNameField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 15.75pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel0.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ManualModeField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 391</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playerNameField.Name" xml:space="preserve">
+    <value>playerNameField</value>
+  </data>
+  <data name="&gt;&gt;NextRoundButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ManualModeField.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="pointField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 240</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel0.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 15.75pt</value>
+  </data>
+  <data name="DataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 150</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>798, 483</value>
+  </data>
+  <data name="&gt;&gt;pointField.Name" xml:space="preserve">
+    <value>pointField</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Point</value>
+  </data>
+  <data name="&gt;&gt;DataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ManualModeField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 120</value>
+  </data>
+  <data name="&gt;&gt;ManualModeField.Name" xml:space="preserve">
+    <value>ManualModeField</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="DataGridView1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 30</value>
+  </data>
+  <data name="&gt;&gt;DataGridView1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel2.Name" xml:space="preserve">
+    <value>HorizontalRevealedHandPanel2</value>
+  </data>
+  <data name="&gt;&gt;NextRoundButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="playerNameField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 173</value>
+  </data>
+  <data name="NextRoundButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>671, 436</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 80</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel3.Name" xml:space="preserve">
+    <value>HorizontalRevealedHandPanel3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;YakuPointColumn.Name" xml:space="preserve">
+    <value>YakuPointColumn</value>
+  </data>
+  <data name="playerNameField.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="HorizontalHandPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>720, 80</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>579, 219</value>
+  </data>
+  <data name="HorizontalHandPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>635, 30</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 80</value>
+  </data>
+  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 150</value>
+  </data>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>579, 150</value>
+  </data>
+  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 15.75pt</value>
+  </data>
+  <data name="playerNameField.Text" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="HorizontalRevealedHandPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 80</value>
+  </data>
+  <data name="YakuPointColumn.Width" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel0.Name" xml:space="preserve">
+    <value>HorizontalRevealedHandPanel0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PointForm</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PointDisplayForm</value>
+  </data>
+  <data name="&gt;&gt;playerNameField.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel2.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 16</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
+    <value>PictureBox1</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel0.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;playerNameField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 21</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pointField.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 15.75pt, style=Bold</value>
+  </data>
+  <data name="NextRoundButton.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel0.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel1.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="HorizontalHandPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 30</value>
+  </data>
+  <data name="&gt;&gt;pointField.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ManualModeField.Text" xml:space="preserve">
+    <value>Set all parameters manually</value>
+  </data>
+  <data name="&gt;&gt;playerNameField.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NextRoundButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>PLAYER</value>
+  </data>
+  <data name="&gt;&gt;NextRoundButton.Name" xml:space="preserve">
+    <value>NextRoundButton</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 21</value>
+  </data>
+  <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>HG丸ｺﾞｼｯｸM-PRO, 12pt</value>
+  </data>
+  <data name="&gt;&gt;YakuPointColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel1.Name" xml:space="preserve">
+    <value>HorizontalRevealedHandPanel1</value>
+  </data>
+  <data name="&gt;&gt;YakuNameColumn.Name" xml:space="preserve">
+    <value>YakuNameColumn</value>
+  </data>
+  <data name="YakuNameColumn.HeaderText" xml:space="preserve">
+    <value>Yaku Name</value>
+  </data>
+  <data name="&gt;&gt;HorizontalHandPanel1.Name" xml:space="preserve">
+    <value>HorizontalHandPanel1</value>
+  </data>
+  <metadata name="YakuPointColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="YakuPointColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ja</value>
+  </metadata>
+  <metadata name="YakuNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>
