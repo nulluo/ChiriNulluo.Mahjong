@@ -5,7 +5,7 @@
  Mahjon-like game playing with various character's tile.
  This software is under development.
  
-# キュアジャン　Ver-0.1.1.21
+# キュアジャン　Ver-0.1.1.22
 
 # 実行方法
  ビルドしたバイナリを任意のディレクトリに置いて、CureJong.exeを実行してください
