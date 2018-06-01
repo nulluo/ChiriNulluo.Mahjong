@@ -592,7 +592,7 @@
       </TileSet>
     </Yaku>
     <!-- オール〇〇(作品名)-->    
-    <Yaku>
+    <!--<Yaku>
       <Name>オールMaxHeart</Name>
       <Type>2</Type>
       <Point>5000</Point>
@@ -610,7 +610,7 @@
         <ID>0201</ID>
         <ID>0202</ID>
       </TileSet>
-    </Yaku>
+    </Yaku>-->
     <Yaku>
       <Name>オール5gogo!</Name>
       <Type>2</Type>
@@ -703,7 +703,7 @@
         <ID>1004</ID>
       </TileSet>
     </Yaku>
-    <Yaku>
+    <!--<Yaku>
       <Name>オール魔法つかい</Name>
       <Type>2</Type>
       <Point>5000</Point>
@@ -712,7 +712,7 @@
         <ID>1102</ID>
         <ID>1103</ID>
       </TileSet>
-    </Yaku>
+    </Yaku>-->
     <Yaku>
       <Name>オールプリアラ</Name>
       <Type>2</Type>
@@ -726,7 +726,7 @@
         <ID>1206</ID>
       </TileSet>
     </Yaku> 
-    <Yaku>
+    <!--<Yaku>
       <Name>オールHugプリ</Name>
       <Type>2</Type>
       <Point>5000</Point>
@@ -735,7 +735,7 @@
         <ID>1302</ID>
         <ID>1303</ID>
       </TileSet>
-    </Yaku>    
+    </Yaku>-->    
   <!-- オール〇〇(イメージカラー)-->
     <Yaku>
       <Name>オールピンクキュア</Name>
@@ -805,11 +805,12 @@
     <Yaku>
       <Name>オール白キュア</Name>
       <Type>2</Type>
-      <Point>10000</Point>
+      <Point>25000</Point>
       <TileSet>
         <ID>0102</ID>
         <ID>0202</ID>
         <ID>0602</ID>
+        <ID>0706</ID>
       </TileSet>  
     </Yaku> 
     <Yaku>
@@ -836,6 +837,18 @@
         <ID>1204</ID>
       </TileSet>  
     </Yaku> 
+    <!--<Yaku>
+      <Name>オール闇キュア</Name>
+      <Type>2</Type>
+      <Point>20000</Point>
+      <TileSet>
+        <ID>0200</ID>
+        <ID>0203</ID>
+        <ID>0400</ID>
+        <ID>0800</ID>
+        <ID>0900</ID>
+      </TileSet>  
+    </Yaku>--> 
     
   <!-- 手牌以外要素依存役 -->
   <DependingOnNonHandConditionYaku>

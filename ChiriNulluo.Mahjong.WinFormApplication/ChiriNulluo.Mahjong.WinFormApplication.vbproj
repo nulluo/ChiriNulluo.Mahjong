@@ -494,6 +494,9 @@
     <None Include="Pictures\charaFace\Face_Mirai01.png" />
     <None Include="Pictures\charaFace\Face_Mirai02.png" />
     <None Include="Pictures\charaFace\Face_Mirai03.png" />
+    <None Include="Pictures\SystemUI\GameStartButton0.gif" />
+    <None Include="Pictures\SystemUI\GameStartButton1.gif" />
+    <None Include="Pictures\SystemUI\GameStartButton2.gif" />
     <Content Include="Pictures\tileIcon\FallenTileBase.png" />
     <Content Include="Pictures\tileIcon\StoodTileBase.png" />
     <Content Include="Pictures\tileIcon\TileStoodBack.png" />

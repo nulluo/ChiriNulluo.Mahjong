@@ -22,26 +22,19 @@ Partial Class InitialForm
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InitialForm))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.DebugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.replayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PlaysBGMMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PlaysSEMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GameStartButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
+        Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.InitialForm_Back
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 24)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(300, 300)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'MenuStrip1
         '
@@ -77,22 +70,49 @@ Partial Class InitialForm
         '
         Me.PlaysBGMMenuItem.CheckOnClick = True
         Me.PlaysBGMMenuItem.Name = "PlaysBGMMenuItem"
-        Me.PlaysBGMMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PlaysBGMMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.PlaysBGMMenuItem.Text = "BGMを鳴らす"
         '
         'PlaysSEMenuItem
         '
         Me.PlaysSEMenuItem.CheckOnClick = True
         Me.PlaysSEMenuItem.Name = "PlaysSEMenuItem"
-        Me.PlaysSEMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PlaysSEMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.PlaysSEMenuItem.Text = "SEを鳴らす"
+        '
+        'GameStartButton
+        '
+        Me.GameStartButton.BackColor = System.Drawing.Color.Transparent
+        Me.GameStartButton.HoverImage = CType(resources.GetObject("GameStartButton.HoverImage"), System.Drawing.Image)
+        Me.GameStartButton.Image = CType(resources.GetObject("GameStartButton.Image"), System.Drawing.Image)
+        Me.GameStartButton.Location = New System.Drawing.Point(89, 127)
+        Me.GameStartButton.Name = "GameStartButton"
+        Me.GameStartButton.PushedImage = CType(resources.GetObject("GameStartButton.PushedImage"), System.Drawing.Image)
+        Me.GameStartButton.Size = New System.Drawing.Size(127, 50)
+        Me.GameStartButton.TabIndex = 2
+        Me.GameStartButton.TabStop = False
+        '
+        'openRuleFormButton
+        '
+        Me.openRuleFormButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton1
+        Me.openRuleFormButton.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton0
+        Me.openRuleFormButton.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.openRuleFormButton.Location = New System.Drawing.Point(89, 193)
+        Me.openRuleFormButton.Name = "openRuleFormButton"
+        Me.openRuleFormButton.PushedImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton2
+        Me.openRuleFormButton.Size = New System.Drawing.Size(121, 50)
+        Me.openRuleFormButton.TabIndex = 41
+        Me.openRuleFormButton.TabStop = False
         '
         'InitialForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(300, 324)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.openRuleFormButton)
+        Me.Controls.Add(Me.GameStartButton)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
@@ -101,18 +121,20 @@ Partial Class InitialForm
         Me.MinimumSize = New System.Drawing.Size(316, 363)
         Me.Name = "InitialForm"
         Me.Text = "キュア☆ジャン(プロトタイプ版)"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents DebugToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents replayToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents 設定ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PlaysBGMMenuItem As ToolStripMenuItem
     Friend WithEvents PlaysSEMenuItem As ToolStripMenuItem
+    Friend WithEvents GameStartButton As RichButton
+    Friend WithEvents openRuleFormButton As RichButton
 End Class

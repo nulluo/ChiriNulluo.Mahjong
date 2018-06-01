@@ -2,10 +2,6 @@
 Imports System.Threading
 
 Public Class InitialForm
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Dim _nextForm As New SelectOpponentForm
-        FormTransition.Transit(Me, _nextForm)
-    End Sub
 
     Private Sub replayToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles replayToolStripMenuItem.Click
         Dim _nextForm As New SelectReplayDataForm()
@@ -21,6 +17,7 @@ Public Class InitialForm
 
         Me.PlaysBGMMenuItem.Checked = Sounds.SoundManager.PlaysBGM
         Me.PlaysSEMenuItem.Checked = Sounds.SoundManager.PlaysSE
+        Me.GameStartButton.Parent = Me
     End Sub
 
     ''' <summary>
@@ -36,5 +33,17 @@ Public Class InitialForm
 
     Private Sub PlaysSEMenuItem_Click(sender As Object, e As EventArgs) Handles PlaysSEMenuItem.Click
         Sounds.SoundManager.PlaysSE = PlaysSEMenuItem.Checked
+    End Sub
+
+    Private Sub GameStartButton_Click(sender As Object, e As EventArgs) Handles GameStartButton.Click
+        Dim _nextForm As New SelectOpponentForm
+        FormTransition.Transit(Me, _nextForm)
+    End Sub
+
+    Private Sub openRuleFormButton_Click(sender As Object, e As EventArgs) Handles openRuleFormButton.Click
+        Dim _nextForm As New RuleForm
+        Me.Hide()
+        _nextForm.ShowDialog()
+        Me.Show()
     End Sub
 End Class

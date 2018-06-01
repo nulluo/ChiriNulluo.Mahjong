@@ -49,9 +49,10 @@ Partial Class RuleForm
         Me.Label2.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 9.0!)
         Me.Label2.Location = New System.Drawing.Point(49, 48)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(317, 36)
+        Me.Label2.Size = New System.Drawing.Size(506, 48)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "・上がると５００点もらえます" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "・ツモだけ（自分で引いた牌だけ）で上がると１０００点" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "・その他の役は後述の役一覧を参照してください。"
+        Me.Label2.Text = "・上がると５００点もらえます" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "・ツモだけ（自分で引いた牌だけ）で上がると１０００点" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "・その他の役は後述の役一覧を参照してください。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "・レギュラープリキュア以" &
+    "外のキャラはボーナス牌として毎局ランダムに3種だけ出現します"
         '
         'Label3
         '
