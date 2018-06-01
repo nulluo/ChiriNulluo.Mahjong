@@ -6,6 +6,7 @@
  This software is under development.
  
 # キュアジャン　Ver-0.1.1.22
+3b51966476fa0f3ca960b72b03cebd07680c5941
 
 # 実行方法
  ビルドしたバイナリを任意のディレクトリに置いて、CureJong.exeを実行してください
