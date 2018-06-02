@@ -26,7 +26,7 @@ Public Class HorizontalDiscardedPilePanel
     Public Event TilePicture_Click As EventHandler(Of TilePictureClickEventArgs)
 
     Private Sub ClickTilePicture(sender As Object, e As EventArgs)
-        Dim _index As Integer = sender.tag
+        Dim _index As Integer = CInt(DirectCast(sender, PictureBox).Tag)
         If _index <= Me.DataSource.Count - 1 Then
             RaiseEvent TilePicture_Click(Me, New TilePictureClickEventArgs(_index))
         End If
@@ -34,7 +34,7 @@ Public Class HorizontalDiscardedPilePanel
 
     Public Event TilePictureMouseEnter As EventHandler(Of TilePictureMouseEnterEventArgs)
     Private Sub MouseEnterTilePicture(sender As Object, e As EventArgs)
-        Dim _index As Integer = sender.tag
+        Dim _index As Integer = CInt(DirectCast(sender, PictureBox).Tag)
         If _index <= Me.DataSource.Count - 1 Then
             RaiseEvent TilePictureMouseEnter(sender, New TilePictureMouseEnterEventArgs(_index))
         End If
@@ -42,7 +42,7 @@ Public Class HorizontalDiscardedPilePanel
 
     Public Event TilePictureMouseLeave As EventHandler(Of TilePictureMouseLeaveEventArgs)
     Private Sub MouseLeaveTilePicture(sender As Object, e As EventArgs)
-        Dim _index As Integer = sender.tag
+        Dim _index As Integer = CInt(DirectCast(sender, PictureBox).Tag)
         If _index <= Me.DataSource.Count - 1 Then
             RaiseEvent TilePictureMouseLeave(sender, New TilePictureMouseLeaveEventArgs(_index))
         End If

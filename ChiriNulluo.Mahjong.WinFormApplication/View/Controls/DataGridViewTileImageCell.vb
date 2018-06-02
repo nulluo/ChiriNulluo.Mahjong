@@ -13,7 +13,7 @@ Public Class DataGridViewTileImageCell
     Protected Overrides Function GetFormattedValue(value As Object, rowIndex As Integer, ByRef cellStyle As DataGridViewCellStyle,
                                                    valueTypeConverter As TypeConverter, formattedValueTypeConverter As TypeConverter,
                                                    context As DataGridViewDataErrorContexts) As Object
-        Dim _image As Image = Precure.Tiles.PrecureCharacterSet.GetInstance.TileImages(value)
+        Dim _image As Image = Precure.Tiles.PrecureCharacterSet.GetInstance.TileImages(value.ToString)
         Return _image
 
     End Function

@@ -5,7 +5,7 @@
     <Setting Name="PlaysBGM" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="PlaysSE" Type="System.String" Scope="User">
+    <Setting Name="PlaysSE" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>

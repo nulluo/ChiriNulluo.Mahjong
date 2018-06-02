@@ -137,7 +137,7 @@ Public Class RoundForm
         Dim _nextDraw = Me.Facade.DrawHumanPlayersTile()
         Me.humanPlayerHandPanel.KeepDrawnTileAtDistance()
         'UNIMPLEMENTED: できればrestDrawCountFieldもデータバインドで、自動で残りツモ数が反映されるようにしたいが面倒くさいな…
-        Me.restDrawCountField.Text = Me.HumanPlayer.RestDrawCount
+        Me.restDrawCountField.Text = Me.HumanPlayer.RestDrawCount.ToString
     End Sub
 
     ''' <summary>
@@ -430,14 +430,14 @@ Public Class RoundForm
     ''' </summary>
     Private Sub HumanPlayerHandPanel_TilePictureClick(sender As Object, e As TilePictureClickEventArgs)
         Dim _index As Integer = e.Index
-        Dim _clickedTile As PreCureCharacterTile = Me.HumanPlayer.Hand.MainTiles(e.Index)
+        Dim _clickedTile = DirectCast(Me.HumanPlayer.Hand.MainTiles(e.Index), PreCureCharacterTile)
         Me.DiscardHumanTile(_index)
     End Sub
 
     Private Sub HumanPlayerHandPanel_TilePictureMouseEnter(sender As Object, e As TilePictureMouseEnterEventArgs)
         Dim _index As Integer = e.Index
         Dim _clickedTile As Tile = Me.HumanPlayer.Hand.MainTiles(_index)
-        Me.TileDetailInfoPanel1.Draw(_clickedTile, _index)
+        Me.TileDetailInfoPanel1.Draw(DirectCast(_clickedTile, PreCureCharacterTile), _index)
 
     End Sub
 
@@ -448,7 +448,7 @@ Public Class RoundForm
 
     Private Sub HumanPlayerDiscardedPilePanel_TilePictureMouseEnter(sender As Object, e As TilePictureMouseEnterEventArgs)
         Dim _index As Integer = e.Index
-        Dim _clickedTile As Tile = Me.humanPlayerDiscardedPilePanel.DataSource(_index)
+        Dim _clickedTile = DirectCast(Me.humanPlayerDiscardedPilePanel.DataSource(_index), PreCureCharacterTile)
         Me.TileDetailInfoPanel1.Draw(_clickedTile, _index)
     End Sub
 
@@ -459,7 +459,7 @@ Public Class RoundForm
 
     Private Sub ComPlayerDiscardedPilePanel_TilePictureMouseEnter(sender As Object, e As TilePictureMouseEnterEventArgs)
         Dim _index As Integer = e.Index
-        Dim _clickedTile As Tile = Me.comPlayerDiscardedPilePanel.DataSource(_index)
+        Dim _clickedTile = DirectCast(Me.comPlayerDiscardedPilePanel.DataSource(_index), PreCureCharacterTile)
         Me.TileDetailInfoPanel1.Draw(_clickedTile, _index)
     End Sub
 

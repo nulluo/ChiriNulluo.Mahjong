@@ -83,7 +83,7 @@ Public Class TileSelectWindowForm
             _form.ShowDialog()
             'UNIMPLEMENTED: 可能なら、ここでチーした牌の情報をパラメータremarkにセットする
             LogFactory.GetReplayLogger.Write(My.Resources.IDProcessTypeUA, My.Resources.IDProcessChow,
-                           My.Resources.IDPlayerHuman, String.Empty, _form.SelectedIndex)
+                           My.Resources.IDPlayerHuman, String.Empty, _form.SelectedIndex.ToString)
         End If
         Dim _receiveValue As RevealedTiles = _form.ChoicedPile
         _form.Dispose()

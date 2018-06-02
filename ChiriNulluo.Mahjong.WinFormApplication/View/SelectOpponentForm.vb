@@ -19,7 +19,7 @@ Public Class SelectOpponentForm
     End Sub
 
     Private Function OpponentButton_Click(sender As Object, e As EventArgs) As Form Handles ButtonRegina.Click, ButtonEas.Click, ButtonRiko.Click, ButtonMirai.Click, ButtonKotoha.Click
-        Me.Facade.SetOpponent(sender.name.replace("Button", String.Empty))
+        Me.Facade.SetOpponent(DirectCast(sender, Button).Name.Replace("Button", String.Empty))
 
         Dim _nextForm As Form = Me.Facade.GoToNextForm(Me.ManualModeField.Checked)
         Return Me.GoToNextForm(_nextForm)

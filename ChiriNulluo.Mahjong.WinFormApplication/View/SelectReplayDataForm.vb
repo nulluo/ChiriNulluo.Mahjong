@@ -7,7 +7,7 @@
     End Sub
 
     Private Sub OKButton_Click(sender As Object, e As EventArgs) Handles OKButton.Click
-        Replay.ReplayLogReader.Read(Me.ReplayDataField.SelectedValue)
+        Replay.ReplayLogReader.Read(Me.ReplayDataField.SelectedValue.ToString)
         Dim _nextForm = New ReplayForm()
         FormTransition.Transit(Me, _nextForm)
     End Sub

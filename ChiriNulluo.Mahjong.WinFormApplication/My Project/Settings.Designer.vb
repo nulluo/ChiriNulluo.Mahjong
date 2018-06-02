@@ -69,9 +69,9 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property PlaysSE() As String
+        Public Property PlaysSE() As Boolean
             Get
-                Return CType(Me("PlaysSE"),String)
+                Return CType(Me("PlaysSE"),Boolean)
             End Get
             Set
                 Me("PlaysSE") = value

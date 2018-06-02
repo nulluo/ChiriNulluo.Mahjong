@@ -38,7 +38,7 @@ Public Class HorizontalHandPanel
 
     Public Event TilePictureClick As EventHandler(Of TilePictureClickEventArgs)
     Private Sub ClickTilePicture(sender As Object, e As EventArgs)
-        Dim _index As Integer = sender.tag
+        Dim _index As Integer = CInt(DirectCast(sender, PictureBox).Tag)
         If _index <= Me.DataSource.Count - 1 Then
             RaiseEvent TilePictureClick(Me, New TilePictureClickEventArgs(_index))
         End If
@@ -46,7 +46,7 @@ Public Class HorizontalHandPanel
 
     Public Event TilePictureMouseEnter As EventHandler(Of TilePictureMouseEnterEventArgs)
     Private Sub MouseEnterTilePicture(sender As Object, e As EventArgs)
-        Dim _index As Integer = sender.tag
+        Dim _index As Integer = CInt(DirectCast(sender, PictureBox).Tag)
         If _index <= Me.DataSource.Count - 1 Then
             RaiseEvent TilePictureMouseEnter(sender, New TilePictureMouseEnterEventArgs(_index))
         End If
@@ -54,7 +54,7 @@ Public Class HorizontalHandPanel
 
     Public Event TilePictureMouseLeave As EventHandler(Of TilePictureMouseLeaveEventArgs)
     Private Sub MouseLeaveTilePicture(sender As Object, e As EventArgs)
-        Dim _index As Integer = sender.tag
+        Dim _index As Integer = CInt(DirectCast(sender, PictureBox).Tag)
         If _index <= Me.DataSource.Count - 1 Then
             RaiseEvent TilePictureMouseLeave(sender, New TilePictureMouseLeaveEventArgs(_index))
         End If
@@ -219,8 +219,8 @@ Public Class HorizontalHandPanel
     ''' 牌の裏面を表示する
     ''' </summary>
     ''' <param name="pictureBoxID"></param>
-    Private Sub ShowBackOfTile(pictureBoxID As String)
-        Dim _bmp As Image = My.Resources.ResourceManager.GetObject("TileStoodBack")
+    Private Sub ShowBackOfTile(pictureBoxID As Integer)
+        Dim _bmp As Image = DirectCast(My.Resources.ResourceManager.GetObject("TileStoodBack"), Image)
         Me.TilePictureList(pictureBoxID).Image = _bmp
     End Sub
 

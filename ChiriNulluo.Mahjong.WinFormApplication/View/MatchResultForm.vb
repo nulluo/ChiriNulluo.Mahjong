@@ -6,8 +6,8 @@
         Dim _humanScore As Integer = MatchManagerController.GetInstance.HumanPlayer.Score
         Dim _comScore As Integer = MatchManagerController.GetInstance.COMPlayer.Score
 
-        Me.humanPointField.Text = _humanScore
-        Me.comPointField.Text = _comScore
+        Me.humanPointField.Text = _humanScore.ToString
+        Me.comPointField.Text = _comScore.ToString
 
         If _comScore < _humanScore Then
             'UNIMPLEMENTED:ちゃんとした対戦相手ごとのメッセージを表示する 

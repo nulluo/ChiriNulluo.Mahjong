@@ -130,13 +130,13 @@ Public NotInheritable Class MatchManagerController
 
     Public ReadOnly Property HumanPlayer As Players.HumanPlayer
         Get
-            Return Me.MatchManager.PlayersList(0)
+            Return DirectCast(Me.MatchManager.PlayersList(0), Players.HumanPlayer)
         End Get
     End Property
 
     Public ReadOnly Property COMPlayer As Players.COM.COMPlayer
         Get
-            Return Me.MatchManager.PlayersList(1)
+            Return DirectCast(Me.MatchManager.PlayersList(1), Players.COM.COMPlayer)
         End Get
     End Property
 #End Region

@@ -312,7 +312,7 @@ Public Class ReplayForm
     Private Sub MoveCurrentRowOfDataGridView(LogNoInMatch As String)
         With Me.DataGridView1
             For i As Integer = .CurrentRow.Index To .RowCount - 1
-                If .Item("LogNoInMatchColumn", i).Value = LogNoInMatch Then
+                If .Item("LogNoInMatchColumn", i).Value.ToString = LogNoInMatch Then
                     .CurrentCell = .Item(0, i)
                     Exit For
                 End If

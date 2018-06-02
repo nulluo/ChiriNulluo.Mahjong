@@ -1,6 +1,6 @@
 ﻿Public NotInheritable Class FormTransition
 
-    Private Shared _transiting = False
+    Private Shared _transiting As Boolean = False
     ''' <summary>
     ''' 画面遷移の最中である場合はTrue。そうでない場合はFalse。
     ''' </summary>

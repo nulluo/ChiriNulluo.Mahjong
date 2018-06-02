@@ -65,7 +65,7 @@ Public Class MessageWindowForm
     End Sub
 
     Private Sub ChoiceLabel_Click(sender As Object, e As EventArgs)
-        Me.ChoicedText = sender.text
+        Me.ChoicedText = DirectCast(sender, Label).Text
         Me.Close()
     End Sub
 
@@ -81,8 +81,8 @@ Public Class MessageWindowForm
         For Each message As String In choiceMessage
             _form.AddChoiceMessage(message)
         Next
-        _form.Left = owner.Left + (owner.Width - _form.Width) / 2
-        _form.Top = owner.Top + (owner.Height - _form.Height) / 2
+        _form.Left = owner.Left + CInt((owner.Width - _form.Width) / 2)
+        _form.Top = owner.Top + CInt((owner.Height - _form.Height) / 2)
 
         _form.ShowDialog()
         Dim _receiveValue As String = _form.ChoicedText
@@ -95,13 +95,13 @@ Public Class MessageWindowForm
     End Function
 
     Private Sub ChoiceLabel_MouseEnter(sender As Object, e As EventArgs) Handles ChoiceLabel0.MouseEnter
-        Dim _index As Integer = Integer.Parse(sender.name.subString(11))
+        Dim _index As Integer = Integer.Parse(DirectCast(sender, Label).Name.Substring(11))
         Me.CursorLabelList(_index).Text = "⇒"
 
     End Sub
 
     Private Sub ChoiceLabel_MouseLeave(sender As Object, e As EventArgs) Handles ChoiceLabel0.MouseLeave
-        Dim _index As Integer = Integer.Parse(sender.name.subString(11))
+        Dim _index As Integer = Integer.Parse(DirectCast(sender, Label).Name.Substring(11))
         Me.CursorLabelList(_index).ResetText()
 
     End Sub

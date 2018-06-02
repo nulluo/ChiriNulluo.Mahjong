@@ -59,14 +59,14 @@ Public Class GameParameterSettingForm
 
         'Dim _startTime = DateTime.Now()
 
-        Dim _senderGrid As String = sender.name
-        logger.Trace(" Move button clicked.[Button:" & sender.Name & "]")
+        Dim _senderGrid As String = DirectCast(sender, Button).Name
+        logger.Trace(" Move button clicked.[Button:" & _senderGrid & "]")
 
         Dim _fromGrid As DataGridView
         Dim _toGrid As DataGridView
         Dim _toPile As Pile
 
-        Select Case sender.Name
+        Select Case _senderGrid
             Case Me.moveToHumanHandFromWallButton.Name
                 _fromGrid = Me.wallPileGrid
                 _toGrid = Me.humanHandGrid
@@ -105,7 +105,7 @@ Public Class GameParameterSettingForm
             Dim _selectedTile = DirectCast(_gridRow.DataBoundItem, Tile)
 
             'UNIMPLEMENTED: とりあえず実装できているのだが、WallPileやHandが保有するList(Of Tile)のAddやRemoveを直に触っているのが密結合すぎな気がする
-            _fromGrid.DataSource.Remove(_selectedTile)
+            DirectCast(_fromGrid.DataSource, Pile).Remove(_selectedTile)
             _toPile.Add(_selectedTile)
         Next
 
@@ -161,8 +161,8 @@ Public Class GameParameterSettingForm
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub moveUpOrDownButtonButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles moveUpButton.Click, moveDownButton.Click
-        Dim _senderGrid As String = sender.name
-        logger.Trace(" Move up/down button clicked.[Button:" & sender.Name & "]")
+        Dim _senderGrid As String = DirectCast(sender, Button).Name
+        logger.Trace(" Move up/down button clicked.[Button:" & _senderGrid & "]")
 
 
         Dim _direction As Integer
@@ -300,17 +300,17 @@ Public Class GameParameterSettingForm
 
     Private Sub Grid_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles wallPileGrid.ColumnHeaderMouseClick,
                                                                             humanHandGrid.ColumnHeaderMouseClick, comHandGrid.ColumnHeaderMouseClick
-        Dim _senderGrid As String = sender.name
+        Dim _senderGrid As String = DirectCast(sender, Button).Name
         Dim _clickedColumn As DataGridViewColumn = DirectCast(sender, DataGridView).Columns(e.ColumnIndex)
-        logger.Trace(" Column header clicked.[DataGridView:" & sender.Name & ", Column:" & _clickedColumn.Name & "]")
+        logger.Trace(" Column header clicked.[DataGridView:" & _senderGrid & ", Column:" & _clickedColumn.Name & "]")
 
     End Sub
 
     Private Sub Grid_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles wallPileGrid.RowHeaderMouseClick,
                                                                             humanHandGrid.RowHeaderMouseClick, comHandGrid.RowHeaderMouseClick
-        Dim _senderGrid As String = sender.name
+        Dim _senderGrid As String = DirectCast(sender, Button).Name
 
-        Dim _message As String = " Row header clicked.[DataGridView:" & sender.Name & ", Row:" & e.RowIndex.ToString("00")
+        Dim _message As String = " Row header clicked.[DataGridView:" & _senderGrid & ", Row:" & e.RowIndex.ToString("00")
 
         '修飾子キー(Shift、Ctrl)が押されているか
         If (Control.ModifierKeys And Keys.Shift) = Keys.Shift Then

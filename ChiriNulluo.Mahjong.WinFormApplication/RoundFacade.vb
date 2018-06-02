@@ -18,7 +18,7 @@ Public Class RoundFacade
 
 #End Region
 
-    Public Sub New(humanHand As Hand, comHand As Hand, wallPile As WallPile, View As Form)
+    Public Sub New(humanHand As Hand, comHand As Hand, wallPile As WallPile, View As RoundForm)
 #If DEBUG Then
 
         '手動で手牌を決定済みの場合はその通りに配牌する
@@ -35,9 +35,9 @@ Public Class RoundFacade
 #End If
         For Each _player As Core.Players.Player In MatchManagerController.GetInstance.PlayersList
             If TypeOf _player Is Core.Players.HumanPlayer Then
-                HumanPlayer = _player
+                HumanPlayer = DirectCast(_player, Core.Players.HumanPlayer)
             Else
-                COMPlayer = _player
+                COMPlayer = DirectCast(_player, Core.Players.COM.COMPlayer)
             End If
         Next
 

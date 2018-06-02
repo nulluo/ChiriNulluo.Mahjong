@@ -123,7 +123,7 @@ Public Class PointForm
 
         '合計点を表示
         Dim _query = From el In _table.AsEnumerable
-        Dim _totalPoint = (_query.Sum(Function(el) el("Point")))
+        Dim _totalPoint = (_query.Sum(Function(el) CInt(el("Point"))))
 
         Me.pointField.Text = _totalPoint.ToString
 
@@ -164,7 +164,7 @@ Public Class PointForm
 
     Private Sub NextRoundButton_Click(sender As Object, e As EventArgs)
         Logging.LogFactory.GetReplayLogger.Write(My.Resources.IDProcessTypeUA,
-                            My.Resources.IDProcessNextRoundButton, My.Resources.IDPlayerHuman, String.Empty, sender.name)
+                            My.Resources.IDProcessNextRoundButton, My.Resources.IDPlayerHuman, String.Empty, DirectCast(sender, Button).Name)
         Me.OpenNextForm(Nothing, Nothing, Nothing)
     End Sub
 
