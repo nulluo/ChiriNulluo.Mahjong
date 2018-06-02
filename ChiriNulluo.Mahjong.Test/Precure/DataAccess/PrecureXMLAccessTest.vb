@@ -50,7 +50,7 @@ Namespace Precure.DataAccess
         <Test()>
         Public Sub TestGetCharacterDataFromXML()
             Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance(Path.Combine(My.Application.Info.DirectoryPath, "TestPrejongConfigSimple.xml"))
-            Dim _precureList As List(Of PreCureCharacterTile) = _xmlAccess.GetCharacterDataFromXML(Nothing, Nothing, Nothing, True)
+            Dim _precureList As List(Of PreCureCharacterTile) = _xmlAccess.GetCharacterDataFromXML(Nothing, Nothing, Nothing, Nothing, True)
 
             Assert.AreEqual(4, _precureList.Count)
 
@@ -74,7 +74,7 @@ Namespace Precure.DataAccess
             Assert.AreEqual(3, _precureList(3).Number)
             Assert.AreEqual("霧生薫", _precureList(3).Name)
 
-            _precureList = _xmlAccess.GetCharacterDataFromXML("02", Nothing, Nothing, True)
+            _precureList = _xmlAccess.GetCharacterDataFromXML("02", Nothing, Nothing, Nothing, True)
 
             Assert.AreEqual(3, _precureList.Count)
 
@@ -93,7 +93,7 @@ Namespace Precure.DataAccess
             Assert.AreEqual(3, _precureList(2).Number)
             Assert.AreEqual("霧生薫", _precureList(2).Name)
 
-            _precureList = _xmlAccess.GetCharacterDataFromXML(Nothing, Nothing, Nothing)
+            _precureList = _xmlAccess.GetCharacterDataFromXML(Nothing, Nothing, Nothing, Nothing)
 
             Assert.AreEqual(2, _precureList.Count)
 
@@ -112,7 +112,7 @@ Namespace Precure.DataAccess
         <Test()>
         Public Sub TestGetRegularPrecureDataFromXML()
             Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance(Path.Combine(My.Application.Info.DirectoryPath, "TestPrejongConfigSimple.xml"))
-            Dim _precureList As List(Of PreCureCharacterTile) = _xmlAccess.GetRegularPrecureDataFromXML(Nothing, Nothing, Nothing)
+            Dim _precureList As List(Of PreCureCharacterTile) = _xmlAccess.GetRegularPrecureDataFromXML(Nothing, Nothing, Nothing, Nothing)
 
             Assert.AreEqual(2, _precureList.Count)
 
@@ -126,7 +126,7 @@ Namespace Precure.DataAccess
             Assert.AreEqual(6, _precureList(1).Number)
             Assert.AreEqual("キラ星シエル", _precureList(1).Name)
 
-            _precureList = _xmlAccess.GetRegularPrecureDataFromXML("02", Nothing, Nothing)
+            _precureList = _xmlAccess.GetRegularPrecureDataFromXML("02", Nothing, Nothing, Nothing)
 
             _precureList.ForEach(Sub(x) Assert.AreEqual("美翔舞", x.Name))
 
@@ -137,7 +137,7 @@ Namespace Precure.DataAccess
         <Test()>
         Public Sub TestGetSpecialCharacterDataFromXML()
             Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance(Path.Combine(My.Application.Info.DirectoryPath, "TestPrejongConfigSimple.xml"))
-            Dim _precureList As List(Of PreCureCharacterTile) = _xmlAccess.GetSpecialCharacterDataFromXML(Nothing, Nothing, Nothing)
+            Dim _precureList As List(Of PreCureCharacterTile) = _xmlAccess.GetSpecialCharacterDataFromXML(Nothing, Nothing, Nothing, Nothing)
 
             Assert.AreEqual(2, _precureList.Count)
 
@@ -151,7 +151,7 @@ Namespace Precure.DataAccess
             Assert.AreEqual(3, _precureList(1).Number)
             Assert.AreEqual("霧生薫", _precureList(1).Name)
 
-            _precureList = _xmlAccess.GetSpecialCharacterDataFromXML(Nothing, "03", Nothing)
+            _precureList = _xmlAccess.GetSpecialCharacterDataFromXML(Nothing, "03", Nothing, Nothing)
             _precureList.ForEach(Sub(x) Assert.AreEqual("霧生薫", x.Name))
 
         End Sub

@@ -7,266 +7,319 @@
       <TileSuitID>01</TileSuitID>
       <Number>01</Number>
       <Name>美墨なぎさ</Name>
+      <CureName>キュアブラック</CureName>
     </Precure>
     <Precure>
       <TileSuitID>01</TileSuitID>
       <Number>02</Number>
       <Name>雪城ほのか</Name>
+      <CureName>キュアホワイト</CureName>
     </Precure>
     <Precure>
       <TileSuitID>01</TileSuitID>
       <Number>03</Number>
       <Name>九条ひかり</Name>
+      <CureName>シャイニールミナス</CureName>
     </Precure>
     <Precure>
       <TileSuitID>02</TileSuitID>
       <Number>01</Number>
       <Name>日向咲</Name>
+      <CureName>キュアブルーム</CureName>
     </Precure>
     <Precure>
       <TileSuitID>02</TileSuitID>
       <Number>02</Number>
       <Name>美翔舞</Name>
+      <CureName>キュアイーグレット</CureName>
     </Precure>
     <Precure>
       <TileSuitID>03</TileSuitID>
       <Number>01</Number>
       <Name>夢原のぞみ</Name>
+      <CureName>キュアドリーム</CureName>
     </Precure>
     <Precure>
       <TileSuitID>03</TileSuitID>
       <Number>02</Number>
       <Name>夏木りん</Name>
+      <CureName>キュアルージュ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>03</TileSuitID>
       <Number>03</Number>
       <Name>春日野うらら</Name>
+      <CureName>キュアレモネード</CureName>
     </Precure>
     <Precure>
       <TileSuitID>03</TileSuitID>
       <Number>04</Number>
       <Name>秋元こまち</Name>
+      <CureName>キュアミント</CureName>
     </Precure>
     <Precure>
       <TileSuitID>03</TileSuitID>
       <Number>05</Number>
       <Name>水無月かれん</Name>
+      <CureName>キュアアクア</CureName>
     </Precure>
     <Precure>
       <TileSuitID>03</TileSuitID>
       <Number>06</Number>
       <Name>美々野くるみ</Name>
+      <CureName>ミルキィローズ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>04</TileSuitID>
       <Number>01</Number>
       <Name>桃園ラブ</Name>
+      <CureName>キュアピーチ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>04</TileSuitID>
       <Number>02</Number>
       <Name>蒼乃美希</Name>
+      <CureName>キュアベリー</CureName>
     </Precure>
     <Precure>
       <TileSuitID>04</TileSuitID>
       <Number>03</Number>
       <Name>山吹祈里</Name>
+      <CureName>キュアパイン</CureName>
     </Precure>
     <Precure>
       <TileSuitID>04</TileSuitID>
       <Number>04</Number>
       <Name>東せつな</Name>
+      <CureName>キュアパッション</CureName>
     </Precure>
     <Precure>
       <TileSuitID>05</TileSuitID>
       <Number>01</Number>
       <Name>花咲つぼみ</Name>
+      <CureName>キュアブロッサム</CureName>
     </Precure>
     <Precure>
       <TileSuitID>05</TileSuitID>
       <Number>02</Number>
       <Name>来海えりか</Name>
+      <CureName>キュアマリン</CureName>
     </Precure>
     <Precure>
       <TileSuitID>05</TileSuitID>
       <Number>03</Number>
       <Name>明堂院いつき</Name>
+      <CureName>キュアサンシャイン</CureName>
     </Precure>
     <Precure>
       <TileSuitID>05</TileSuitID>
       <Number>04</Number>
       <Name>月影ゆり</Name>
+      <CureName>キュアムーンライト</CureName>
     </Precure>
     <Precure>
       <TileSuitID>06</TileSuitID>
       <Number>01</Number>
       <Name>北条響</Name>
+      <CureName>キュアメロディ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>06</TileSuitID>
       <Number>02</Number>
       <Name>南野奏</Name>
+      <CureName>キュアリズム</CureName>
     </Precure>
     <Precure>
       <TileSuitID>06</TileSuitID>
       <Number>03</Number>
       <Name>黒川エレン</Name>
+      <CureName>キュアビート</CureName>
     </Precure>
     <Precure>
       <TileSuitID>06</TileSuitID>
       <Number>04</Number>
       <Name>調辺アコ</Name>
+      <CureName>キュアミューズ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>07</TileSuitID>
       <Number>01</Number>
       <Name>星空みゆき</Name>
+      <CureName>キュアハッピー</CureName>
     </Precure>
     <Precure>
       <TileSuitID>07</TileSuitID>
       <Number>02</Number>
       <Name>日野あかね</Name>
+      <CureName>キュアサニー</CureName>
     </Precure>
     <Precure>
       <TileSuitID>07</TileSuitID>
       <Number>03</Number>
       <Name>黄瀬やよい</Name>
+      <CureName>キュアピース</CureName>
     </Precure>
     <Precure>
       <TileSuitID>07</TileSuitID>
       <Number>04</Number>
       <Name>緑川なお</Name>
+      <CureName>キュアマーチ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>07</TileSuitID>
       <Number>05</Number>
       <Name>青木れいか</Name>
+      <CureName>キュアビューティ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>08</TileSuitID>
       <Number>01</Number>
       <Name>相田マナ</Name>
+      <CureName>キュアハート</CureName>
     </Precure>
     <Precure>
       <TileSuitID>08</TileSuitID>
       <Number>02</Number>
       <Name>菱川六花</Name>
+      <CureName>キュアダイヤモンド</CureName>
     </Precure>
     <Precure>
       <TileSuitID>08</TileSuitID>
       <Number>03</Number>
       <Name>四葉ありす</Name>
+      <CureName>キュアロゼッタ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>08</TileSuitID>
       <Number>04</Number>
       <Name>剣崎真琴</Name>
+      <CureName>キュアソード</CureName>
     </Precure>
     <Precure>
       <TileSuitID>08</TileSuitID>
       <Number>05</Number>
       <Name>円亜久里</Name>
+      <CureName>キュアエース</CureName>
     </Precure>
     <Precure>
       <TileSuitID>09</TileSuitID>
       <Number>01</Number>
       <Name>愛乃めぐみ</Name>
+      <CureName>キュアラブリー</CureName>
     </Precure>
     <Precure>
       <TileSuitID>09</TileSuitID>
       <Number>02</Number>
       <Name>白雪ひめ</Name>
+      <CureName>キュアプリンセス</CureName>
     </Precure>
     <Precure>
       <TileSuitID>09</TileSuitID>
       <Number>03</Number>
       <Name>大森ゆうこ</Name>
+      <CureName>キュアハニー</CureName>
     </Precure>
     <Precure>
       <TileSuitID>09</TileSuitID>
       <Number>04</Number>
       <Name>氷川いおな</Name>
+      <CureName>キュアフォーチュン</CureName>
     </Precure>
     <Precure>
       <TileSuitID>10</TileSuitID>
       <Number>01</Number>
       <Name>春野はるか</Name>
+      <CureName>キュアフローラ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>10</TileSuitID>
       <Number>02</Number>
       <Name>海藤みなみ</Name>
+      <CureName>キュアマーメイド</CureName>
     </Precure>
     <Precure>
       <TileSuitID>10</TileSuitID>
       <Number>03</Number>
       <Name>天ノ川きらら</Name>
+      <CureName>キュアトゥインクル</CureName>
     </Precure>
     <Precure>
       <TileSuitID>10</TileSuitID>
       <Number>04</Number>
       <Name>紅城トワ</Name>
+      <CureName>キュアスカーレット</CureName>
     </Precure>
     <Precure>
       <TileSuitID>11</TileSuitID>
       <Number>01</Number>
       <Name>朝日奈みらい</Name>
+      <CureName>キュアミラクル</CureName>
     </Precure>
     <Precure>
       <TileSuitID>11</TileSuitID>
       <Number>02</Number>
       <Name>十六夜リコ</Name>
+      <CureName>キュアマジカル</CureName>
     </Precure>
     <Precure>
       <TileSuitID>11</TileSuitID>
       <Number>03</Number>
       <Name>花海ことは</Name>
+      <CureName>キュアフェリーチェ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>12</TileSuitID>
       <Number>01</Number>
       <Name>宇佐美いちか</Name>
+      <CureName>キュアホイップ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>12</TileSuitID>
       <Number>02</Number>
       <Name>有栖川ひまり</Name>
+      <CureName>キュアカスタード</CureName>
     </Precure>
     <Precure>
       <TileSuitID>12</TileSuitID>
       <Number>03</Number>
       <Name>立神あおい</Name>
+      <CureName>キュアジェラート</CureName>
     </Precure>
     <Precure>
       <TileSuitID>12</TileSuitID>
       <Number>04</Number>
       <Name>琴爪ゆかり</Name>
+      <CureName>キュアマカロン</CureName>
     </Precure>
     <Precure>
       <TileSuitID>12</TileSuitID>
       <Number>05</Number>
       <Name>剣城あきら</Name>
+      <CureName>キュアショコラ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>12</TileSuitID>
       <Number>06</Number>
       <Name>キラ星シエル</Name>
+      <CureName>キュアパルフェ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>13</TileSuitID>
       <Number>01</Number>
       <Name>野乃はな</Name>
+      <CureName>キュアパルフェ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>13</TileSuitID>
       <Number>02</Number>
       <Name>薬師寺さあや</Name>
+      <CureName>キュアアンジュ</CureName>
     </Precure>
     <Precure>
       <TileSuitID>13</TileSuitID>
       <Number>03</Number>
       <Name>輝木ほまれ</Name>
+      <CureName>キュアエトワール</CureName>
     </Precure>
   </Precures>
   <SpecialCharacters>

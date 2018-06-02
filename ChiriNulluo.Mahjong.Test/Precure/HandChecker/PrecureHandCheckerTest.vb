@@ -53,7 +53,7 @@ Namespace Precure.HandChecker
         <TestCase(True, "0101", "0101", "0102", "0102", "0103", "0103", "0103", "0103", "0103", "0902", "0902", "0902", "0801", "0801")> '0103が5枚あるアガリ(特殊能力によって発生し得る)
         Public Sub TestIsCompletedIfTargetTileAdded(expectedValue As Boolean, targetTileID As String, ParamArray precureIDs As String())
             Me.MakeHand(precureIDs)
-            Dim _targetTile As New PreCureCharacterTile(targetTileID, "")
+            Dim _targetTile As New PreCureCharacterTile(targetTileID, String.Empty, String.Empty)
             Assert.AreEqual(expectedValue, New PrecureHandChecker(Me._roundManager.PlayersList(0).Hand).IsCompletedIfTargetTileAdded(_targetTile))
         End Sub
 
@@ -82,7 +82,7 @@ Namespace Precure.HandChecker
                 'もし指定したIDの牌が山に残っていなければ、強制的に牌のモチーフを上書きして取得する。
                 If _pickedTile Is Nothing Then
                     _pickedTile = .WallPile.PopNextDraw()
-                    _pickedTile = New PreCureCharacterTile(id, "")
+                    _pickedTile = New PreCureCharacterTile(id, String.Empty, String.Empty)
                 End If
 
                 .AddTile(_pickedTile, _playersHand.MainTiles)

@@ -82,7 +82,7 @@ Namespace Core.Yaku
                 'もし指定したIDの牌が山に残っていなければ、強制的に牌のモチーフを上書きして取得する。
                 If _pickedTile Is Nothing Then
                     _pickedTile = .WallPile.PopNextDraw()
-                    _pickedTile = New PreCureCharacterTile(id, "")
+                    _pickedTile = New PreCureCharacterTile(id, String.Empty, String.Empty)
                 End If
 
                 .AddTile(_pickedTile, _playersHand.MainTiles)

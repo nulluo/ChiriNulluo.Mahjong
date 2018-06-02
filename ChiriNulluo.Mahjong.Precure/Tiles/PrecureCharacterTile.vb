@@ -5,18 +5,20 @@ Namespace Tiles
     Public Class PreCureCharacterTile
         Inherits Tile
 
-        Public Sub New(precureID As String, name As String)
+        Public Sub New(precureID As String, name As String, cureName As String)
             Me.ID = precureID
             Me.Name = name
             Me.SuitID = Left(precureID, 2)
             Me.Number = CInt(Right(precureID, 2))
+            Me.CureName = cureName
         End Sub
 
-        Public Sub New(suitID As String, number As String, name As String)
+        Public Sub New(suitID As String, number As String, name As String, cureName As String)
             Me.ID = suitID & number
             Me.Name = name
             Me.SuitID = suitID
             Me.Number = CInt(number)
+            Me.CureName = cureName
         End Sub
 
         'UNIMPLEMENTED：この実装には問題がある。今はプリキュアしか牌がないからよいが、他のタイプの牌が混ざると、
@@ -28,16 +30,17 @@ Namespace Tiles
 
         Public Property SuitID As String
         Public Property Number As Integer
+        Public Property CureName As String
 
         Public ReadOnly Property Image As System.Drawing.Bitmap
             Get
-                Return My.Resources.ResourceManager.GetObject(String.Format("Precure{0:0000}", Me.ID))
+                Return DirectCast(My.Resources.ResourceManager.GetObject(String.Format("Precure{0:0000}", Me.ID)), System.Drawing.Bitmap)
             End Get
         End Property
 
         Public ReadOnly Property EnlargedImage As System.Drawing.Bitmap
             Get
-                Return My.Resources.ResourceManager.GetObject(String.Format("TileEnlarged{0:0000}", Me.ID))
+                Return DirectCast(My.Resources.ResourceManager.GetObject(String.Format("TileEnlarged{0:0000}", Me.ID)), System.Drawing.Bitmap)
             End Get
         End Property
 

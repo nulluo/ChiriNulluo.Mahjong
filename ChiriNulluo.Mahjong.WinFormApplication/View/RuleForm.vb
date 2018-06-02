@@ -21,7 +21,7 @@ Public Class RuleForm
 
                 Dim _tiles As New Pile
                 For Each _tile As String In .TileSet
-                    _tiles.Add(New PreCureCharacterTile(_tile, String.Empty))
+                    _tiles.Add(New PreCureCharacterTile(_tile, String.Empty, String.Empty))
                 Next
 
                 'UNIMPLEMENTED: 説明文の多言語化

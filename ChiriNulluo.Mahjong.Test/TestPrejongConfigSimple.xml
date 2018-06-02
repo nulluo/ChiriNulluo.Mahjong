@@ -7,11 +7,13 @@
       <TileSuitID>02</TileSuitID>
       <Number>02</Number>
       <Name>美翔舞</Name>
+      <CureName>キュアイーグレット</CureName>
     </Precure>
     <Precure>
       <TileSuitID>12</TileSuitID>
       <Number>06</Number>
       <Name>キラ星シエル</Name>
+      <CureName>キュアパルフェ</CureName>
     </Precure>
   </Precures>
   <SpecialCharacters>

@@ -25,7 +25,8 @@ Public Class TileDetailInfoPanel
 
         Dim _suit As PrecureSuit = _xmlAccess.GetTileSuit(tile.SuitID)
 
-        Me.PrecureNameLabel.Text = tile.Name
+        Me.NameLabel.Text = tile.Name
+        Me.CureNameLabel.Text = tile.CureName
         Me.SuitNameLabel.Text = _suit.Name
         Me.NumberLabel.Text = tile.Number & "/" & _suit.TotalTilesCount
 
@@ -39,7 +40,7 @@ Public Class TileDetailInfoPanel
     ''' パネルを消去する。
     ''' </summary>
     Public Sub [Erase]()
-        Me.PrecureNameLabel.Text = String.Empty
+        Me.NameLabel.Text = String.Empty
         Me.SuitNameLabel.Text = String.Empty
         Me.NumberLabel.Text = String.Empty
         Me.EnlargedImage.Image = Nothing

@@ -23,10 +23,10 @@ Partial Class TileDetailInfoPanel
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.EnlargedImage = New System.Windows.Forms.PictureBox()
-        Me.PrecureNameLabel = New System.Windows.Forms.Label()
+        Me.NameLabel = New System.Windows.Forms.Label()
         Me.NumberLabel = New System.Windows.Forms.Label()
         Me.SuitNameLabel = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.CureNameLabel = New System.Windows.Forms.Label()
         CType(Me.EnlargedImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,15 +40,15 @@ Partial Class TileDetailInfoPanel
         Me.EnlargedImage.TabIndex = 0
         Me.EnlargedImage.TabStop = False
         '
-        'PrecureNameLabel
+        'NameLabel
         '
-        Me.PrecureNameLabel.AutoSize = True
-        Me.PrecureNameLabel.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.PrecureNameLabel.Location = New System.Drawing.Point(154, 43)
-        Me.PrecureNameLabel.Name = "PrecureNameLabel"
-        Me.PrecureNameLabel.Size = New System.Drawing.Size(84, 21)
-        Me.PrecureNameLabel.TabIndex = 1
-        Me.PrecureNameLabel.Text = "Label1"
+        Me.NameLabel.AutoSize = True
+        Me.NameLabel.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.NameLabel.Location = New System.Drawing.Point(154, 8)
+        Me.NameLabel.Name = "NameLabel"
+        Me.NameLabel.Size = New System.Drawing.Size(90, 21)
+        Me.NameLabel.TabIndex = 1
+        Me.NameLabel.Text = "Label1"
         '
         'NumberLabel
         '
@@ -71,15 +71,15 @@ Partial Class TileDetailInfoPanel
         Me.SuitNameLabel.TabIndex = 1
         Me.SuitNameLabel.Text = "Label1"
         '
-        'Label1
+        'CureNameLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label1.Location = New System.Drawing.Point(154, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 21)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Label1"
+        Me.CureNameLabel.AutoSize = True
+        Me.CureNameLabel.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.CureNameLabel.Location = New System.Drawing.Point(153, 41)
+        Me.CureNameLabel.Name = "CureNameLabel"
+        Me.CureNameLabel.Size = New System.Drawing.Size(84, 21)
+        Me.CureNameLabel.TabIndex = 1
+        Me.CureNameLabel.Text = "Label1"
         '
         'TileDetailInfoPanel
         '
@@ -88,8 +88,8 @@ Partial Class TileDetailInfoPanel
         Me.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Controls.Add(Me.NumberLabel)
         Me.Controls.Add(Me.SuitNameLabel)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PrecureNameLabel)
+        Me.Controls.Add(Me.CureNameLabel)
+        Me.Controls.Add(Me.NameLabel)
         Me.Controls.Add(Me.EnlargedImage)
         Me.Name = "TileDetailInfoPanel"
         Me.Size = New System.Drawing.Size(430, 180)
@@ -100,8 +100,8 @@ Partial Class TileDetailInfoPanel
     End Sub
 
     Friend WithEvents EnlargedImage As PictureBox
-    Friend WithEvents PrecureNameLabel As Label
+    Friend WithEvents NameLabel As Label
     Friend WithEvents NumberLabel As Label
     Friend WithEvents SuitNameLabel As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents CureNameLabel As Label
 End Class

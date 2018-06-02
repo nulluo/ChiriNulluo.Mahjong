@@ -338,17 +338,17 @@ Public Class GameParameterSettingForm
     ''' </summary>
     Private Sub MakeFixHandAndWall()
         For i As Integer = 0 To 200 - 13 - 13 - 1
-            Dim _precure As New PreCureCharacterTile("01", "01", "美墨なぎさ")
+            Dim _precure As New PreCureCharacterTile("01", "01", "美墨なぎさ", "キュアブラック")
             Me.WallPile.Add(_precure)
         Next
 
         For i As Integer = 0 To 13 - 1
-            Dim _precure As New PreCureCharacterTile("01", "02", "雪城ほのか")
+            Dim _precure As New PreCureCharacterTile("01", "02", "雪城ほのか", "キュアホワイト")
             Me.HumanHand.DrawTile(_precure)
         Next
 
         For i As Integer = 0 To 13 - 1
-            Dim _precure As New PreCureCharacterTile("01", "03", "九条ひかり")
+            Dim _precure As New PreCureCharacterTile("01", "03", "九条ひかり", "シャイニールミナス")
             Me.COMHand.DrawTile(_precure)
         Next
     End Sub

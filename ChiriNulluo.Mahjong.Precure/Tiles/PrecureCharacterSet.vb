@@ -18,10 +18,10 @@ Namespace Tiles
         Private Sub New()
             Dim _dataAccess As DataAccess.PrecureXMLAccess = DataAccess.PrecureXMLAccess.GetInstance()
 
-            _regularPrecureTilesList = _dataAccess.GetRegularPrecureDataFromXML(Nothing, Nothing, Nothing)
-            _specialCharacterTilesList = _dataAccess.GetSpecialCharacterDataFromXML(Nothing, Nothing, Nothing)
+            _regularPrecureTilesList = _dataAccess.GetRegularPrecureDataFromXML(Nothing, Nothing, Nothing, Nothing)
+            _specialCharacterTilesList = _dataAccess.GetSpecialCharacterDataFromXML(Nothing, Nothing, Nothing, Nothing)
 
-            Me._allCharacterTilesList = _dataAccess.GetCharacterDataFromXML(Nothing, Nothing, Nothing, True)
+            Me._allCharacterTilesList = _dataAccess.GetCharacterDataFromXML(Nothing, Nothing, Nothing, Nothing, True)
             Me.AllCharacterTilesIDList.ForEach(Sub(x) TileImages.Add(x,
                    DirectCast(My.Resources.ResourceManager.GetObject(String.Format("Precure{0:0000}", x)),
                    System.Drawing.Bitmap)))
@@ -44,10 +44,10 @@ Namespace Tiles
             Me._currentRoundSpecialCharacterTilesList = New List(Of PreCureCharacterTile)
 
             '牌1種ごとに4枚の牌を追加する
-            _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing)
-            _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing)
-            _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing)
-            _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing)
+            _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
+            _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
+            _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
+            _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
 
 
             Dim _random As New System.Random()
@@ -61,10 +61,10 @@ Namespace Tiles
 
                 If Not Me.CurrentRoundTotalTilesIDList.Contains(_item.ID) Then
                     i += 1
-                    Dim _item0 = New PreCureCharacterTile(_item.ID, _item.Name)
-                    Dim _item1 = New PreCureCharacterTile(_item.ID, _item.Name)
-                    Dim _item2 = New PreCureCharacterTile(_item.ID, _item.Name)
-                    Dim _item3 = New PreCureCharacterTile(_item.ID, _item.Name)
+                    Dim _item0 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName)
+                    Dim _item1 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName)
+                    Dim _item2 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName)
+                    Dim _item3 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName)
 
                     With _currentRoundTotalTilesList
                         .Add(_item0)
@@ -173,7 +173,7 @@ Namespace Tiles
         ''' <returns></returns>
         Public Function GetTileDefinition(id As String) As PreCureCharacterTile
             Dim _dataAccess As DataAccess.PrecureXMLAccess = DataAccess.PrecureXMLAccess.GetInstance()
-            Dim _precures As List(Of PreCureCharacterTile) = _dataAccess.GetCharacterDataFromXML(Left(id, 2), Right(id, 2), Nothing, True)
+            Dim _precures As List(Of PreCureCharacterTile) = _dataAccess.GetCharacterDataFromXML(Left(id, 2), Right(id, 2), Nothing, Nothing, True)
 
             If _precures.Count > 0 Then
                 Return _precures(0)

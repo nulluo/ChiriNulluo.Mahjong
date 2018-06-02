@@ -30,7 +30,7 @@ Namespace HandChecker
             With Me.NumsPerPrecureList
                 For Each _id As String In .Keys
                     For i As Integer = 0 To .Item(_id) - 1
-                        Dim _tile As New PreCureCharacterTile(_id, "")
+                        Dim _tile As New PreCureCharacterTile(_id, String.Empty, String.Empty)
                         Me.Hand.DrawTile(_tile)
                     Next
                 Next
@@ -195,7 +195,7 @@ Namespace HandChecker
         ''' <param name="i">牌種を示す0から始まる連番</param>
         ''' <param name="restNumPerPrecure">現在の牌種別残り枚数</param>
         ''' <returns>指定した牌を起点とする3牌が順子候補になれるかどうかを表す真理値。</returns>
-        Private Function CanBeStartOfChow(i As Integer, restNumPerPrecure As SortedList(Of String, Integer))
+        Private Function CanBeStartOfChow(i As Integer, restNumPerPrecure As SortedList(Of String, Integer)) As Boolean
             With restNumPerPrecure
                 'UNIMPLEMENTED：限界値（iのMax）分析すること
                 If i + 2 <= .Count - 1 Then
@@ -422,7 +422,7 @@ Namespace HandChecker
         ''' <param name="id1"></param>
         ''' <param name="id2"></param>
         ''' <returns></returns>
-        Private Function IsAllTileSameSuit(id0 As String, id1 As String, id2 As String)
+        Private Function IsAllTileSameSuit(id0 As String, id1 As String, id2 As String) As Boolean
             Dim _suit0 As String = id0.Substring(0, 2)
             Dim _suit1 As String = id1.Substring(0, 2)
             Dim _suit2 As String = id2.Substring(0, 2)

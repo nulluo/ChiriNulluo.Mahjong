@@ -63,22 +63,22 @@ Namespace DataAccess
         ''' 全キャラクター牌情報(正式プリキュア牌、特殊キャラ牌両方を含む)から条件に一致する牌情報を取得し、Listに追加するメソッドを定義します。
         ''' </summary>
         Public Sub FillCharacterDataFromXML(characterList As List(Of PreCureCharacterTile),
-                                           seriesID As String, number As String, name As String, Optional includesSpecialCharacter As Boolean = False)
+                                           seriesID As String, number As String, name As String, cureName As String, Optional includesSpecialCharacter As Boolean = False)
 
-            Me.GetCharacterDataFromXML(seriesID, number, name, includesSpecialCharacter).ForEach(Sub(x) characterList.Add(x))
+            Me.GetCharacterDataFromXML(seriesID, number, name, cureName, includesSpecialCharacter).ForEach(Sub(x) characterList.Add(x))
         End Sub
 
         ''' <summary>
         ''' 全キャラクター牌情報(正式プリキュア牌、特殊キャラ牌両方を含む)から条件に一致する牌を取得する メソッドを定義します。
         ''' </summary>
         ''' <returns>取得した <see cref="DataTable"/> 。</returns>
-        Public Function GetCharacterDataFromXML(seriesID As String, number As String, name As String, Optional includesSpecialCharacter As Boolean = False) As List(Of PreCureCharacterTile)
+        Public Function GetCharacterDataFromXML(seriesID As String, number As String, name As String, cureName As String, Optional includesSpecialCharacter As Boolean = False) As List(Of PreCureCharacterTile)
             Dim _precureList As New List(Of PreCureCharacterTile)
 
-            Me.FillRegularPrecureDataFromXML(_precureList, seriesID, number, name)
+            Me.FillRegularPrecureDataFromXML(_precureList, seriesID, number, name, cureName)
 
             If includesSpecialCharacter Then
-                Me.FillSpecialCharacterDataFromXML(_precureList, seriesID, number, name)
+                Me.FillSpecialCharacterDataFromXML(_precureList, seriesID, number, name, cureName)
             End If
 
             Return _precureList
@@ -92,8 +92,8 @@ Namespace DataAccess
         ''' <param name="number"></param>
         ''' <param name="name"></param>
         Public Sub FillRegularPrecureDataFromXML(tileList As List(Of PreCureCharacterTile),
-                           seriesID As String, number As String, name As String)
-            Me.GetRegularPrecureDataFromXML(seriesID, number, name).ForEach(Sub(x) tileList.Add(x))
+                           seriesID As String, number As String, name As String, cureName As String)
+            Me.GetRegularPrecureDataFromXML(seriesID, number, name, cureName).ForEach(Sub(x) tileList.Add(x))
         End Sub
 
         ''' <summary>
@@ -103,7 +103,7 @@ Namespace DataAccess
         ''' <param name="number"></param>
         ''' <param name="name"></param>
         ''' <returns></returns>
-        Public Function GetRegularPrecureDataFromXML(seriesID As String, number As String, name As String) As List(Of PreCureCharacterTile)
+        Public Function GetRegularPrecureDataFromXML(seriesID As String, number As String, name As String, cureName As String) As List(Of PreCureCharacterTile)
             Dim _nodesList As XmlNodeList = Me.GetNodes("PreJongSettings/Precures/Precure")
             Dim _precureList As New List(Of PreCureCharacterTile)
 
@@ -127,7 +127,12 @@ Namespace DataAccess
                     Continue For
                 End If
 
-                _precureList.Add(New PreCureCharacterTile(_seriesIDText, _numberText, _nameText))
+                Dim _cureNameText As String = _node.SelectSingleNode("CureName").InnerText
+                If Not cureName Is Nothing AndAlso cureName <> _cureNameText Then
+                    Continue For
+                End If
+
+                _precureList.Add(New PreCureCharacterTile(_seriesIDText, _numberText, _nameText, _cureNameText))
 
             Next
 
@@ -137,18 +142,23 @@ Namespace DataAccess
         ''' <summary>
         ''' 条件に一致する特殊キャラ牌情報を全て取得し、Listに追加するメソッドを定義します。
         ''' </summary>
-        Public Sub FillSpecialCharacterDataFromXML(tileList As List(Of PreCureCharacterTile), seriesID As String, number As String, name As String)
-            Me.GetSpecialCharacterDataFromXML(seriesID, number, name).ForEach(Sub(x) tileList.Add(x))
+        Public Sub FillSpecialCharacterDataFromXML(tileList As List(Of PreCureCharacterTile), seriesID As String, number As String, name As String, cureName As String)
+            Me.GetSpecialCharacterDataFromXML(seriesID, number, name, cureName).ForEach(Sub(x) tileList.Add(x))
         End Sub
         ''' <summary>
         ''' 条件に一致する特殊キャラ牌情報を全て取得する メソッドを定義します。
         ''' </summary>
         ''' <returns>取得した <see cref="DataTable"/> 。</returns>
-        Public Function GetSpecialCharacterDataFromXML(seriesID As String, number As String, name As String) As List(Of PreCureCharacterTile)
+        Public Function GetSpecialCharacterDataFromXML(seriesID As String, number As String, name As String, cureName As String) As List(Of PreCureCharacterTile)
+
+
+            '特殊キャラはプリキュア名を持たないので、cureNameが指定されている場合、検索せずに空のリストを返す。
+            Dim _characterList As New List(Of PreCureCharacterTile)
+            If Not String.IsNullOrEmpty(cureName) Then
+                Return _characterList
+            End If
 
             Dim _nodesList As XmlNodeList
-            Dim _characterList As New List(Of PreCureCharacterTile)
-
             _nodesList = Me.GetNodes("PreJongSettings/SpecialCharacters/SpecialCharacter")
 
             For Each _node As XmlNode In _nodesList
@@ -171,7 +181,7 @@ Namespace DataAccess
                     Continue For
                 End If
 
-                _characterList.Add(New PreCureCharacterTile(_seriesIDText, _numberText, _nameText))
+                _characterList.Add(New PreCureCharacterTile(_seriesIDText, _numberText, _nameText, Nothing))
 
             Next
 
@@ -199,7 +209,7 @@ Namespace DataAccess
                     _tileSet.Add(_idTag.InnerText)
                 Next
 
-                _yakuList.Add(New Yaku(_name, _type, _point, _tileSet))
+                _yakuList.Add(New Yaku(_name, DirectCast(_type, YakuType), _point, _tileSet))
             Next
 
             Return _yakuList
@@ -223,7 +233,7 @@ Namespace DataAccess
                 '    _tileSet.Add(_idTag.InnerText)
                 'Next
 
-                _yakuList.Add(New Yaku(_name, _type, _point, Nothing))
+                _yakuList.Add(New Yaku(_name, DirectCast(_type, YakuType), _point, Nothing))
             Next
 
             Return _yakuList
