@@ -26,7 +26,7 @@
                 Throw New ArgumentException("Cannot compare to different type object.", "obj")
             End If
 
-            Return Me.ID - DirectCast(obj, Tile).ID
+            Return CInt(Me.ID) - CInt(DirectCast(obj, Tile).ID)
         End Function
 
         Public MustOverride Function IsSameColorWith(tile As Tile) As Boolean

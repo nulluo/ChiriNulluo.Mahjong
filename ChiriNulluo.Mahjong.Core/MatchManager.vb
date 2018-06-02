@@ -89,7 +89,7 @@ Public Class MatchManager
     ''' </summary>
     ''' <param name="index">プレイヤーのインデックス</param>
     ''' <returns><c>index</c>番目のプレイヤーの点数</returns>
-    Public Function GetPlayerScore(index As Integer)
+    Public Function GetPlayerScore(index As Integer) As Integer
         Return Me.PlayersList(index).Score
     End Function
 

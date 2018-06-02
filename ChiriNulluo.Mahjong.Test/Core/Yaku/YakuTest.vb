@@ -93,7 +93,7 @@ Namespace Core.Yaku
         ''' 役名を指定してYakuオブジェクトを取得する
         ''' </summary>
         ''' <returns></returns>
-        Private Function GetYaku(yakuName) As ChiriNulluo.Mahjong.Core.Yaku.Yaku
+        Private Function GetYaku(yakuName As String) As ChiriNulluo.Mahjong.Core.Yaku.Yaku
             Return Me._yakuList.Where(Function(x) x.Name = yakuName)(0)
         End Function
 
