@@ -5,7 +5,8 @@
  Mahjon-like game playing with various character's tile.
  This software is under development.
  
-# キュアジャン　Ver-0.1.1.22
+# キュアジャン　Ver-0.1.1.23
+- プリキュア名称を表示する機能追加
 
 # 注意事項
  キュアジャンは正式リリースが完了していない、開発中のゲームです。
@@ -28,4 +29,4 @@
 - もっと賢いCOM思考アルゴリズムの実装
 - 役の出現確率を計算して役の点数を決定
 - 台詞・ストーリーの追加
-- キャラグラフィックの追加
+- 対戦キャラクターの追加
