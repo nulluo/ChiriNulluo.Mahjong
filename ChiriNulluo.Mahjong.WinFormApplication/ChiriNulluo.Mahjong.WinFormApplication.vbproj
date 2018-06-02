@@ -41,7 +41,7 @@
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionExplicit>On</OptionExplicit>
+    <OptionExplicit>Off</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionCompare>Binary</OptionCompare>
@@ -507,6 +507,9 @@
     <None Include="Pictures\SystemUI\GameStartButton0.gif" />
     <None Include="Pictures\SystemUI\GameStartButton1.gif" />
     <None Include="Pictures\SystemUI\GameStartButton2.gif" />
+    <Content Include="NLog_LICENSE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Pictures\tileIcon\FallenTileBase.png" />
     <Content Include="Pictures\tileIcon\StoodTileBase.png" />
     <Content Include="Pictures\tileIcon\TileStoodBack.png" />

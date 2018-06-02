@@ -263,6 +263,7 @@
     <None Include="Pictures\tileIcon\Diff\Precure1301.png" />
     <None Include="Pictures\tileIcon\Diff\Precure1302.png" />
     <None Include="Pictures\tileIcon\Diff\Precure1303.png" />
+    <Content Include="NLog_LICENSE.txt" />
     <Content Include="PreJongConfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
