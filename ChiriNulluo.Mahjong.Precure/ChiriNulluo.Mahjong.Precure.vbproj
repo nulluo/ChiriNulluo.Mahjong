@@ -97,14 +97,17 @@
     <Compile Include="Suits\PrecureSuit.vb" />
     <Compile Include="Tiles\PrecureCharacterTile.vb" />
     <Compile Include="Tiles\PrecureCharacterSet.vb" />
+    <Compile Include="Yaku\PrecureYaku.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.ja.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.zh.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TileEnlarged1303.png" />

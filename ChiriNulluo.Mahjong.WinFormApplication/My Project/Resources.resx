@@ -4282,4 +4282,11 @@
   <data name="InitialForm_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pictures\SystemUI\InitialForm_Back.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SystemScriptChomboWarning" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="LabelNoYakus" xml:space="preserve">
+    <value>No Yakus</value>
+    <comment>画面項目</comment>
+  </data>
 </root>

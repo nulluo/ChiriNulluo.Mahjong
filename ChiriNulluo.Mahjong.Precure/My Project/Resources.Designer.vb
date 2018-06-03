@@ -61,6 +61,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Faul に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property LabelNoYakus() As String
+            Get
+                Return ResourceManager.GetString("LabelNoYakus", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         '''</summary>
         Friend ReadOnly Property Precure0000() As System.Drawing.Bitmap

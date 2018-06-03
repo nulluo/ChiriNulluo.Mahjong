@@ -311,4 +311,10 @@
   <data name="CharacterScriptMiraiWinRon" xml:space="preserve">
     <value>いま！その牌捨てました？ロン！</value>
   </data>
+  <data name="SystemScriptChomboWarning" xml:space="preserve">
+    <value>ボーナス牌以外の役が1つ以上ないと上がれないモフ　･･･ペナルティで3000点マイナスするモフ・・・</value>
+  </data>
+  <data name="LabelNoYakus" xml:space="preserve">
+    <value>役なし</value>
+  </data>
 </root>

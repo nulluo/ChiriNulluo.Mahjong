@@ -300,7 +300,7 @@ Public Class GameParameterSettingForm
 
     Private Sub Grid_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles wallPileGrid.ColumnHeaderMouseClick,
                                                                             humanHandGrid.ColumnHeaderMouseClick, comHandGrid.ColumnHeaderMouseClick
-        Dim _senderGrid As String = DirectCast(sender, Button).Name
+        Dim _senderGrid As String = DirectCast(sender, DataGridView).Name
         Dim _clickedColumn As DataGridViewColumn = DirectCast(sender, DataGridView).Columns(e.ColumnIndex)
         logger.Trace(" Column header clicked.[DataGridView:" & _senderGrid & ", Column:" & _clickedColumn.Name & "]")
 
@@ -308,7 +308,7 @@ Public Class GameParameterSettingForm
 
     Private Sub Grid_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles wallPileGrid.RowHeaderMouseClick,
                                                                             humanHandGrid.RowHeaderMouseClick, comHandGrid.RowHeaderMouseClick
-        Dim _senderGrid As String = DirectCast(sender, Button).Name
+        Dim _senderGrid As String = DirectCast(sender, DataGridView).Name
 
         Dim _message As String = " Row header clicked.[DataGridView:" & _senderGrid & ", Row:" & e.RowIndex.ToString("00")
 

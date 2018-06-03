@@ -4,6 +4,7 @@ Imports ChiriNulluo.Mahjong.Precure.DataAccess
 Imports ChiriNulluo.Mahjong.Core.Players
 Imports ChiriNulluo.Mahjong.Precure.Tiles
 Imports ChiriNulluo.Mahjong.WinFormApplication.Constants
+Imports ChiriNulluo.Mahjong.Precure.Yaku
 
 ''' <summary>
 ''' 対局終了後の点数表示画面
@@ -26,54 +27,6 @@ Public Class PointForm
     Private Property LosingPlayer As Player
 
     Private Property SeriesPrecureList As New List(Of List(Of String))
-
-    ''' <summary>
-    ''' XMLで表現できない非定型役のうち、達成できたものを全て取得し、DataTableに追加する。
-    ''' </summary>
-    ''' <returns>注入先のDataTable</returns>
-    Private Sub FillAccomplishedIrregularYakus(table As DataTable)
-        Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
-        Dim _yakuList As List(Of Yaku) = _xmlAccess.GetIrregularYakuDataFromXML()
-
-        For Each _yaku As Yaku In _yakuList
-            If IsAccomplishedIrregularYaku(_yaku.Name) Then
-                Dim _row As DataRow = table.NewRow()
-                _row("YakuName") = _yaku.Name
-                _row("Point") = _yaku.Point
-                table.Rows.Add(_row)
-            End If
-        Next
-    End Sub
-
-    ''' <summary>
-    ''' 役グリッドにバインドするためのDataTableを取得する
-    ''' </summary>
-    ''' <returns></returns>
-    Private Function GetYakuTable() As DataTable
-        Dim _table As New DataTable
-
-        _table.Columns.Add("YakuName", Type.GetType("System.String"))
-        _table.Columns.Add("Point", Type.GetType("System.Int32"))
-
-        Return _table
-    End Function
-
-    ''' <summary>
-    ''' 非正規の役が達成できているかどうか検証する。
-    ''' </summary>
-    ''' <param name="yakuName">役名</param>
-    ''' <returns>役が達成できている場合はTrue,そうでない場合はFalse。</returns>
-    Private Function IsAccomplishedIrregularYaku(yakuName As String) As Boolean
-
-        Select Case yakuName
-            Case "あがり"
-                Return True
-            Case "ツモ"
-                Return (Not Me.WinningPlayer.Hand.PongOrChowOrRonDone)
-            Case "リーチ"
-                Return Me.WinningPlayer.RiichiDone
-        End Select
-    End Function
 
 #Region "Form Transition"
     'UNIMPLEMENTED: COMHAND、HUMANHAND、WALLPILEの順序が一定していないのが気になる（Human->COMの順序が良いだろうと思っていたが、積み込む順番の関係上、先に配牌するのがHumanでなくCOMになったため）
@@ -102,24 +55,15 @@ Public Class PointForm
         Me.ManualModeField.Visible = False
 #End If
 
-        Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
-        Dim _yakuList As List(Of Yaku) = _xmlAccess.GetYakuDataFromXML()
+        '役判定
+        Dim _handChecker As New Precure.HandChecker.PrecureHandChecker(WinningPlayer)
+        Dim _table = _handChecker.GetYakuInfo(WinningPlayer)
 
-        Dim _table = Me.GetYakuTable()
-        '特殊役の判定結果をDataTableに追加
-        Me.FillAccomplishedIrregularYakus(_table)
-
-        '通常役の判定結果をDataTableに追加
-        For Each _yaku As Yaku In _yakuList
-            If _yaku.IsAccomplished(Me.WinningPlayer.Hand) Then
-                Dim _row As DataRow = _table.NewRow()
-                _row("YakuName") = _yaku.Name
-                _row("Point") = _yaku.Point
-                _table.Rows.Add(_row)
-            End If
-        Next
-
+        If _handChecker.SetCompleteButNoYakus Then
+            Me.DataGridView1.Columns(1).DefaultCellStyle.ForeColor = Color.Red
+        End If
         Me.DataGridView1.DataSource = _table
+
 
         '合計点を表示
         Dim _query = From el In _table.AsEnumerable
@@ -157,7 +101,7 @@ Public Class PointForm
 
         Me.DataGridView1.ColumnHeadersVisible = False
 
-        'UNIMPLEMENTED: DataGridViewにフォントを設定していても適用されない
+        'UNIMPLEMENTED: DataGridViewにフォントを設定していても適用されない。なぜ?
         Me.DataGridView1.RowsDefaultCellStyle.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
 
     End Sub
@@ -209,6 +153,7 @@ Public Class PointForm
         End If
     End Sub
 #End Region
+
 
     ''' <summary>
     ''' 画面上のUI操作に関するイベントハンドラーとイベントの紐づけを実行する。

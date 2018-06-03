@@ -697,6 +697,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  No Yakus に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property LabelNoYakus() As String
+            Get
+                Return ResourceManager.GetString("LabelNoYakus", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  OK に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property LabelOK() As String
@@ -845,6 +854,15 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("StoodTileBase", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property SystemScriptChomboWarning() As String
+            Get
+                Return ResourceManager.GetString("SystemScriptChomboWarning", resourceCulture)
             End Get
         End Property
         

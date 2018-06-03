@@ -37,8 +37,24 @@ Namespace HandChecker
             End With
         End Sub
 
+        ''' <summary>
+        ''' コンストラクタ
+        ''' </summary>
+        ''' <param name="player">プレイヤー</param>
+        Public Sub New(player As Core.Players.Player)
+            Me.New(player.Hand)
+            Me.Player = player
+        End Sub
+
+        ''' <summary>
+        ''' 4面子1雀頭の形は成立しているが、役なしのためツモ以外では上がれない状態であるかどうか。
+        ''' </summary>
+        ''' <returns>4面子1雀頭の形は成立しているが、役なしのためツモ以外では上がれない状態である場合はTrue,そうでない場合はFalse。</returns>
+        Public Property SetCompleteButNoYakus As Boolean = False
+
         Private Property NumsPerPrecureList As SortedList(Of String, Integer)
         Private Property Hand As Hand
+        Private Property Player As Core.Players.Player
 
 
         ''' <summary>
@@ -102,7 +118,7 @@ Namespace HandChecker
         Private Function DeterminedByHandIrregularYakuAccomplished() As Boolean
 
             Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
-            Dim _yakuList As List(Of Yaku) = _xmlAccess.GetYakuDataFromXML()
+            Dim _yakuList As List(Of Core.Yaku.Yaku) = _xmlAccess.GetYakuDataFromXML()
 
             'UNIMPLEMENTED: LINQでさらに短く書けるはず(どう書くんだっけ？）
             For Each _yaku As Core.Yaku.Yaku In _yakuList.Where(Function(x) x.Type.HasFlag(YakuType.DeterminedByHandIrregular))
@@ -431,5 +447,96 @@ Namespace HandChecker
 
         End Function
 
+
+#Region "役判定処理"
+
+
+        ''' <summary>
+        ''' あるプレイヤーの手牌で成立している役を計算する。
+        ''' </summary>
+        ''' <param name="player">プレイヤー</param>
+        Public Function GetYakuInfo(player As Core.Players.Player) As DataTable
+            Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
+            Dim _yakuList As List(Of Core.Yaku.Yaku) = _xmlAccess.GetYakuDataFromXML()
+
+            Dim _table = Me.GetYakuTable()
+            '特殊役の判定結果をDataTableに追加
+            Me.FillAccomplishedIrregularYakus(player, _table)
+
+            '通常役の判定結果をDataTableに追加
+            For Each _yaku As Core.Yaku.Yaku In _yakuList
+                If _yaku.IsAccomplished(player.Hand) Then
+                    Dim _row As DataRow = _table.NewRow()
+                    _row("YakuName") = _yaku.Name
+                    _row("Point") = _yaku.Point
+                    _table.Rows.Add(_row)
+                End If
+            Next
+
+            '「あがり」以外の役がついていない場合、チョンボ罰として3000ポイント支払う
+            If _table.Rows.Count <= 1 Then
+                _table.Rows.Clear()
+                Dim _row As DataRow = _table.NewRow()
+                _row("YakuName") = My.Resources.LabelNoYakus
+                _row("Point") = -3000
+                _table.Rows.Add(_row)
+
+                Me.SetCompleteButNoYakus = True
+            End If
+
+            Return _table
+
+        End Function
+
+
+        ''' <summary>
+        ''' 役を表すDataTableを取得する
+        ''' </summary>
+        ''' <returns></returns>
+        Private Function GetYakuTable() As DataTable
+            Dim _table As New DataTable
+
+            _table.Columns.Add("YakuName", System.Type.GetType("System.String"))
+            _table.Columns.Add("Point", System.Type.GetType("System.Int32"))
+
+            Return _table
+        End Function
+
+
+        ''' <summary>
+        ''' XMLで表現できない非定型役のうち、達成できたものを全て取得し、DataTableに追加する。
+        ''' </summary>
+        Private Sub FillAccomplishedIrregularYakus(player As Core.Players.Player, table As DataTable)
+            Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
+            Dim _yakuList As List(Of Core.Yaku.Yaku) = _xmlAccess.GetIrregularYakuDataFromXML()
+
+            For Each _yaku As Core.Yaku.Yaku In _yakuList
+                If IsAccomplishedIrregularYaku(player, _yaku.Name) Then
+                    Dim _row As DataRow = table.NewRow()
+                    _row("YakuName") = _yaku.Name
+                    _row("Point") = _yaku.Point
+                    table.Rows.Add(_row)
+                End If
+            Next
+        End Sub
+
+        ''' <summary>
+        ''' 非正規の役が達成できているかどうか検証する。
+        ''' </summary>
+        ''' <param name="yakuName">役名</param>
+        ''' <returns>役が達成できている場合はTrue,そうでない場合はFalse。</returns>
+        Private Function IsAccomplishedIrregularYaku(player As Core.Players.Player, yakuName As String) As Boolean
+
+            Select Case yakuName
+                Case "あがり"
+                    Return True
+                Case "ツモ"
+                    Return (Not player.Hand.PongOrChowOrRonDone)
+                Case "リーチ"
+                    Return player.RiichiDone
+            End Select
+        End Function
+
+#End Region
     End Class
 End Namespace

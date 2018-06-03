@@ -10,6 +10,10 @@ Namespace Yaku
 
         Public Property TileSet As List(Of String)
 
+        'ここで引数無しのコンストラクタを定義しておかないと継承先のPrecureYakuクラスでエラーが出るため、ダミーで定義しておく
+        Public Sub New()
+        End Sub
+
         Public Sub New(name As String, type As YakuType, point As Integer, tileSet As List(Of String))
             Me.Name = name
             Me.Type = type
@@ -35,6 +39,7 @@ Namespace Yaku
             End If
 
         End Function
+
 
         ''' <summary>
         ''' 手牌が特定の牌セット全てを含んでいるかどうかを判定する。

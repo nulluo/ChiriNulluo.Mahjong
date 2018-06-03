@@ -194,10 +194,10 @@ Namespace DataAccess
         ''' プリキュア役から、手牌依存型役のデータを全て取得する
         ''' </summary>
         ''' <returns>取得した役の <see cref="List"/> 。</returns>
-        Public Function GetYakuDataFromXML() As List(Of Yaku)
+        Public Function GetYakuDataFromXML() As List(Of Core.Yaku.Yaku)
 
             Dim _nodesList As XmlNodeList = Me.GetNodes("PreJongSettings/Yakus/Yaku")
-            Dim _yakuList As New List(Of Yaku)
+            Dim _yakuList As New List(Of Core.Yaku.Yaku)
 
             For Each _node As XmlNode In _nodesList
                 Dim _name As String = _node.SelectSingleNode("Name").InnerText
@@ -209,7 +209,7 @@ Namespace DataAccess
                     _tileSet.Add(_idTag.InnerText)
                 Next
 
-                _yakuList.Add(New Yaku(_name, DirectCast(_type, YakuType), _point, _tileSet))
+                _yakuList.Add(New Core.Yaku.Yaku(_name, DirectCast(_type, YakuType), _point, _tileSet))
             Next
 
             Return _yakuList
@@ -219,9 +219,9 @@ Namespace DataAccess
         ''' プリキュア役のうち、手牌以外要素依存役のデータを全て取得する
         ''' </summary>
         ''' <returns></returns>
-        Public Function GetIrregularYakuDataFromXML() As List(Of Yaku)
+        Public Function GetIrregularYakuDataFromXML() As List(Of Core.Yaku.Yaku)
             Dim _nodesList As XmlNodeList = Me.GetNodes("PreJongSettings/Yakus/DependingOnNonHandConditionYaku")
-            Dim _yakuList As New List(Of Yaku)
+            Dim _yakuList As New List(Of Core.Yaku.Yaku)
 
             For Each _node As XmlNode In _nodesList
                 Dim _name As String = _node.SelectSingleNode("Name").InnerText
@@ -233,7 +233,7 @@ Namespace DataAccess
                 '    _tileSet.Add(_idTag.InnerText)
                 'Next
 
-                _yakuList.Add(New Yaku(_name, DirectCast(_type, YakuType), _point, Nothing))
+                _yakuList.Add(New Core.Yaku.Yaku(_name, DirectCast(_type, YakuType), _point, Nothing))
             Next
 
             Return _yakuList

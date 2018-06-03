@@ -222,4 +222,7 @@
   <data name="IDProcessRiichi" xml:space="preserve">
     <value>Riichi</value>
   </data>
+  <data name="LabelNoYakus" xml:space="preserve">
+    <value>无役</value>
+  </data>
 </root>
