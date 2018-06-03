@@ -60,10 +60,10 @@ Partial Class RuleForm
         Me.Label3.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 9.0!)
         Me.Label3.Location = New System.Drawing.Point(49, 141)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(545, 48)
+        Me.Label3.Size = New System.Drawing.Size(545, 36)
         Me.Label3.TabIndex = 1
-        Me.Label3.Text = "・フリテン・カンはありません" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "・役なしでも上がれます" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "・ピンフとかイーペーコーといった普通の麻雀の役はありません。ここに書かれている役が全てです" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "・天和、地" &
-    "和、人和、嶺上開花、ドラはありません"
+        Me.Label3.Text = "・フリテン・カンはありません" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "・ピンフとかイーペーコーといった普通の麻雀の役はありません。ここに書かれている役が全てです" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "・天和、地和、人和、嶺上開花、ドラは" &
+    "ありません"
         '
         'LinkLabel1
         '

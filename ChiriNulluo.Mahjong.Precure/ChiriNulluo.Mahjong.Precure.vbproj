@@ -97,7 +97,6 @@
     <Compile Include="Suits\PrecureSuit.vb" />
     <Compile Include="Tiles\PrecureCharacterTile.vb" />
     <Compile Include="Tiles\PrecureCharacterSet.vb" />
-    <Compile Include="Yaku\PrecureYaku.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.ja.resx" />

@@ -28,6 +28,8 @@ Public Class PointForm
 
     Private Property SeriesPrecureList As New List(Of List(Of String))
 
+    Private Property GainedScore As Integer
+
 #Region "Form Transition"
     'UNIMPLEMENTED: COMHAND、HUMANHAND、WALLPILEの順序が一定していないのが気になる（Human->COMの順序が良いだろうと思っていたが、積み込む順番の関係上、先に配牌するのがHumanでなくCOMになったため）
     Private Sub OpenNextForm(comHand As Hand, humanHand As Hand, wallPile As WallPile)
@@ -56,10 +58,10 @@ Public Class PointForm
 #End If
 
         '役判定
-        Dim _handChecker As New Precure.HandChecker.PrecureHandChecker(WinningPlayer)
-        Dim _table = _handChecker.GetYakuInfo(WinningPlayer)
+        Dim _handChecker As New Precure.HandChecker.PrecureHandChecker(WinningPlayer.Hand)
+        Dim _table = _handChecker.GetYakuInfo(WinningPlayer.RiichiDone)
 
-        If _handChecker.SetCompleteButNoYakus Then
+        If _handChecker.IsSetCompleteButNoYakus Then
             Me.DataGridView1.Columns(1).DefaultCellStyle.ForeColor = Color.Red
         End If
         Me.DataGridView1.DataSource = _table
@@ -67,13 +69,13 @@ Public Class PointForm
 
         '合計点を表示
         Dim _query = From el In _table.AsEnumerable
-        Dim _totalPoint = (_query.Sum(Function(el) CInt(el("Point"))))
+        GainedScore = (_query.Sum(Function(el) CInt(el("Point"))))
 
-        Me.pointField.Text = _totalPoint.ToString
+        Me.pointField.Text = GainedScore.ToString
 
         '敗者のスコアから勝者のスコアへ点数分移動
-        WinningPlayer.Score += _totalPoint
-        LosingPlayer.Score -= _totalPoint
+        WinningPlayer.Score += GainedScore
+        LosingPlayer.Score -= GainedScore
 
         'UNIMPLEMENTED: 副露牌があった場合も表示できるようにする
         Me.WinningPlayer.Hand.MainTiles.Sort()
@@ -126,6 +128,11 @@ Public Class PointForm
     ''' <param name="e"></param>
     Private Sub PointForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         Me.DataGridView1.CurrentCell = Nothing
+
+        'チョンボしていた場合は警告を表意jする
+        If GainedScore = -3000 Then
+            Me.ShowMessageWindows(My.Resources.SystemScriptChomboWarning)
+        End If
     End Sub
 
 #End Region
@@ -164,5 +171,14 @@ Public Class PointForm
         Me.ManualModeField.Enabled = True
     End Sub
 
+    Private Sub ShowMessageWindows(words As String)
+        Dim _dialog As New TalkingCharaWindowForm()
+        _dialog.Left = Me.Left + (Me.Width - _dialog.Width) \ 2
+        _dialog.Top = Me.Top + (Me.Height - _dialog.Height) \ 2
+        _dialog.Owner = Me
+        _dialog.Words = words
+        _dialog.CharacterImage = MatchManagerController.GetInstance.OpponentManager.GetNormalImage
+        _dialog.ShowDialog()
+    End Sub
 
 End Class

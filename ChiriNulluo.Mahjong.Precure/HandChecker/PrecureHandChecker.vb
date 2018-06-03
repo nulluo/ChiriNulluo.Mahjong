@@ -38,24 +38,13 @@ Namespace HandChecker
         End Sub
 
         ''' <summary>
-        ''' コンストラクタ
-        ''' </summary>
-        ''' <param name="player">プレイヤー</param>
-        Public Sub New(player As Core.Players.Player)
-            Me.New(player.Hand)
-            Me.Player = player
-        End Sub
-
-        ''' <summary>
         ''' 4面子1雀頭の形は成立しているが、役なしのためツモ以外では上がれない状態であるかどうか。
         ''' </summary>
         ''' <returns>4面子1雀頭の形は成立しているが、役なしのためツモ以外では上がれない状態である場合はTrue,そうでない場合はFalse。</returns>
-        Public Property SetCompleteButNoYakus As Boolean = False
+        Public Property IsSetCompleteButNoYakus As Boolean = False
 
         Private Property NumsPerPrecureList As SortedList(Of String, Integer)
         Private Property Hand As Hand
-        Private Property Player As Core.Players.Player
-
 
         ''' <summary>
         ''' メンツが揃っていて上がれる状態になっている場合にTrue,そうでない場合はFalseを返す。
@@ -330,9 +319,32 @@ Namespace HandChecker
             _tempDictionary(tile.ID) += 1
 
             Dim _newHandChecker As New PrecureHandChecker(_tempDictionary)
+
             Return _newHandChecker.IsCompleted()
 
         End Function
+
+        ''' <summary>
+        ''' 対象の牌を手牌に加えると4雀頭1面子が成立し、かつ役がつくかどうか判定する。このメソッドは手牌が13枚のときに有効に機能する。
+        ''' </summary>
+        ''' <param name="tile"></param>
+        ''' <returns>対象の牌を手牌に加えるとアガリになるかどうか</returns>
+        Public Function IsSetCompletedAndYakuAccomplishedIfTargetTileAdded(tile As Tile, riichiDone As Boolean) As Boolean
+
+            Dim _tempDictionary = Me.GetDeepCopy(Me.NumsPerPrecureList)
+            _tempDictionary(tile.ID) += 1
+
+            Dim _newHandChecker As New PrecureHandChecker(_tempDictionary)
+
+            If _newHandChecker.IsCompleted() Then
+                _newHandChecker.GetYakuInfo(riichiDone)
+                Return _newHandChecker.IsSetCompleteButNoYakus
+            Else
+                Return False
+            End If
+
+        End Function
+
 
         ''' <summary>
         ''' ツモッた後、手牌の中から捨てるとテンパイになる牌を取得する。どう切ってもテンパイ手が作れない場合はNothingを返す。このメソッドは手牌が14枚のとき(ツモった直後)に有効に機能する。
@@ -452,20 +464,20 @@ Namespace HandChecker
 
 
         ''' <summary>
-        ''' あるプレイヤーの手牌で成立している役を計算する。
+        ''' 成立している役を計算する。
         ''' </summary>
-        ''' <param name="player">プレイヤー</param>
-        Public Function GetYakuInfo(player As Core.Players.Player) As DataTable
+        ''' <param name="riichiDone">プレイヤーがリーチしているかどうか</param>
+        Public Function GetYakuInfo(riichiDone As Boolean) As DataTable
             Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
             Dim _yakuList As List(Of Core.Yaku.Yaku) = _xmlAccess.GetYakuDataFromXML()
 
             Dim _table = Me.GetYakuTable()
             '特殊役の判定結果をDataTableに追加
-            Me.FillAccomplishedIrregularYakus(player, _table)
+            Me.FillAccomplishedIrregularYakus(riichiDone, _table)
 
             '通常役の判定結果をDataTableに追加
             For Each _yaku As Core.Yaku.Yaku In _yakuList
-                If _yaku.IsAccomplished(player.Hand) Then
+                If _yaku.IsAccomplished(Me.Hand) Then
                     Dim _row As DataRow = _table.NewRow()
                     _row("YakuName") = _yaku.Name
                     _row("Point") = _yaku.Point
@@ -481,7 +493,7 @@ Namespace HandChecker
                 _row("Point") = -3000
                 _table.Rows.Add(_row)
 
-                Me.SetCompleteButNoYakus = True
+                Me.IsSetCompleteButNoYakus = True
             End If
 
             Return _table
@@ -506,12 +518,12 @@ Namespace HandChecker
         ''' <summary>
         ''' XMLで表現できない非定型役のうち、達成できたものを全て取得し、DataTableに追加する。
         ''' </summary>
-        Private Sub FillAccomplishedIrregularYakus(player As Core.Players.Player, table As DataTable)
+        Private Sub FillAccomplishedIrregularYakus(riichiDone As Boolean, table As DataTable)
             Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
             Dim _yakuList As List(Of Core.Yaku.Yaku) = _xmlAccess.GetIrregularYakuDataFromXML()
 
             For Each _yaku As Core.Yaku.Yaku In _yakuList
-                If IsAccomplishedIrregularYaku(player, _yaku.Name) Then
+                If IsAccomplishedIrregularYaku(riichiDone, _yaku.Name) Then
                     Dim _row As DataRow = table.NewRow()
                     _row("YakuName") = _yaku.Name
                     _row("Point") = _yaku.Point
@@ -525,15 +537,15 @@ Namespace HandChecker
         ''' </summary>
         ''' <param name="yakuName">役名</param>
         ''' <returns>役が達成できている場合はTrue,そうでない場合はFalse。</returns>
-        Private Function IsAccomplishedIrregularYaku(player As Core.Players.Player, yakuName As String) As Boolean
+        Private Function IsAccomplishedIrregularYaku(riichiDone As Boolean, yakuName As String) As Boolean
 
             Select Case yakuName
                 Case "あがり"
                     Return True
                 Case "ツモ"
-                    Return (Not player.Hand.PongOrChowOrRonDone)
+                    Return (Not Me.Hand.PongOrChowOrRonDone)
                 Case "リーチ"
-                    Return player.RiichiDone
+                    Return riichiDone
             End Select
         End Function
 

@@ -158,7 +158,7 @@ Public Class RoundFacade
 
         'プレイヤーの捨て牌をCOMがロン可能か？
         Dim _handCheckerCOM As New PrecureHandChecker(Me.COMPlayer.Hand)
-        If _handCheckerCOM.IsCompletedIfTargetTileAdded(_tileToDiscard) Then
+        If _handCheckerCOM.IsSetCompletedAndYakuAccomplishedIfTargetTileAdded(_tileToDiscard, COMPlayer.RiichiDone) Then
             Me.COMPlayer.Hand.PongOrChowOrRonDone = True
             'UNIMPLEMENTED：状況に応じてロンするかどうかＣＯＭに思考させる
             Me.Result = RoundState.PlayerLoseByTileDiscardedByPlayer

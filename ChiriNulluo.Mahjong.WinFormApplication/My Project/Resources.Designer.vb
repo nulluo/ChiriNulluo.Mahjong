@@ -858,7 +858,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''   に類似しているローカライズされた文字列を検索します。
+        '''  You cannot declare Ron or Tsumo unless some yaku other than bonus tile is accomplished.Penalty minus 3000 points mofu. に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property SystemScriptChomboWarning() As String
             Get
