@@ -91,7 +91,7 @@ Public Class RoundFacade
     End Function
 
     ''' <summary>
-    ''' COMプレイヤーが牌を1枚ツモる
+    ''' COMプレイヤーが牌を1枚ツモる。
     ''' </summary>
     Public Sub DrawCOMPlayersTile()
 
@@ -107,7 +107,7 @@ Public Class RoundFacade
     End Sub
 
     ''' <summary>
-    ''' COMプレイヤーが牌を1枚切る
+    ''' COMプレイヤーが牌を1枚切る。聴牌した場合、リーチするかどうかCOMが判断して決めて実行する。
     ''' </summary>
     ''' <returns>捨てた牌</returns>
     Public Function DiscardCOMPlayersTile() As Tile
@@ -115,6 +115,14 @@ Public Class RoundFacade
 
         Dim _discardedTile As Tile = Me.COMPlayer.ChooseDiscardTile()
         Me.COMPlayer.DiscardTile(_discardedTile)
+
+        'テンパイ判定
+        Dim _handChecker As New PrecureHandChecker(Me.COMPlayer.Hand)
+        If Not Me.COMPlayer.RiichiDone AndAlso _handChecker.IsReady Then
+            If Me.DecidesToRiichi() Then
+                _result = _result Or RoundState.COMDeclaredRiichi
+            End If
+        End If
 
         'COMの捨て牌をプレイヤーがロン可能か？
         Dim _handCheckerPlayer As New PrecureHandChecker(Me.HumanPlayer.Hand)
@@ -240,6 +248,21 @@ Public Class RoundFacade
     Friend Sub RiichiHuman()
         Me.HumanPlayer.RiichiDone = True
     End Sub
+
+    Friend Sub RiichiCOM()
+        Me.COMPlayer.RiichiDone = True
+    End Sub
+
+    ''' <summary>
+    ''' リーチするかどうかを決定する
+    ''' </summary>
+    Private Function DecidesToRiichi() As Boolean
+
+        Dim _random As New System.Random()
+        'UNIMPLEMENTED: 本来はCOMPlayerの戦略ごとに異なるロジックで決定する。取り合えず一律で1/5の確率でリーチさせてる
+        Return (_random.Next(5) = 0)
+
+    End Function
 
     ''' <summary>
     ''' Round開始時の山牌、手牌の状態をリプレイログに書きだす

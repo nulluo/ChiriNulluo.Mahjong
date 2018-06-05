@@ -62,5 +62,11 @@
         ''' </summary>
         COMCanChowTileDiscardedByPlayer = &H400
 
+        ''' <summary>
+        ''' COMがリーチを宣言した
+        ''' </summary>
+        COMDeclaredRiichi = &H800
+
+
     End Enum
 End Namespace

@@ -183,6 +183,12 @@ Public Class RoundForm
 
         'COMが牌を1枚捨てる
         Dim _tileDiscardedByCOM = Me.Facade.DiscardCOMPlayersTile()
+        If Me.Facade.Result.HasFlag(RoundState.COMDeclaredRiichi) Then
+            Me.Facade.RiichiCOM()
+            MessageBox.Show("COMがリーチをかけました")
+            Me.riichiImageCOM.Visible = True
+        End If
+
 
         Dim _choiceMessages As New List(Of String)
 

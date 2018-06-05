@@ -338,7 +338,7 @@ Namespace HandChecker
 
             If _newHandChecker.IsCompleted() Then
                 _newHandChecker.GetYakuInfo(riichiDone)
-                Return _newHandChecker.IsSetCompleteButNoYakus
+                Return Not _newHandChecker.IsSetCompleteButNoYakus
             Else
                 Return False
             End If

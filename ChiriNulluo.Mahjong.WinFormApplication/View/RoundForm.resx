@@ -758,7 +758,7 @@
   <data name="&gt;&gt;riichiImageHuman.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="riichiImageCPU.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="riichiImageCOM.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhWgAZAIcAAPaw1/eUuv74+/vb7P2rt/i+3vrN5vV8qPSczf7z+fSLvP9zd/KIwv7l6v2wu/7U
         2f2Jk//d3v6dpf1rdfzh8PzAzf3o8//8/ftYZvOMxf/q6vahzPvS4vWYxvebvvt1hP7R1vrD2/h3lfR+
@@ -796,31 +796,31 @@
         hvKUqEzlYUgZEAA7
 </value>
   </data>
-  <data name="riichiImageCPU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="riichiImageCOM.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="riichiImageCPU.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="riichiImageCOM.Location" type="System.Drawing.Point, System.Drawing">
     <value>243, 285</value>
   </data>
-  <data name="riichiImageCPU.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="riichiImageCOM.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 26</value>
   </data>
-  <data name="riichiImageCPU.TabIndex" type="System.Int32, mscorlib">
+  <data name="riichiImageCOM.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
-  <data name="riichiImageCPU.Visible" type="System.Boolean, mscorlib">
+  <data name="riichiImageCOM.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;riichiImageCPU.Name" xml:space="preserve">
-    <value>riichiImageCPU</value>
+  <data name="&gt;&gt;riichiImageCOM.Name" xml:space="preserve">
+    <value>riichiImageCOM</value>
   </data>
-  <data name="&gt;&gt;riichiImageCPU.Type" xml:space="preserve">
+  <data name="&gt;&gt;riichiImageCOM.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;riichiImageCPU.Parent" xml:space="preserve">
+  <data name="&gt;&gt;riichiImageCOM.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;riichiImageCPU.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;riichiImageCOM.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="RiichiButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">

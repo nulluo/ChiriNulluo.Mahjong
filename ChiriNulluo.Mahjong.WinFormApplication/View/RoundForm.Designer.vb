@@ -44,7 +44,7 @@ Partial Class RoundForm
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.riichiImageHuman = New System.Windows.Forms.PictureBox()
-        Me.riichiImageCPU = New System.Windows.Forms.PictureBox()
+        Me.riichiImageCOM = New System.Windows.Forms.PictureBox()
         Me.RiichiButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
         Me.humanPlayerDiscardedPilePanel = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalDiscardedPilePanel()
         Me.comPlayerDiscardedPilePanel = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalDiscardedPilePanel()
@@ -61,7 +61,7 @@ Partial Class RoundForm
         CType(Me.BonusTIlePicture2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.riichiImageHuman, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.riichiImageCPU, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.riichiImageCOM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RiichiButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -193,11 +193,11 @@ Partial Class RoundForm
         Me.riichiImageHuman.Name = "riichiImageHuman"
         Me.riichiImageHuman.TabStop = False
         '
-        'riichiImageCPU
+        'riichiImageCOM
         '
-        resources.ApplyResources(Me.riichiImageCPU, "riichiImageCPU")
-        Me.riichiImageCPU.Name = "riichiImageCPU"
-        Me.riichiImageCPU.TabStop = False
+        resources.ApplyResources(Me.riichiImageCOM, "riichiImageCOM")
+        Me.riichiImageCOM.Name = "riichiImageCOM"
+        Me.riichiImageCOM.TabStop = False
         '
         'RiichiButton
         '
@@ -282,7 +282,7 @@ Partial Class RoundForm
         Me.BackColor = System.Drawing.Color.Green
         Me.Controls.Add(Me.openRuleFormButton)
         Me.Controls.Add(Me.RiichiButton)
-        Me.Controls.Add(Me.riichiImageCPU)
+        Me.Controls.Add(Me.riichiImageCOM)
         Me.Controls.Add(Me.riichiImageHuman)
         Me.Controls.Add(Me.restDrawCountField)
         Me.Controls.Add(Me.Label9)
@@ -317,7 +317,7 @@ Partial Class RoundForm
         CType(Me.BonusTIlePicture2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.riichiImageHuman, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.riichiImageCPU, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.riichiImageCOM, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RiichiButton, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -353,7 +353,7 @@ Partial Class RoundForm
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents riichiImageHuman As PictureBox
-    Friend WithEvents riichiImageCPU As PictureBox
+    Friend WithEvents riichiImageCOM As PictureBox
     Friend WithEvents RiichiButton As RichButton
     Friend WithEvents openRuleFormButton As RichButton
 End Class
