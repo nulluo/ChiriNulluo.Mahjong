@@ -228,4 +228,7 @@
   <data name="SystemScriptChomboWarning" xml:space="preserve">
     <value>You cannot declare Ron or Tsumo unless some yaku other than bonus tile is accomplished.Penalty minus 3000 points mofu.</value>
   </data>
+  <data name="CharacterScriptRiichi" xml:space="preserve">
+    <value>立直 !</value>
+  </data>
 </root>

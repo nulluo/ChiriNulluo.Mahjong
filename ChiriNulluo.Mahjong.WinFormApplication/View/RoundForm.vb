@@ -185,7 +185,8 @@ Public Class RoundForm
         Dim _tileDiscardedByCOM = Me.Facade.DiscardCOMPlayersTile()
         If Me.Facade.Result.HasFlag(RoundState.COMDeclaredRiichi) Then
             Me.Facade.RiichiCOM()
-            MessageBox.Show("COMがリーチをかけました")
+            Me.OpenCOMRiichiForm()
+            Me.Facade.Result = RoundState.Undetermined
             Me.riichiImageCOM.Visible = True
         End If
 
@@ -400,7 +401,10 @@ Public Class RoundForm
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles RiichiAutoDrawTimer.Tick
-        Me.Facade.DiscardIfHumanRiichiDone()
+        'リーチ宣言のメッセージが出ている間はオートツモを停止する
+        If Not Me.Facade.Result.HasFlag(RoundState.COMDeclaredRiichi) Then
+            Me.Facade.DiscardIfHumanRiichiDone()
+        End If
     End Sub
 
 #Region "User Operation Event"
@@ -542,6 +546,16 @@ Public Class RoundForm
         _dialog.Top = Me.Top + (Me.Height - _dialog.Height) \ 2
         _dialog.Owner = Me
         _dialog.Words = MatchManagerController.GetInstance.OpponentManager.GetScriptGameStart
+        _dialog.CharacterImage = MatchManagerController.GetInstance.OpponentManager.GetNormalImage
+        _dialog.ShowDialog()
+    End Sub
+
+    Private Sub OpenCOMRiichiForm()
+        Dim _dialog As New TalkingCharaWindowForm()
+        _dialog.Left = Me.Left + (Me.Width - _dialog.Width) \ 2
+        _dialog.Top = Me.Top + (Me.Height - _dialog.Height) \ 2
+        _dialog.Owner = Me
+        _dialog.Words = My.Resources.CharacterScriptRiichi
         _dialog.CharacterImage = MatchManagerController.GetInstance.OpponentManager.GetNormalImage
         _dialog.ShowDialog()
     End Sub

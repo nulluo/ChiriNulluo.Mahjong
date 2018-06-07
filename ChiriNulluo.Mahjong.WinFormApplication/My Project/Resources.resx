@@ -4290,4 +4290,8 @@
     <value>No Yakus</value>
     <comment>画面項目</comment>
   </data>
+  <data name="CharacterScriptRiichi" xml:space="preserve">
+    <value>Riichi !</value>
+    <comment>キャラクター台詞</comment>
+  </data>
 </root>

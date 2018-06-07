@@ -317,4 +317,7 @@
   <data name="LabelNoYakus" xml:space="preserve">
     <value>役なし</value>
   </data>
+  <data name="CharacterScriptRiichi" xml:space="preserve">
+    <value>リーチ！</value>
+  </data>
 </root>

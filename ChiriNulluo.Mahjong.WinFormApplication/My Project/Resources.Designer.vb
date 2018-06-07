@@ -271,6 +271,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Riichi ! に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptRiichi() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptRiichi", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''   に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptRikoDraw() As String
