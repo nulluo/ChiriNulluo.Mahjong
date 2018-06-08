@@ -823,6 +823,30 @@
   <data name="&gt;&gt;riichiImageCOM.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="openRuleFormButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="openRuleFormButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1045, 263</value>
+  </data>
+  <data name="openRuleFormButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 50</value>
+  </data>
+  <data name="openRuleFormButton.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;openRuleFormButton.Name" xml:space="preserve">
+    <value>openRuleFormButton</value>
+  </data>
+  <data name="&gt;&gt;openRuleFormButton.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.RichButton, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;openRuleFormButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;openRuleFormButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RiichiButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1051,38 +1075,20 @@
   <data name="&gt;&gt;TileDetailInfoPanel1.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
-  <data name="openRuleFormButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1045, 263</value>
-  </data>
-  <data name="openRuleFormButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 50</value>
-  </data>
-  <data name="openRuleFormButton.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;openRuleFormButton.Name" xml:space="preserve">
-    <value>openRuleFormButton</value>
-  </data>
-  <data name="&gt;&gt;openRuleFormButton.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.RichButton, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;openRuleFormButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;openRuleFormButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>96</value>
+    <value>42</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1176, 681</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>Manual</value>

@@ -20,7 +20,7 @@ Namespace Precure.HandChecker
         End Sub
 
         <TestCase(True, "0101", "0101", "0102", "0102", "0103", "0103", "0201", "0201", "0902", "0902", "0902", "0801", "0801", "0801")>'あがり：普通の役
-        <TestCase(True, "0101", "0101", "0202", "0202", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0802", "0803", "0803")> 'あがり：七対子
+        <TestCase(False, "0101", "0101", "0202", "0202", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0802", "0803", "0803")> 'ブタ：七対子は撤廃
         <TestCase(False, "0101", "0101", "0101", "0101", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0802", "0803", "0803")> 'ブタ：同牌4個を含むため七対子が成立しない
         <TestCase(True, "0101", "0101", "0102", "0102", "0103", "0103", "0103", "0103", "0103", "0902", "0902", "0902", "0801", "0801")> '0103が5枚あるアガリ(特殊能力によって発生し得る)
         <TestCase(True, "0101", "0101", "0102", "0102", "0103", "0103", "0201", "0201", "0902", "0902", "0902", "0801", "0801", "0801")>
@@ -31,24 +31,24 @@ Namespace Precure.HandChecker
         End Sub
 
         <TestCase(True, "0101", "0101", "0102", "0102", "0103", "0103", "0103", "0103", "0902", "0902", "0902", "0801", "0801")> 'テンパイだけど特殊能力なしでは上がれない
-        <TestCase(True, "0101", "0101", "0202", "0202", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0802", "0803")> '七対子テンパイ
+        <TestCase(False, "0101", "0101", "0202", "0202", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0802", "0803")> 'NG：七対子は撤廃
         <TestCase(True, "0801", "0101", "0103", "0902", "0902", "0902", "0801", "0103", "0103", "0101", "0102", "0102", "0103")> '理牌されてなくても正常に動作するよね？①
-        <TestCase(True, "0202", "0802", "0202", "0301", "0301", "0902", "0902", "0101", "0101", "0802", "0303", "0303", "0803")> '理牌されてなくても正常に動作するよね？②
+        <TestCase(False, "0202", "0802", "0202", "0301", "0301", "0902", "0902", "0101", "0101", "0802", "0303", "0303", "0803")> '理牌されてなくても正常に動作するよね？②NG：七対子は撤廃
         Public Sub TestIsReady(expectedValue As Boolean, ParamArray precureIDs As String())
             Me.MakeHand(precureIDs)
             Assert.AreEqual(expectedValue, New PrecureHandChecker(Me._roundManager.PlayersList(0).Hand).IsReady)
         End Sub
 
-        <TestCase(True, "0101", "0101", "0102", "0102", "0103", "0103", "0201", "0201", "0902", "0902", "0902", "0801", "0802")>'イーシャンテン：普通の役
-        <TestCase(True, "0101", "0101", "0202", "0202", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0803", "1001")> '七対子イーシャンテン
-        <TestCase(False, "0101", "0201", "0202", "0301", "0303", "0401", "0403", "0501", "0502", "0601", "0603", "1001", "1102")>'ブタ
-        Public Sub TestIsOneStepAwayFromReady(expectedValue As Boolean, ParamArray precureIDs As String())
-            Me.MakeHand(precureIDs)
-            Assert.AreEqual(expectedValue, New PrecureHandChecker(Me._roundManager.PlayersList(0).Hand).IsOneStepAwayFromReady)
-        End Sub
+        '<TestCase(True, "0101", "0101", "0102", "0102", "0103", "0103", "0201", "0201", "0902", "0902", "0902", "0801", "0802")>'イーシャンテン：普通の役
+        '<TestCase(True, "0101", "0101", "0202", "0202", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0803", "1001")> '七対子イーシャンテン
+        '<TestCase(False, "0101", "0201", "0202", "0301", "0303", "0401", "0403", "0501", "0502", "0601", "0603", "1001", "1102")>'ブタ
+        'Public Sub TestIsOneStepAwayFromReady(expectedValue As Boolean, ParamArray precureIDs As String())
+        '    Me.MakeHand(precureIDs)
+        '    Assert.AreEqual(expectedValue, New PrecureHandChecker(Me._roundManager.PlayersList(0).Hand).IsOneStepAwayFromReady)
+        'End Sub
 
         <TestCase(True, "0101", "0101", "0102", "0102", "0103", "0103", "0201", "0201", "0902", "0902", "0902", "0801", "0801", "0801")>'あがり：普通の役
-        <TestCase(True, "0101", "0101", "0202", "0202", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0802", "0803", "0803")> 'あがり：七対子
+        <TestCase(False, "0101", "0101", "0202", "0202", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0802", "0803", "0803")> 'ブタ：七対子は撤廃
         <TestCase(False, "0101", "0101", "0101", "0101", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0802", "0803", "0803")> 'ブタ：同牌4個を含むため七対子が成立しない
         <TestCase(True, "0101", "0101", "0102", "0102", "0103", "0103", "0103", "0103", "0103", "0902", "0902", "0902", "0801", "0801")> '0103が5枚あるアガリ(特殊能力によって発生し得る)
         Public Sub TestIsCompletedIfTargetTileAdded(expectedValue As Boolean, targetTileID As String, ParamArray precureIDs As String())
@@ -64,6 +64,8 @@ Namespace Precure.HandChecker
         ''' </summary>
         ''' <param name="precureIDList"></param>
         Private Sub MakeHand(precureIDList As String())
+            _roundManager.PlayersList(0).Hand.MainTiles.Clear()
+
             For Each _precureID As String In precureIDList
                 Me.AddTileToMyHand(_precureID)
             Next

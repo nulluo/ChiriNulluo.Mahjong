@@ -11,6 +11,7 @@ Namespace HandChecker
     ''' </summary>
     Public Class PrecureHandChecker
 
+
         'UNIMPLEMENTED：深く考えずにコンストラクタ実装してしまったが、静的メソッドしかもたないNotInheritableなクラスでいい気がする
         ''' <summary>
         ''' コンストラクタ
@@ -56,7 +57,6 @@ Namespace HandChecker
                 Return True
             End If
 
-            'UNIMPLEMENTED：鳴いた牌はメンツが確定する事を考慮していない（例：①①①でポンした場合、ポンした後で②、③がきても①①＝雀頭、①②③＝順子という組み合わせは不可能になるが、そういった考慮を全くしていない）
             For i As Integer = 0 To NumsPerPrecureList.Count - 1
 
                 '一時リストに牌種別枚数を複製
@@ -77,8 +77,7 @@ Namespace HandChecker
                         Continue For
                     End If
 
-                    '普通は同じ種類の牌が6枚できる事は無いので全く同じ牌の刻子が2組できる事は考慮しなくてよいのだが
-                    '特殊効果で牌の枚数が増えた場合に発生し得るのでその可能性もチェック
+                    '同じ種類の牌が6枚できる事は無いので全く同じ牌の刻子が2組できる事は考慮しない
                     While Me.CanbeTriplet(j, _tempList)
                         'j番目の牌種が刻子になり得る場合、それが刻子を作ったと仮定してアガれるか検証
                         _tempList(_tempList.Keys(j)) -= 3

@@ -45,6 +45,7 @@ Partial Class RoundForm
         Me.Label12 = New System.Windows.Forms.Label()
         Me.riichiImageHuman = New System.Windows.Forms.PictureBox()
         Me.riichiImageCOM = New System.Windows.Forms.PictureBox()
+        Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
         Me.RiichiButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
         Me.humanPlayerDiscardedPilePanel = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalDiscardedPilePanel()
         Me.comPlayerDiscardedPilePanel = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalDiscardedPilePanel()
@@ -55,15 +56,14 @@ Partial Class RoundForm
         Me.horizontalRevealedHandPanel1 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel()
         Me.horizontalRevealedHandPanel0 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel()
         Me.TileDetailInfoPanel1 = New ChiriNulluo.Mahjong.WinFormApplication.TileDetailInfoPanel()
-        Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
         CType(Me.BonusTIlePicture0, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BonusTIlePicture1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BonusTIlePicture2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.riichiImageHuman, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.riichiImageCOM, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RiichiButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RiichiButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'comPointField
@@ -199,6 +199,15 @@ Partial Class RoundForm
         Me.riichiImageCOM.Name = "riichiImageCOM"
         Me.riichiImageCOM.TabStop = False
         '
+        'openRuleFormButton
+        '
+        Me.openRuleFormButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton1
+        Me.openRuleFormButton.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton0
+        resources.ApplyResources(Me.openRuleFormButton, "openRuleFormButton")
+        Me.openRuleFormButton.Name = "openRuleFormButton"
+        Me.openRuleFormButton.PushedImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton2
+        Me.openRuleFormButton.TabStop = False
+        '
         'RiichiButton
         '
         Me.RiichiButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RiichiButton1
@@ -266,15 +275,6 @@ Partial Class RoundForm
         Me.TileDetailInfoPanel1.TargetTile = Nothing
         Me.TileDetailInfoPanel1.TargetTileIndex = 0
         '
-        'openRuleFormButton
-        '
-        Me.openRuleFormButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton1
-        Me.openRuleFormButton.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton0
-        resources.ApplyResources(Me.openRuleFormButton, "openRuleFormButton")
-        Me.openRuleFormButton.Name = "openRuleFormButton"
-        Me.openRuleFormButton.PushedImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton2
-        Me.openRuleFormButton.TabStop = False
-        '
         'RoundForm
         '
         resources.ApplyResources(Me, "$this")
@@ -318,8 +318,8 @@ Partial Class RoundForm
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.riichiImageHuman, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.riichiImageCOM, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RiichiButton, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RiichiButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
