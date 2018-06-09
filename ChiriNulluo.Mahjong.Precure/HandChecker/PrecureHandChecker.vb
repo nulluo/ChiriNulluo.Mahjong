@@ -11,6 +11,8 @@ Namespace HandChecker
     ''' </summary>
     Public Class PrecureHandChecker
 
+        'UNIMPLEMENTED: とりあえず仮にここにベタがきするが、本来はPrecureXMLDataAccessクラスでXMLから取得しないとだめです
+        Private CharacterNumPerSeries() As Integer = {1, 3, 4, 7, 5, 5, 6, 7, 6, 5, 4, 3, 6, 3}
 
         'UNIMPLEMENTED：深く考えずにコンストラクタ実装してしまったが、静的メソッドしかもたないNotInheritableなクラスでいい気がする
         ''' <summary>
@@ -18,7 +20,7 @@ Namespace HandChecker
         ''' </summary>
         ''' <param name="hand">手牌</param>
         Public Sub New(hand As Hand)
-            Me.NumsPerPrecureList = GetPrecureTileCountDictionary()
+            Me.NumsPerPrecureList = Me.GetPrecureTileCountDictionary()
             For Each tile In hand.MainTiles
                 Me.NumsPerPrecureList(tile.ID) += 1
             Next
@@ -53,50 +55,123 @@ Namespace HandChecker
         ''' <returns>メンツが揃っていて上がれる状態になっている場合にTrue,そうでない場合はFalse</returns>
         Public Function IsCompleted() As Boolean
 
-            If Me.DeterminedByHandIrregularYakuAccomplished() Then
-                Return True
-            End If
+            With NumsPerPrecureList
 
-            For i As Integer = 0 To NumsPerPrecureList.Count - 1
-
-                '一時リストに牌種別枚数を複製
-                Dim _tempList As SortedList(Of String, Integer)
-                _tempList = Me.GetDeepCopy(NumsPerPrecureList)
-
-                If Not CanBePair(i, _tempList) Then
-                    'i番目の牌種が雀頭になり得ない場合、さらに雀頭候補を探す
-                    Continue For
-                Else
-                    'i番目の牌種が雀頭になり得る場合、それが雀頭だったと仮定してアガれるか検証を続行
-                    _tempList(_tempList.Keys(i)) -= 2
+                If Me.DeterminedByHandIrregularYakuAccomplished() Then
+                    Return True
                 End If
 
-                For j As Integer = 0 To NumsPerPrecureList.Count - 1
-                    'j番目の牌種が1枚も存在しない場合j+1に移る
-                    If Not Me.ExistsTile(j, _tempList) Then
+                Dim r As Integer = 0
+                Dim a As Integer = .Values(0)
+                Dim b As Integer = .Values(1)
+
+                '雀頭候補
+                Dim _headSeries As Integer = Me.GetHeadCandidateSuit(NumsPerPrecureList)
+                If _headSeries = -1 Then
+                    Return False
+                End If
+
+
+                Dim _seriesStartChara As Integer
+                Dim _seriesEndChara As Integer
+                For i As Integer = 0 To _headSeries - 1
+                    _seriesStartChara += CharacterNumPerSeries(i)
+                Next
+                _seriesEndChara += _seriesStartChara + CharacterNumPerSeries(_headSeries) - 1
+
+                For _charaIndex As Integer = _seriesStartChara To _seriesEndChara
+                    .Item(.Keys(_charaIndex)) -= 2
+                    If .Values(_charaIndex) >= 0 Then
+                        If Me.IsDividableIntoFourMents(NumsPerPrecureList) Then
+                            Return True
+                        End If
+                    End If
+                    .Item(.Keys(_charaIndex)) += 2
+                Next
+
+                Return False
+            End With
+
+        End Function
+
+        ''' <summary>
+        ''' 12枚の牌をチェックして４面子に完全に分解可能か判定する。
+        ''' </summary>
+        ''' <returns></returns>
+        Private Function IsDividableIntoFourMents(numsPerPrecureList As SortedList(Of String, Integer)) As Boolean
+
+            With numsPerPrecureList
+                Dim r As Integer = 0
+                Dim a = .Values(0)
+                Dim b = .Values(1)
+
+                For i As Integer = 0 To .Count - 3
+                    r = a Mod 3
+                    If r = 0 Then
+                        a = b - r
+                        b = .Values(i + 2) - r
+
                         Continue For
                     End If
 
-                    '同じ種類の牌が6枚できる事は無いので全く同じ牌の刻子が2組できる事は考慮しない
-                    While Me.CanbeTriplet(j, _tempList)
-                        'j番目の牌種が刻子になり得る場合、それが刻子を作ったと仮定してアガれるか検証
-                        _tempList(_tempList.Keys(j)) -= 3
-                    End While
+                    If b >= r AndAlso .Values(i + 2) >= r AndAlso
+                        .Keys(i).Substring(0, 2) = .Keys(i + 2).Substring(0, 2) Then
 
-                    While Me.CanBeStartOfChow(j, _tempList)
-                        'j～j+2番目の牌種で順子になり得る場合、それで順子を作ったと仮定してアガれるか検証
-                        _tempList(_tempList.Keys(j)) -= 1
-                        _tempList(_tempList.Keys(j + 1)) -= 1
-                        _tempList(_tempList.Keys(j + 2)) -= 1
-                    End While
+                        'UNIMPLEMENTED: 上と同じ計算をしているので改善の余地がありそう
+                        a = b - r
+                        b = .Values(i + 2) - r
 
+                    Else
+                        Return False
+                    End If
                 Next
-                If Not Me.RemainsSomeTiles(_tempList) Then
+
+                If a Mod 3 = 0 AndAlso b Mod 3 = 0 Then
                     Return True
+                Else
+                    Return False
                 End If
+
+            End With
+        End Function
+
+        ''' <summary>
+        ''' 与えられた手牌がアガリ形になっている可能性がある場合、雀頭になる牌の候補の含まれるSuitを作品IDで返します。
+        ''' 与えられた手牌がアガリ形ではあり得ないと判断した場合、-1を返します。
+        ''' </summary>
+        ''' <returns></returns>
+        Private Function GetHeadCandidateSuit(numsPerPrecureList As SortedList(Of String, Integer)) As Integer
+            Dim _head As Integer = -1
+            Dim _seriesBorder As Integer = 0
+            For _seriesIndex As Integer = 0 To CharacterNumPerSeries.Length - 1
+                Dim _sumPerTeam As Integer = 0
+
+                Dim _charaNum As Integer = CharacterNumPerSeries(_seriesIndex)
+
+                '1つのSuit内の牌の枚数の総数を計算
+                For _charaIndex As Integer = _seriesBorder To _seriesBorder + _charaNum - 1
+                    _sumPerTeam += numsPerPrecureList.Values(_charaIndex)
+                Next
+                Select Case _sumPerTeam Mod 3
+                    Case 1
+                        '総数を3で割った余りが1の場合、アガリ形ではあり得ない
+                        Return -1
+                    Case 2
+                        '総数を3で割った余りが2の場合、そのSuit内に雀頭候補がある可能性がある
+                        If _head = -1 Then
+                            _head = _seriesIndex
+                        Else
+                            '雀頭候補のあるSuitが複数出てきたら、アガリ形ではない
+                            Return -1
+                        End If
+                End Select
+
+                _seriesBorder += _charaNum
             Next
 
-            Return False
+            '全てのSuitを検索したが雀頭候補が見つからなかった
+            Return _head
+
         End Function
 
         ''' <summary>
@@ -260,7 +335,6 @@ Namespace HandChecker
                     _tempDictionary(_precureIDWall) -= 1
                 End If
             Next
-
 
             Return False
         End Function
