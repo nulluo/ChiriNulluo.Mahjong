@@ -725,6 +725,13 @@ Public Class RoundForm
         Me.OpenNextRoundForm(_comHand, _humanHand, _wallPile)
     End Sub
 
+    Private Sub TestShantenButton1_Click(sender As Object, e As EventArgs) Handles TestShantenButton1.Click
+        Dim _shanten = ShantenCounter.CalculateShanten(Me.HumanPlayer.Hand.TotalTiles.Select(Function(x) x.ID).ToList)
+
+        MessageBox.Show("Shanten:" & _shanten.ShantenCount)
+
+    End Sub
+
 
 #End Region
 End Class

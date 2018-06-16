@@ -56,6 +56,7 @@ Partial Class RoundForm
         Me.horizontalRevealedHandPanel1 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel()
         Me.horizontalRevealedHandPanel0 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel()
         Me.TileDetailInfoPanel1 = New ChiriNulluo.Mahjong.WinFormApplication.TileDetailInfoPanel()
+        Me.TestShantenButton1 = New System.Windows.Forms.Button()
         CType(Me.BonusTIlePicture0, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BonusTIlePicture1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BonusTIlePicture2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -275,11 +276,18 @@ Partial Class RoundForm
         Me.TileDetailInfoPanel1.TargetTile = Nothing
         Me.TileDetailInfoPanel1.TargetTileIndex = 0
         '
+        'TestShantenButton1
+        '
+        resources.ApplyResources(Me.TestShantenButton1, "TestShantenButton1")
+        Me.TestShantenButton1.Name = "TestShantenButton1"
+        Me.TestShantenButton1.UseVisualStyleBackColor = True
+        '
         'RoundForm
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Green
+        Me.Controls.Add(Me.TestShantenButton1)
         Me.Controls.Add(Me.openRuleFormButton)
         Me.Controls.Add(Me.RiichiButton)
         Me.Controls.Add(Me.riichiImageCOM)
@@ -356,4 +364,5 @@ Partial Class RoundForm
     Friend WithEvents riichiImageCOM As PictureBox
     Friend WithEvents RiichiButton As RichButton
     Friend WithEvents openRuleFormButton As RichButton
+    Friend WithEvents TestShantenButton1 As Button
 End Class

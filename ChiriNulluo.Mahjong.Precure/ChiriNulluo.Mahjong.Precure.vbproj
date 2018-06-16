@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\Constants.vb" />
+    <Compile Include="HandChecker\ShantenCounter.vb" />
     <Compile Include="HandChecker\PrecureHandChecker.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

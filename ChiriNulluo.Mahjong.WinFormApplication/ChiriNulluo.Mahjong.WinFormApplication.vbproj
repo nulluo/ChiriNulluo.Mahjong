@@ -101,6 +101,12 @@
     <Compile Include="RoundFacade.vb" />
     <Compile Include="SetOpponentFacade.vb" />
     <Compile Include="Sounds\SoundManager.vb" />
+    <Compile Include="View\CharacterIDTestForm.Designer.vb">
+      <DependentUpon>CharacterIDTestForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\CharacterIDTestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\Controls\ControlExtension.vb" />
     <Compile Include="View\Controls\DataGridViewTileImageCell.vb" />
     <Compile Include="View\Controls\DataGridViewTileImageColumn.vb" />
@@ -264,6 +270,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.zh.resx" />
+    <EmbeddedResource Include="View\CharacterIDTestForm.resx">
+      <DependentUpon>CharacterIDTestForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Controls\HorizontalDiscardedPilePanel.resx">
       <DependentUpon>HorizontalDiscardedPilePanel.vb</DependentUpon>
     </EmbeddedResource>
