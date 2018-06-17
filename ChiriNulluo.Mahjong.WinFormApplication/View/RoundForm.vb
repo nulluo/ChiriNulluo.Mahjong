@@ -77,6 +77,7 @@ Public Class RoundForm
 #If DEBUG Then
         Me.allTilesOpenField.Visible = True
         Me.endRoundButton.Visible = True
+        Me.TestShantenButton1.Visible = True
 #End If
 
         '手牌UIにモデルをバインド
@@ -313,6 +314,7 @@ Public Class RoundForm
             Me.RiichiAutoDrawTimer.Enabled = False
         End If
 
+        Me.DisplayUnRevealedBonusTIlePictures(True)
         Me.CaptureFormImageIfNonReplayMode()
 
         Me.OpenRoundEndTalkingWindowForm(discardedTile)
@@ -380,7 +382,8 @@ Public Class RoundForm
             Me.mediaPlayer.settings.volume = 10
         End If
 
-        Me.DisplayBonusTIlePictures()
+        Me.DisplayRevealedBonusTIlePictures()
+
     End Sub
 
     ''' <summary>
@@ -433,6 +436,8 @@ Public Class RoundForm
         Else
             Me.WallPileForm.Hide()
         End If
+
+        Me.DisplayUnRevealedBonusTIlePictures(_open)
     End Sub
 
     ''' <summary>
@@ -678,13 +683,31 @@ Public Class RoundForm
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' 表ボーナス牌を表示する
     ''' </summary>
-    Private Sub DisplayBonusTIlePictures()
+    Private Sub DisplayRevealedBonusTIlePictures()
         'UNIMPLEMENTED: 0,4,8というインデックスを知っているのは内部を知り過ぎている感じ
         Me.BonusTIlePicture0.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(0).Image
         Me.BonusTIlePicture1.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(4).Image
         Me.BonusTIlePicture2.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(8).Image
+    End Sub
+
+    ''' <summary>
+    ''' 裏ボーナス牌を表示する
+    ''' </summary>
+    Private Sub DisplayUnRevealedBonusTIlePictures(visible As Boolean)
+
+        If visible Then
+            'UNIMPLEMENTED: 12,16,20というインデックスを知っているのは内部を知り過ぎている感じ
+            Me.BonusTIlePicture3.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(12).Image
+            Me.BonusTIlePicture4.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(16).Image
+            Me.BonusTIlePicture5.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(20).Image
+        Else
+            Me.BonusTIlePicture3.Image = Nothing
+            Me.BonusTIlePicture4.Image = Nothing
+            Me.BonusTIlePicture5.Image = Nothing
+        End If
+
     End Sub
 #End Region
 
@@ -731,6 +754,7 @@ Public Class RoundForm
         MessageBox.Show("Shanten:" & _shanten.ShantenCount)
 
     End Sub
+
 
 
 #End Region

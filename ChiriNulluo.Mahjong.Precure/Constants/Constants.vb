@@ -5,7 +5,7 @@
         ''' <summary>
         ''' 1局で指定されるボーナス牌の種類数
         ''' </summary>
-        Public Const BonusTileNumber = 3
+        Public Const BonusTileNumber = 6
 
     End Module
 

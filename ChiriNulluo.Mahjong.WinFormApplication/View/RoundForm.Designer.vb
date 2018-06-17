@@ -45,6 +45,10 @@ Partial Class RoundForm
         Me.Label12 = New System.Windows.Forms.Label()
         Me.riichiImageHuman = New System.Windows.Forms.PictureBox()
         Me.riichiImageCOM = New System.Windows.Forms.PictureBox()
+        Me.TestShantenButton1 = New System.Windows.Forms.Button()
+        Me.BonusTIlePicture3 = New System.Windows.Forms.PictureBox()
+        Me.BonusTIlePicture4 = New System.Windows.Forms.PictureBox()
+        Me.BonusTIlePicture5 = New System.Windows.Forms.PictureBox()
         Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
         Me.RiichiButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
         Me.humanPlayerDiscardedPilePanel = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalDiscardedPilePanel()
@@ -56,13 +60,15 @@ Partial Class RoundForm
         Me.horizontalRevealedHandPanel1 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel()
         Me.horizontalRevealedHandPanel0 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel()
         Me.TileDetailInfoPanel1 = New ChiriNulluo.Mahjong.WinFormApplication.TileDetailInfoPanel()
-        Me.TestShantenButton1 = New System.Windows.Forms.Button()
         CType(Me.BonusTIlePicture0, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BonusTIlePicture1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BonusTIlePicture2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.riichiImageHuman, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.riichiImageCOM, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BonusTIlePicture3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BonusTIlePicture4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BonusTIlePicture5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RiichiButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -200,6 +206,33 @@ Partial Class RoundForm
         Me.riichiImageCOM.Name = "riichiImageCOM"
         Me.riichiImageCOM.TabStop = False
         '
+        'TestShantenButton1
+        '
+        resources.ApplyResources(Me.TestShantenButton1, "TestShantenButton1")
+        Me.TestShantenButton1.Name = "TestShantenButton1"
+        Me.TestShantenButton1.UseVisualStyleBackColor = True
+        '
+        'BonusTIlePicture3
+        '
+        Me.BonusTIlePicture3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.BonusTIlePicture3, "BonusTIlePicture3")
+        Me.BonusTIlePicture3.Name = "BonusTIlePicture3"
+        Me.BonusTIlePicture3.TabStop = False
+        '
+        'BonusTIlePicture4
+        '
+        Me.BonusTIlePicture4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.BonusTIlePicture4, "BonusTIlePicture4")
+        Me.BonusTIlePicture4.Name = "BonusTIlePicture4"
+        Me.BonusTIlePicture4.TabStop = False
+        '
+        'BonusTIlePicture5
+        '
+        Me.BonusTIlePicture5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.BonusTIlePicture5, "BonusTIlePicture5")
+        Me.BonusTIlePicture5.Name = "BonusTIlePicture5"
+        Me.BonusTIlePicture5.TabStop = False
+        '
         'openRuleFormButton
         '
         Me.openRuleFormButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton1
@@ -276,12 +309,6 @@ Partial Class RoundForm
         Me.TileDetailInfoPanel1.TargetTile = Nothing
         Me.TileDetailInfoPanel1.TargetTileIndex = 0
         '
-        'TestShantenButton1
-        '
-        resources.ApplyResources(Me.TestShantenButton1, "TestShantenButton1")
-        Me.TestShantenButton1.Name = "TestShantenButton1"
-        Me.TestShantenButton1.UseVisualStyleBackColor = True
-        '
         'RoundForm
         '
         resources.ApplyResources(Me, "$this")
@@ -301,6 +328,9 @@ Partial Class RoundForm
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.comPointField)
+        Me.Controls.Add(Me.BonusTIlePicture5)
+        Me.Controls.Add(Me.BonusTIlePicture4)
+        Me.Controls.Add(Me.BonusTIlePicture3)
         Me.Controls.Add(Me.BonusTIlePicture2)
         Me.Controls.Add(Me.allTilesOpenField)
         Me.Controls.Add(Me.BonusTIlePicture1)
@@ -326,6 +356,9 @@ Partial Class RoundForm
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.riichiImageHuman, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.riichiImageCOM, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BonusTIlePicture3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BonusTIlePicture4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BonusTIlePicture5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RiichiButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -365,4 +398,7 @@ Partial Class RoundForm
     Friend WithEvents RiichiButton As RichButton
     Friend WithEvents openRuleFormButton As RichButton
     Friend WithEvents TestShantenButton1 As Button
+    Friend WithEvents BonusTIlePicture3 As PictureBox
+    Friend WithEvents BonusTIlePicture4 As PictureBox
+    Friend WithEvents BonusTIlePicture5 As PictureBox
 End Class

@@ -114,6 +114,8 @@ Public NotInheritable Class MatchManagerController
             logger.Error(ex)
         End Try
 
+        Precure.HandChecker.ShantenCounter.InitializeCurrentRoundTiles()
+
         Me.MatchManager.RoundManager.WallPile = Me.WallPile
 
         'UNIMPLEMENTED：1番目のプレイヤーがCOMであることをこのクラスが知っていてそれを利用するというのは結合度が強すぎでは？
