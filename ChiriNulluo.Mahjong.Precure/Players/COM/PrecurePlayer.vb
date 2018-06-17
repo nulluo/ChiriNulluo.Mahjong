@@ -23,8 +23,6 @@
         ''' <returns></returns>
         Public Property DisplayName As String
 
-
-
     End Class
 
 End Namespace

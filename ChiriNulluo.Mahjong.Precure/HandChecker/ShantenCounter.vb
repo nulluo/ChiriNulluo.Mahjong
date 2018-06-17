@@ -241,8 +241,9 @@ Namespace HandChecker
             Dim _subResultWithoutHead As ShantenCountProgress = CountMentsuAndMentsCandidate(NumsPerTileIndexList, 0, _progressWithoutHead)
             _results.Add(_subResultWithoutHead)
 
+            'UNIMPLEMENTED: ＋１　必要ないのでは？
             ''上記で計算した暫定最小向聴数のうち、最小値が求めたい向聴数となる
-            Dim _minShantenCount As Integer = 9
+            Dim _minShantenCount As Integer = Constants.ShantenCountMax + 1
 
             'UNIMPLEMENTED: LINQで最小値は計算できるはず
             _results.ForEach(Sub(x)
@@ -479,7 +480,7 @@ Namespace HandChecker
                         _candidate = 4 - _mentsu
                     End If
 
-                    Dim _shantenCount As Integer = 8 - 2 * Me.MentsuCount - _candidate
+                    Dim _shantenCount As Integer = Constants.ShantenCountMax - 2 * Me.MentsuCount - _candidate
 
                     If (Me.HasHead) Then
                         _shantenCount -= 1

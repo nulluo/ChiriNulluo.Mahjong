@@ -10,7 +10,7 @@ Public Class MatchManager
         Me.PlayersList.AddRange(Enumerable.Range(0, Me.HumanPlayersNumber).Select(Function(index) New HumanPlayer).ToArray)
 
         Me.COMPlayersNumber = cOMPlayersNumber
-        Me.PlayersList.AddRange(Enumerable.Range(0, Me.COMPlayersNumber).Select(Function(index) New COM.COMPlayer).ToArray)
+        Me.PlayersList.AddRange(Enumerable.Range(0, Me.COMPlayersNumber).Select(Function(index) New COM.COMPlayer()).ToArray)
 
         Dim _humanPlayerIndexes(Me.HumanPlayersNumber - 1) As Integer
         For i As Integer = 0 To Me.HumanPlayersNumber - 1

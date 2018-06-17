@@ -11,16 +11,19 @@ Public NotInheritable Class MatchManagerController
 
     Private Sub New()
         'Me.MatchManager = New MatchManager(1, 1)
-        Me.InnerInitializeMatch(COMStrategy.ToCompleteDealtReadyHand)
+        'Me.InnerInitializeMatch(COMStrategy.ToCompleteDealtReadyHand)
+        Me.InnerInitializeMatch(COMStrategy.ToDecreaseShantenCount)
     End Sub
 
     Private Sub New(comStrategy As COMStrategy)
         'Me.MatchManager = New MatchManager(1, 1)
         If comStrategy = COMStrategy.ToCompleteDealtHandOneStepAwayFromReady Then
             Me.InnerInitializeMatch(COMStrategy.ToCompleteDealtHandOneStepAwayFromReady)
+        ElseIf comStrategy = comStrategy.ToDecreaseShantenCount
+            Me.InnerInitializeMatch(COMStrategy.ToDecreaseShantenCount)
         Else
-            'UNIMPLEMENTED：COMStrategy.Randomの場合もテンパイ手ベースのアルゴリズムになる事に注意（COMStrategy.Randomの場合の挙動が現在バグっているため）
-            Me.InnerInitializeMatch(COMStrategy.ToCompleteDealtReadyHand)
+            'UNIMPLEMENTED：COMStrategy.Randomの場合も向聴数減少型のアルゴリズムになる事に注意（COMStrategy.Randomの場合の挙動が現在バグっているため）
+            Me.InnerInitializeMatch(COMStrategy.ToDecreaseShantenCount)
         End If
 
     End Sub
@@ -62,7 +65,8 @@ Public NotInheritable Class MatchManagerController
     ''' <param name="wallPile"></param>
     Public Sub InitializeRound(humanHand As Hand, comHand As Hand, wallPile As WallPile)
         'MatchManagerやRoundManagerの生成（その中で一旦通常通り配牌される）
-        Me.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
+        'Me.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
+        Me.InitializeRound(COMStrategy.ToDecreaseShantenCount)
 
         '↑で配牌した結果を上書きする形で配牌しなおす↓
 
@@ -113,14 +117,16 @@ Public NotInheritable Class MatchManagerController
             'UNIMPLEMENTED：なんらかのほうほうでろぐをはく
             logger.Error(ex)
         End Try
-
-        Precure.HandChecker.ShantenCounter.InitializeCurrentRoundTiles()
-
         Me.MatchManager.RoundManager.WallPile = Me.WallPile
 
         'UNIMPLEMENTED：1番目のプレイヤーがCOMであることをこのクラスが知っていてそれを利用するというのは結合度が強すぎでは？
         Dim _com = DirectCast(Me.MatchManager.RoundManager.PlayersList(1), Players.COM.COMPlayer)
         _com.Algorithm = New PrecureCOMPlayerAlgorithm(_com, Me.MatchManager.RoundManager, comStrategy)
+        _com.PreviousShantenCount = 8
+        'UNIMPLEMENTED: ここで  chirnulluo.mahjong.precure.ShantenCountMaxにアクセスしたいのだがうまくいかない
+        'UNIMPLEMENTED: 仮に初期のPreviousShantenCountを8にしているが、配牌時の向聴数を計算してPreviousShantenCountプロパティを初期化するようにしないと、最初のツモで必ず牌を手から出して捨ててしまう
+
+        Precure.HandChecker.ShantenCounter.InitializeCurrentRoundTiles()
         Return Me.MatchManager.RoundManager
     End Function
 

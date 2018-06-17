@@ -17,5 +17,11 @@
         ''' </summary>
         ToCompleteDealtHandOneStepAwayFromReady
 
+        ''' <summary>
+        ''' 向聴数が減少する場合、牌を捨ててアガリを目指す
+        ''' </summary>
+        ToDecreaseShantenCount
+
+
     End Enum
 End Namespace

@@ -44,6 +44,30 @@ Namespace Players.COM
                         End If
                     End If
 
+                Case COMStrategy.ToDecreaseShantenCount
+                    'テンパイになっている時はツモギリ
+                    Dim _handChecker As New PrecureHandChecker(_comPlayer.Hand)
+                    If _handChecker.IsReady Then
+                        Return _comPlayer.Hand.TileDrawnBefore
+                    End If
+
+                    Dim _newShanten As Integer
+
+                    Dim _handTileIDList As List(Of String) = _comPlayer.Hand.MainTiles.Select(Function(x) x.ID).ToList
+
+                    For i As Integer = 0 To _handTileIDList.Count - 1
+                        Dim _id As String = _handTileIDList(i)
+                        _handTileIDList.RemoveAt(i)
+                        _newShanten = ShantenCounter.CalculateShanten(_handTileIDList).ShantenCount
+                        _handTileIDList.Insert(i, _id)
+
+                        If _newShanten <= _comPlayer.PreviousShantenCount Then
+                            _comPlayer.PreviousShantenCount = _newShanten
+                            Return _comPlayer.Hand.MainTiles.SearchTile(_id)
+                        End If
+                    Next
+                    Return _comPlayer.Hand.TileDrawnBefore
+
             End Select
 
         End Function
@@ -65,6 +89,10 @@ Namespace Players.COM
                 Case COMStrategy.ToCompleteDealtHandOneStepAwayFromReady
                     Dim _comHandFactory As New PrecureCOMHandFactory(Me._roundManager)
                     _comHandFactory.DealHandNeedingTwoTIlesToComplete(Me._comPlayer)
+
+                Case COMStrategy.ToDecreaseShantenCount
+                    Dim _comHandFactory As New PrecureCOMHandFactory(Me._roundManager)
+                    _comHandFactory.DealReadyHand(Me._comPlayer)
 
             End Select
         End Sub

@@ -26,7 +26,8 @@ Public Class RoundFacade
                                                  wallPile IsNot Nothing Then
             MatchManagerController.GetInstance.InitializeRound(humanHand, comHand, wallPile)
         Else
-            MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
+            'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
+            MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToDecreaseShantenCount)
             MatchManagerController.GetInstance.MatchManager.RoundManager.ShuffleWall()
         End If
 #Else
@@ -236,6 +237,7 @@ Public Class RoundFacade
         If Me.Result <> RoundState.Draw Then
             MatchManagerController.GetInstance.MatchManager.RoundsCount += 1
         End If
+
 
     End Sub
 

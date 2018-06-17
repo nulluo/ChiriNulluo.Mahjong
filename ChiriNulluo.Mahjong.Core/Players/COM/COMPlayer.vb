@@ -5,6 +5,7 @@ Namespace Players.COM
     Public Class COMPlayer
         Inherits Player
 
+
         Public Property Algorithm As COMPlayerAlgorithm
 
         'UNIMPLEMENTED：設計は再検討を要する：ほとんどのメソッドがCOMPlayerAlgorithmに移譲されている。このクラスとCOMPlayerAlgorithmを分ける意味はあったのか？
@@ -30,6 +31,13 @@ Namespace Players.COM
         Public Function ChooseDiscardTile() As Tiles.Tile
             Return Algorithm.ChooseDiscardTile()
         End Function
+
+
+        ''' <summary>
+        ''' 1巡前の向聴数
+        ''' </summary>
+        ''' <returns>1巡前の向聴数</returns>
+        Public Property PreviousShantenCount As Integer
 
     End Class
 
