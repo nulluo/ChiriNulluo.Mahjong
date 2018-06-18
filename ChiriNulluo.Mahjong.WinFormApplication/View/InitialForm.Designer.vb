@@ -31,6 +31,7 @@ Partial Class InitialForm
         Me.PlaysSEMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GameStartButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
         Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
+        Me.TwitterShareButton = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +105,15 @@ Partial Class InitialForm
         Me.openRuleFormButton.TabIndex = 41
         Me.openRuleFormButton.TabStop = False
         '
+        'TwitterShareButton
+        '
+        Me.TwitterShareButton.Location = New System.Drawing.Point(12, 249)
+        Me.TwitterShareButton.Name = "TwitterShareButton"
+        Me.TwitterShareButton.Size = New System.Drawing.Size(102, 35)
+        Me.TwitterShareButton.TabIndex = 42
+        Me.TwitterShareButton.Text = "Twitterでシェア"
+        Me.TwitterShareButton.UseVisualStyleBackColor = True
+        '
         'InitialForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -111,6 +121,7 @@ Partial Class InitialForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(300, 324)
+        Me.Controls.Add(Me.TwitterShareButton)
         Me.Controls.Add(Me.openRuleFormButton)
         Me.Controls.Add(Me.GameStartButton)
         Me.Controls.Add(Me.MenuStrip1)
@@ -137,4 +148,5 @@ Partial Class InitialForm
     Friend WithEvents PlaysSEMenuItem As ToolStripMenuItem
     Friend WithEvents GameStartButton As RichButton
     Friend WithEvents openRuleFormButton As RichButton
+    Friend WithEvents TwitterShareButton As Button
 End Class
