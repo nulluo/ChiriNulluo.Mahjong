@@ -19,7 +19,7 @@ Namespace Players.COM
         ''' <summary>
         ''' 配牌時、テンパイ手が入っている確率
         ''' </summary>
-        Private Const ReadyHandStartRate As Integer = 70
+        Private Const ReadyHandStartRate As Integer = 20
 
 
 #End Region

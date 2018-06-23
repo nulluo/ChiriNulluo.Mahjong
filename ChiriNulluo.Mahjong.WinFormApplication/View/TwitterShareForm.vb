@@ -14,16 +14,11 @@
         Me.PreviousForm = previousForm
         Me.ImageFileName = imageFileName
 
+        Me.Cursor = Cursors.WaitCursor
     End Sub
 
 
     Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
-
-        Timer1.Enabled = True
-
-    End Sub
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
         Me.WebBrowser1.Document.All.GetElementsByName("tweet")(0).InnerText =
                          "キュア雀で●●に勝利しました #キュアジャン https://bit.ly/2MhypHb"
@@ -40,5 +35,9 @@
         bmp.Dispose()
 
         Timer1.Enabled = False
+
+        Me.Cursor = Cursors.Default
+
     End Sub
+
 End Class

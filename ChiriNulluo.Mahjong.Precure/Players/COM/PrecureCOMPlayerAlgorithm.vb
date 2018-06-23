@@ -55,19 +55,21 @@ Namespace Players.COM
 
                     Dim _handTileIDList As List(Of String) = _comPlayer.Hand.MainTiles.Select(Function(x) x.ID).ToList
 
+                    'UNIMPLEMENTED: これだと、向聴数が少なる牌のうち、常に最小のIDの牌を捨てるアルゴリズムになっているため、COMの手牌がじゃっかんID上の方に偏る傾向が出てしまう。IDと向聴数のDictionaryを用意して、最小向聴数を満たす捨て牌候補からランダムで捨て牌を確定する仕組みが必要
+                    '捨てる牌。まずはツモった牌を候補とし、それ以外に向聴数が小さくなる牌が見つかればそれを捨てる
+                    Dim _idToDiscard As String = _handTileIDList.Last
                     For i As Integer = 0 To _handTileIDList.Count - 1
                         Dim _id As String = _handTileIDList(i)
                         _handTileIDList.RemoveAt(i)
                         _newShanten = ShantenCounter.CalculateShanten(_handTileIDList).ShantenCount
                         _handTileIDList.Insert(i, _id)
 
-                        If _newShanten <= _comPlayer.PreviousShantenCount Then
+                        If _newShanten < _comPlayer.PreviousShantenCount Then
                             _comPlayer.PreviousShantenCount = _newShanten
-                            Return _comPlayer.Hand.MainTiles.SearchTile(_id)
+                            _idToDiscard = _id
                         End If
                     Next
-                    Return _comPlayer.Hand.TileDrawnBefore
-
+                    Return _comPlayer.Hand.MainTiles.SearchTile(_idToDiscard)
             End Select
 
         End Function
