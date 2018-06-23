@@ -246,6 +246,12 @@
     <Compile Include="View\TileSelectWindowForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\TwitterShareForm.Designer.vb">
+      <DependentUpon>TwitterShareForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\TwitterShareForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\WallPIleForm.Designer.vb">
       <DependentUpon>WallPIleForm.vb</DependentUpon>
     </Compile>
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\TileSelectWindowForm.resx">
       <DependentUpon>TileSelectWindowForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TwitterShareForm.resx">
+      <DependentUpon>TwitterShareForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\WallPIleForm.resx">
       <DependentUpon>WallPIleForm.vb</DependentUpon>

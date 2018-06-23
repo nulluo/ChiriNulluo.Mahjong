@@ -39,6 +39,7 @@ Partial Class PointForm
         Me.HorizontalRevealedHandPanel1 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel()
         Me.HorizontalRevealedHandPanel0 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel()
         Me.HorizontalHandPanel1 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalHandPanel()
+        Me.TwitterShareButton = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -150,11 +151,18 @@ Partial Class PointForm
         Me.HorizontalHandPanel1.DisplayStyle = ChiriNulluo.Mahjong.WinFormApplication.Constants.HandPanelDisplayStyle.ShownToHumanStood
         Me.HorizontalHandPanel1.Name = "HorizontalHandPanel1"
         '
+        'TwitterShareButton
+        '
+        resources.ApplyResources(Me.TwitterShareButton, "TwitterShareButton")
+        Me.TwitterShareButton.Name = "TwitterShareButton"
+        Me.TwitterShareButton.UseVisualStyleBackColor = True
+        '
         'PointForm
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Controls.Add(Me.TwitterShareButton)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ManualModeField)
         Me.Controls.Add(Me.playerNameField)
@@ -192,4 +200,5 @@ Partial Class PointForm
     Friend WithEvents playerNameField As Label
     Friend WithEvents YakuNameColumn As DataGridViewTextBoxColumn
     Friend WithEvents YakuPointColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TwitterShareButton As Button
 End Class

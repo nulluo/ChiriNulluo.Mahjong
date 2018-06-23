@@ -181,4 +181,17 @@ Public Class PointForm
         _dialog.ShowDialog()
     End Sub
 
+    Private Sub TwitterShareButton_Click(sender As Object, e As EventArgs) Handles TwitterShareButton.Click
+        'コントロールの外観を描画するBitmapの作成
+        Dim bmp As New Bitmap(Me.Width, Me.Height)
+        'キャプチャする
+        Me.DrawToBitmap(bmp, New Rectangle(0, 0, Me.Width, Me.Height))
+        'ファイルに保存する
+        bmp.Save(IO.Path.Combine(My.Application.Info.DirectoryPath, "logs\Image" & DateTime.Now.ToString("yyyyMMddhhmmnnss") & ".png"))
+        '後始末
+        bmp.Dispose()
+
+        Dim _form As New TwitterShareForm(Me, IO.Path.Combine(My.Application.Info.DirectoryPath, "logs\", "ScreenShot.gif"))
+        _form.Show()
+    End Sub
 End Class

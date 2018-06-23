@@ -52,4 +52,11 @@ Public Class InitialForm
         System.Diagnostics.Process.Start("http://twitter.com/share?url=http://www.geocities.jp/nero021/programming/CureJong/CureJong.htm&text=%e3%81%93%e3%81%ae%e3%82%b2%e3%83%bc%e3%83%a0%e3%82%81%e3%81%a3%e3%81%a1%e3%82%83%e9%9d%a2%e7%99%bd%e3%81%84%e3%81%a7%ef%bc%81%e3%81%bf%e3%82%93%e3%81%aa%e3%82%82%e3%82%84%e3%82%8d%e3%81%86%ef%bc%81")
 
     End Sub
+
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim _form As New TwitterShareForm(Me, IO.Path.Combine(My.Application.Info.DirectoryPath, "logs", "ScreenShot.gif"))
+        _form.Show()
+    End Sub
 End Class

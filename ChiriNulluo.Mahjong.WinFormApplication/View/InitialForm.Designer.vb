@@ -29,12 +29,13 @@ Partial Class InitialForm
         Me.設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PlaysBGMMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PlaysSEMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GameStartButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
-        Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
         Me.TwitterShareButton = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
+        Me.GameStartButton = New ChiriNulluo.Mahjong.WinFormApplication.RichButton()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -81,17 +82,25 @@ Partial Class InitialForm
         Me.PlaysSEMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.PlaysSEMenuItem.Text = "SEを鳴らす"
         '
-        'GameStartButton
+        'TwitterShareButton
         '
-        Me.GameStartButton.BackColor = System.Drawing.Color.Transparent
-        Me.GameStartButton.HoverImage = CType(resources.GetObject("GameStartButton.HoverImage"), System.Drawing.Image)
-        Me.GameStartButton.Image = CType(resources.GetObject("GameStartButton.Image"), System.Drawing.Image)
-        Me.GameStartButton.Location = New System.Drawing.Point(89, 127)
-        Me.GameStartButton.Name = "GameStartButton"
-        Me.GameStartButton.PushedImage = CType(resources.GetObject("GameStartButton.PushedImage"), System.Drawing.Image)
-        Me.GameStartButton.Size = New System.Drawing.Size(127, 50)
-        Me.GameStartButton.TabIndex = 2
-        Me.GameStartButton.TabStop = False
+        Me.TwitterShareButton.Location = New System.Drawing.Point(12, 249)
+        Me.TwitterShareButton.Name = "TwitterShareButton"
+        Me.TwitterShareButton.Size = New System.Drawing.Size(102, 35)
+        Me.TwitterShareButton.TabIndex = 42
+        Me.TwitterShareButton.Text = "Twitterでシェア"
+        Me.TwitterShareButton.UseVisualStyleBackColor = True
+        Me.TwitterShareButton.Visible = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(158, 261)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(113, 23)
+        Me.Button1.TabIndex = 43
+        Me.Button1.Text = "TwitterSheaTest"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'openRuleFormButton
         '
@@ -105,14 +114,17 @@ Partial Class InitialForm
         Me.openRuleFormButton.TabIndex = 41
         Me.openRuleFormButton.TabStop = False
         '
-        'TwitterShareButton
+        'GameStartButton
         '
-        Me.TwitterShareButton.Location = New System.Drawing.Point(12, 249)
-        Me.TwitterShareButton.Name = "TwitterShareButton"
-        Me.TwitterShareButton.Size = New System.Drawing.Size(102, 35)
-        Me.TwitterShareButton.TabIndex = 42
-        Me.TwitterShareButton.Text = "Twitterでシェア"
-        Me.TwitterShareButton.UseVisualStyleBackColor = True
+        Me.GameStartButton.BackColor = System.Drawing.Color.Transparent
+        Me.GameStartButton.HoverImage = CType(resources.GetObject("GameStartButton.HoverImage"), System.Drawing.Image)
+        Me.GameStartButton.Image = CType(resources.GetObject("GameStartButton.Image"), System.Drawing.Image)
+        Me.GameStartButton.Location = New System.Drawing.Point(89, 127)
+        Me.GameStartButton.Name = "GameStartButton"
+        Me.GameStartButton.PushedImage = CType(resources.GetObject("GameStartButton.PushedImage"), System.Drawing.Image)
+        Me.GameStartButton.Size = New System.Drawing.Size(127, 50)
+        Me.GameStartButton.TabIndex = 2
+        Me.GameStartButton.TabStop = False
         '
         'InitialForm
         '
@@ -121,6 +133,7 @@ Partial Class InitialForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(300, 324)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TwitterShareButton)
         Me.Controls.Add(Me.openRuleFormButton)
         Me.Controls.Add(Me.GameStartButton)
@@ -134,8 +147,8 @@ Partial Class InitialForm
         Me.Text = "キュア☆ジャン(プロトタイプ版)"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -149,4 +162,5 @@ Partial Class InitialForm
     Friend WithEvents GameStartButton As RichButton
     Friend WithEvents openRuleFormButton As RichButton
     Friend WithEvents TwitterShareButton As Button
+    Friend WithEvents Button1 As Button
 End Class
