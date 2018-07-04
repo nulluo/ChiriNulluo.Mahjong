@@ -44,6 +44,39 @@ Namespace Tiles
             End Get
         End Property
 
+
+        ''' <summary>
+        ''' ある牌の隣の牌(同じSuitに属するものに限る)を返す。隣の牌が存在しない場合は空のListを返す。
+        ''' </summary>
+        ''' <returns></returns>
+        Public Function NeighbourTileIDs() As List(Of String)
+
+            Dim _neighbours As New List(Of String)
+
+            If Me.Number > 0 Then
+                Dim _numberLeft As String
+                _numberLeft = String.Format("{0:00}", (Me.Number - 1))
+                Dim _tileIDLeft As String
+                _tileIDLeft = Me.SuitID & _numberLeft
+
+                If PrecureCharacterSet.GetInstance.AllCharacterTilesIDList.Contains(_tileIDLeft) Then
+                    _neighbours.Add(_tileIDLeft)
+                End If
+            End If
+
+            Dim _numberRight As String
+            _numberRight = String.Format("{0:00}", (Me.Number + 1))
+            Dim _tileIDRight As String
+            _tileIDRight = Me.SuitID & _numberRight
+
+            If PrecureCharacterSet.GetInstance.AllCharacterTilesIDList.Contains(_tileIDRight) Then
+                _neighbours.Add(_tileIDRight)
+            End If
+
+            Return _neighbours
+        End Function
+
+
     End Class
 
 End Namespace

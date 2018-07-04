@@ -83,6 +83,7 @@ Namespace HandChecker
                     .Item(.Keys(_charaIndex)) -= 2
                     If .Values(_charaIndex) >= 0 Then
                         If Me.IsDividableIntoFourMents(NumsPerPrecureList) Then
+                            .Item(.Keys(_charaIndex)) += 2
                             Return True
                         End If
                     End If
@@ -230,6 +231,7 @@ Namespace HandChecker
             Dim _tempDictionary = Me.GetDeepCopy(Me.NumsPerPrecureList)
 
             '総当たり方式で1牌ずつ手牌に足してみて、上がりになるか検証
+            'UNIMPLEMENTED: これ、アガリ牌が表表示されていないボーナス牌のどれかの場合テンパイ認定されないのでは？
             'UNIMPLEMENTED：これひょっとして、上がり牌が捨て牌または敵手牌の中にしかない場合、テンパイとして判定されないのでは？山牌しかみてないから
             For Each _precureIDWall As String In PrecureCharacterSet.GetInstance.CurrentRoundTotalTilesIDList
                 _tempDictionary(_precureIDWall) += 1
@@ -436,6 +438,50 @@ Namespace HandChecker
 
             Return _suit0 = _suit1 AndAlso _suit1 = _suit2 AndAlso _suit2 = _suit0
 
+        End Function
+
+        ''' <summary>
+        ''' 現在の手牌に加えるとアガリ形になる牌のIDを取得する。何を加えてもアガリ形にならない場合、空のリストを返す。アガリ形は役がついているかどうかは考慮しない。手牌依存型非定型役(オールスターズDX1など)にも対応する。ボーナス牌が今の局で使用されているかどうかは考慮しない。
+        ''' </summary>
+        ''' <returns></returns>
+        Public Function TilesToCompleteHand() As List(Of String)
+
+            '手牌の中の牌ID（重複を除く)
+            Dim _distinctTilesInHand As List(Of PreCureCharacterTile)
+            _distinctTilesInHand = Me.Hand.TotalTiles.Select(Function(x) DirectCast(x, PreCureCharacterTile)).Distinct.ToList
+
+            Dim _neighbourTilesList As New List(Of String)
+
+            _distinctTilesInHand.ForEach(Sub(x)
+                                             _neighbourTilesList.AddRange(x.NeighbourTileIDs)
+                                         End Sub)
+
+            'アタリ牌の候補(手牌に含まれる牌＋手牌の隣の牌)
+            Dim _candidateTileIDs As New List(Of String)
+            _candidateTileIDs.AddRange(_neighbourTilesList)
+            _candidateTileIDs.AddRange(_distinctTilesInHand.Select(Function(x) x.ID))
+
+            Dim _tempDictionary = Me.GetDeepCopy(Me.NumsPerPrecureList)
+
+
+            Dim _tilesToComplete As New List(Of String)
+
+            '総当たり方式で1牌ずつ手牌に足してみて、上がりになるか検証
+            For Each _precureID As String In _candidateTileIDs.OrderBy(Function(x) x).Distinct.ToList
+                _tempDictionary(_precureID) += 1
+
+                Dim _newHandChecker As New PrecureHandChecker(_tempDictionary)
+                If _newHandChecker.IsCompleted() Then
+                    _tilesToComplete.Add(_precureID)
+                End If
+                _tempDictionary(_precureID) -= 1
+
+            Next
+
+
+            Return _tilesToComplete
+
+            'UNIMPLEMENTED: 手牌依存型非定型役に対応していない
         End Function
 
 

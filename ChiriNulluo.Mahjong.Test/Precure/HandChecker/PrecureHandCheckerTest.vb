@@ -59,6 +59,15 @@ Namespace Precure.HandChecker
             Assert.AreEqual(expectedValue, New PrecureHandChecker(Me._roundManager.PlayersList(0).Hand).IsCompletedIfTargetTileAdded(_targetTile))
         End Sub
 
+        <TestCase(New String() {"0101"}, "0101", "0102", "0102", "0103", "0103", "0201", "0201", "0902", "0902", "0902", "0801", "0801", "0801")>
+        <TestCase(New String() {}, "0101", "0101", "0202", "0202", "0301", "0301", "0303", "0303", "0902", "0902", "0802", "0802", "0803")>
+        <TestCase(New String() {"0300", "0301", "0302", "0303", "0304", "0305", "0306"}, "0301", "0301", "0302", "0302", "0303", "0303", "0304", "0304", "0305", "0305", "0306", "0306", "0306")>'染め手：解析に時間かかりそう
+        Public Sub TestTilesToCompleteHand(expectedValue As String(), ParamArray precureIDs As String())
+            Me.MakeHand(precureIDs)
+            Assert.AreEqual(expectedValue.ToList, New PrecureHandChecker(Me._roundManager.PlayersList(0).Hand).TilesToCompleteHand)
+
+        End Sub
+
 #Region "テスト用補助メソッド"
 
         ''' <summary>
