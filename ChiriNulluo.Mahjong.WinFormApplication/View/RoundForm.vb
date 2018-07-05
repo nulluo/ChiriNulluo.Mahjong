@@ -280,6 +280,8 @@ Public Class RoundForm
             Me.RiichiAutoDrawTimer.Enabled = True
         End If
 
+        Me.ShowMyAtariHai()
+
         'ロンしない、鳴かない場合はツモる
         Me.DrawHumanPlayersTile()
         If Sounds.SoundManager.PlaysSE Then
@@ -755,7 +757,24 @@ Public Class RoundForm
 
     End Sub
 
+    'UNIMPLEMENTED: デバッグ用のコードなので削除する
+    ''' <summary>
+    ''' 聴牌している場合、アタリ牌が何か表示する
+    ''' </summary>
+    Private Sub ShowMyAtariHai()
+        Dim _tiles As List(Of String) = New PrecureHandChecker(Me.HumanPlayer.Hand).TilesToCompleteHand
 
+        Dim _message As String = String.Empty
+        If _tiles.Count <> 0 Then
+
+            _tiles.ForEach(Sub(x)
+                               _message &= String.Format("{0}:{1}", x, PrecureCharacterSet.GetInstance.GetTileDefinition(x).CureName) & vbCrLf
+                           End Sub)
+            MessageBox.Show(Me, _message, "待ち牌")
+        End If
+
+
+    End Sub
 
 #End Region
 End Class

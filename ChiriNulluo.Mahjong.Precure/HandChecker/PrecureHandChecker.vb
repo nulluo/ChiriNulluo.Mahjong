@@ -479,9 +479,34 @@ Namespace HandChecker
             Next
 
 
+            '手牌依存型非定型役のいずれかでテンパイしているか判定
+            Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
+            Dim _yakuList As List(Of Core.Yaku.Yaku) = _xmlAccess.GetYakuDataFromXML()
+
+            'UNIMPLEMENTED: いまいちコードがキレイじゃない･･･
+            For Each _yaku As Core.Yaku.Yaku In _yakuList.Where(Function(x) x.Type.HasFlag(YakuType.DeterminedByHandIrregular))
+
+                '_yakuに含まれる牌を1枚ずつ追加してその役が成立するかどうかをチェックする。
+                'このロジックは、現在の手牌依存型非定型役が「プリキュアオールスターズDX1」だけだからこれで正しく判定できているが、
+                'YakuType.HandIsSubSetOfSpecificTileSet型でない手牌依存型非定型役が作られた場合、このロジックでは正しく判定できなくなる。
+                For Each _irregularYakuPrecureID As String In _yaku.TileSet
+                    If _tilesToComplete.Contains(_irregularYakuPrecureID) Then
+                        Continue For
+                    End If
+
+                    _tempDictionary(_irregularYakuPrecureID) += 1
+                    Dim _newHandChecker As New PrecureHandChecker(_tempDictionary)
+                    If _yaku.IsAccomplished(_newHandChecker.Hand) Then
+                        _tilesToComplete.Add(_irregularYakuPrecureID)
+                    End If
+                    _tempDictionary(_irregularYakuPrecureID) -= 1
+
+                Next
+
+            Next
+
             Return _tilesToComplete
 
-            'UNIMPLEMENTED: 手牌依存型非定型役に対応していない
         End Function
 
 
