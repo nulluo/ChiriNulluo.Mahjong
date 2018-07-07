@@ -45,7 +45,7 @@ Public Class SetOpponentFacade
         Dim _nextForm As Form
 
         If isManualMode Then
-            _nextForm = New GameParameterSettingForm
+            _nextForm = New SelectBonusTileForm
         Else
             If Replay.ReplayDataManager.CurrentState = ReplayModeState.Running Then
                 Dim _humanHand As New Hand

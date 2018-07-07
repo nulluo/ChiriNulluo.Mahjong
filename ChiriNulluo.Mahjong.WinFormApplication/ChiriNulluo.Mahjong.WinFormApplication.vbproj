@@ -216,6 +216,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="View\SelectBonusTileForm.Designer.vb">
+      <DependentUpon>SelectBonusTileForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\SelectBonusTileForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\SelectOpponentForm.Designer.vb">
       <DependentUpon>SelectOpponentForm.vb</DependentUpon>
     </Compile>
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\RoundForm.resx">
       <DependentUpon>RoundForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SelectBonusTileForm.resx">
+      <DependentUpon>SelectBonusTileForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SelectOpponentForm.resx">
       <DependentUpon>SelectOpponentForm.vb</DependentUpon>
