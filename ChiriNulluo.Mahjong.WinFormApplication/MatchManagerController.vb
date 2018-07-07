@@ -64,11 +64,17 @@ Public NotInheritable Class MatchManagerController
     ''' <param name="comHand"></param>
     ''' <param name="wallPile"></param>
     Public Sub InitializeRound(humanHand As Hand, comHand As Hand, wallPile As WallPile)
-        'MatchManagerやRoundManagerの生成（その中で一旦通常通り配牌される）
         'Me.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
-        Me.InitializeRound(COMStrategy.ToDecreaseShantenCount)
 
-        '↑で配牌した結果を上書きする形で配牌しなおす↓
+        Me.MatchManager.RoundManager = New RoundManager(Me.PlayersList, 0)
+
+        'UNIMPLEMENTED：1番目のプレイヤーがCOMであることをこのクラスが知っていてそれを利用するというのは結合度が強すぎでは？
+        Dim _com = DirectCast(Me.MatchManager.RoundManager.PlayersList(1), Players.COM.COMPlayer)
+        _com.Algorithm = New PrecureCOMPlayerAlgorithm(_com, Me.MatchManager.RoundManager, COMStrategy.ToCompleteDealtReadyHand)
+        _com.PreviousShantenCount = 8
+        'UNIMPLEMENTED: ここで  chirnulluo.mahjong.precure.ShantenCountMaxにアクセスしたいのだがうまくいかない
+        'UNIMPLEMENTED: 仮に初期のPreviousShantenCountを8にしているが、配牌時の向聴数を計算してPreviousShantenCountプロパティを初期化するようにしないと、最初のツモで必ず牌を手から出して捨ててしまう
+
 
         'HUMAN手牌構成
         Me.MatchManager.RoundManager.PlayersList(0).Hand = humanHand
@@ -95,6 +101,8 @@ Public NotInheritable Class MatchManagerController
         Me.MatchManager.RoundManager.PlayersList(1).Score = Constants.InitialScore
         Me.InitializeRound(comStrategy)
     End Sub
+
+
 
     Public Function InitializeRound(comStrategy As COMStrategy) As RoundManager
 

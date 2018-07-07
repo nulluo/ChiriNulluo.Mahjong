@@ -19,6 +19,15 @@ Public Class GameParameterSettingForm
 
     Private Shared logger As NLog.Logger = NLog.LogManager.GetCurrentClassLogger()
 
+    Public Sub New()
+
+        ' この呼び出しはデザイナーで必要です。
+        InitializeComponent()
+
+        ' InitializeComponent() 呼び出しの後で初期化を追加します。
+
+    End Sub
+
 #Region "Event Handler"
 
     Private Sub okButton_Click(sender As Object, e As EventArgs) Handles okButton.Click
