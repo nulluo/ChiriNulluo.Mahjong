@@ -48,7 +48,7 @@ Public Class GameParameterSettingForm
             Return
         End If
 
-        Dim _roundForm As New RoundForm(Me.HumanHand, Me.COMHand, Me.WallPile)
+        Dim _roundForm As New RoundForm(Me.HumanHand, Me.COMHand, Me.WallPile, Me.RevealedBonusTiles, Me.UnrevealedBonusTiles)
         FormTransition.Transit(Me, _roundForm)
 
     End Sub
@@ -275,7 +275,6 @@ Public Class GameParameterSettingForm
         Dim _precureList = PrecureCharacterSet.GetInstance.InitializeTileListForNewRound(revealedBonusTiles, unrevealedBonusTiles)
 
         For Each _precure As PreCureCharacterTile In _precureList
-            '1種につき4枚用意する
             Me.WallPile.Add(_precure)
         Next
 

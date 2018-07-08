@@ -4294,4 +4294,12 @@
     <value>Riichi !</value>
     <comment>キャラクター台詞</comment>
   </data>
+  <data name="IDProcessHaipai_BonusRevealed" xml:space="preserve">
+    <value>Haipai-BonusRevealed</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessHaipai_BonusUnrevealed" xml:space="preserve">
+    <value>Haipai-BonusUnrevealed</value>
+    <comment>ID</comment>
+  </data>
 </root>

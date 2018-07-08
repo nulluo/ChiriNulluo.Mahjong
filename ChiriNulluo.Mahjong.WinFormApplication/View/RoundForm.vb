@@ -62,7 +62,8 @@ Public Class RoundForm
     ''' <param name="humanHand">HUMANの手牌</param>
     ''' <param name="comHand">COMの手牌</param>
     ''' <param name="wallPile">山牌</param>
-    Public Sub New(humanHand As Hand, comHand As Hand, wallPile As WallPile)
+    Public Sub New(humanHand As Hand, comHand As Hand, wallPile As WallPile,
+                   revealedBonusTiles As List(Of String), unrevealedBonusTiles As List(Of String))
         'UNIMPLEMENTED：この呼び出しいるの？
         MyBase.New()
 
@@ -72,7 +73,7 @@ Public Class RoundForm
         ' InitializeComponent() 呼び出しの後で初期化を追加します。
 
         'ファサードクラス生成
-        Facade = New RoundFacade(humanHand, comHand, wallPile, Me)
+        Facade = New RoundFacade(humanHand, comHand, wallPile, Me, revealedBonusTiles, unrevealedBonusTiles)
 
 #If DEBUG Then
         Me.allTilesOpenField.Visible = True
@@ -340,7 +341,7 @@ Public Class RoundForm
                 If Replay.ReplayDataManager.CurrentState = ReplayModeState.Running Then
                     Me.ReplayOpeningNextRoundForm()
                 Else
-                    Me.OpenNextRoundForm(Nothing, Nothing, Nothing)
+                    Me.OpenNextRoundForm(Nothing, Nothing, Nothing, Nothing, Nothing)
                 End If
             End If
         End If
@@ -619,8 +620,9 @@ Public Class RoundForm
         FormTransition.Transit(Me, _pointDisplayDialog)
     End Sub
 
-    Private Sub OpenNextRoundForm(comHand As Hand, humanHand As Hand, wallPile As WallPile)
-        Dim _roundForm As New RoundForm(humanHand, comHand, wallPile)
+    Private Sub OpenNextRoundForm(comHand As Hand, humanHand As Hand, wallPile As WallPile,
+                   revealedBonusTiles As List(Of String), unrevealedBonusTiles As List(Of String))
+        Dim _roundForm As New RoundForm(humanHand, comHand, wallPile, revealedBonusTiles, unrevealedBonusTiles)
         FormTransition.Transit(Me, _roundForm)
     End Sub
 
@@ -689,9 +691,9 @@ Public Class RoundForm
     ''' </summary>
     Private Sub DisplayRevealedBonusTIlePictures()
         'UNIMPLEMENTED: 0,4,8というインデックスを知っているのは内部を知り過ぎている感じ
-        Me.BonusTIlePicture0.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(0).Image
-        Me.BonusTIlePicture1.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(4).Image
-        Me.BonusTIlePicture2.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(8).Image
+        Me.BonusTIlePicture0.Image = PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesList(0).Image
+        Me.BonusTIlePicture1.Image = PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesList(4).Image
+        Me.BonusTIlePicture2.Image = PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesList(8).Image
     End Sub
 
     ''' <summary>
@@ -701,9 +703,9 @@ Public Class RoundForm
 
         If visible Then
             'UNIMPLEMENTED: 12,16,20というインデックスを知っているのは内部を知り過ぎている感じ
-            Me.BonusTIlePicture3.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(12).Image
-            Me.BonusTIlePicture4.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(16).Image
-            Me.BonusTIlePicture5.Image = PrecureCharacterSet.GetInstance.CurrentRoundSpecialCharacterTilesList(20).Image
+            Me.BonusTIlePicture3.Image = PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesList(0).Image
+            Me.BonusTIlePicture4.Image = PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesList(4).Image
+            Me.BonusTIlePicture5.Image = PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesList(8).Image
         Else
             Me.BonusTIlePicture3.Image = Nothing
             Me.BonusTIlePicture4.Image = Nothing
@@ -738,6 +740,9 @@ Public Class RoundForm
         Dim _comHandIDList As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
         Dim _humanHandIDList As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
         Dim _wallPileIDList As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
+        Dim _revealedBonusTiles As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
+        Dim _unrevealedBonusTiles As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
+
 
         Dim _humanHand As New Hand
         Dim _comHand As New Hand
@@ -747,7 +752,7 @@ Public Class RoundForm
         _humanHandIDList.ForEach(Sub(id) _humanHand.MainTiles.Add(PrecureCharacterSet.GetInstance.GetTileDefinition(id)))
         _wallPileIDList.ForEach(Sub(id) _wallPile.Add(PrecureCharacterSet.GetInstance.GetTileDefinition(id)))
 
-        Me.OpenNextRoundForm(_comHand, _humanHand, _wallPile)
+        Me.OpenNextRoundForm(_comHand, _humanHand, _wallPile, _revealedBonusTiles, _unrevealedBonusTiles)
     End Sub
 
     Private Sub TestShantenButton1_Click(sender As Object, e As EventArgs) Handles TestShantenButton1.Click

@@ -3,6 +3,7 @@ Imports ChiriNulluo.Mahjong.Core.Players
 Imports ChiriNulluo.Mahjong.Core.Players.COM
 Imports ChiriNulluo.Mahjong.Core.Tiles
 Imports ChiriNulluo.Mahjong.Precure.HandChecker
+Imports ChiriNulluo.Mahjong.Precure.Tiles
 Imports ChiriNulluo.Mahjong.WinFormApplication.Constants
 Imports ChiriNulluo.Mahjong.WinFormApplication.Logging
 
@@ -18,13 +19,14 @@ Public Class RoundFacade
 
 #End Region
 
-    Public Sub New(humanHand As Hand, comHand As Hand, wallPile As WallPile, View As RoundForm)
+    Public Sub New(humanHand As Hand, comHand As Hand, wallPile As WallPile, View As RoundForm,
+                   revealedBonusTiles As List(Of String), unrevealedBonusTiles As List(Of String))
 #If DEBUG Then
 
         '手動で手牌を決定済みの場合はその通りに配牌する
         If humanHand IsNot Nothing AndAlso comHand IsNot Nothing AndAlso
                                                  wallPile IsNot Nothing Then
-            MatchManagerController.GetInstance.InitializeRound(humanHand, comHand, wallPile)
+            MatchManagerController.GetInstance.InitializeRound(humanHand, comHand, wallPile, revealedBonusTiles, unrevealedBonusTiles)
         Else
             'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
             MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToDecreaseShantenCount)
@@ -292,6 +294,15 @@ Public Class RoundFacade
         LogFactory.GetReplayLogger.Write(My.Resources.IDProcessTypeRD,
                                          My.Resources.IDProcessHaipai_P1, String.Empty, String.Empty,
                                          _wallPile.Select(Function(x) x.ID).ToArray)
+
+        LogFactory.GetReplayLogger.Write(My.Resources.IDProcessTypeRD,
+                                 My.Resources.IDProcessHaipai_BonusRevealed, String.Empty, String.Empty,
+                                        PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesIDList.ToArray)
+
+        LogFactory.GetReplayLogger.Write(My.Resources.IDProcessTypeRD,
+                                 My.Resources.IDProcessHaipai_BonusUnrevealed, String.Empty, String.Empty,
+                                        PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesIDList.ToArray)
+
 
     End Sub
 End Class

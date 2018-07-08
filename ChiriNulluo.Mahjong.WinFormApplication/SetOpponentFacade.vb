@@ -41,7 +41,8 @@ Public Class SetOpponentFacade
     End Sub
 
     Public Function GoToNextForm(isManualMode As Boolean, Optional humanHandIDList As List(Of String) = Nothing,
-                                Optional comHandIDList As List(Of String) = Nothing, Optional wallPileIDList As List(Of String) = Nothing) As Form
+                                Optional comHandIDList As List(Of String) = Nothing, Optional wallPileIDList As List(Of String) = Nothing,
+                                Optional revealedBonusTiles As List(Of String) = Nothing, Optional unrevealedBonusTiles As List(Of String) = Nothing) As Form
         Dim _nextForm As Form
 
         If isManualMode Then
@@ -56,9 +57,9 @@ Public Class SetOpponentFacade
                 comHandIDList.ForEach(Sub(id) _comHand.MainTiles.Add(PrecureCharacterSet.GetInstance.GetTileDefinition(id)))
                 wallPileIDList.ForEach(Sub(id) _wallPile.Add(PrecureCharacterSet.GetInstance.GetTileDefinition(id)))
 
-                _nextForm = New RoundForm(_humanHand, _comHand, _wallPile)
+                _nextForm = New RoundForm(_humanHand, _comHand, _wallPile, revealedBonusTiles, unrevealedBonusTiles)
             Else
-                _nextForm = New RoundForm(Nothing, Nothing, Nothing)
+                _nextForm = New RoundForm(Nothing, Nothing, Nothing, Nothing, Nothing)
             End If
         End If
         Return Me.View.GoToNextForm(_nextForm)

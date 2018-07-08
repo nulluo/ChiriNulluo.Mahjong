@@ -570,6 +570,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Haipai-BonusRevealed に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property IDProcessHaipai_BonusRevealed() As String
+            Get
+                Return ResourceManager.GetString("IDProcessHaipai_BonusRevealed", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Haipai-BonusUnrevealed に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property IDProcessHaipai_BonusUnrevealed() As String
+            Get
+                Return ResourceManager.GetString("IDProcessHaipai_BonusUnrevealed", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Haipai-P0 に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property IDProcessHaipai_P0() As String

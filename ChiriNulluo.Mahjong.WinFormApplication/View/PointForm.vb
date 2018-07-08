@@ -32,7 +32,8 @@ Public Class PointForm
 
 #Region "Form Transition"
     'UNIMPLEMENTED: COMHAND、HUMANHAND、WALLPILEの順序が一定していないのが気になる（Human->COMの順序が良いだろうと思っていたが、積み込む順番の関係上、先に配牌するのがHumanでなくCOMになったため）
-    Private Sub OpenNextForm(comHand As Hand, humanHand As Hand, wallPile As WallPile)
+    Private Sub OpenNextForm(comHand As Hand, humanHand As Hand, wallPile As WallPile,
+                   revealedBonusTiles As List(Of String), unrevealedBonusTiles As List(Of String))
         Dim _nextForm As Form
 
         If MatchManagerController.GetInstance.MatchManager.RoundsCount = Constants.MaxRounds2PlayersMatch Then
@@ -40,7 +41,7 @@ Public Class PointForm
         ElseIf Me.ManualModeField.Checked Then
             '_nextForm = New GameParameterSettingForm
         Else
-            _nextForm = New RoundForm(humanHand, comHand, wallPile)
+            _nextForm = New RoundForm(humanHand, comHand, wallPile, revealedBonusTiles, unrevealedBonusTiles)
         End If
         FormTransition.Transit(Me, _nextForm)
     End Sub
@@ -111,7 +112,7 @@ Public Class PointForm
     Private Sub NextRoundButton_Click(sender As Object, e As EventArgs)
         Logging.LogFactory.GetReplayLogger.Write(My.Resources.IDProcessTypeUA,
                             My.Resources.IDProcessNextRoundButton, My.Resources.IDPlayerHuman, String.Empty, DirectCast(sender, Button).Name)
-        Me.OpenNextForm(Nothing, Nothing, Nothing)
+        Me.OpenNextForm(Nothing, Nothing, Nothing, Nothing, Nothing)
     End Sub
 
     ''' <summary>
@@ -141,11 +142,13 @@ Public Class PointForm
 
     Friend Sub ReplayOpeningNextForm()
         If MatchManagerController.GetInstance.MatchManager.RoundsCount = Constants.MaxRounds2PlayersMatch Then
-            Me.OpenNextForm(Nothing, Nothing, Nothing)
+            Me.OpenNextForm(Nothing, Nothing, Nothing, Nothing, Nothing)
         Else
             Dim _comHandIDList As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
             Dim _humanHandIDList As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
             Dim _wallPileIDList As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
+            Dim _revealedBonusTiles As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
+            Dim _unrevealedBonusTiles As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
 
             Dim _humanHand As New Hand
             Dim _comHand As New Hand
@@ -155,7 +158,7 @@ Public Class PointForm
             _humanHandIDList.ForEach(Sub(id) _humanHand.MainTiles.Add(PrecureCharacterSet.GetInstance.GetTileDefinition(id)))
             _wallPileIDList.ForEach(Sub(id) _wallPile.Add(PrecureCharacterSet.GetInstance.GetTileDefinition(id)))
 
-            Me.OpenNextForm(_comHand, _humanHand, _wallPile)
+            Me.OpenNextForm(_comHand, _humanHand, _wallPile, _revealedBonusTiles, _unrevealedBonusTiles)
 
         End If
     End Sub

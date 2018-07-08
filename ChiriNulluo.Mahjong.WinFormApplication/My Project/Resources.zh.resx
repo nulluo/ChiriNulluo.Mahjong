@@ -231,4 +231,10 @@
   <data name="CharacterScriptRiichi" xml:space="preserve">
     <value>立直 !</value>
   </data>
+  <data name="IDProcessHaipai_BonusRevealed" xml:space="preserve">
+    <value>Haipai-BonusRevealed</value>
+  </data>
+  <data name="IDProcessHaipai_BonusUnrevealed" xml:space="preserve">
+    <value>Haipai-BonusUnrevealed</value>
+  </data>
 </root>

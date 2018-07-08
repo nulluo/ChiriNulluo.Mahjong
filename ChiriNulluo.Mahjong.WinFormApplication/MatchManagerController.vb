@@ -63,7 +63,7 @@ Public NotInheritable Class MatchManagerController
     ''' <param name="humanHand"></param>
     ''' <param name="comHand"></param>
     ''' <param name="wallPile"></param>
-    Public Sub InitializeRound(humanHand As Hand, comHand As Hand, wallPile As WallPile)
+    Public Sub InitializeRound(humanHand As Hand, comHand As Hand, wallPile As WallPile, revealedBonusTiles As List(Of String), unrevealedBonusTiles As List(Of String))
         'Me.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
 
         Me.MatchManager.RoundManager = New RoundManager(Me.PlayersList, 0)
@@ -75,6 +75,8 @@ Public NotInheritable Class MatchManagerController
         'UNIMPLEMENTED: ここで  chirnulluo.mahjong.precure.ShantenCountMaxにアクセスしたいのだがうまくいかない
         'UNIMPLEMENTED: 仮に初期のPreviousShantenCountを8にしているが、配牌時の向聴数を計算してPreviousShantenCountプロパティを初期化するようにしないと、最初のツモで必ず牌を手から出して捨ててしまう
 
+        PrecureCharacterSet.GetInstance.InitializeTileListForNewRound(revealedBonusTiles, unrevealedBonusTiles)
+        'Me.MatchManager.RoundManager.WallPile.Clear()
 
         'HUMAN手牌構成
         Me.MatchManager.RoundManager.PlayersList(0).Hand = humanHand

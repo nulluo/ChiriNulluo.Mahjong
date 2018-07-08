@@ -42,7 +42,8 @@ Namespace Tiles
             Dim _dataAccess As DataAccess.PrecureXMLAccess = DataAccess.PrecureXMLAccess.GetInstance()
 
             Me._currentRoundTotalTilesList = New List(Of PreCureCharacterTile)
-            Me._currentRoundSpecialCharacterTilesList = New List(Of PreCureCharacterTile)
+            Me._currentRoundRevealedBonusTilesList = New List(Of PreCureCharacterTile)
+            Me._currentRoundUnrevealedBonusTilesList = New List(Of PreCureCharacterTile)
 
             '牌1種ごとに4枚の牌を追加する
             _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
@@ -78,21 +79,40 @@ Namespace Tiles
         End Property
 
         ''' <summary>
-        ''' 現在の局の全てのボーナス牌(Tile型)のリスト。0～2番目が表ボーナス牌、3～5番目が裏ボーナス牌。
+        ''' 現在の局の全ての表ボーナス牌(Tile型)のリスト。
         ''' </summary>
-        Private _currentRoundSpecialCharacterTilesList As List(Of PreCureCharacterTile)
-        Public ReadOnly Property CurrentRoundSpecialCharacterTilesList As List(Of PreCureCharacterTile)
+        Private _currentRoundRevealedBonusTilesList As List(Of PreCureCharacterTile)
+        Public ReadOnly Property CurrentRoundRevealedBonusTilesList As List(Of PreCureCharacterTile)
             Get
-                Return _currentRoundSpecialCharacterTilesList
+                Return _currentRoundRevealedBonusTilesList
             End Get
         End Property
 
         ''' <summary>
-        ''' 現在の局の全てのボーナス牌ID(String型)のリスト。0～2番目が表ボーナス牌、3～5番目が裏ボーナス牌。
+        ''' 現在の局の全ての表ボーナス牌ID(String型)のリスト。
         ''' </summary>
-        Public ReadOnly Property CurrentRoundSpecialCharacterTilesIDList As List(Of String)
+        Public ReadOnly Property CurrentRoundRevealedBonusTilesIDList As List(Of String)
             Get
-                Return _currentRoundSpecialCharacterTilesList.Select(Function(x) x.ID).ToList
+                Return _currentRoundRevealedBonusTilesList.Select(Function(x) x.ID).ToList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' 現在の局の全ての裏ボーナス牌(Tile型)のリスト。
+        ''' </summary>
+        Private _currentRoundUnrevealedBonusTilesList As List(Of PreCureCharacterTile)
+        Public ReadOnly Property CurrentRoundUnrevealedBonusTilesList As List(Of PreCureCharacterTile)
+            Get
+                Return _currentRoundUnrevealedBonusTilesList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' 現在の局の全ての裏ボーナス牌ID(String型)のリスト。
+        ''' </summary>
+        Public ReadOnly Property CurrentRoundUnrevealedBonusTilesIDList As List(Of String)
+            Get
+                Return _currentRoundUnrevealedBonusTilesList.Select(Function(x) x.ID).ToList
             End Get
         End Property
 
@@ -177,17 +197,18 @@ Namespace Tiles
             'ボーナス牌は、引数で与えられた場合はその牌を追加する。
             '引数で指定されなかった場合、各局ごとに、特殊キャラ牌からランダムでN枚選んで追加する
 
-            'UNIMPLEMENTED: ここのコード同じコードの繰り返しになっているのでメソッドにくくりだすべき
-            Dim i As Integer = 0
-
             Dim _maxTiles As Integer
+            Dim _currentRoundSpecialTilesList As List(Of PreCureCharacterTile)
 
             If isRevealedTiles Then
                 _maxTiles = Constants.Constants.RevealedBonusTileNumber
+                _currentRoundSpecialTilesList = _currentRoundRevealedBonusTilesList
             Else
                 _maxTiles = Constants.Constants.UnrevealedBonusTileNumber
+                _currentRoundSpecialTilesList = _currentRoundUnrevealedBonusTilesList
             End If
 
+            Dim i As Integer = 0
             While i < _maxTiles
                 Dim _item As PreCureCharacterTile
 
@@ -212,7 +233,7 @@ Namespace Tiles
                         .Add(_item3)
                     End With
 
-                    With _currentRoundSpecialCharacterTilesList
+                    With _currentRoundSpecialTilesList
                         .Add(_item0)
                         .Add(_item1)
                         .Add(_item2)
