@@ -99,6 +99,7 @@
     <Compile Include="Logging\ReplayLogger.vb" />
     <Compile Include="Replay\ReplayLogReader.vb" />
     <Compile Include="RoundFacade.vb" />
+    <Compile Include="SelectBonusTileFacade.vb" />
     <Compile Include="SetOpponentFacade.vb" />
     <Compile Include="Sounds\SoundManager.vb" />
     <Compile Include="View\CharacterIDTestForm.Designer.vb">

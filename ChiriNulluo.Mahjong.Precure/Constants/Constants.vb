@@ -3,9 +3,14 @@
     Module Constants
 
         ''' <summary>
-        ''' 1局で指定されるボーナス牌の種類数
+        ''' 1局で指定される表ボーナス牌の種類数
         ''' </summary>
-        Public Const BonusTileNumber = 6
+        Public Const RevealedBonusTileNumber = 3
+
+        ''' <summary>
+        ''' 1局で指定される裏ボーナス牌の種類数
+        ''' </summary>
+        Public Const UnrevealedBonusTileNumber = 3
 
         ''' <summary>
         ''' 向聴数の最大値

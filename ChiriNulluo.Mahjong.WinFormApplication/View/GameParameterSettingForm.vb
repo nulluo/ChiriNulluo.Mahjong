@@ -17,14 +17,19 @@ Public Class GameParameterSettingForm
     Private Property HumanHandImageColumn As New DataGridViewTileImageColumn()
     Private Property COMHandImageColumn As New DataGridViewTileImageColumn()
 
+    Private Property RevealedBonusTiles As List(Of String)
+    Private Property UnrevealedBonusTiles As List(Of String)
+
     Private Shared logger As NLog.Logger = NLog.LogManager.GetCurrentClassLogger()
 
-    Public Sub New()
+    Public Sub New(revealedBonusTiles As List(Of String), unrevealedBonusTiles As List(Of String))
 
         ' この呼び出しはデザイナーで必要です。
         InitializeComponent()
 
         ' InitializeComponent() 呼び出しの後で初期化を追加します。
+        Me.RevealedBonusTiles = revealedBonusTiles
+        Me.UnrevealedBonusTiles = unrevealedBonusTiles
 
     End Sub
 
@@ -267,7 +272,7 @@ Public Class GameParameterSettingForm
         Me.COMHandGrid.Columns.Insert(1,COMHandImageColumn)
 
 
-        Dim _precureList = PrecureCharacterSet.GetInstance.InitializeTileListForNewRound
+        Dim _precureList = PrecureCharacterSet.GetInstance.InitializeTileListForNewRound(revealedBonusTiles, unrevealedBonusTiles)
 
         For Each _precure As PreCureCharacterTile In _precureList
             '1種につき4枚用意する

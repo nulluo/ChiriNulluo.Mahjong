@@ -24,20 +24,20 @@ Partial Class SelectBonusTileForm
     Private Sub InitializeComponent()
         Me.okButton = New System.Windows.Forms.Button()
         Me.specialTileGrid = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.SelectCheckColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.SelectRevealedBonusTileColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.SelectUnrevealedBonusTileColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.wallIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.bonusTileIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WallNameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WallSeriesIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WallNumberColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.ImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         CType(Me.specialTileGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'okButton
         '
-        Me.okButton.Location = New System.Drawing.Point(336, 31)
+        Me.okButton.Location = New System.Drawing.Point(415, 31)
         Me.okButton.Name = "okButton"
         Me.okButton.Size = New System.Drawing.Size(66, 35)
         Me.okButton.TabIndex = 0
@@ -48,56 +48,42 @@ Partial Class SelectBonusTileForm
         '
         Me.specialTileGrid.AllowUserToAddRows = False
         Me.specialTileGrid.AllowUserToDeleteRows = False
+        Me.specialTileGrid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.specialTileGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.specialTileGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.specialTileGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SelectCheckColumn, Me.SelectUnrevealedBonusTileColumn, Me.wallIDColumn, Me.ImageColumn, Me.WallNameColumn, Me.WallSeriesIDColumn, Me.WallNumberColumn})
+        Me.specialTileGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SelectRevealedBonusTileColumn, Me.SelectUnrevealedBonusTileColumn, Me.bonusTileIDColumn, Me.ImageColumn, Me.WallNameColumn, Me.WallSeriesIDColumn, Me.WallNumberColumn})
         Me.specialTileGrid.Location = New System.Drawing.Point(12, 31)
         Me.specialTileGrid.Name = "specialTileGrid"
         Me.specialTileGrid.RowHeadersWidth = 16
-        Me.specialTileGrid.RowTemplate.Height = 32
-        Me.specialTileGrid.Size = New System.Drawing.Size(301, 431)
+        Me.specialTileGrid.RowTemplate.Height = 60
+        Me.specialTileGrid.Size = New System.Drawing.Size(356, 706)
         Me.specialTileGrid.TabIndex = 8
         '
-        'DataGridViewImageColumn1
+        'SelectRevealedBonusTileColumn
         '
-        Me.DataGridViewImageColumn1.DataPropertyName = "Image"
-        Me.DataGridViewImageColumn1.HeaderText = "Image"
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.ReadOnly = True
-        Me.DataGridViewImageColumn1.Width = 41
-        '
-        'SelectCheckColumn
-        '
-        Me.SelectCheckColumn.DataPropertyName = "SelectRevealedBonusTileColumn"
-        Me.SelectCheckColumn.FalseValue = ""
-        Me.SelectCheckColumn.HeaderText = "表ボーナス"
-        Me.SelectCheckColumn.IndeterminateValue = ""
-        Me.SelectCheckColumn.Name = "SelectCheckColumn"
-        Me.SelectCheckColumn.TrueValue = ""
-        Me.SelectCheckColumn.Width = 62
+        Me.SelectRevealedBonusTileColumn.DataPropertyName = "SelectRevealedBonusTileColumn"
+        Me.SelectRevealedBonusTileColumn.FalseValue = ""
+        Me.SelectRevealedBonusTileColumn.HeaderText = "表ボーナス"
+        Me.SelectRevealedBonusTileColumn.IndeterminateValue = ""
+        Me.SelectRevealedBonusTileColumn.Name = "SelectRevealedBonusTileColumn"
+        Me.SelectRevealedBonusTileColumn.TrueValue = ""
+        Me.SelectRevealedBonusTileColumn.Width = 62
         '
         'SelectUnrevealedBonusTileColumn
         '
         Me.SelectUnrevealedBonusTileColumn.DataPropertyName = "SelectUnevealedBonusTileColumn"
-        Me.SelectUnrevealedBonusTileColumn.HeaderText = "裏ボーナス牌"
+        Me.SelectUnrevealedBonusTileColumn.HeaderText = "裏ボーナス"
         Me.SelectUnrevealedBonusTileColumn.Name = "SelectUnrevealedBonusTileColumn"
-        Me.SelectUnrevealedBonusTileColumn.Width = 74
+        Me.SelectUnrevealedBonusTileColumn.Width = 62
         '
-        'wallIDColumn
+        'bonusTileIDColumn
         '
-        Me.wallIDColumn.DataPropertyName = "ID"
-        Me.wallIDColumn.HeaderText = "ID"
-        Me.wallIDColumn.Name = "wallIDColumn"
-        Me.wallIDColumn.ReadOnly = True
-        Me.wallIDColumn.Width = 41
-        '
-        'ImageColumn
-        '
-        Me.ImageColumn.DataPropertyName = "Image"
-        Me.ImageColumn.HeaderText = "Image"
-        Me.ImageColumn.Name = "ImageColumn"
-        Me.ImageColumn.ReadOnly = True
-        Me.ImageColumn.Width = 41
+        Me.bonusTileIDColumn.DataPropertyName = "ID"
+        Me.bonusTileIDColumn.HeaderText = "ID"
+        Me.bonusTileIDColumn.Name = "bonusTileIDColumn"
+        Me.bonusTileIDColumn.ReadOnly = True
+        Me.bonusTileIDColumn.Width = 41
         '
         'WallNameColumn
         '
@@ -123,11 +109,27 @@ Partial Class SelectBonusTileForm
         Me.WallNumberColumn.Visible = False
         Me.WallNumberColumn.Width = 69
         '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.DataPropertyName = "Image"
+        Me.DataGridViewImageColumn1.HeaderText = "Image"
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.ReadOnly = True
+        Me.DataGridViewImageColumn1.Width = 41
+        '
+        'ImageColumn
+        '
+        Me.ImageColumn.DataPropertyName = "Image"
+        Me.ImageColumn.HeaderText = "Image"
+        Me.ImageColumn.Name = "ImageColumn"
+        Me.ImageColumn.ReadOnly = True
+        Me.ImageColumn.Width = 41
+        '
         'SelectBonusTileForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(414, 487)
+        Me.ClientSize = New System.Drawing.Size(529, 749)
         Me.Controls.Add(Me.specialTileGrid)
         Me.Controls.Add(Me.okButton)
         Me.Name = "SelectBonusTileForm"
@@ -140,9 +142,9 @@ Partial Class SelectBonusTileForm
     Friend WithEvents okButton As Button
     Friend WithEvents specialTileGrid As DataGridView
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
-    Friend WithEvents SelectCheckColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents SelectRevealedBonusTileColumn As DataGridViewCheckBoxColumn
     Friend WithEvents SelectUnrevealedBonusTileColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents wallIDColumn As DataGridViewTextBoxColumn
+    Friend WithEvents bonusTileIDColumn As DataGridViewTextBoxColumn
     Friend WithEvents ImageColumn As DataGridViewImageColumn
     Friend WithEvents WallNameColumn As DataGridViewTextBoxColumn
     Friend WithEvents WallSeriesIDColumn As DataGridViewTextBoxColumn

@@ -38,7 +38,7 @@ Public Class PointForm
         If MatchManagerController.GetInstance.MatchManager.RoundsCount = Constants.MaxRounds2PlayersMatch Then
             _nextForm = New MatchResultForm()
         ElseIf Me.ManualModeField.Checked Then
-            _nextForm = New GameParameterSettingForm
+            '_nextForm = New GameParameterSettingForm
         Else
             _nextForm = New RoundForm(humanHand, comHand, wallPile)
         End If

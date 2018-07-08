@@ -37,7 +37,8 @@ Namespace Tiles
         ''' </summary>
         ''' <returns>初期化された牌リスト</returns>
         ''' <remarks>1局終了するごとにこのメソッドで初期化をしておかないと、前局の「副露」状態や牌変更能力の結果を引き継いでしまう。</remarks>
-        Public Function InitializeTileListForNewRound() As List(Of PreCureCharacterTile)
+        Public Function InitializeTileListForNewRound(Optional revealedTiles As List(Of String) = Nothing,
+                                                      Optional unrevealedTiles As List(Of String) = Nothing) As List(Of PreCureCharacterTile)
             Dim _dataAccess As DataAccess.PrecureXMLAccess = DataAccess.PrecureXMLAccess.GetInstance()
 
             Me._currentRoundTotalTilesList = New List(Of PreCureCharacterTile)
@@ -49,15 +50,153 @@ Namespace Tiles
             _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
             _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
 
+            Me.AddBonusTiles(revealedTiles, True)
+            Me.AddBonusTiles(unrevealedTiles, False)
 
+            Return Me._currentRoundTotalTilesList
+        End Function
+
+#Region "Property"
+
+        ''' <summary>
+        ''' 現在の局の全ての牌(Tile型)のリスト。(ボーナス牌を含む）
+        ''' </summary>
+        Private _currentRoundTotalTilesList As List(Of PreCureCharacterTile)
+        Public ReadOnly Property CurrentRoundTotalTilesList As List(Of PreCureCharacterTile) Implements TileSet(Of PreCureCharacterTile).CurrentRoundTotalTilesList
+            Get
+                Return _currentRoundTotalTilesList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' 現在の局の全ての牌ID(String型)のリスト。(ボーナス牌を含む）
+        ''' </summary>
+        Public ReadOnly Property CurrentRoundTotalTilesIDList As List(Of String) Implements TileSet(Of PreCureCharacterTile).CurrentRoundTotalTilesIDList
+            Get
+                Return _currentRoundTotalTilesList.Select(Function(x) x.ID).ToList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' 現在の局の全てのボーナス牌(Tile型)のリスト。0～2番目が表ボーナス牌、3～5番目が裏ボーナス牌。
+        ''' </summary>
+        Private _currentRoundSpecialCharacterTilesList As List(Of PreCureCharacterTile)
+        Public ReadOnly Property CurrentRoundSpecialCharacterTilesList As List(Of PreCureCharacterTile)
+            Get
+                Return _currentRoundSpecialCharacterTilesList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' 現在の局の全てのボーナス牌ID(String型)のリスト。0～2番目が表ボーナス牌、3～5番目が裏ボーナス牌。
+        ''' </summary>
+        Public ReadOnly Property CurrentRoundSpecialCharacterTilesIDList As List(Of String)
+            Get
+                Return _currentRoundSpecialCharacterTilesList.Select(Function(x) x.ID).ToList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' ボーナス牌も含めたすべての牌(Tile型)のリスト。現在の局のボーナス牌とは無関係に全てのボーナス牌を含む。
+        ''' </summary>
+        Private _allCharacterTilesList As List(Of PreCureCharacterTile)
+        Public ReadOnly Property AllCharacterTilesList As List(Of PreCureCharacterTile)
+            Get
+                Return _allCharacterTilesList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' ボーナス牌も含めたすべての牌(Tile型)のリスト。現在の局のボーナス牌とは無関係に全てのボーナス牌を含む。
+        ''' </summary>
+        Public ReadOnly Property AllCharacterTilesIDList As List(Of String)
+            Get
+                Return _allCharacterTilesList.Select(Function(x) x.ID).ToList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' 正式プリキュア牌全ての牌(Tile型)のリスト。
+        ''' </summary>
+        Private _regularPrecureTilesList As List(Of PreCureCharacterTile)
+        Public ReadOnly Property RegularPrecureTilesList As List(Of PreCureCharacterTile)
+            Get
+                Return _regularPrecureTilesList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' 正式プリキュア牌全ての牌ID(String型)のリスト。
+        ''' </summary>
+        Public ReadOnly Property RegularPrecureTilesIDList As List(Of String)
+            Get
+                Return _regularPrecureTilesList.Select(Function(x) x.ID).ToList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' 特殊キャラ牌全ての牌(Tile型)のリスト。
+        ''' </summary>
+        Private _specialCharacterTilesList As List(Of PreCureCharacterTile)
+        Public ReadOnly Property SpecialCharacterTilesList As List(Of PreCureCharacterTile)
+            Get
+                Return _specialCharacterTilesList
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' 特殊キャラ牌全ての牌ID(String型)のリスト。
+        ''' </summary>
+        Public ReadOnly Property SpecialTilesIDList As List(Of String)
+            Get
+                Return _specialCharacterTilesList.Select(Function(x) x.ID).ToList
+            End Get
+        End Property
+
+
+        Private _tileSuitsCount As Integer
+        Public ReadOnly Property TileSuitsCount As Integer
+            Get
+                Return _tileSuitsCount
+            End Get
+        End Property
+
+
+        'UNIMPLEMENTED: PrecureCharacterTile.Imageはこのプロパティを使えば実装できるはずだが、手牌表示コントロールで使うとエラーで落ちるようになったので、統一感は無いが別方針で実装している。
+        Public Property TileImages As New Dictionary(Of String, System.Drawing.Bitmap)
+
+#End Region
+
+        ''' <summary>
+        ''' ボーナス牌を山牌に追加する。
+        ''' </summary>
+        ''' <param name="tiles">表ボーナス牌または裏ボーナス牌の牌IDリスト</param>
+        ''' <param name="isRevealedTiles">追加するのが表ボーナス牌の場合はTrue、裏ボーナス牌の場合はFalse。</param>
+        Private Sub AddBonusTiles(tiles As List(Of String), isRevealedTiles As Boolean)
             Dim _random As New System.Random()
-            'ボーナス牌は局ごとに、特殊キャラ牌からランダムでN枚選んで追加する
+            'ボーナス牌は、引数で与えられた場合はその牌を追加する。
+            '引数で指定されなかった場合、各局ごとに、特殊キャラ牌からランダムでN枚選んで追加する
 
-            Dim i As Integer = 1
+            'UNIMPLEMENTED: ここのコード同じコードの繰り返しになっているのでメソッドにくくりだすべき
+            Dim i As Integer = 0
 
-            While i <= Constants.Constants.BonusTileNumber
-                Dim _index = _random.Next(_specialCharacterTilesList.Count)
-                Dim _item = _specialCharacterTilesList(_index)
+            Dim _maxTiles As Integer
+
+            If isRevealedTiles Then
+                _maxTiles = Constants.Constants.RevealedBonusTileNumber
+            Else
+                _maxTiles = Constants.Constants.UnrevealedBonusTileNumber
+            End If
+
+            While i < _maxTiles
+                Dim _item As PreCureCharacterTile
+
+                If tiles Is Nothing Then
+                    Dim _index = _random.Next(_specialCharacterTilesList.Count)
+                    _item = _specialCharacterTilesList(_index)
+                Else
+                    _item = Me.GetTileDefinition(tiles(i))
+                End If
 
                 If Not Me.CurrentRoundTotalTilesIDList.Contains(_item.ID) Then
                     i += 1
@@ -82,89 +221,7 @@ Namespace Tiles
                 End If
 
             End While
-
-            Return Me._currentRoundTotalTilesList
-        End Function
-
-#Region "Property"
-
-        Private _currentRoundTotalTilesList As List(Of PreCureCharacterTile)
-        Public ReadOnly Property CurrentRoundTotalTilesList As List(Of PreCureCharacterTile) Implements TileSet(Of PreCureCharacterTile).CurrentRoundTotalTilesList
-            Get
-                Return _currentRoundTotalTilesList
-            End Get
-        End Property
-
-        Public ReadOnly Property CurrentRoundTotalTilesIDList As List(Of String) Implements TileSet(Of PreCureCharacterTile).CurrentRoundTotalTilesIDList
-            Get
-                Return _currentRoundTotalTilesList.Select(Function(x) x.ID).ToList
-            End Get
-        End Property
-
-        Private _currentRoundSpecialCharacterTilesList As List(Of PreCureCharacterTile)
-        Public ReadOnly Property CurrentRoundSpecialCharacterTilesList As List(Of PreCureCharacterTile)
-            Get
-                Return _currentRoundSpecialCharacterTilesList
-            End Get
-        End Property
-
-        Public ReadOnly Property CurrentRoundSpecialCharacterTilesIDList As List(Of String)
-            Get
-                Return _currentRoundSpecialCharacterTilesList.Select(Function(x) x.ID).ToList
-            End Get
-        End Property
-
-        Private _allCharacterTilesList As List(Of PreCureCharacterTile)
-        Public ReadOnly Property AllCharacterTilesList As List(Of PreCureCharacterTile)
-            Get
-                Return _allCharacterTilesList
-            End Get
-        End Property
-
-        Public ReadOnly Property AllCharacterTilesIDList As List(Of String)
-            Get
-                Return _allCharacterTilesList.Select(Function(x) x.ID).ToList
-            End Get
-        End Property
-
-        Private _regularPrecureTilesList As List(Of PreCureCharacterTile)
-        Public ReadOnly Property RegularPrecureTilesList As List(Of PreCureCharacterTile)
-            Get
-                Return _regularPrecureTilesList
-            End Get
-        End Property
-
-        Public ReadOnly Property RegularPrecureTilesIDList As List(Of String)
-            Get
-                Return _regularPrecureTilesList.Select(Function(x) x.ID).ToList
-            End Get
-        End Property
-
-        Private _specialCharacterTilesList As List(Of PreCureCharacterTile)
-        Public ReadOnly Property SpecialCharacterTilesList As List(Of PreCureCharacterTile)
-            Get
-                Return _specialCharacterTilesList
-            End Get
-        End Property
-
-        Public ReadOnly Property SpecialTilesIDList As List(Of String)
-            Get
-                Return _specialCharacterTilesList.Select(Function(x) x.ID).ToList
-            End Get
-        End Property
-
-        Private _tileSuitsCount As Integer
-        Public ReadOnly Property TileSuitsCount As Integer
-            Get
-                Return _tileSuitsCount
-            End Get
-        End Property
-
-
-        'UNIMPLEMENTED: PrecureCharacterTile.Imageはこのプロパティを使えば実装できるはずだが、手牌表示コントロールで使うとエラーで落ちるようになったので、統一感は無いが別方針で実装している。
-        Public Property TileImages As New Dictionary(Of String, System.Drawing.Bitmap)
-
-#End Region
+        End Sub
 
         ''' <summary>
         ''' 指定したIDの牌の定義情報を取得します。
