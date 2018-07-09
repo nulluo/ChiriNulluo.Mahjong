@@ -76,13 +76,14 @@ Public Class ReplayForm
         Dim _comHandIDList As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
         Dim _humanHandIDList As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
         Dim _wallPileIDList As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
-        Dim _bonusTileIDList As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
+        Dim _revealedBonusTiles As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
+        Dim _unrevealedBonusTiles As List(Of String) = Replay.ReplayDataManager.GoForward.Parameters
 
         'Me.StartMatch(_humanHandIDList, _comHandIDList, _wallPileIDList)
 
         '次画面取得
-        Me.TargetForm = _selectOpponentForm.Facade.GoToNextForm(False,
-                                _humanHandIDList, _comHandIDList, _wallPileIDList, _bonusTileIDList)
+        Me.TargetForm = _selectOpponentForm.Facade.GoToNextForm(False, _humanHandIDList,
+                              _comHandIDList, _wallPileIDList, _revealedBonusTiles, _unrevealedBonusTiles)
         _selectOpponentForm.GoToNextForm(Me.TargetForm)
         Me.Activate()
     End Sub

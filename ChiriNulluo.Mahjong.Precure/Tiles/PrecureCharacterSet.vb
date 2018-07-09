@@ -219,7 +219,10 @@ Namespace Tiles
                     _item = Me.GetTileDefinition(tiles(i))
                 End If
 
+                'ランダムでボーナス牌を選んでいるので、前に追加したボーナス牌と重複していないかチェックする
                 If Not Me.CurrentRoundTotalTilesIDList.Contains(_item.ID) Then
+
+                    '以前に追加していないボーナス牌の場合だけカウントアップし、牌を追加する
                     i += 1
                     Dim _item0 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName)
                     Dim _item1 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName)

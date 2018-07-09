@@ -297,11 +297,11 @@ Public Class RoundFacade
 
         LogFactory.GetReplayLogger.Write(My.Resources.IDProcessTypeRD,
                                  My.Resources.IDProcessHaipai_BonusRevealed, String.Empty, String.Empty,
-                                        PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesIDList.ToArray)
+                                        PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesIDList.Distinct.ToArray)
 
         LogFactory.GetReplayLogger.Write(My.Resources.IDProcessTypeRD,
                                  My.Resources.IDProcessHaipai_BonusUnrevealed, String.Empty, String.Empty,
-                                        PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesIDList.ToArray)
+                                        PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesIDList.Distinct.ToArray)
 
 
     End Sub
