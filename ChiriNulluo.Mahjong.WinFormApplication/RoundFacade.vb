@@ -120,8 +120,8 @@ Public Class RoundFacade
         Me.COMPlayer.DiscardTile(_discardedTile)
 
         'テンパイ判定
-        Dim _handChecker As New PrecureHandChecker(Me.COMPlayer.Hand)
-        If Not Me.COMPlayer.RiichiDone AndAlso _handChecker.IsReady Then
+        Dim _handCheckerCOM As New PrecureHandChecker(Me.COMPlayer.Hand)
+        If Not Me.COMPlayer.RiichiDone AndAlso _handCheckerCOM.IsReady Then
             If Me.DecidesToRiichi() Then
                 _result = _result Or RoundState.COMDeclaredRiichi
             End If
@@ -131,10 +131,13 @@ Public Class RoundFacade
         Dim _handCheckerPlayer As New PrecureHandChecker(Me.HumanPlayer.Hand)
         If _handCheckerPlayer.IsCompletedIfTargetTileAdded(_discardedTile) Then
             _result = _result Or RoundState.PlayerCanRonTileDiscardedByCOM
+            If Me.IsFriten(Me.HumanPlayer) Then
+                _result = _result Or RoundState.PlayerIsFriten
+            End If
         End If
 
-        'COMの捨て牌をプレイヤーがポン可能か？
-        If _handCheckerPlayer.CanMakeTripletIfTargetTileAdded(_discardedTile) Then
+            'COMの捨て牌をプレイヤーがポン可能か？
+            If _handCheckerPlayer.CanMakeTripletIfTargetTileAdded(_discardedTile) Then
             _result = _result Or RoundState.PlayerCanPongTileDiscardedByCOM
         End If
 
@@ -256,6 +259,54 @@ Public Class RoundFacade
     Friend Sub RiichiCOM()
         Me.COMPlayer.RiichiDone = True
     End Sub
+
+
+    ''' <summary>
+    ''' アガリ牌を見逃したプレイヤーが、もしリーチを宣言済みである場合、そのプレイヤーをフリテン状態にする。
+    ''' アガリ牌が他プレイヤーから捨てられたのを見逃した時に実行する。
+    ''' </summary>
+    ''' <param name="missedWinningTilePlayer">アガリ牌をロンしなかったプレイヤー</param>
+    Friend Sub MakeFritenIfRiichiDone(missedWinningTilePlayer As Player)
+
+        If missedWinningTilePlayer.RiichiDone Then
+            missedWinningTilePlayer.IgnoredWinningTileFromAnotherAfterRiichi = True
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' 対象のテンパイ済みプレイヤーがフリテン状態かどうかチェックする。
+    ''' </summary>
+    ''' <param name="readyPlayer">フリテン状態かどうかチェックするプレイヤー。テンパイ済みである事は前提とする。</param>
+    ''' <returns>対象のプレイヤーがフリテンしている場合はTrue,そうでない場合はFalse。</returns>
+    ''' <remarks>readyPlayerがテンパイしている状態でこのメソッドを呼び出すことを前提とする。</remarks>
+    Private Function IsFriten(readyPlayer As Player) As Boolean
+
+        If readyPlayer.IgnoredWinningTileFromAnotherAfterRiichi Then
+            'リーチ後に アガリ牌が他プレイヤーから捨てられたのを見逃している場合
+            Return True
+        Else
+            'そのプレイヤーのアタリ牌を取得
+            Dim _handCheckerPlayer As New PrecureHandChecker(Me.HumanPlayer.Hand)
+            Dim _tilesToCompleteHand As List(Of String) = _handCheckerPlayer.TilesToCompleteHand()
+
+            For Each _id As String In _tilesToCompleteHand
+                If readyPlayer.DiscardedPile.SearchTile(_id) IsNot Nothing Then
+                    'アタリ牌が自身の捨て牌にある場合
+                    Return True
+                End If
+            Next
+
+            If False Then
+                'UNIMPLEMENTED: アタリ牌がポン・チーで食われた牌の中にある場合
+                Return True
+            Else
+                Return False
+            End If
+
+        End If
+
+    End Function
 
     ''' <summary>
     ''' リーチするかどうかを決定する

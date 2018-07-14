@@ -60,6 +60,8 @@ Partial Class RoundForm
         Me.horizontalRevealedHandPanel1 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel()
         Me.horizontalRevealedHandPanel0 = New ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel()
         Me.TileDetailInfoPanel1 = New ChiriNulluo.Mahjong.WinFormApplication.TileDetailInfoPanel()
+        Me.FritenLabelHuman = New System.Windows.Forms.Label()
+        Me.FritenLabelCOM = New System.Windows.Forms.Label()
         CType(Me.BonusTIlePicture0, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BonusTIlePicture1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BonusTIlePicture2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -309,11 +311,23 @@ Partial Class RoundForm
         Me.TileDetailInfoPanel1.TargetTile = Nothing
         Me.TileDetailInfoPanel1.TargetTileIndex = 0
         '
+        'FritenLabelHuman
+        '
+        resources.ApplyResources(Me.FritenLabelHuman, "FritenLabelHuman")
+        Me.FritenLabelHuman.Name = "FritenLabelHuman"
+        '
+        'FritenLabelCOM
+        '
+        resources.ApplyResources(Me.FritenLabelCOM, "FritenLabelCOM")
+        Me.FritenLabelCOM.Name = "FritenLabelCOM"
+        '
         'RoundForm
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Green
+        Me.Controls.Add(Me.FritenLabelCOM)
+        Me.Controls.Add(Me.FritenLabelHuman)
         Me.Controls.Add(Me.TestShantenButton1)
         Me.Controls.Add(Me.openRuleFormButton)
         Me.Controls.Add(Me.RiichiButton)
@@ -401,4 +415,6 @@ Partial Class RoundForm
     Friend WithEvents BonusTIlePicture3 As PictureBox
     Friend WithEvents BonusTIlePicture4 As PictureBox
     Friend WithEvents BonusTIlePicture5 As PictureBox
+    Friend WithEvents FritenLabelHuman As Label
+    Friend WithEvents FritenLabelCOM As Label
 End Class

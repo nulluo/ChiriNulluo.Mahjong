@@ -17,6 +17,12 @@ Namespace Players
 
         Property RiichiDone As Boolean = False
 
+        ''' <summary>
+        ''' リーチ後に、他プレイヤーから捨てられたアタリ牌を見逃したことにより、フリテン状態になっているかどうか。自分の捨て牌にアタリ牌があるかどうかはチェックしない。
+        ''' </summary>
+        ''' <returns>他プレイヤーから捨てられたアタリ牌を見逃したことにより、フリテン状態になっている場合はTrue、そうでない場合はFalse。</returns>
+        Property IgnoredWinningTileFromAnotherAfterRiichi As Boolean = False
+
         Public Sub InitializeHand()
             Me.Hand = New Hand()
         End Sub

@@ -220,19 +220,25 @@ Public Class RoundForm
                 Case My.Resources.LabelRon
                     'ロンする場合
 
-                    'UNIMPLEMENTED: 本来はFacadeクラスにロンを実行するメソッドを定義して、そこにこのコードを書くべきである↓
-                    Me.HumanPlayer.Hand.PongOrChowOrRonDone = True
-                    Me.Facade.Result = RoundState.PlayerWinByTileDiscardedByCOM
+                    If Me.Facade.Result.HasFlag(RoundState.PlayerIsFriten) Then
+                        'Humanがフリテンの場合
+                        MessageBox.Show("フリテンだから、ロンはできないモフ！")
+                    Else
 
-                    If Sounds.SoundManager.PlaysSE Then
-                        Dim _mediaPlayer = New System.Media.SoundPlayer(Path.Combine(My.Application.Info.DirectoryPath, Constants.SoundFolder, "GameClear.wav"))
-                        _mediaPlayer.Play()
+                        'UNIMPLEMENTED: 本来はFacadeクラスにロンを実行するメソッドを定義して、そこにこのコードを書くべきである↓
+                        Me.HumanPlayer.Hand.PongOrChowOrRonDone = True
+                        Me.Facade.Result = RoundState.PlayerWinByTileDiscardedByCOM
+
+                        If Sounds.SoundManager.PlaysSE Then
+                            Dim _mediaPlayer = New System.Media.SoundPlayer(Path.Combine(My.Application.Info.DirectoryPath, Constants.SoundFolder, "GameClear.wav"))
+                            _mediaPlayer.Play()
+                        End If
+
+                        Me.EndRound(True, _tileDiscardedByCOM)
+                        '人間がロン上がりした場合、処理を中断する
+
+                        Return
                     End If
-
-                    Me.EndRound(True, _tileDiscardedByCOM)
-                    '人間がロン上がりした場合、処理を中断する
-
-                    Return
 
                 Case My.Resources.LabelPong
                     'ポンする場合
@@ -268,7 +274,10 @@ Public Class RoundForm
                     Return
 
                 Case My.Resources.LabelPass
-                    'パスの場合は何もしない
+                    'パスの場合、ロンせずに見逃した場合はフリテン判定をする
+                    If _choiceMessages.Contains(My.Resources.LabelRon) Then
+                        Me.Facade.MakeFritenIfRiichiDone(Me.HumanPlayer)
+                    End If
 
             End Select
         End If

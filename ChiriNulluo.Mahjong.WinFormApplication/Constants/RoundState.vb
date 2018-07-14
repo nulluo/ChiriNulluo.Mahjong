@@ -67,6 +67,16 @@
         ''' </summary>
         COMDeclaredRiichi = &H800
 
+        ''' <summary>
+        ''' HUMANはフリテン状態である
+        ''' </summary>
+        PlayerIsFriten = &H1000
+
+        ''' <summary>
+        ''' HUMANはフリテン状態である
+        ''' </summary>
+        COMIsFriten = &H2000
+
 
     End Enum
 End Namespace
