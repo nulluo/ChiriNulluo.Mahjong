@@ -13,9 +13,9 @@ Public NotInheritable Class MatchManagerController
         'Me.MatchManager = New MatchManager(1, 1)
         'Me.InnerInitializeMatch(COMStrategy.ToCompleteDealtReadyHand)
 
-        'Me.InnerInitializeMatch(COMStrategy.ToDecreaseShantenCount)
+        Me.InnerInitializeMatch(COMStrategy.ToDecreaseShantenCount)
 
-        Me.InnerInitializeMatch(COMStrategy.ToBeFritenForTest)
+        'Me.InnerInitializeMatch(COMStrategy.ToBeFritenForTest)
     End Sub
 
     Private Sub New(comStrategy As COMStrategy)
@@ -23,8 +23,8 @@ Public NotInheritable Class MatchManagerController
         If comStrategy = COMStrategy.ToCompleteDealtHandOneStepAwayFromReady Then
             Me.InnerInitializeMatch(COMStrategy.ToCompleteDealtHandOneStepAwayFromReady)
         ElseIf comStrategy = comStrategy.ToDecreaseShantenCount
-            'Me.InnerInitializeMatch(COMStrategy.ToDecreaseShantenCount)
-            Me.InnerInitializeMatch(COMStrategy.ToBeFritenForTest)
+            Me.InnerInitializeMatch(COMStrategy.ToDecreaseShantenCount)
+            'Me.InnerInitializeMatch(COMStrategy.ToBeFritenForTest)
 
         Else
             'UNIMPLEMENTED：COMStrategy.Randomの場合も向聴数減少型のアルゴリズムになる事に注意（COMStrategy.Randomの場合の挙動が現在バグっているため）
@@ -76,9 +76,8 @@ Public NotInheritable Class MatchManagerController
         'UNIMPLEMENTED：1番目のプレイヤーがCOMであることをこのクラスが知っていてそれを利用するというのは結合度が強すぎでは？
         Dim _com = DirectCast(Me.MatchManager.RoundManager.PlayersList(1), Players.COM.COMPlayer)
 
-        'UNIMPLEMENTED: なんでここ向聴数減少目指すアルゴリズムじゃなくてToCompleteDealtReadyHandにしてるの？↓
-        '_com.Algorithm = New PrecureCOMPlayerAlgorithm(_com, Me.MatchManager.RoundManager, COMStrategy.ToCompleteDealtReadyHand)
-        _com.Algorithm = New PrecureCOMPlayerAlgorithm(_com, Me.MatchManager.RoundManager, COMStrategy.ToBeFritenForTest)
+        '_com.Algorithm = New PrecureCOMPlayerAlgorithm(_com, Me.MatchManager.RoundManager, COMStrategy.ToBeFritenForTest)
+        _com.Algorithm = New PrecureCOMPlayerAlgorithm(_com, Me.MatchManager.RoundManager, COMStrategy.ToDecreaseShantenCount)
         _com.PreviousShantenCount = 8
         'UNIMPLEMENTED: ここで  chirnulluo.mahjong.precure.ShantenCountMaxにアクセスしたいのだがうまくいかない
         'UNIMPLEMENTED: 仮に初期のPreviousShantenCountを8にしているが、配牌時の向聴数を計算してPreviousShantenCountプロパティを初期化するようにしないと、最初のツモで必ず牌を手から出して捨ててしまう

@@ -30,8 +30,8 @@ Public Class RoundFacade
             MatchManagerController.GetInstance.InitializeRound(humanHand, comHand, wallPile, revealedBonusTiles, unrevealedBonusTiles)
         Else
             'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
-            'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToDecreaseShantenCount)
-            MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToBeFritenForTest)
+            MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToDecreaseShantenCount)
+            'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToBeFritenForTest)
             MatchManagerController.GetInstance.MatchManager.RoundManager.ShuffleWall()
         End If
 #Else
