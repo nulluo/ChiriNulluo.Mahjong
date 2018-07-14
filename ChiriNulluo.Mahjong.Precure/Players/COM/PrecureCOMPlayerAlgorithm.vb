@@ -8,7 +8,7 @@ Namespace Players.COM
     Public Class PrecureCOMPlayerAlgorithm
         Implements COMPlayerAlgorithm
 
-        Private _strategy As COMStrategy
+        Public Property strategy As COMStrategy
         Private _comPlayer As COMPlayer
         Private _roundManager As RoundManager
 
@@ -44,7 +44,7 @@ Namespace Players.COM
                         End If
                     End If
 
-                Case COMStrategy.ToDecreaseShantenCount
+                Case COMStrategy.ToDecreaseShantenCount, COMStrategy.ToBeFritenForTest
                     'テンパイになっている時はツモギリ
                     Dim _handChecker As New PrecureHandChecker(_comPlayer.Hand)
                     If _handChecker.IsReady Then
@@ -70,6 +70,7 @@ Namespace Players.COM
                         End If
                     Next
                     Return _comPlayer.Hand.MainTiles.SearchTile(_idToDiscard)
+
             End Select
 
         End Function

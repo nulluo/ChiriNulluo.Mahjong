@@ -17,6 +17,7 @@ Public Class RoundFacade
 
     Private Property View As RoundForm
 
+
 #End Region
 
     Public Sub New(humanHand As Hand, comHand As Hand, wallPile As WallPile, View As RoundForm,
@@ -29,7 +30,8 @@ Public Class RoundFacade
             MatchManagerController.GetInstance.InitializeRound(humanHand, comHand, wallPile, revealedBonusTiles, unrevealedBonusTiles)
         Else
             'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
-            MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToDecreaseShantenCount)
+            'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToDecreaseShantenCount)
+            MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToBeFritenForTest)
             MatchManagerController.GetInstance.MatchManager.RoundManager.ShuffleWall()
         End If
 #Else
@@ -103,7 +105,19 @@ Public Class RoundFacade
         'アガリ判定
         Dim _handChecker As New PrecureHandChecker(Me.COMPlayer.Hand)
         If _handChecker.IsCompleted() Then
-            Me.Result = RoundState.PlayerLoseByTileDrawnByCOM
+            If DirectCast(Me.COMPlayer.Algorithm, Precure.Players.COM.PrecureCOMPlayerAlgorithm).strategy = COMStrategy.ToBeFritenForTest Then
+                'フリテンテスト用Strategyを採用している場合
+                If Me.COMPlayer.IgnoredWinningTileCount = 0 Then
+                    Me.COMPlayer.IgnoredWinningTileCount += 1
+                Else
+                    Me.Result = RoundState.PlayerLoseByTileDrawnByCOM
+                End If
+
+            Else
+                Me.Result = RoundState.PlayerLoseByTileDrawnByCOM
+
+            End If
+
         Else
             Me.Result = RoundState.Undetermined
         End If
@@ -131,7 +145,7 @@ Public Class RoundFacade
         Dim _handCheckerPlayer As New PrecureHandChecker(Me.HumanPlayer.Hand)
         If _handCheckerPlayer.IsCompletedIfTargetTileAdded(_discardedTile) Then
             _result = _result Or RoundState.PlayerCanRonTileDiscardedByCOM
-            If Me.IsFriten(Me.HumanPlayer) Then
+            If Me.IsFriten(Me.HumanPlayer, Me.COMPlayer) Then
                 _result = _result Or RoundState.PlayerIsFriten
             End If
         End If
@@ -173,13 +187,20 @@ Public Class RoundFacade
         'プレイヤーの捨て牌をCOMがロン可能か？
         Dim _handCheckerCOM As New PrecureHandChecker(Me.COMPlayer.Hand)
         If _handCheckerCOM.IsSetCompletedAndYakuAccomplishedIfTargetTileAdded(_tileToDiscard, COMPlayer.RiichiDone) Then
-            Me.COMPlayer.Hand.PongOrChowOrRonDone = True
-            'UNIMPLEMENTED：状況に応じてロンするかどうかＣＯＭに思考させる
-            Me.Result = RoundState.PlayerLoseByTileDiscardedByPlayer
+            If Me.IsFriten(Me.COMPlayer, Me.HumanPlayer) Then
+                'COMがフリテンしている場合
+                Me.Result = RoundState.COMIsFriten
+            Else
+                Me.COMPlayer.Hand.PongOrChowOrRonDone = True
+                'UNIMPLEMENTED：状況に応じてロンするかどうかＣＯＭに思考させる
+                Me.Result = RoundState.PlayerLoseByTileDiscardedByPlayer
 
-            'ElseIf [COMが鳴くかどうかの判定処理]
-            'UNIMPLEMENTED： 「プレイヤーの捨て牌をCOMが鳴けるか判定し、鳴いた方が有利と判断した場合に鳴く」処理をここに書く
-            'UNIMPLEMENTED: COMのポン・チー機能を実装した場合、COM側のDrawCountを1増やす事を忘れないようにする
+                'ElseIf [COMが鳴くかどうかの判定処理]
+                'UNIMPLEMENTED： 「プレイヤーの捨て牌をCOMが鳴けるか判定し、鳴いた方が有利と判断した場合に鳴く」処理をここに書く
+                'UNIMPLEMENTED: COMのポン・チー機能を実装した場合、COM側のDrawCountを1増やす事を忘れないようにする
+
+            End If
+
         Else
             Me.Result = RoundState.Undetermined
         End If
@@ -280,30 +301,32 @@ Public Class RoundFacade
     ''' <param name="readyPlayer">フリテン状態かどうかチェックするプレイヤー。テンパイ済みである事は前提とする。</param>
     ''' <returns>対象のプレイヤーがフリテンしている場合はTrue,そうでない場合はFalse。</returns>
     ''' <remarks>readyPlayerがテンパイしている状態でこのメソッドを呼び出すことを前提とする。</remarks>
-    Private Function IsFriten(readyPlayer As Player) As Boolean
+    Private Function IsFriten(readyPlayer As Player,tileDiscardPlayer As player) As Boolean
 
         If readyPlayer.IgnoredWinningTileFromAnotherAfterRiichi Then
             'リーチ後に アガリ牌が他プレイヤーから捨てられたのを見逃している場合
             Return True
         Else
             'そのプレイヤーのアタリ牌を取得
-            Dim _handCheckerPlayer As New PrecureHandChecker(Me.HumanPlayer.Hand)
+            Dim _handCheckerPlayer As New PrecureHandChecker(readyPlayer.Hand)
             Dim _tilesToCompleteHand As List(Of String) = _handCheckerPlayer.TilesToCompleteHand()
 
             For Each _id As String In _tilesToCompleteHand
                 If readyPlayer.DiscardedPile.SearchTile(_id) IsNot Nothing Then
                     'アタリ牌が自身の捨て牌にある場合
                     Return True
+
+                Else
+                    'UNIMPLEMENTED: アタリ牌がポン・チーで食われた牌の中にある場合
+                    For Each _tiles As RevealedTiles In tileDiscardPlayer.Hand.RevealedTilesList
+                        If _tiles.OpponentsTile.ID = _id Then
+                            Return True
+                        End If
+                    Next
                 End If
             Next
 
-            If False Then
-                'UNIMPLEMENTED: アタリ牌がポン・チーで食われた牌の中にある場合
-                Return True
-            Else
-                Return False
-            End If
-
+            Return False
         End If
 
     End Function

@@ -22,6 +22,12 @@
         ''' </summary>
         ToDecreaseShantenCount
 
+        'UNIMPLEMENTED: デバッグ用のモードなのでリリースコードに残すべきかは要検討
+        ''' <summary>
+        ''' アガリ牌が出たり、ツモったりしても一度目は見逃して、わざとフリテンになる。
+        ''' それ以外は<c>ToDecreaseShantenCount</c>と同じ挙動をする。(COMのフリテンテスト専用)
+        ''' </summary>
+        ToBeFritenForTest
 
     End Enum
 End Namespace

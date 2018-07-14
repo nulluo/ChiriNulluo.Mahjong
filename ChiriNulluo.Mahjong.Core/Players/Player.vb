@@ -17,6 +17,14 @@ Namespace Players
 
         Property RiichiDone As Boolean = False
 
+        'UNIMPLEMENTED: COMがフリテンしない仕様であれば必要ない。「フリテンをする」うっかりキャラを実装するなら必要になるが･･･？
+        ''' <summary>
+        ''' ツモするか、または他家から出たアガリ牌を見逃した回数。COMのフリテンテスト用プロパティ
+        ''' </summary>
+        ''' <returns></returns>
+        Public Property IgnoredWinningTileCount As Integer = 0
+
+
         ''' <summary>
         ''' リーチ後に、他プレイヤーから捨てられたアタリ牌を見逃したことにより、フリテン状態になっているかどうか。自分の捨て牌にアタリ牌があるかどうかはチェックしない。
         ''' </summary>

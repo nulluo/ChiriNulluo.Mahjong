@@ -16,6 +16,7 @@ Public Class RoundManager
                                 x.DiscardedPile.Clear()
                                 x.RiichiDone = False
                                 x.IgnoredWinningTileFromAnotherAfterRiichi = False
+                                x.IgnoredWinningTileCount = 0
                             End Sub)
         Me.PlayersList = playersList
 
