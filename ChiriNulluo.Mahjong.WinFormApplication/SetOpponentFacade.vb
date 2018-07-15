@@ -58,6 +58,7 @@ Public Class SetOpponentFacade
                 wallPileIDList.ForEach(Sub(id) _wallPile.Add(PrecureCharacterSet.GetInstance.GetTileDefinition(id)))
 
                 _nextForm = New RoundForm(_humanHand, _comHand, _wallPile, revealedBonusTiles, unrevealedBonusTiles)
+                ChiriNulluo.Mahjong.Precure.HandChecker.ShantenCounter.InitializeCurrentRoundTiles()
             Else
                 _nextForm = New RoundForm(Nothing, Nothing, Nothing, Nothing, Nothing)
             End If
