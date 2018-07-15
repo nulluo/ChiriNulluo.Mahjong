@@ -2,50 +2,52 @@
 Imports ChiriNulluo.Mahjong.Precure.Suits
 Imports ChiriNulluo.Mahjong.Precure.DataAccess
 
-''' <summary>
-''' 牌詳細情報表示パネル
-''' </summary>
-Public Class TileDetailInfoPanel
-
-    Public Property TargetTile As PreCureCharacterTile
-
-    Public Property TargetTileIndex As Integer
-
+Namespace View
     ''' <summary>
-    ''' パネルを描画する。
+    ''' 牌詳細情報表示パネル
     ''' </summary>
-    ''' <param name="tile">表示する牌</param>
-    ''' <param name="index">Pile内での牌のインデックス</param>
-    Public Sub Draw(tile As PreCureCharacterTile, index As Integer)
+    Public Class TileDetailInfoPanel
 
-        Me.TargetTile = tile
-        Me.TargetTileIndex = index
+        Public Property TargetTile As PreCureCharacterTile
 
-        Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
+        Public Property TargetTileIndex As Integer
 
-        Dim _suit As PrecureSuit = _xmlAccess.GetTileSuit(tile.SuitID)
+        ''' <summary>
+        ''' パネルを描画する。
+        ''' </summary>
+        ''' <param name="tile">表示する牌</param>
+        ''' <param name="index">Pile内での牌のインデックス</param>
+        Public Sub Draw(tile As PreCureCharacterTile, index As Integer)
 
-        Me.NameLabel.Text = tile.Name
-        Me.CureNameLabel.Text = tile.CureName
-        Me.SuitNameLabel.Text = _suit.Name
-        Me.NumberLabel.Text = tile.Number & "/" & _suit.TotalTilesCount
+            Me.TargetTile = tile
+            Me.TargetTileIndex = index
 
-        Me.EnlargedImage.Image = tile.EnlargedImage
+            Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
 
-        Me.Visible = True
+            Dim _suit As PrecureSuit = _xmlAccess.GetTileSuit(tile.SuitID)
 
-    End Sub
+            Me.NameLabel.Text = tile.Name
+            Me.CureNameLabel.Text = tile.CureName
+            Me.SuitNameLabel.Text = _suit.Name
+            Me.NumberLabel.Text = tile.Number & "/" & _suit.TotalTilesCount
 
-    ''' <summary>
-    ''' パネルを消去する。
-    ''' </summary>
-    Public Sub [Erase]()
-        Me.NameLabel.Text = String.Empty
-        Me.SuitNameLabel.Text = String.Empty
-        Me.NumberLabel.Text = String.Empty
-        Me.EnlargedImage.Image = Nothing
+            Me.EnlargedImage.Image = tile.EnlargedImage
 
-        Me.Visible = False
-    End Sub
+            Me.Visible = True
 
-End Class
+        End Sub
+
+        ''' <summary>
+        ''' パネルを消去する。
+        ''' </summary>
+        Public Sub [Erase]()
+            Me.NameLabel.Text = String.Empty
+            Me.SuitNameLabel.Text = String.Empty
+            Me.NumberLabel.Text = String.Empty
+            Me.EnlargedImage.Image = Nothing
+
+            Me.Visible = False
+        End Sub
+
+    End Class
+End Namespace

@@ -98,9 +98,9 @@
     <Compile Include="Replay\ReplayDataManager.vb" />
     <Compile Include="Logging\ReplayLogger.vb" />
     <Compile Include="Replay\ReplayLogReader.vb" />
-    <Compile Include="RoundFacade.vb" />
-    <Compile Include="SelectBonusTileFacade.vb" />
-    <Compile Include="SetOpponentFacade.vb" />
+    <Compile Include="Facade\RoundFacade.vb" />
+    <Compile Include="Facade\SelectBonusTileFacade.vb" />
+    <Compile Include="Facade\SetOpponentFacade.vb" />
     <Compile Include="Sounds\SoundManager.vb" />
     <Compile Include="View\CharacterIDTestForm.Designer.vb">
       <DependentUpon>CharacterIDTestForm.vb</DependentUpon>
@@ -369,7 +369,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ChiriNulluo.Mahjong.WinFormApplication.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -571,6 +570,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
