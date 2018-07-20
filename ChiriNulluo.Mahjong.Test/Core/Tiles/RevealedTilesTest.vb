@@ -19,7 +19,7 @@ Namespace Core.Tiles
             Try
                 Dim _revealedTiles = New RevealedTiles(isTriplet, _myTile1, _myTile2, _opponentsTile)
                 Assert.That(Not exceptionOccurs)
-                Assert.That(_opponentsTile Is _revealedTiles.TileDiscardedByOpponent)
+                Assert.That(_opponentsTile Is _revealedTiles.OpponentsTile)
 
             Catch ex As ArgumentException
                 Assert.That(exceptionOccurs)

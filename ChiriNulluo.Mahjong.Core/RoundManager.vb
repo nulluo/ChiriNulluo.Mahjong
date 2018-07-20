@@ -58,6 +58,10 @@ Public Class RoundManager
 
     Public Property TurnCount As Integer
 
+    ''' <summary>
+    ''' 今捨てられた牌を鳴いて加えると、順子を形成可能な塔子のリストを取得する。
+    ''' </summary>
+    ''' <returns>今捨てられた牌を鳴いて加えると、順子を形成可能な塔子のリスト</returns>
     Public Property PossibleTatsuListWhichCanMakeChowIfDiscaredTileAdded As List(Of List(Of String)) = Nothing
 
     Private Property HumanPlayersIndexes As Integer()
