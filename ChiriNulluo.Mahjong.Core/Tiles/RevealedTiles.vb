@@ -9,8 +9,6 @@
         'UNIMPLEMENTED：カンをありにするならこれはBoolean（二値）では対応できなくなる
         Public Property IsTriplet As Boolean = False
 
-        Public Property TileDiscardedByOpponent As Tile
-
         Public ReadOnly Property MyTile0 As Tile
 
         Public ReadOnly Property MyTile1 As Tile
@@ -44,7 +42,6 @@
             Me._myTile1 = myTile1
             Me._opponentsTile = opponentsTile
 
-            Me.TileDiscardedByOpponent = opponentsTile
             Me.Sort()
 
             If Not Me.IsTriplet Then

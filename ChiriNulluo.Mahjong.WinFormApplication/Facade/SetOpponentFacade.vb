@@ -6,7 +6,7 @@ Imports ChiriNulluo.Mahjong.WinFormApplication.Constants
 Imports ChiriNulluo.Mahjong.WinFormApplication.View
 
 Namespace Facade
-    Public Class SetOpponentFacade
+    Public Class SelectOpponentFacade
 #Region "Property"
 
         Private Property View As SelectOpponentForm

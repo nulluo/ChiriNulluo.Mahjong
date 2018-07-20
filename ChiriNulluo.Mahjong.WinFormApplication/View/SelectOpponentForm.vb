@@ -5,7 +5,7 @@ Namespace View
     Public Class SelectOpponentForm
 
 #Region "Property"
-        Public Property Facade As New SetOpponentFacade(Me)
+        Public Property Facade As New SelectOpponentFacade(Me)
 #End Region
 
 #Region "Event Handler"
