@@ -377,6 +377,7 @@ Namespace View
                 _riichiPlayer = My.Resources.IDPlayerCOM
             End If
 
+            'UNIMPLEMENTED: ここだけRoundFacadeからではなく、RoundFormから直接ReplayLoggerを使用しているのが気持ち悪い
             LogFactory.GetReplayLogger.Write(My.Resources.IDProcessTypeUA, My.Resources.IDProcessRiichi,
                    _riichiPlayer, String.Empty, String.Empty)
 

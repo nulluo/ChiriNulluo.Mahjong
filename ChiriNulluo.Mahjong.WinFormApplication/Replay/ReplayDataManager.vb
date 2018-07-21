@@ -13,11 +13,11 @@
         Public Shared Property CurrentState As Constants.ReplayModeState = Constants.ReplayModeState.NormalModeSinceMatchStarted
 
         Private Shared _current As Integer = -1
-        Public Shared Property Current As Integer
+        Private Shared Property Current As Integer
             Get
                 Return _current
             End Get
-            Private Set(value As Integer)
+            Set(value As Integer)
                 _current = value
             End Set
         End Property
