@@ -51,13 +51,28 @@ Namespace Tiles
             _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
             _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
 
+            Me._numsPerPrecureList.Clear()
+            _dataAccess.GetRegularPrecureDataFromXML(Nothing, Nothing, Nothing, Nothing).Select(Of String)(Function(x) x.ID).Distinct.ToList.ForEach(Sub(y) Me._numsPerPrecureList.Add(y, 0))
+
+
             Me.AddBonusTiles(revealedTiles, True)
             Me.AddBonusTiles(unrevealedTiles, False)
+
 
             Return Me._currentRoundTotalTilesList
         End Function
 
 #Region "Property"
+
+        'UNIMPLEMENTED: 名前が実態を表してないので要検討
+        'UNIMPLEMENTED: SortedListじゃなく、SoretedSetにすべきだとおもわれる（KeyだけでValueを使用していないので）
+        Private _numsPerPrecureList As New SortedList(Of String, Integer)
+        Public ReadOnly Property NumsPerPrecureList As SortedList(Of String, Integer)
+            Get
+                Return _numsPerPrecureList
+            End Get
+        End Property
+
 
         ''' <summary>
         ''' 現在の局の全ての牌(Tile型)のリスト。(ボーナス牌を含む）
@@ -242,6 +257,8 @@ Namespace Tiles
                         .Add(_item2)
                         .Add(_item3)
                     End With
+
+                    Me._numsPerPrecureList.Add(_item.ID, 0)
                 End If
 
             End While

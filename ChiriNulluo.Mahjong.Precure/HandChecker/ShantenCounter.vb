@@ -14,7 +14,7 @@ Namespace HandChecker
         'Private Shared IndexDictionary As New Dictionary(Of String, Integer)
 
 
-        Private Shared Property NumsPerPrecureList As New SortedList(Of String, Integer)
+        'Private Shared Property NumsPerPrecureList As New SortedList(Of String, Integer)
 
         Public Const TileMax As Integer = 65 - 12 + 6
 
@@ -22,11 +22,11 @@ Namespace HandChecker
         ''' <summary>
         ''' 現在の牌リスト(プリキュア牌＋現在の局のボーナス牌）をリセットする
         ''' </summary>
-        Public Shared Sub InitializeCurrentRoundTiles()
-            NumsPerPrecureList.Clear()
-            PrecureCharacterSet.GetInstance.CurrentRoundTotalTilesIDList.Distinct.ToList.ForEach(
-                                                                                      Sub(x) NumsPerPrecureList.Add(x, 0))
-        End Sub
+        'Public Shared Sub InitializeCurrentRoundTiles()
+        '    NumsPerPrecureList.Clear()
+        '    PrecureCharacterSet.GetInstance.CurrentRoundTotalTilesIDList.Distinct.ToList.ForEach(
+        '                                                                              Sub(x) NumsPerPrecureList.Add(x, 0))
+        'End Sub
 
         ''' <summary>
         ''' スタティックコンストラクタ：牌種IDを牌を表す全角文字に変換する配列を生成
@@ -198,7 +198,7 @@ Namespace HandChecker
             ''UNIMPLEMENTED: もっといいLINQの書き方あるはず
             'handInfo.ForEach(Sub(x) _indexList.Add(IndexDictionary(x)))
 
-            Dim _indexList As List(Of Integer) = handInfo.Select(Function(x) NumsPerPrecureList.IndexOfKey(x)).ToList
+            Dim _indexList As List(Of Integer) = handInfo.Select(Function(x) PrecureCharacterSet.GetInstance.NumsPerPrecureList.IndexOfKey(x)).ToList
 
             Return CalculateShanten(_indexList)
 
@@ -419,18 +419,18 @@ Namespace HandChecker
         End Function
 
         'UNIMPLEMENTED: PrecureHandCheckerクラスにほぼ同じメソッドがある。統合を検討する
-
+        'UNIMPLEMENTED: よくかんがえたらメソッド名は「両者が同じ色であるか」なのに実際に判定しているのは「両者が同じ色であり、さらに一つ上or下の牌も同じ色であるか」という内容になっており、メソッド名が実際のふるまいを正確に表現していない
         ''' <summary>
         ''' 2枚の牌インデックスが全て同じ作品IDに属するかどうかを判定する。無効な牌インデックス(範囲外)が指定された場合はFalseを返す。
         ''' </summary>
         Private Shared Function IsSameSuit(index0 As Integer, index1 As Integer) As Boolean
             'このチェックは、満、薫が存在しないときに咲＋舞が塔子判定されないようにするために必要
-            If index0 <= -1 OrElse NumsPerPrecureList.Count <= index1 Then
+            If index0 <= -1 OrElse PrecureCharacterSet.GetInstance.NumsPerPrecureList.Count <= index1 Then
                 Return False
             End If
 
-            Dim _suit0 As String = NumsPerPrecureList.Keys(index0).Substring(0, 2)
-            Dim _suit1 As String = NumsPerPrecureList.Keys(index1).Substring(0, 2)
+            Dim _suit0 As String = PrecureCharacterSet.GetInstance.NumsPerPrecureList.Keys(index0).Substring(0, 2)
+            Dim _suit1 As String = PrecureCharacterSet.GetInstance.NumsPerPrecureList.Keys(index1).Substring(0, 2)
 
             Return _suit0 = _suit1
 

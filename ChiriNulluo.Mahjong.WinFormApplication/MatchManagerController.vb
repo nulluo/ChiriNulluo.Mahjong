@@ -143,7 +143,6 @@ Public NotInheritable Class MatchManagerController
         'UNIMPLEMENTED: ここで  chirnulluo.mahjong.precure.ShantenCountMaxにアクセスしたいのだがうまくいかない
         'UNIMPLEMENTED: 仮に初期のPreviousShantenCountを8にしているが、配牌時の向聴数を計算してPreviousShantenCountプロパティを初期化するようにしないと、最初のツモで必ず牌を手から出して捨ててしまう
 
-        Precure.HandChecker.ShantenCounter.InitializeCurrentRoundTiles()
         Return Me.MatchManager.RoundManager
     End Function
 
