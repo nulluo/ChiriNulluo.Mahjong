@@ -51,8 +51,8 @@ Namespace Tiles
             _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
             _dataAccess.FillRegularPrecureDataFromXML(Me._currentRoundTotalTilesList, Nothing, Nothing, Nothing, Nothing)
 
-            Me._numsPerPrecureList.Clear()
-            _dataAccess.GetRegularPrecureDataFromXML(Nothing, Nothing, Nothing, Nothing).Select(Of String)(Function(x) x.ID).Distinct.ToList.ForEach(Sub(y) Me._numsPerPrecureList.Add(y, 0))
+            Me._sortedCurrentRoundDistinctTotalIDSet.Clear()
+            _dataAccess.GetRegularPrecureDataFromXML(Nothing, Nothing, Nothing, Nothing).Select(Of String)(Function(x) x.ID).Distinct.ToList.ForEach(Sub(y) Me._sortedCurrentRoundDistinctTotalIDSet.Add(y))
 
 
             Me.AddBonusTiles(revealedTiles, True)
@@ -64,12 +64,18 @@ Namespace Tiles
 
 #Region "Property"
 
-        'UNIMPLEMENTED: 名前が実態を表してないので要検討
-        'UNIMPLEMENTED: SortedListじゃなく、SoretedSetにすべきだとおもわれる（KeyだけでValueを使用していないので）
-        Private _numsPerPrecureList As New SortedList(Of String, Integer)
-        Public ReadOnly Property NumsPerPrecureList As SortedList(Of String, Integer)
+
+        ''' <summary>
+        ''' 昇順に並んだ現在のラウンドの全牌ID(プリキュア牌＋特殊キャラ牌)のセット(重複は含まない)
+        ''' </summary>
+        Private _sortedCurrentRoundDistinctTotalIDSet As New SortedSet(Of String)
+        ''' <summary>
+        ''' 昇順に並んだ現在のラウンドの全牌ID(プリキュア牌＋特殊キャラ牌)のセット(重複は含まない)
+        ''' </summary>
+        ''' <returns></returns>
+        Public ReadOnly Property SortedCurrentRoundDistinctTotalIDSet As SortedSet(Of String)
             Get
-                Return _numsPerPrecureList
+                Return _sortedCurrentRoundDistinctTotalIDSet
             End Get
         End Property
 
@@ -258,7 +264,7 @@ Namespace Tiles
                         .Add(_item3)
                     End With
 
-                    Me._numsPerPrecureList.Add(_item.ID, 0)
+                    Me._sortedCurrentRoundDistinctTotalIDSet.Add(_item.ID)
                 End If
 
             End While

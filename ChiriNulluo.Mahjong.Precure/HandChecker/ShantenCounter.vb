@@ -198,7 +198,7 @@ Namespace HandChecker
             ''UNIMPLEMENTED: もっといいLINQの書き方あるはず
             'handInfo.ForEach(Sub(x) _indexList.Add(IndexDictionary(x)))
 
-            Dim _indexList As List(Of Integer) = handInfo.Select(Function(x) PrecureCharacterSet.GetInstance.NumsPerPrecureList.IndexOfKey(x)).ToList
+            Dim _indexList As List(Of Integer) = handInfo.Select(Function(x) PrecureCharacterSet.GetInstance.SortedCurrentRoundDistinctTotalIDSet.ToList.IndexOf(x)).ToList
 
             Return CalculateShanten(_indexList)
 
@@ -425,12 +425,12 @@ Namespace HandChecker
         ''' </summary>
         Private Shared Function IsSameSuit(index0 As Integer, index1 As Integer) As Boolean
             'このチェックは、満、薫が存在しないときに咲＋舞が塔子判定されないようにするために必要
-            If index0 <= -1 OrElse PrecureCharacterSet.GetInstance.NumsPerPrecureList.Count <= index1 Then
+            If index0 <= -1 OrElse PrecureCharacterSet.GetInstance.SortedCurrentRoundDistinctTotalIDSet.Count <= index1 Then
                 Return False
             End If
 
-            Dim _suit0 As String = PrecureCharacterSet.GetInstance.NumsPerPrecureList.Keys(index0).Substring(0, 2)
-            Dim _suit1 As String = PrecureCharacterSet.GetInstance.NumsPerPrecureList.Keys(index1).Substring(0, 2)
+            Dim _suit0 As String = PrecureCharacterSet.GetInstance.SortedCurrentRoundDistinctTotalIDSet(index0).Substring(0, 2)
+            Dim _suit1 As String = PrecureCharacterSet.GetInstance.SortedCurrentRoundDistinctTotalIDSet(index1).Substring(0, 2)
 
             Return _suit0 = _suit1
 
