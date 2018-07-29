@@ -100,7 +100,7 @@
     <Compile Include="Replay\ReplayLogReader.vb" />
     <Compile Include="Facade\RoundFacade.vb" />
     <Compile Include="Facade\SelectBonusTileFacade.vb" />
-    <Compile Include="Facade\SetOpponentFacade.vb" />
+    <Compile Include="Facade\SelectOpponentFacade.vb" />
     <Compile Include="Sounds\SoundManager.vb" />
     <Compile Include="View\CharacterIDTestForm.Designer.vb">
       <DependentUpon>CharacterIDTestForm.vb</DependentUpon>
