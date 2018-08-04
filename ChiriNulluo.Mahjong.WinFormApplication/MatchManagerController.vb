@@ -33,6 +33,9 @@ Public NotInheritable Class MatchManagerController
 
     End Sub
 
+    ''' <summary>
+    ''' マッチを初期化する。(マッチ終了後、ゲーム初期画面から次のマッチを開始するときのために初期化が必要)
+    ''' </summary>
     Public Shared Sub InitializeMatch()
         _instance = New MatchManagerController()
     End Sub
@@ -53,7 +56,7 @@ Public NotInheritable Class MatchManagerController
 
     Public ReadOnly Property PlayersList As List(Of Players.Player)
         Get
-            Return MatchManager.RoundManager.PlayersList
+            Return MatchManager.PlayersList
         End Get
     End Property
 
@@ -106,9 +109,9 @@ Public NotInheritable Class MatchManagerController
     Private Sub InnerInitializeMatch(comStrategy As COMStrategy)
 
         Me.MatchManager = New MatchManager(1, 1)
-        Me.MatchManager.RoundManager.PlayersList(0).Score = Constants.InitialScore
-        Me.MatchManager.RoundManager.PlayersList(1).Score = Constants.InitialScore
-        Me.InitializeRound(comStrategy)
+        Me.MatchManager.PlayersList(0).Score = Constants.InitialScore
+        Me.MatchManager.PlayersList(1).Score = Constants.InitialScore
+        'Me.InitializeRound(comStrategy)
     End Sub
 
 

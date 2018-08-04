@@ -26,7 +26,7 @@ Namespace Tiles
                    DirectCast(My.Resources.ResourceManager.GetObject(String.Format("Precure{0:0000}", x)),
                    System.Drawing.Bitmap)))
 
-            Me.InitializeTileListForNewRound()
+            'Me.InitializeTileListForNewRound()
 
             _tileSuitsCount = _dataAccess.GetTileSuitsCount()
 

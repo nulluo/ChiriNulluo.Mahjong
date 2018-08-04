@@ -10,7 +10,6 @@ Public Class RoundManager
     ''' <param name="playersList">プレイヤーのリスト</param>
     ''' <param name="humanPlayerIndexes">プレイヤーのうち、HUMANであるもののインデックス</param>
     Public Sub New(playersList As List(Of Player), ParamArray humanPlayerIndexes() As Integer)
-
         playersList.ForEach(Sub(x)
                                 x.InitializeHand()
                                 x.DiscardedPile.Clear()
@@ -18,6 +17,8 @@ Public Class RoundManager
                                 x.IgnoredWinningTileFromAnotherAfterRiichi = False
                                 x.IgnoredWinningTileCount = 0
                             End Sub)
+        'UNIMPLEMENTED：↑よく考えたら、プレイヤーの属性としてこれらのプロパティを持っているけど、それがまずいんじゃないかなあ。RoundManagerクラスのプロパティとして持っておけばRoundManagerクラスは毎局Newされてるんだからこのような初期化コードは不要になる
+
         Me.PlayersList = playersList
 
         Me.HumanPlayersIndexes = humanPlayerIndexes

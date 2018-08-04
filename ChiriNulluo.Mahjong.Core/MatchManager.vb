@@ -17,7 +17,8 @@ Public Class MatchManager
             _humanPlayerIndexes(i) = i
         Next
 
-        Me.RoundManager = New RoundManager(Me.PlayersList, _humanPlayerIndexes)
+        'UNIMPLEMENTED: ↓RoundManagerのNewをここでやってしまうと、使用されないインスタンスが生じてしまう。後のInitializeRound呼び出し時にあらためてRoundManagerはNewされるので
+        'Me.RoundManager = New RoundManager(Me.PlayersList, _humanPlayerIndexes)
 
         MatchID = DateTime.Now.ToString("yyyy/MM/dd_hh:mm:ss_") & MatchIDSerialNumber.ToString("00")
         LogNoInMatch = 0
