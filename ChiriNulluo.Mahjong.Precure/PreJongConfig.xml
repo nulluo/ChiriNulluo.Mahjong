@@ -837,7 +837,7 @@
         <ID>1004</ID>
         <ID>1205</ID>
       </TileSet>  
-    </Yaku> 
+    </Yaku>
     <Yaku>
       <Name>オール黄キュア</Name>
       <Type>2</Type>
@@ -853,8 +853,8 @@
         <ID>0903</ID>
         <ID>1003</ID>
         <ID>1202</ID>
-      </TileSet>  
-    </Yaku> 
+      </TileSet>
+    </Yaku>
     <Yaku>
       <Name>オール白キュア</Name>
       <Type>2</Type>
@@ -889,7 +889,27 @@
         <ID>1102</ID>
         <ID>1204</ID>
       </TileSet>  
-    </Yaku> 
+    </Yaku>
+    <!--ボーナス牌-->
+    <Yaku>
+      <Name>ボーナス牌</Name>
+      <Type>48</Type>
+      <Point>100</Point>
+      <TileSet>
+        <ID>0000</ID>
+        <ID>0200</ID>
+        <ID>0203</ID>
+        <ID>0300</ID>
+        <ID>0400</ID>
+        <ID>0500</ID>
+        <ID>0600</ID>
+        <ID>0605</ID>
+        <ID>0700</ID>
+        <ID>0706</ID>
+        <ID>0800</ID>
+        <ID>0900</ID>
+      </TileSet>
+    </Yaku>
     <!--<Yaku>
       <Name>オール闇キュア</Name>
       <Type>2</Type>
@@ -906,7 +926,7 @@
   <!-- 手牌以外要素依存役 -->
   <DependingOnNonHandConditionYaku>
       <Name>あがり</Name>
-      <Type>8</Type>
+      <Type>24</Type>
       <Point>500</Point>
   </DependingOnNonHandConditionYaku>
   <DependingOnNonHandConditionYaku>

@@ -240,6 +240,38 @@ Namespace DataAccess
         End Function
 
         ''' <summary>
+        ''' プリキュア役のうち、ボーナス牌役のデータを取得する
+        ''' </summary>
+        ''' <returns></returns>
+        Public Function GetBonusYakuDataFromXML() As Core.Yaku.Yaku
+            'UNIMPLEMENTED: XPATHでもっとかんたんに書けそうなきがする・・・
+            Dim _nodesList As XmlNodeList = Me.GetNodes("PreJongSettings/Yakus/Yaku")
+            Dim _yakuList As New List(Of Core.Yaku.Yaku)
+
+            For Each _node As XmlNode In _nodesList
+                Dim _name As String = _node.SelectSingleNode("Name").InnerText
+
+                'UNIMPLEMENTED: [ボーナス牌」文字列のリソース化
+                If _name = "ボーナス牌" Then
+                    Dim _type As Integer = Integer.Parse(_node.SelectSingleNode("Type").InnerText)
+                    Dim _point As Integer = Integer.Parse(_node.SelectSingleNode("Point").InnerText)
+                    Dim _idsNodeList As XmlNodeList = _node.SelectNodes("TileSet/ID")
+                    Dim _tileSet As New List(Of String)
+                    For Each _idTag As XmlNode In _idsNodeList
+                        _tileSet.Add(_idTag.InnerText)
+                    Next
+
+                    Return New Core.Yaku.Yaku(_name, DirectCast(_type, YakuType), _point, _tileSet)
+                End If
+
+            Next
+
+            Return Nothing
+        End Function
+
+
+
+        ''' <summary>
         ''' 作品IDの最大数を取得する。
         ''' </summary>
         ''' <returns></returns>

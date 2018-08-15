@@ -27,6 +27,15 @@ Namespace Yaku
         ''' </summary>
         DependingOnNonHandCondition = &H8
 
+        ''' <summary>
+        ''' 得点には加算されるが、このタイプの役以外が成立しないと上がれない(チョンボになる)役(アガリ＋ボーナス牌)
+        ''' </summary>
+        NeedsOtherYakuTypeToFinish = &H10
+
+        ''' <summary>
+        ''' ボーナス牌
+        ''' </summary>
+        BonusTile = &H20
 
     End Enum
 

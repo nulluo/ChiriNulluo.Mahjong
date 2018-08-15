@@ -530,13 +530,29 @@ Namespace HandChecker
                 If _yaku.IsAccomplished(Me.Hand) Then
                     Dim _row As DataRow = _table.NewRow()
                     _row("YakuName") = _yaku.Name
-                    _row("Point") = _yaku.Point
+                    _row("YakuType") = _yaku.Type
+
+                    If _yaku.Type.HasFlag(YakuType.BonusTile) Then
+                        'ボーナス牌の場合はすべてのボーナス牌の個数を数えて得点加算する
+                        _row("Point") = Me.GetBonusTilePoint()
+                    Else
+                        _row("Point") = _yaku.Point
+                    End If
                     _table.Rows.Add(_row)
+
                 End If
             Next
 
-            '「あがり」以外の役がついていない場合、チョンボ罰として3000ポイント支払う
-            If _table.Rows.Count <= 1 Then
+            '「あがり」「ボーナス牌」以外の役がついていない場合、チョンボ罰として3000ポイント支払う
+            Dim _exceptionFound As Boolean = False
+            For Each _row As DataRow In _table.Rows
+                Dim _yakuType As YakuType = DirectCast(_row("YakuType"), YakuType)
+                If Not _yakuType.HasFlag(YakuType.NeedsOtherYakuTypeToFinish) Then
+                    _exceptionFound = True
+                    Exit For
+                End If
+            Next
+            If Not _exceptionFound Then
                 _table.Rows.Clear()
                 Dim _row As DataRow = _table.NewRow()
                 _row("YakuName") = My.Resources.LabelNoYakus
@@ -560,6 +576,7 @@ Namespace HandChecker
 
             _table.Columns.Add("YakuName", System.Type.GetType("System.String"))
             _table.Columns.Add("Point", System.Type.GetType("System.Int32"))
+            _table.Columns.Add("YakuType", System.Type.GetType("System.Int32"))
 
             Return _table
         End Function
@@ -577,6 +594,7 @@ Namespace HandChecker
                     Dim _row As DataRow = table.NewRow()
                     _row("YakuName") = _yaku.Name
                     _row("Point") = _yaku.Point
+                    _row("YakuType") = _yaku.Type
                     table.Rows.Add(_row)
                 End If
             Next
@@ -599,6 +617,24 @@ Namespace HandChecker
             End Select
         End Function
 
+        ''' <summary>
+        ''' ボーナス牌の得点合計を計算する
+        ''' </summary>
+        ''' <returns></returns>
+        Private Function GetBonusTilePoint() As Integer
+            Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
+
+            'UNIMPLEMENTED: LINQでもっとはやくかけそう
+            Dim _point As Integer = 0
+            Dim _bonusYaku = _xmlAccess.GetBonusYakuDataFromXML()
+            For Each _tile As Tile In Me.Hand.TotalTiles
+                If _bonusYaku.TileSet.Contains(_tile.ID) Then
+                    _point += _bonusYaku.Point
+                End If
+            Next
+
+            Return _point
+        End Function
 #End Region
 
 

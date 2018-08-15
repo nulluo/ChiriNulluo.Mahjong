@@ -34,6 +34,8 @@ Namespace Yaku
                 Return Me.IncludesWholeTileSet(hand)
             ElseIf Me.Type.HasFlag(YakuType.HandIsSubSetOfSpecificTileSet)
                 Return Me.IsEveryTileIncludedOfTileSet(hand)
+            ElseIf Me.Type.HasFlag(YakuType.BonusTile)
+                Return Me.HandContainsSomeTileInTileSet(hand)
             Else
                 Return Nothing
             End If
@@ -73,5 +75,20 @@ Namespace Yaku
             Return Not _exceptionFound
         End Function
 
+        ''' <summary>
+        ''' 手牌の中に、特定の牌セットの牌が少なくとも一つ含まれるかどうかを判定する。
+        ''' </summary>
+        ''' <param name="hand">手牌</param>
+        ''' <returns></returns>
+        Private Function HandContainsSomeTileInTileSet(hand As Hand) As Boolean
+            Dim _found As Boolean = False
+            For Each _tileInHand As Tile In hand.TotalTiles
+                If (From _idInTileSet In TileSet Where _tileInHand.ID = _idInTileSet).Count > 0 Then
+                    _found = True
+                    Exit For
+                End If
+            Next
+            Return _found
+        End Function
     End Class
 End Namespace
