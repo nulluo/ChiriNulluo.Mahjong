@@ -60,6 +60,8 @@ Namespace View
         Me.ManualModeField.Visible = False
 #End If
 
+            Me.DataGridView1.AutoGenerateColumns = False
+
             '役判定
             Dim _handChecker As New Precure.HandChecker.PrecureHandChecker(WinningPlayer.Hand)
             Dim _table = _handChecker.GetYakuInfo(WinningPlayer.RiichiDone)
