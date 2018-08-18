@@ -132,7 +132,7 @@ Namespace DataAccess
                     Continue For
                 End If
 
-                _precureList.Add(New PreCureCharacterTile(_seriesIDText, _numberText, _nameText, _cureNameText))
+                _precureList.Add(New PreCureCharacterTile(_seriesIDText, _numberText, _nameText, _cureNameText, False))
 
             Next
 
@@ -181,7 +181,7 @@ Namespace DataAccess
                     Continue For
                 End If
 
-                _characterList.Add(New PreCureCharacterTile(_seriesIDText, _numberText, _nameText, Nothing))
+                _characterList.Add(New PreCureCharacterTile(_seriesIDText, _numberText, _nameText, Nothing, True))
 
             Next
 

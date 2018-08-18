@@ -245,10 +245,10 @@ Namespace Tiles
 
                     '以前に追加していないボーナス牌の場合だけカウントアップし、牌を追加する
                     i += 1
-                    Dim _item0 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName)
-                    Dim _item1 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName)
-                    Dim _item2 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName)
-                    Dim _item3 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName)
+                    Dim _item0 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName, True)
+                    Dim _item1 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName, True)
+                    Dim _item2 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName, True)
+                    Dim _item3 = New PreCureCharacterTile(_item.ID, _item.Name, _item.CureName, True)
 
                     With _currentRoundTotalTilesList
                         .Add(_item0)

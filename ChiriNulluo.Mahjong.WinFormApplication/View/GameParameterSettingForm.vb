@@ -351,17 +351,17 @@ Namespace View
         ''' </summary>
         Private Sub MakeFixHandAndWall()
             For i As Integer = 0 To 200 - 13 - 13 - 1
-                Dim _precure As New PreCureCharacterTile("01", "01", "美墨なぎさ", "キュアブラック")
+                Dim _precure As New PreCureCharacterTile("01", "01", "美墨なぎさ", "キュアブラック", False)
                 Me.WallPile.Add(_precure)
             Next
 
             For i As Integer = 0 To 13 - 1
-                Dim _precure As New PreCureCharacterTile("01", "02", "雪城ほのか", "キュアホワイト")
+                Dim _precure As New PreCureCharacterTile("01", "02", "雪城ほのか", "キュアホワイト", False)
                 Me.HumanHand.DrawTile(_precure)
             Next
 
             For i As Integer = 0 To 13 - 1
-                Dim _precure As New PreCureCharacterTile("01", "03", "九条ひかり", "シャイニールミナス")
+                Dim _precure As New PreCureCharacterTile("01", "03", "九条ひかり", "シャイニールミナス", False)
                 Me.COMHand.DrawTile(_precure)
             Next
         End Sub

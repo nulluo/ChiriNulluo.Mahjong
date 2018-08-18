@@ -5,20 +5,27 @@ Namespace Tiles
     Public Class PreCureCharacterTile
         Inherits Tile
 
-        Public Sub New(precureID As String, name As String, cureName As String)
+        ''' <summary>
+        ''' 特殊キャラ牌であるかどうか。
+        ''' </summary>
+        Public IsSpecial As Boolean? = False
+
+        Public Sub New(precureID As String, name As String, cureName As String, isSpecial As Boolean)
             Me.ID = precureID
             Me.Name = name
             Me.SuitID = Left(precureID, 2)
             Me.Number = CInt(Right(precureID, 2))
             Me.CureName = cureName
+            Me.IsSpecial = isSpecial
         End Sub
 
-        Public Sub New(suitID As String, number As String, name As String, cureName As String)
+        Public Sub New(suitID As String, number As String, name As String, cureName As String, isSpecial As Boolean)
             Me.ID = suitID & number
             Me.Name = name
             Me.SuitID = suitID
             Me.Number = CInt(number)
             Me.CureName = cureName
+            Me.IsSpecial = isSpecial
         End Sub
 
         'UNIMPLEMENTED：この実装には問題がある。今はプリキュアしか牌がないからよいが、他のタイプの牌が混ざると、

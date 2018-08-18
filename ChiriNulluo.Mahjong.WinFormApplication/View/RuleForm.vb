@@ -10,7 +10,7 @@ Namespace View
         Private Const HeaderHeight As Integer = 250
         Private Const PanelMargin As Integer = 10
 
-        Private Sub YakuDescriptionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Private Sub RuleForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
             Me.SuspendLayout()
 
             Dim _xmlAccess As PrecureXMLAccess = PrecureXMLAccess.GetInstance()
@@ -22,7 +22,7 @@ Namespace View
 
                     Dim _tiles As New Pile
                     For Each _tile As String In .TileSet
-                        _tiles.Add(New PreCureCharacterTile(_tile, String.Empty, String.Empty))
+                        _tiles.Add(New PreCureCharacterTile(_tile, String.Empty, String.Empty, Nothing))
                     Next
 
                     'UNIMPLEMENTED: 説明文の多言語化

@@ -12,9 +12,9 @@ Namespace Core.Tiles
         <TestCase(False, "", True, "0101", "0101", "0101")>
         <TestCase(False, "", False, "0104", "0102", "0103")>
         Public Sub TestNew(exceptionOccurs As Boolean, expectedErrorMessage As String, isTriplet As Boolean, myTile1ID As String, myTile2ID As String, opponentsTileID As String)
-            Dim _myTile1 As New PreCureCharacterTile(myTile1ID, String.Empty, String.Empty)
-            Dim _myTile2 As New PreCureCharacterTile(myTile2ID, String.Empty, String.Empty)
-            Dim _opponentsTile As New PreCureCharacterTile(opponentsTileID, String.Empty, String.Empty)
+            Dim _myTile1 As New PreCureCharacterTile(myTile1ID, String.Empty, String.Empty, Nothing)
+            Dim _myTile2 As New PreCureCharacterTile(myTile2ID, String.Empty, String.Empty, Nothing)
+            Dim _opponentsTile As New PreCureCharacterTile(opponentsTileID, String.Empty, String.Empty, Nothing)
 
             Try
                 Dim _revealedTiles = New RevealedTiles(isTriplet, _myTile1, _myTile2, _opponentsTile)

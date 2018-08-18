@@ -487,6 +487,26 @@ Namespace My.Resources
         '''<summary>
         '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         '''</summary>
+        Friend ReadOnly Property FallenTileBaseSpecial() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FallenTileBaseSpecial", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property FallenTileBaseSpecial1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FallenTileBaseSpecial1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
         Friend ReadOnly Property Frame0() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Frame0", resourceCulture)
@@ -880,6 +900,16 @@ Namespace My.Resources
         Friend ReadOnly Property StoodTileBase() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("StoodTileBase", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property StoodTileBaseSpecial() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("StoodTileBaseSpecial", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

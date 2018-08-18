@@ -55,7 +55,7 @@ Namespace Precure.HandChecker
         <TestCase(True, "0101", "0101", "0102", "0102", "0103", "0103", "0103", "0103", "0103", "0902", "0902", "0902", "0801", "0801")> '0103が5枚あるアガリ(特殊能力によって発生し得る)
         Public Sub TestIsCompletedIfTargetTileAdded(expectedValue As Boolean, targetTileID As String, ParamArray precureIDs As String())
             Me.MakeHand(precureIDs)
-            Dim _targetTile As New PreCureCharacterTile(targetTileID, String.Empty, String.Empty)
+            Dim _targetTile As New PreCureCharacterTile(targetTileID, String.Empty, String.Empty, Nothing)
             Assert.AreEqual(expectedValue, New PrecureHandChecker(Me._roundManager.PlayersList(0).Hand).IsCompletedIfTargetTileAdded(_targetTile))
         End Sub
 
@@ -91,7 +91,7 @@ Namespace Precure.HandChecker
             Dim _pickedTile As Tile
             Dim _playersHand As Hand = _roundManager.PlayersList(0).Hand
             With _roundManager
-                _pickedTile = New PreCureCharacterTile(id, String.Empty, String.Empty)
+                _pickedTile = New PreCureCharacterTile(id, String.Empty, String.Empty, Nothing)
                 .AddTile(_pickedTile, _playersHand.MainTiles)
             End With
         End Sub

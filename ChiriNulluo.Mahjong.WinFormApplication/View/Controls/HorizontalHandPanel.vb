@@ -157,11 +157,21 @@ Namespace View
             '白牌にキャラ絵・テキストを描画
 
             If IsStood Then
-                _baseImage = My.Resources.StoodTileBase
+                If DirectCast(tile, Precure.Tiles.PreCureCharacterTile).IsSpecial Then
+                    _baseImage = My.Resources.StoodTileBaseSpecial
+                Else
+                    _baseImage = My.Resources.StoodTileBase
+                End If
+
                 _g = Graphics.FromImage(_baseImage)
                 _g.DrawImage(_diffImage, 0, 23, 48, 53)
             Else
-                _baseImage = My.Resources.FallenTileBase
+                If DirectCast(tile, Precure.Tiles.PreCureCharacterTile).IsSpecial Then
+                    _baseImage = My.Resources.FallenTileBaseSpecial
+                Else
+                    _baseImage = My.Resources.FallenTileBase
+                End If
+
                 _g = Graphics.FromImage(_baseImage)
                 _g.DrawImage(_diffImage, 0, 3)
             End If

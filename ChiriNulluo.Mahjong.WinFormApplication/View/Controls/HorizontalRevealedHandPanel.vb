@@ -70,7 +70,13 @@ Namespace View
 
         Private Function GetTileImage(tile As Tile) As Image
             'ベースとなる白牌のImageオブジェクト取得
-            Dim _baseImage As Image = My.Resources.FallenTileBase
+            Dim _baseImage As Image
+            If DirectCast(tile, Precure.Tiles.PreCureCharacterTile).IsSpecial Then
+                _baseImage = My.Resources.FallenTileBaseSpecial
+            Else
+                _baseImage = My.Resources.FallenTileBase
+            End If
+
             Dim _g As Graphics = Graphics.FromImage(_baseImage)
 
             '白牌にキャラ絵・テキストを描画

@@ -539,7 +539,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Pictures\tileIcon\FallenTileBase.png" />
+    <None Include="Pictures\tileIcon\FallenTileBaseSpecial.png" />
     <Content Include="Pictures\tileIcon\StoodTileBase.png" />
+    <None Include="Pictures\tileIcon\StoodTileBaseSpecial.png" />
     <Content Include="Pictures\tileIcon\TileStoodBack.png" />
     <None Include="Resources\Button_0.gif" />
     <Content Include="Resources\InitialForm_Back.gif" />

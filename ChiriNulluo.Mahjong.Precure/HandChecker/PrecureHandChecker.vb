@@ -33,7 +33,7 @@ Namespace HandChecker
             With Me.NumsPerPrecureList
                 For Each _id As String In .Keys
                     For i As Integer = 0 To .Item(_id) - 1
-                        Dim _tile As New PreCureCharacterTile(_id, String.Empty, String.Empty)
+                        Dim _tile As New PreCureCharacterTile(_id, String.Empty, String.Empty, Nothing)
                         Me.Hand.DrawTile(_tile)
                     Next
                 Next
