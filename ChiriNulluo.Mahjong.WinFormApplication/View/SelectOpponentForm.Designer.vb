@@ -27,20 +27,20 @@
             Me.LabelEas = New System.Windows.Forms.Label()
             Me.Label2 = New System.Windows.Forms.Label()
             Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+            Me.Label3 = New System.Windows.Forms.Label()
             Me.ButtonMirai = New System.Windows.Forms.Button()
             Me.ButtonKotoha = New System.Windows.Forms.Button()
             Me.LabelMirai = New System.Windows.Forms.Label()
             Me.ButtonRiko = New System.Windows.Forms.Button()
             Me.LabelRiko = New System.Windows.Forms.Label()
+            Me.Label7 = New System.Windows.Forms.Label()
+            Me.Label5 = New System.Windows.Forms.Label()
+            Me.Label4 = New System.Windows.Forms.Label()
+            Me.Label1 = New System.Windows.Forms.Label()
             Me.LabelRegina = New System.Windows.Forms.Label()
             Me.ButtonEas = New System.Windows.Forms.Button()
             Me.ButtonRegina = New System.Windows.Forms.Button()
             Me.ManualModeField = New System.Windows.Forms.CheckBox()
-            Me.Label3 = New System.Windows.Forms.Label()
-            Me.Label4 = New System.Windows.Forms.Label()
-            Me.Label5 = New System.Windows.Forms.Label()
-            Me.Label1 = New System.Windows.Forms.Label()
-            Me.Label7 = New System.Windows.Forms.Label()
             Me.TableLayoutPanel1.SuspendLayout()
             Me.SuspendLayout()
             '
@@ -77,7 +77,7 @@
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-            Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128.0!))
+            Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131.0!))
             Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 3)
             Me.TableLayoutPanel1.Controls.Add(Me.ButtonMirai, 1, 2)
             Me.TableLayoutPanel1.Controls.Add(Me.ButtonKotoha, 1, 2)
@@ -102,10 +102,24 @@
             Me.TableLayoutPanel1.Size = New System.Drawing.Size(416, 260)
             Me.TableLayoutPanel1.TabIndex = 0
             '
+            'Label3
+            '
+            Me.Label3.AutoSize = True
+            Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.Label3.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 11.0!)
+            Me.Label3.ForeColor = System.Drawing.Color.Snow
+            Me.Label3.Location = New System.Drawing.Point(109, 232)
+            Me.Label3.Name = "Label3"
+            Me.Label3.Size = New System.Drawing.Size(94, 25)
+            Me.Label3.TabIndex = 32
+            Me.Label3.Text = "みらい"
+            Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            '
             'ButtonMirai
             '
+            Me.ButtonMirai.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
             Me.ButtonMirai.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.ButtonMirai.Image = CType(resources.GetObject("ButtonMirai.Image"), System.Drawing.Image)
+            Me.ButtonMirai.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.Face_Mirai01
             Me.ButtonMirai.Location = New System.Drawing.Point(109, 132)
             Me.ButtonMirai.Name = "ButtonMirai"
             Me.ButtonMirai.Size = New System.Drawing.Size(94, 94)
@@ -158,6 +172,58 @@
             Me.LabelRiko.Text = "リコ"
             Me.LabelRiko.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
+            'Label7
+            '
+            Me.Label7.AutoSize = True
+            Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.Label7.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Bold)
+            Me.Label7.ForeColor = System.Drawing.Color.Snow
+            Me.Label7.Location = New System.Drawing.Point(315, 129)
+            Me.Label7.Name = "Label7"
+            Me.Label7.Size = New System.Drawing.Size(125, 100)
+            Me.Label7.TabIndex = 24
+            Me.Label7.Text = "?"
+            Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            '
+            'Label5
+            '
+            Me.Label5.AutoSize = True
+            Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.Label5.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Bold)
+            Me.Label5.ForeColor = System.Drawing.Color.Snow
+            Me.Label5.Location = New System.Drawing.Point(315, 106)
+            Me.Label5.Name = "Label5"
+            Me.Label5.Size = New System.Drawing.Size(125, 20)
+            Me.Label5.TabIndex = 22
+            Me.Label5.Text = "?"
+            Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            '
+            'Label4
+            '
+            Me.Label4.AutoSize = True
+            Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.Label4.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Bold)
+            Me.Label4.ForeColor = System.Drawing.Color.Snow
+            Me.Label4.Location = New System.Drawing.Point(212, 106)
+            Me.Label4.Name = "Label4"
+            Me.Label4.Size = New System.Drawing.Size(94, 20)
+            Me.Label4.TabIndex = 21
+            Me.Label4.Text = "?"
+            Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            '
+            'Label1
+            '
+            Me.Label1.AutoSize = True
+            Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.Label1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Bold)
+            Me.Label1.ForeColor = System.Drawing.Color.Snow
+            Me.Label1.Location = New System.Drawing.Point(315, 3)
+            Me.Label1.Name = "Label1"
+            Me.Label1.Size = New System.Drawing.Size(125, 100)
+            Me.Label1.TabIndex = 20
+            Me.Label1.Text = "?"
+            Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            '
             'LabelRegina
             '
             Me.LabelRegina.AutoSize = True
@@ -201,71 +267,6 @@
             Me.ManualModeField.Text = "Set all parameters manually"
             Me.ManualModeField.UseVisualStyleBackColor = True
             Me.ManualModeField.Visible = False
-            '
-            'Label3
-            '
-            Me.Label3.AutoSize = True
-            Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.Label3.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 11.0!)
-            Me.Label3.ForeColor = System.Drawing.Color.Snow
-            Me.Label3.Location = New System.Drawing.Point(109, 232)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(94, 25)
-            Me.Label3.TabIndex = 32
-            Me.Label3.Text = "みらい"
-            Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            '
-            'Label4
-            '
-            Me.Label4.AutoSize = True
-            Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.Label4.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Bold)
-            Me.Label4.ForeColor = System.Drawing.Color.Snow
-            Me.Label4.Location = New System.Drawing.Point(212, 106)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(94, 20)
-            Me.Label4.TabIndex = 21
-            Me.Label4.Text = "?"
-            Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            '
-            'Label5
-            '
-            Me.Label5.AutoSize = True
-            Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.Label5.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Bold)
-            Me.Label5.ForeColor = System.Drawing.Color.Snow
-            Me.Label5.Location = New System.Drawing.Point(315, 106)
-            Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(122, 20)
-            Me.Label5.TabIndex = 22
-            Me.Label5.Text = "?"
-            Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            '
-            'Label1
-            '
-            Me.Label1.AutoSize = True
-            Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.Label1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Bold)
-            Me.Label1.ForeColor = System.Drawing.Color.Snow
-            Me.Label1.Location = New System.Drawing.Point(315, 3)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(122, 100)
-            Me.Label1.TabIndex = 20
-            Me.Label1.Text = "?"
-            Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            '
-            'Label7
-            '
-            Me.Label7.AutoSize = True
-            Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.Label7.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Bold)
-            Me.Label7.ForeColor = System.Drawing.Color.Snow
-            Me.Label7.Location = New System.Drawing.Point(315, 129)
-            Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(122, 100)
-            Me.Label7.TabIndex = 24
-            Me.Label7.Text = "?"
-            Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'SelectOpponentForm
             '

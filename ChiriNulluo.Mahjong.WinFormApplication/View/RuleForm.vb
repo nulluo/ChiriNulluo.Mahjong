@@ -34,6 +34,7 @@ Namespace View
 
                         Case YakuType.HandIsSubSetOfSpecificTileSet
                             _description = "手牌全てが以下の牌のどれかである"
+                            'UNIMPLEMENTED: ボーナス牌の説明が"手牌全てが以下の牌のどれかである"になっており、おかしい
 
                     End Select
 
