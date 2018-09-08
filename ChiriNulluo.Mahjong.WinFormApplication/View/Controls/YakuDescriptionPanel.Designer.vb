@@ -85,7 +85,7 @@
             Me.DescriptionField.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 10.0!)
             Me.DescriptionField.Location = New System.Drawing.Point(3, 69)
             Me.DescriptionField.Name = "DescriptionField"
-            Me.DescriptionField.Size = New System.Drawing.Size(665, 60)
+            Me.DescriptionField.Size = New System.Drawing.Size(665, 54)
             Me.DescriptionField.TabIndex = 5
             Me.DescriptionField.Text = "DescriptionField" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DescriptionField" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DescriptionField"
             '
@@ -101,6 +101,7 @@
             '
             'Panel1
             '
+            Me.Panel1.Controls.Add(Me.tilePicture0)
             Me.Panel1.Controls.Add(Me.tilePicture13)
             Me.Panel1.Controls.Add(Me.tilePicture12)
             Me.Panel1.Controls.Add(Me.tilePicture11)
@@ -114,16 +115,15 @@
             Me.Panel1.Controls.Add(Me.tilePicture3)
             Me.Panel1.Controls.Add(Me.tilePicture2)
             Me.Panel1.Controls.Add(Me.tilePicture1)
-            Me.Panel1.Controls.Add(Me.tilePicture0)
-            Me.Panel1.Location = New System.Drawing.Point(7, 132)
+            Me.Panel1.Location = New System.Drawing.Point(7, 126)
             Me.Panel1.Name = "Panel1"
-            Me.Panel1.Size = New System.Drawing.Size(677, 79)
+            Me.Panel1.Size = New System.Drawing.Size(677, 87)
             Me.Panel1.TabIndex = 7
             '
             'tilePicture13
             '
             Me.tilePicture13.Image = CType(resources.GetObject("tilePicture13.Image"), System.Drawing.Image)
-            Me.tilePicture13.Location = New System.Drawing.Point(627, -1)
+            Me.tilePicture13.Location = New System.Drawing.Point(627, 0)
             Me.tilePicture13.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture13.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture13.Name = "tilePicture13"
@@ -134,7 +134,7 @@
             'tilePicture12
             '
             Me.tilePicture12.Image = CType(resources.GetObject("tilePicture12.Image"), System.Drawing.Image)
-            Me.tilePicture12.Location = New System.Drawing.Point(579, -1)
+            Me.tilePicture12.Location = New System.Drawing.Point(579, 0)
             Me.tilePicture12.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture12.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture12.Name = "tilePicture12"
@@ -145,7 +145,7 @@
             'tilePicture11
             '
             Me.tilePicture11.Image = CType(resources.GetObject("tilePicture11.Image"), System.Drawing.Image)
-            Me.tilePicture11.Location = New System.Drawing.Point(531, -1)
+            Me.tilePicture11.Location = New System.Drawing.Point(531, 0)
             Me.tilePicture11.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture11.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture11.Name = "tilePicture11"
@@ -156,7 +156,7 @@
             'tilePicture10
             '
             Me.tilePicture10.Image = CType(resources.GetObject("tilePicture10.Image"), System.Drawing.Image)
-            Me.tilePicture10.Location = New System.Drawing.Point(483, -1)
+            Me.tilePicture10.Location = New System.Drawing.Point(483, 0)
             Me.tilePicture10.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture10.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture10.Name = "tilePicture10"
@@ -167,7 +167,7 @@
             'tilePicture9
             '
             Me.tilePicture9.Image = CType(resources.GetObject("tilePicture9.Image"), System.Drawing.Image)
-            Me.tilePicture9.Location = New System.Drawing.Point(435, -1)
+            Me.tilePicture9.Location = New System.Drawing.Point(435, 0)
             Me.tilePicture9.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture9.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture9.Name = "tilePicture9"
@@ -178,7 +178,7 @@
             'tilePicture8
             '
             Me.tilePicture8.Image = CType(resources.GetObject("tilePicture8.Image"), System.Drawing.Image)
-            Me.tilePicture8.Location = New System.Drawing.Point(387, -1)
+            Me.tilePicture8.Location = New System.Drawing.Point(387, 0)
             Me.tilePicture8.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture8.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture8.Name = "tilePicture8"
@@ -189,7 +189,7 @@
             'tilePicture7
             '
             Me.tilePicture7.Image = CType(resources.GetObject("tilePicture7.Image"), System.Drawing.Image)
-            Me.tilePicture7.Location = New System.Drawing.Point(339, -1)
+            Me.tilePicture7.Location = New System.Drawing.Point(339, 0)
             Me.tilePicture7.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture7.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture7.Name = "tilePicture7"
@@ -200,7 +200,7 @@
             'tilePicture6
             '
             Me.tilePicture6.Image = CType(resources.GetObject("tilePicture6.Image"), System.Drawing.Image)
-            Me.tilePicture6.Location = New System.Drawing.Point(291, -1)
+            Me.tilePicture6.Location = New System.Drawing.Point(291, 0)
             Me.tilePicture6.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture6.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture6.Name = "tilePicture6"
@@ -211,7 +211,7 @@
             'tilePicture5
             '
             Me.tilePicture5.Image = CType(resources.GetObject("tilePicture5.Image"), System.Drawing.Image)
-            Me.tilePicture5.Location = New System.Drawing.Point(243, -1)
+            Me.tilePicture5.Location = New System.Drawing.Point(243, 0)
             Me.tilePicture5.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture5.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture5.Name = "tilePicture5"
@@ -222,7 +222,7 @@
             'tilePicture4
             '
             Me.tilePicture4.Image = CType(resources.GetObject("tilePicture4.Image"), System.Drawing.Image)
-            Me.tilePicture4.Location = New System.Drawing.Point(195, -1)
+            Me.tilePicture4.Location = New System.Drawing.Point(195, 0)
             Me.tilePicture4.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture4.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture4.Name = "tilePicture4"
@@ -233,7 +233,7 @@
             'tilePicture3
             '
             Me.tilePicture3.Image = CType(resources.GetObject("tilePicture3.Image"), System.Drawing.Image)
-            Me.tilePicture3.Location = New System.Drawing.Point(147, -1)
+            Me.tilePicture3.Location = New System.Drawing.Point(147, 0)
             Me.tilePicture3.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture3.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture3.Name = "tilePicture3"
@@ -244,7 +244,7 @@
             'tilePicture2
             '
             Me.tilePicture2.Image = CType(resources.GetObject("tilePicture2.Image"), System.Drawing.Image)
-            Me.tilePicture2.Location = New System.Drawing.Point(99, -1)
+            Me.tilePicture2.Location = New System.Drawing.Point(99, 0)
             Me.tilePicture2.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture2.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture2.Name = "tilePicture2"
@@ -255,7 +255,7 @@
             'tilePicture1
             '
             Me.tilePicture1.Image = CType(resources.GetObject("tilePicture1.Image"), System.Drawing.Image)
-            Me.tilePicture1.Location = New System.Drawing.Point(51, -1)
+            Me.tilePicture1.Location = New System.Drawing.Point(51, 0)
             Me.tilePicture1.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture1.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture1.Name = "tilePicture1"
@@ -266,7 +266,7 @@
             'tilePicture0
             '
             Me.tilePicture0.Image = CType(resources.GetObject("tilePicture0.Image"), System.Drawing.Image)
-            Me.tilePicture0.Location = New System.Drawing.Point(3, -1)
+            Me.tilePicture0.Location = New System.Drawing.Point(3, 0)
             Me.tilePicture0.MaximumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture0.MinimumSize = New System.Drawing.Size(48, 80)
             Me.tilePicture0.Name = "tilePicture0"
