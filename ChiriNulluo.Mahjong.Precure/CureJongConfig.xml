@@ -654,21 +654,24 @@
         <ID>0102</ID>
         <ID>0103</ID>
       </TileSet>
-    </Yaku>
+    </Yaku>-->
     <Yaku>
       <Name>オールSplashStar</Name>
       <Type>2</Type>
       <Point>5000</Point>
       <TileSet>
+        <ID>0200</ID>
         <ID>0201</ID>
         <ID>0202</ID>
+        <ID>0203</ID>
       </TileSet>
-    </Yaku>-->
+    </Yaku>
     <Yaku>
       <Name>オール5gogo!</Name>
       <Type>2</Type>
       <Point>5000</Point>
       <TileSet>
+        <ID>0300</ID>
         <ID>0301</ID>
         <ID>0302</ID>
         <ID>0303</ID>
@@ -682,6 +685,7 @@
       <Type>2</Type>
       <Point>5000</Point>
       <TileSet>
+        <ID>0400</ID>
         <ID>0401</ID>
         <ID>0402</ID>
         <ID>0403</ID>
@@ -693,6 +697,7 @@
       <Type>2</Type>
       <Point>5000</Point>
       <TileSet>
+        <ID>0500</ID>
         <ID>0501</ID>
         <ID>0502</ID>
         <ID>0503</ID>
@@ -704,10 +709,12 @@
       <Type>2</Type>
       <Point>5000</Point>
       <TileSet>
+        <ID>0600</ID>
         <ID>0601</ID>
         <ID>0602</ID>
         <ID>0603</ID>
         <ID>0604</ID>
+        <ID>0605</ID>
       </TileSet>
     </Yaku>
     <Yaku>
@@ -715,11 +722,13 @@
       <Type>2</Type>
       <Point>5000</Point>
       <TileSet>
+        <ID>0700</ID>
         <ID>0701</ID>
         <ID>0702</ID>
         <ID>0703</ID>
         <ID>0704</ID>
         <ID>0705</ID>
+        <ID>0706</ID>
       </TileSet>
     </Yaku>
     <Yaku>
@@ -727,6 +736,7 @@
       <Type>2</Type>
       <Point>5000</Point>
       <TileSet>
+        <ID>0800</ID>
         <ID>0801</ID>
         <ID>0802</ID>
         <ID>0803</ID>
@@ -739,6 +749,7 @@
       <Type>2</Type>
       <Point>5000</Point>
       <TileSet>
+        <ID>0900</ID>
         <ID>0901</ID>
         <ID>0902</ID>
         <ID>0903</ID>
