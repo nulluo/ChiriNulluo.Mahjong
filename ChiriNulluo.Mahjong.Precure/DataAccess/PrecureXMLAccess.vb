@@ -17,7 +17,7 @@ Namespace DataAccess
 
             'XMLファイルパスが指定されない場合は、既定の場所から探す
             If xmlFilePath = String.Empty Then
-                xmlFilePath = Path.Combine(My.Application.Info.DirectoryPath, "PreJongConfig.xml")
+                xmlFilePath = Path.Combine(My.Application.Info.DirectoryPath, "CureJongConfig.xml")
             End If
 
             'シングルトンインスタンスが未生成の場合は新規作成する。
