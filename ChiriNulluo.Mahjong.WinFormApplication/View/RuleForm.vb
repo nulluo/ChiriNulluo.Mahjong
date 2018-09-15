@@ -55,7 +55,7 @@ Namespace View
             'リンク先に移動したことにする
             LinkLabel1.LinkVisited = True
             'ブラウザで開く
-            System.Diagnostics.Process.Start("http://www.geocities.jp/nero021/programming/CureJong/CureJong.htm")
+            System.Diagnostics.Process.Start("https://nulluo.github.io/ChiriNulluo.Game.WebSite/CureJong/")
         End Sub
 
         Private Sub returnButton_Click(sender As Object, e As EventArgs) Handles returnButton.Click
