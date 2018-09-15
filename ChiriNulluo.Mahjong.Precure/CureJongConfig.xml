@@ -936,11 +936,6 @@
     
   <!-- 手牌以外要素依存役 -->
   <DependingOnNonHandConditionYaku>
-      <Name>あがり</Name>
-      <Type>24</Type>
-      <Point>500</Point>
-  </DependingOnNonHandConditionYaku>
-  <DependingOnNonHandConditionYaku>
       <Name>ツモ</Name>
       <Type>8</Type>
       <Point>1000</Point>

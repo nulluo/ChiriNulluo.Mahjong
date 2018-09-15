@@ -28,7 +28,7 @@ Namespace Yaku
         DependingOnNonHandCondition = &H8
 
         ''' <summary>
-        ''' 得点には加算されるが、このタイプの役以外が成立しないと上がれない(チョンボになる)役(アガリ＋ボーナス牌)
+        ''' 得点には加算されるが、このタイプの役以外が成立しないと上がれない(チョンボになる)役(ボーナス牌)
         ''' </summary>
         NeedsOtherYakuTypeToFinish = &H10
 
