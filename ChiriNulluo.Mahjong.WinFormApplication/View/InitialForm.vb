@@ -17,9 +17,9 @@ Namespace View
 
 
 #If DEBUG Then
-            Me.MainMenuStrip.Visible = True
+            Me.DebugToolStripMenuItem.Visible = True
 #Else
-            Me.MainMenuStrip.Visible = False
+            Me.DebugToolStripMenuItem.Visible = False
 #End If
 
             Me.PlaysBGMMenuItem.Checked = Sounds.SoundManager.PlaysBGM

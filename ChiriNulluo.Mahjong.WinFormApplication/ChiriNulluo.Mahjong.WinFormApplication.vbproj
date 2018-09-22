@@ -302,17 +302,11 @@
     <EmbeddedResource Include="View\Controls\YakuDescriptionPanel.resx">
       <DependentUpon>YakuDescriptionPanel.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\MatchResultForm.en-US.resx">
-      <DependentUpon>MatchResultForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\MatchResultForm.resx">
       <DependentUpon>MatchResultForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\GameTasteWindowTestForm1.resx">
       <DependentUpon>GameTasteWindowTestForm1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\PointForm.en-US.resx">
-      <DependentUpon>PointForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PointForm.resx">
       <DependentUpon>PointForm.vb</DependentUpon>
@@ -331,9 +325,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ReplayForm.resx">
       <DependentUpon>ReplayForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\RoundForm.en-US.resx">
-      <DependentUpon>RoundForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\RoundForm.resx">
       <DependentUpon>RoundForm.vb</DependentUpon>

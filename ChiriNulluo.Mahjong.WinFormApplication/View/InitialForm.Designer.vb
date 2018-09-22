@@ -47,7 +47,6 @@
             Me.MenuStrip1.Size = New System.Drawing.Size(300, 24)
             Me.MenuStrip1.TabIndex = 1
             Me.MenuStrip1.Text = "MenuStrip1"
-            Me.MenuStrip1.Visible = False
             '
             'DebugToolStripMenuItem
             '
