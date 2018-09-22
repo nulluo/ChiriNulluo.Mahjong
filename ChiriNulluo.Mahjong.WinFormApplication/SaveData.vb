@@ -11,10 +11,10 @@ Public Class SaveData
     End Sub
 
     Private Const FileName As String = "SaveData.xml"
+    Private Const TemplateFileName As String = "SaveDataTemplate.xml"
     Private Const TrueString As String = "TRUE"
     Private Const FalseString As String = "FALSE"
 
-    Private Property XmlDocument As New XmlDocument
 
     Private Shared _instance As SaveData
 
@@ -34,76 +34,114 @@ Public Class SaveData
         End If
 
         If Me.IsNewerVersionSaveDataReleased Then
-            Debug.WriteLine("IsNewerVersionSaveDataReleased:True")
-        Else
-            Debug.WriteLine("IsNewerVersionSaveDataReleased:False")
+            Me.AppendDiffData()
         End If
 
     End Sub
 
+    ''' <summary>
+    ''' 新バージョンによって、セーブデータファイルに追加された項目を、SaveData.xmlに追加します。
+    ''' </summary>
+    Private Sub AppendDiffData()
+
+        Dim _xmlDocumentTemplate As New XmlDocument()
+        _xmlDocumentTemplate.Load(TemplateFileName)
+
+        Dim _xmlDocumentReal As New XmlDocument()
+        _xmlDocumentReal.Load(FileName)
+
+        Dim _saveDataNodeReal = Me.GetNodes(_xmlDocumentReal, "saveData")(0)
+        Dim _fileVersionNodeReal = Me.GetNodes(_xmlDocumentReal, "saveData/latestVersion")(0)
+
+        Dim _fileVersionReal As String = _fileVersionNodeReal.InnerText
+        For Each _saveTemplate As XmlNode In Me.GetNodes(_xmlDocumentTemplate, "saveData/saves/save")
+
+            Dim _saveVersionTemplate = DirectCast(_saveTemplate, XmlElement).GetAttribute("version")
+
+            If CompareVersionString(_saveVersionTemplate, _fileVersionReal) > 0 Then
+                Dim _saveNodeImported = _xmlDocumentReal.ImportNode(_saveTemplate, True)
+                _saveDataNodeReal.InsertBefore(_saveNodeImported, _fileVersionNodeReal)
+            End If
+
+        Next
+        _fileVersionNodeReal.InnerText = Me.GetTemplateFileVersion
+
+        _xmlDocumentReal.Save(FileName)
+    End Sub
 
     Private Sub CreateNewSaveDataFile()
-        Dim _document As New XmlDocument()
-
-        Dim _declaration As XmlDeclaration = _document.CreateXmlDeclaration("1.0", "UTF-8", Nothing)
-        _document.AppendChild(_declaration)
-
-        Dim _root As XmlElement = _document.CreateElement("saveData")
-        _document.AppendChild(_root)
-
-        Dim _fileVersion As XmlElement = _document.CreateElement("fileVersion")
-        _root.AppendChild(_fileVersion)
-        _fileVersion.InnerText = Me.GetMyFileVersion
-
-
-        Dim _versionAttribute As XmlAttribute = _document.CreateAttribute("version")
-        Dim _data As XmlElement = _document.CreateElement("data")
-        _data.Attributes.Append(_versionAttribute)
-        _root.InsertAfter(_data, _fileVersion)
-
-        _document.Save(FileName)
-
+        System.IO.File.Copy(TemplateFileName, FileName)
     End Sub
 
     ''' <summary>
-    ''' 存在しているセーブデータファイルのバージョンよりも、バイナリのバージョンが新しい場合はTrue,そうでなければFalseを返す。。
+    ''' 存在しているセーブデータファイルのバージョンよりも、最新セーブデータファイルのバージョンが新しい場合はTrue,そうでなければFalseを返す。。
     ''' </summary>
-    ''' <returns>存在しているセーブデータファイルのバージョンよりも、バイナリのバージョンが新しい場合はTrue,そうでなければFalse</returns>
+    ''' <returns>存在しているセーブデータファイルのバージョンよりも、最新セーブデータファイルのバージョンが新しい場合はTrue,そうでなければFalse</returns>
     Private Function IsNewerVersionSaveDataReleased() As Boolean
+        Dim _xmlDocument As New XmlDocument()
+        _xmlDocument.Load(FileName)
 
-        XmlDocument.Load(FileName)
-        Dim _saveDataVersion As String = Me.GetNodes("saveData/fileVersion")(0).InnerText
-        Dim _fileVersion As String = Me.GetMyFileVersion
+        Dim _nodesList As XmlNodeList = Me.GetNodes(_xmlDocument, "saveData/latestVersion")
 
-        Dim _saveDataVersionArray As List(Of Integer) = _saveDataVersion.Split("."c).Select(Function(x) CInt(x)).ToList
-        Dim _fileVersionArray As List(Of Integer) = _fileVersion.Split("."c).Select(Function(x) CInt(x)).ToList
+        Dim _node As XmlNode = _nodesList(0)
+
+        Dim _saveDataVersion As String = _node.InnerText
+        Dim _templateFileVersion As String = Me.GetTemplateFileVersion
+
+        If CompareVersionString(_saveDataVersion, _templateFileVersion) < 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    ''' <summary>
+    ''' <para>#.#.#.# (#は整数値)の形のバージョン文字列の大小を比較する。</para>
+    ''' <para>versionString1が、versionString2 より小さい(古い)場合：-1</para>
+    ''' <para>versionString1とversionString2が一致する場合：0 </para>
+    ''' <para>versionString1が、versionString2 より大きい(新しい)場合：1</para>
+    ''' <para>を返す。</para>
+    ''' </summary>
+    ''' <param name="versionString1">バージョン文字列1</param>
+    ''' <param name="versionString2">バージョン文字列2</param>
+    ''' <remarks>#.#.#(桁数が足りない),#.#.#.#.#(桁数が多すぎる)など、不正なバージョン形式の場合は正しく判定できない。</remarks>
+    ''' <returns>
+    ''' <para>versionString1が、versionString2 より小さい(古い)場合：-1</para>
+    ''' <para>versionString1とversionString2が一致する場合：0 </para>
+    ''' <para>versionString1が、versionString2 より大きい(新しい)場合：1</para>
+    ''' </returns>
+    Private Function CompareVersionString(versionString1 As String, versionString2 As String) As Integer
+
+        Dim _versionString1Array As List(Of Integer) = versionString1.Split("."c).Select(Function(x) CInt(x)).ToList
+        Dim _versionString2Array As List(Of Integer) = versionString2.Split("."c).Select(Function(x) CInt(x)).ToList
 
         For i As Integer = 0 To 3
 
-            Dim _versionNumberSaveData As Integer = _saveDataVersionArray(i)
-            Dim _versionNumberFileVersion As Integer = _fileVersionArray(i)
+            Dim _versionNumber1 As Integer = _versionString1Array(i)
+            Dim _versionNumber2 As Integer = _versionString2Array(i)
 
-            If _versionNumberSaveData < _versionNumberFileVersion Then
-                Return True
-            ElseIf _versionNumberSaveData > _versionNumberFileVersion Then
-                Return False
+            If _versionNumber1 < _versionNumber2 Then
+                Return -1
+            ElseIf _versionNumber1 > _versionNumber2 Then
+                Return 1
             End If
 
         Next
 
-        Return False
-
+        Return 0
     End Function
+
 
     ''' <summary>
     ''' 指定したXPathで特定される、ノードの集合を取得します。
     ''' </summary>
+    ''' <param name="xmlDocument">XMLドキュメント</param>
     ''' <param name="xpath">ノードを特定するための XPath 式。</param>
     ''' <returns>XPathで特定される全てのノードを含む <see cref="XmlNodeList" /> 。見つからない場合は空の <see cref="XmlNodeList" /> を返します。</returns>
-    Private Function GetNodes(xpath As String) As XmlNodeList
+    Private Function GetNodes(xmlDocument As XmlDocument, xpath As String) As XmlNodeList
 
         Try
-            Dim _nodes = Me.XmlDocument.SelectNodes(xpath)
+            Dim _nodes = xmlDocument.SelectNodes(xpath)
             If _nodes IsNot Nothing Then
                 Return _nodes
             Else
@@ -118,12 +156,15 @@ Public Class SaveData
     End Function
 
     ''' <summary>
-    ''' このexe自身のファイルバージョンを取得する。
+    ''' 現在の最新セーブデータファイルのバージョンを取得する。
     ''' </summary>
     ''' <returns></returns>
-    Private Function GetMyFileVersion() As String
-        Return System.Diagnostics.FileVersionInfo.GetVersionInfo(
-                                    System.Reflection.Assembly.GetExecutingAssembly().Location).FileVersion
+    Private Function GetTemplateFileVersion() As String
+
+        Dim _xmlDocumentTemplate As New XmlDocument()
+        _xmlDocumentTemplate.Load(TemplateFileName)
+        Return Me.GetNodes(_xmlDocumentTemplate, "saveData/latestVersion")(0).InnerText
+
     End Function
 
     ''' <summary>
@@ -133,14 +174,15 @@ Public Class SaveData
     ''' <param name="defaultValue">値が取得できない場合に返す値。</param>
     ''' <returns>XPathに従って、最初に見つかったノードのInnerTextの値。XPathが不正の場合は、<paramref name="defaultValue" /> を返す。</returns>
     ''' <exception cref="XmlFileNotLoadedException">XMLファイルが読込まれていません。</exception>
-    Private Function GetNodeByBoolean(xpath As String, Optional defaultValue As Boolean = False) As Boolean
-        Dim _xmlNode As XmlNodeList = Me.GetNodes(xpath)
+    Private Function GetNodeByBoolean(xmlDocument As XmlDocument, xpath As String, Optional defaultValue As Boolean = False) As Boolean
 
-        If _xmlNode.Count = 0 Then
+        Dim _xmlNodeList As XmlNodeList = Me.GetNodes(xmlDocument, xpath)
+
+        If _xmlNodeList.Count = 0 Then
             Return defaultValue
         End If
 
-        Dim _value = Me.GetNodes(xpath)(0).InnerText
+        Dim _value = _xmlNodeList(0).InnerText
         If _value.ToUpperInvariant = "TRUE" Then
             Return True
         Else

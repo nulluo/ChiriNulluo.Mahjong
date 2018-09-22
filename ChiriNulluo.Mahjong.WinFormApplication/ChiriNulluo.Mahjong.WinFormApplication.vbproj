@@ -546,6 +546,9 @@
     <Content Include="Pictures\tileIcon\TileStoodBack.png" />
     <None Include="Resources\Button_0.gif" />
     <Content Include="Resources\InitialForm_Back.gif" />
+    <Content Include="SaveDataTemplate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Sounds\BGM\Memory.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -1,3 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<SaveData>
-</SaveData>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<saveData>
+  <saves>
+    <save version="1.0.0.0" >
+      <StoryMode>
+        <DefeatedCPUOpponents>
+          <CPUOpponent name="Riko">FALSE</CPUOpponent>
+          <CPUOpponent name="Mirai">FALSE</CPUOpponent>
+          <CPUOpponent name="Eas">FALSE</CPUOpponent>
+          <CPUOpponent name="Regina">FALSE</CPUOpponent>
+          <CPUOpponent name="Ruru">FALSE</CPUOpponent>
+        </DefeatedCPUOpponents>
+      </StoryMode>
+    </save>
+    <save version="1.0.1.0" >
+      <tutorialDone>FALSE</tutorialDone>
+    </save>
+    <save version="1.1.0.0">
+      <test>hoge</test>
+    </save>
+  </saves>
+  <latestVersion >1.1.0.0</latestVersion >
+</saveData>
