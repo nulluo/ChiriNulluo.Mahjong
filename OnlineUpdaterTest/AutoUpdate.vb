@@ -219,7 +219,25 @@ Public Class AutoUpdate
 
                 '前回アップデートのバージョン番号とサーバ側の最新バージョン番号を比較
                 If LastUpdate.LessThan(TotalUpdates) Then
-                    'UNIMPLEMENTED: ばーじょんこうしんをおこなうかかくにんする
+                    'If MessageBox.Show("新しいバージョンがあります。ダウンロードしますか？", "アップデート",
+                    'MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.OK Then
+                    'End If
+
+                    'UNIMPLEMENTED: アップデートの意志をユーザーに確認する
+
+                    FileList = XMLFunction.GetFiles
+                        For Each ThisFile As FileDetails In FileList
+                        'UNIMPLEMENTED: ローカルのファイルを全削除する
+                        'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。
+                        Updated = True
+                            Updaterfile = Path.Combine(AppPath, ThisFile.LocalFilePath)
+                            Serverfile = Path.Combine("http://", UpdateSite, ThisFile.ServerFilePath)
+                            LabelMessage.Text = ThisFile.Name & "をサーバーからダウンロードしています。" & vbCrLf & "完了までお待ちください。"
+                            GroupBoxMessage.Refresh()
+                            If File.Exists(Updaterfile) Then File.Delete(Updaterfile)
+                            My.Computer.Network.DownloadFile(Serverfile, Updaterfile)
+                        Next
+
                     FileList = XMLFunction.GetFiles
                     For Each ThisFile As FileDetails In FileList
                         'UNIMPLEMENTED: ローカルのファイルを全削除する
@@ -261,5 +279,22 @@ Public Class AutoUpdate
         'アプリケーションを起動する。
         LoadApp()
     End Sub
+
+
+    ''' <summary>
+    ''' 指定したファイルがアップデートによって上書きしてよいファイルの場合はTrue,上書き禁止のファイルの場合はFalseを返す。
+    ''' </summary>
+    ''' <param name="filePath">ファイルパス(ローカルのファイルパスで記述)</param>
+    ''' <return>指定したファイルがアップデートによって上書きしてよいファイルの場合はTrue,上書き禁止のファイルの場合はFalseを返す。</return>
+    Private Function IsOverwritable(filePath As String) As Boolean
+
+        '今の所、SaveData.xmlだけが上書き禁止ファイルに該当する
+        If filePath = "SaveData.xml" Then
+            Return False
+        Else
+            Return True
+        End If
+
+    End Function
 
 End Class
