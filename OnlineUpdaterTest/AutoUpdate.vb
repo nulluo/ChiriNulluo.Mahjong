@@ -219,19 +219,18 @@ Public Class AutoUpdate
 
                 '前回アップデートのバージョン番号とサーバ側の最新バージョン番号を比較
                 If LastUpdate.LessThan(TotalUpdates) Then
+                    'UNIMPLEMENTED: ばーじょんこうしんをおこなうかかくにんする
                     FileList = XMLFunction.GetFiles
                     For Each ThisFile As FileDetails In FileList
-                        'UNIMPLEMENTED: ファイル個別にバージョン確認は面倒なのでやらない
+                        'UNIMPLEMENTED: ローカルのファイルを全削除する
                         'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。
-                        If LastUpdate.LessThan(ThisFile.Update) Then
-                            Updated = True
-                            Updaterfile = Path.Combine(AppPath, ThisFile.Local)
-                            Serverfile = Path.Combine("http://", UpdateSite, ThisFile.Server)
-                            LabelMessage.Text = ThisFile.File & "をサーバーからダウンロードしています。" & vbCrLf & "完了までお待ちください。"
-                            GroupBoxMessage.Refresh()
-                            If File.Exists(Updaterfile) Then File.Delete(Updaterfile)
-                            My.Computer.Network.DownloadFile(Serverfile, Updaterfile)
-                        End If
+                        Updated = True
+                        Updaterfile = Path.Combine(AppPath, ThisFile.LocalFilePath)
+                        Serverfile = Path.Combine("http://", UpdateSite, ThisFile.ServerFilePath)
+                        LabelMessage.Text = ThisFile.Name & "をサーバーからダウンロードしています。" & vbCrLf & "完了までお待ちください。"
+                        GroupBoxMessage.Refresh()
+                        If File.Exists(Updaterfile) Then File.Delete(Updaterfile)
+                        My.Computer.Network.DownloadFile(Serverfile, Updaterfile)
                     Next
                 End If
 

@@ -45,10 +45,9 @@ Namespace XMLFunc
             XMLSNode("updates/file")
             For Each Fileitem As XmlNode In nodelist
                 Dim ThisFile As New FileDetails
-                ThisFile.File = Fileitem.Attributes.GetNamedItem("name").Value
-                ThisFile.Server = Fileitem.ChildNodes.Item(0).InnerText
-                ThisFile.Local = Fileitem.ChildNodes.Item(1).InnerText
-                ThisFile.Update = Fileitem.ChildNodes.Item(2).InnerText
+                ThisFile.Name = Fileitem.Attributes.GetNamedItem("name").Value
+                ThisFile.ServerFilePath = Fileitem.ChildNodes.Item(0).InnerText
+                ThisFile.LocalFilePath = Fileitem.ChildNodes.Item(1).InnerText
                 _files.Add(ThisFile)
             Next
             Return _files
