@@ -5,15 +5,28 @@ Namespace XMLFunc
         Private xmldoc As XmlDocument
         Private nodelist As XmlNodeList
 
+        ''' <summary>
+        ''' 指定されたXMLファイルを読み込む。
+        ''' </summary>
+        ''' <param name="FileName"></param>
         Public Sub OpenXMLDoc(ByVal FileName As String)
             xmldoc = New XmlDocument()
             xmldoc.Load(FileName)
         End Sub
 
+        ''' <summary>
+        ''' XPath式と一致するノードのリストを選択する。
+        ''' </summary>
+        ''' <param name="NodeName"></param>
         Public Sub XMLSNode(ByVal NodeName As String)
             nodelist = xmldoc.SelectNodes(NodeName)
         End Sub
 
+        ''' <summary>
+        ''' 現在選択しているNodeListに含まれるノードから、Keynameで指定した属性の値を取得する。
+        ''' </summary>
+        ''' <param name="Keyname"></param>
+        ''' <returns></returns>
         Public Function GetNodeVal(ByVal Keyname As String) As String
             Dim tmpstr As String
             tmpstr = ""
@@ -23,8 +36,12 @@ Namespace XMLFunc
             Return tmpstr
         End Function
 
+        ''' <summary>
+        ''' アップデートログファイルからfile要素の情報をFileDetails型のリストで取得する。
+        ''' </summary>
+        ''' <returns>アップデートログファイルから取得したfile要素の情報</returns>
         Public Function GetFiles() As List(Of FileDetails)
-            GetFiles = New List(Of FileDetails)
+            Dim _files = New List(Of FileDetails)
             XMLSNode("updates/file")
             For Each Fileitem As XmlNode In nodelist
                 Dim ThisFile As New FileDetails
@@ -32,55 +49,10 @@ Namespace XMLFunc
                 ThisFile.Server = Fileitem.ChildNodes.Item(0).InnerText
                 ThisFile.Local = Fileitem.ChildNodes.Item(1).InnerText
                 ThisFile.Update = Fileitem.ChildNodes.Item(2).InnerText
-                GetFiles.Add(ThisFile)
+                _files.Add(ThisFile)
             Next
-
-
+            Return _files
         End Function
-
-        Public Class FileDetails
-            Private _File As String
-            Private _Server As String
-            Private _Local As String
-            Private _Update As String
-
-            Public Property File() As String
-                Get
-                    Return _File
-                End Get
-                Set(ByVal value As String)
-                    _File = value
-                End Set
-            End Property
-
-            Public Property Server() As String
-                Get
-                    Return _Server
-                End Get
-                Set(ByVal value As String)
-                    _Server = value
-                End Set
-            End Property
-
-            Public Property Local() As String
-                Get
-                    Return _Local
-                End Get
-                Set(ByVal value As String)
-                    _Local = value
-                End Set
-            End Property
-
-            Public Property Update() As String
-                Get
-                    Return _Update
-                End Get
-                Set(ByVal value As String)
-                    _Update = value
-                End Set
-            End Property
-
-        End Class
 
     End Class
 End Namespace
