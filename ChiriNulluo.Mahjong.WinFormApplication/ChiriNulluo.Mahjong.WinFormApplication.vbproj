@@ -101,6 +101,7 @@
     <Compile Include="Facade\RoundFacade.vb" />
     <Compile Include="Facade\SelectBonusTileFacade.vb" />
     <Compile Include="Facade\SelectOpponentFacade.vb" />
+    <Compile Include="SaveData.vb" />
     <Compile Include="Sounds\SoundManager.vb" />
     <Compile Include="View\CharacterIDTestForm.Designer.vb">
       <DependentUpon>CharacterIDTestForm.vb</DependentUpon>
@@ -576,6 +577,11 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)"=="Release" (
+    del "$(TargetDir)SaveData.xml" /Q
+)</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

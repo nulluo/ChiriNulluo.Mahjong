@@ -11,10 +11,15 @@ Namespace View
         End Sub
 
         Private Sub InitialForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+            'セーブデータファイル初期化
+            SaveData.GetInstance.InitializeSaveDataFile()
+
+
 #If DEBUG Then
             Me.MainMenuStrip.Visible = True
 #Else
-        Me.MainMenuStrip.Visible = False
+            Me.MainMenuStrip.Visible = False
 #End If
 
             Me.PlaysBGMMenuItem.Checked = Sounds.SoundManager.PlaysBGM
