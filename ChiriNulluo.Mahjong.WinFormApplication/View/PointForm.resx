@@ -190,7 +190,7 @@
     <value>579, 219</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>PointDisplayForm</value>
+    <value>キュア☆ジャン[プロトタイプ版]</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -573,4 +573,7 @@
   <metadata name="YakuNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="TwitterShareButton.Text" xml:space="preserve">
+    <value>ツイートする！</value>
+  </data>
 </root>

@@ -274,9 +274,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="My Project\Resources.ja.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.en-US.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
@@ -305,7 +303,7 @@
     <EmbeddedResource Include="View\Controls\YakuDescriptionPanel.resx">
       <DependentUpon>YakuDescriptionPanel.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\MatchResultForm.ja.resx">
+    <EmbeddedResource Include="View\MatchResultForm.en-US.resx">
       <DependentUpon>MatchResultForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MatchResultForm.resx">
@@ -314,7 +312,7 @@
     <EmbeddedResource Include="View\GameTasteWindowTestForm1.resx">
       <DependentUpon>GameTasteWindowTestForm1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\PointForm.ja.resx">
+    <EmbeddedResource Include="View\PointForm.en-US.resx">
       <DependentUpon>PointForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PointForm.resx">
@@ -335,7 +333,7 @@
     <EmbeddedResource Include="View\ReplayForm.resx">
       <DependentUpon>ReplayForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\RoundForm.ja.resx">
+    <EmbeddedResource Include="View\RoundForm.en-US.resx">
       <DependentUpon>RoundForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\RoundForm.resx">

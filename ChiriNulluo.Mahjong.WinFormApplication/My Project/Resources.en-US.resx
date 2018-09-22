@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CharacterScriptEasDraw" xml:space="preserve">
+    <value>Draw... I'll win next.</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptEasGameStart" xml:space="preserve">
+    <value>...</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptEasLose" xml:space="preserve">
+    <value>Oh, damn...You won.</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptEasWinDraw" xml:space="preserve">
+    <value>Oh dear. It was boring time.</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptEasWinRon" xml:space="preserve">
+    <value>Ron !!</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptKotohaDraw" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptKotohaGameStart" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptKotohaLose" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptKotohaWinDraw" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptKotohaWinRon" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptMiraiDraw" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptMiraiGameStart" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptMiraiLose" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptMiraiWinDraw" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptMiraiWinRon" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptReginaDraw" xml:space="preserve">
+    <value>Next time !</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptReginaGameStart" xml:space="preserve">
+    <value>Do you think you could beat me??</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptReginaLose" xml:space="preserve">
+    <value>No way! Mana is much stronger than you !</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptReginaWinDraw" xml:space="preserve">
+    <value>YEAH！ I won !</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptReginaWinRon" xml:space="preserve">
+    <value>YEAH！ I won !</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptRiichi" xml:space="preserve">
+    <value>Riichi !</value>
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptRikoDraw" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptRikoGameStart" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptRikoLose" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptRikoWinDraw" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="CharacterScriptRikoWinRon" xml:space="preserve">
+    <value />
+    <comment>キャラクター台詞</comment>
+  </data>
+  <data name="IDPlayerCOM" xml:space="preserve">
+    <value>COM</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDPlayerHuman" xml:space="preserve">
+    <value>Human</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessChoiceForSkill" xml:space="preserve">
+    <value>ChoiceForSkill</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessChow" xml:space="preserve">
+    <value>Chow</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessDiscardTile" xml:space="preserve">
+    <value>DiscardTile</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessHaipai_BonusRevealed" xml:space="preserve">
+    <value>Haipai-BonusRevealed</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessHaipai_BonusUnrevealed" xml:space="preserve">
+    <value>Haipai-BonusUnrevealed</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessHaipai_P0" xml:space="preserve">
+    <value>Haipai-P0</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessHaipai_P1" xml:space="preserve">
+    <value>Haipai-P1</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessHaipai_Wall" xml:space="preserve">
+    <value>Haipai-Wall</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessMeesageWindowChoice" xml:space="preserve">
+    <value>MeesageWindowChoice</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessNextRoundButton" xml:space="preserve">
+    <value>NextRoundButton</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessRiichi" xml:space="preserve">
+    <value>Riichi</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessSelectOpponent" xml:space="preserve">
+    <value>SelectOpponent</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessTypeRD" xml:space="preserve">
+    <value>RD</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessTypeUA" xml:space="preserve">
+    <value>UA</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessTypeUN" xml:space="preserve">
+    <value>UN</value>
+    <comment>ID</comment>
+  </data>
+  <data name="IDProcessUseSkill" xml:space="preserve">
+    <value>UseSkill</value>
+    <comment>ID</comment>
+  </data>
+  <data name="LabelChow" xml:space="preserve">
+    <value>Chow</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelGameTitle" xml:space="preserve">
+    <value>CureJong</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelNo" xml:space="preserve">
+    <value>No</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelNoYakus" xml:space="preserve">
+    <value>No Yakus</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelOK" xml:space="preserve">
+    <value>OK</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelPass" xml:space="preserve">
+    <value>Pass</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelPoint" xml:space="preserve">
+    <value>Point</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelPong" xml:space="preserve">
+    <value>Pong</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelRon" xml:space="preserve">
+    <value>Ron</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelYakuCondition" xml:space="preserve">
+    <value>Yaku Condition</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelYes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="LabelYou" xml:space="preserve">
+    <value>You</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="SystemScriptChomboWarning" xml:space="preserve">
+    <value>You cannot declare Ron or Tsumo unless some yaku other than bonus tile is accomplished.Penalty minus 3000 points mofu.</value>
+    <comment>システム台詞</comment>
+  </data>
+  <data name="SystemScriptConfirmConcede" xml:space="preserve">
+    <value>Do you really concede ?</value>
+    <comment>システム台詞</comment>
+  </data>
+  <data name="SystemScriptConfirmFinish" xml:space="preserve">
+    <value>Will you finish with this hand ?</value>
+    <comment>システム台詞</comment>
+  </data>
+  <data name="SystemScriptConfirmPong" xml:space="preserve">
+    <value>Will you pong ?</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="SystemScriptConfirmRon" xml:space="preserve">
+    <value>Will you ron ?</value>
+    <comment>画面項目</comment>
+  </data>
+  <data name="SystemScriptDrawnGame" xml:space="preserve">
+    <value>Drawn game.</value>
+    <comment>システム台詞</comment>
+  </data>
+  <data name="SystemScriptExitConfirmation" xml:space="preserve">
+    <value>Are you sure you want to exit ?</value>
+    <comment>システム台詞</comment>
+  </data>
+  <data name="TileToNextDraw" xml:space="preserve">
+    <value>Next Draw</value>
+    <comment>次に引く牌</comment>
+  </data>
+</root>

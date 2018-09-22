@@ -61,7 +61,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Faul に類似しているローカライズされた文字列を検索します。
+        '''  役なし に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property LabelNoYakus() As String
             Get
