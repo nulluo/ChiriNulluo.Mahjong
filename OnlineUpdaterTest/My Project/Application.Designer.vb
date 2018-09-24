@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.ChiriNulluo.Mahjong.OnlineUpdater.AutoUpdate
+            Me.MainForm = Global.ChiriNulluo.Mahjong.OnlineUpdater.View.InitialForm
         End Sub
     End Class
 End Namespace

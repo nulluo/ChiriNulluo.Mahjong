@@ -76,10 +76,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoUpdate.Designer.vb">
+    <Compile Include="DownLoader.vb" />
+    <Compile Include="Launcher.vb" />
+    <Compile Include="UpdateIDResetForm.Designer.vb">
+      <DependentUpon>UpdateIDResetForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateIDResetForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AutoUpdate.Designer.vb">
       <DependentUpon>AutoUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="AutoUpdate.vb">
+    <Compile Include="View\AutoUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Defaults.vb" />
@@ -100,10 +108,25 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="VersionComparer.vb" />
+    <Compile Include="View\DownloadNewVersionForm .Designer.vb">
+      <DependentUpon>DownloadNewVersionForm .vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\DownloadNewVersionForm .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InitialForm.Designer.vb">
+      <DependentUpon>InitialForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\InitialForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="XmlFunc.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AutoUpdate.resx">
+    <EmbeddedResource Include="UpdateIDResetForm.resx">
+      <DependentUpon>UpdateIDResetForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AutoUpdate.resx">
       <DependentUpon>AutoUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -111,6 +134,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DownloadNewVersionForm .resx">
+      <DependentUpon>DownloadNewVersionForm .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InitialForm.resx">
+      <DependentUpon>InitialForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
