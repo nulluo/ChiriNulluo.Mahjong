@@ -20,7 +20,7 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\bin\Debug\</OutputPath>
     <DocumentationFile>ChiriNulluo.Mahjong.OnlineUpdater.xml</DocumentationFile>
     <NoWarn>
     </NoWarn>
@@ -32,7 +32,7 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\bin\Release\</OutputPath>
     <DocumentationFile>ChiriNulluo.Mahjong.OnlineUpdater.xml</DocumentationFile>
     <NoWarn>
     </NoWarn>
@@ -84,12 +84,6 @@
     <Compile Include="UpdateIDResetForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\AutoUpdate.Designer.vb">
-      <DependentUpon>AutoUpdate.vb</DependentUpon>
-    </Compile>
-    <Compile Include="View\AutoUpdate.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Defaults.vb" />
     <Compile Include="FileDetails.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -125,9 +119,6 @@
   <ItemGroup>
     <EmbeddedResource Include="UpdateIDResetForm.resx">
       <DependentUpon>UpdateIDResetForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\AutoUpdate.resx">
-      <DependentUpon>AutoUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

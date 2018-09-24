@@ -10,7 +10,7 @@ Module Defaults
     Public Const UpdateID As String = "UpdateID"
 
     ' The Applications Root Path "C:\Dir1\Dir2" (No trailing backslash)
-    Public AppPath As String = Path.Combine(My.Application.Info.DirectoryPath, "\..\..\..\testprogram\bin\Debug")
+    Public AppPath As String = My.Application.Info.DirectoryPath
 
     ' The Applications Exe "Dir3\Prog.exe" (from the root path. No leading Backslash)
     Public Const AppEXE As String = "TestProgram.exe"
