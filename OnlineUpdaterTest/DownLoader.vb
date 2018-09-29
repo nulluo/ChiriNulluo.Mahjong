@@ -13,7 +13,7 @@ Public Class DownLoader
     '''<return>ダウンロードに成功した場合はTrue、そうでない場合、False。</return>
     Public Shared Async Function DownloadFileAsync(serverPath As String, localPath As String) As Task(Of Boolean)
         Try
-            Dim _client As New HttpClient()
+            Dim _client As HttpClient = HttpClientFactory.Client
             Dim _response As HttpResponseMessage = Await _client.GetAsync(serverPath, HttpCompletionOption.ResponseHeadersRead)
 
             If _response.IsSuccessStatusCode Then

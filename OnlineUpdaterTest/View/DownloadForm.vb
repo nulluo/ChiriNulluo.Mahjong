@@ -16,7 +16,7 @@ Namespace View
         End Sub
 
         Private Async Function DownLoadFiles() As Task
-
+            'UNIMPLEMENTED: 戻り値使って何かしないのかよ…
             Dim _isDownloadSuccess As Boolean = Await Release.Download()
             Launcher.Execute()
 

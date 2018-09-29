@@ -35,7 +35,6 @@ Public Class Release
     ''' <returns>リリースに含まれるファイルのリスト</returns>
     Private Property Files As List(Of ReleasedFile)
 
-
 #End Region
 
 
@@ -55,8 +54,7 @@ Public Class Release
             'xmlファイルをローカル保存するときのパス
             Dim _sourcePath As String = Path.Combine("http://", UpdateSite & "/" & UpdateID & ".xml")
 
-            'UNIMPLEMENTED: HttpClientは何個もNewしない
-            Dim _client As New HttpClient()
+            Dim _client As HttpClient = HttpClientFactory.Client
             Dim _response As HttpResponseMessage = Await _client.GetAsync(_sourcePath, HttpCompletionOption.ResponseHeadersRead)
 
             'Webからファイルダウンロード実行
