@@ -1,6 +1,8 @@
 ﻿Imports System.IO
 Imports System.Net.Http
 
+'UNIMPLEMENTED: サーバ接続に一定時間以上経つと接続あきらめる設定が必要？
+
 ''' <summary>
 ''' 現在の最新リリースバージョンの情報
 ''' </summary>
@@ -21,6 +23,12 @@ Public Class Release
             Return _instance
         End Get
     End Property
+
+    ''' <summary>
+    ''' The Applications Root Path "C:\Dir1\Dir2" (No trailing backslash)
+    ''' </summary>
+    ''' <returns></returns>
+    Public Shared ReadOnly Property ApplicationPath As String = My.Application.Info.DirectoryPath
 
     ''' <summary>
     ''' バージョン番号
@@ -48,29 +56,29 @@ Public Class Release
         Try
 
             '最新バージョンが記載されたxmlファイルのURL
-            Dim _targetPath As String = Path.Combine(My.Application.Info.DirectoryPath, "UpdateLog.xml")
+            Dim _targetPath As String = Path.Combine(My.Application.Info.DirectoryPath, My.Settings.LocalReleaseInfoXMLFIleWithExtension)
 
             'UNIMPLEMENTED: 強引なパス結合
             'xmlファイルをローカル保存するときのパス
-            Dim _sourcePath As String = Path.Combine("http://", UpdateSite & "/" & UpdateID & ".xml")
+            Dim _sourcePath As String = Path.Combine(My.Settings.ReleaseSite, My.Settings.ServerReleaseInfoXMLFIleWithExtension)
 
             Dim _client As HttpClient = HttpClientFactory.Client
             Dim _response As HttpResponseMessage = Await _client.GetAsync(_sourcePath, HttpCompletionOption.ResponseHeadersRead)
 
             'Webからファイルダウンロード実行
             Dim _isDownloadSuccess As Boolean
-            _isDownloadSuccess = Await DownLoader.DownloadFileAsync(_targetPath, _sourcePath)
+            _isDownloadSuccess = Await DownLoader.DownloadFileAsync(_sourcePath, _targetPath)
 
             If _isDownloadSuccess Then
 
-                Dim _xmlReader As New XmlReader(UpdateID & ".xml")
+                Dim _xmlReader As New XmlReader(My.Settings.LocalReleaseInfoXMLFIleWithExtension)
 
                 'バージョンが最新かどうか確認
                 'UpdateID.xmlの中から最新バージョン番号を取り出す。
                 Me.Version = _xmlReader.GetAttributeValue("/updates", "total")
 
                 '前回アップデートのバージョン番号とサーバ側の最新バージョン番号を比較
-                If LastUpdate.LessThan(Me.Version) Then
+                If My.Settings.LastUpdate.LessThan(Me.Version) Then
                     Return True
                 Else
                     Return False
@@ -96,17 +104,17 @@ Public Class Release
 
         Try
 
-            Dim xmlFunction As New XmlReader(UpdateID & ".xml")
+            Dim xmlFunction As New XmlReader(My.Settings.LocalReleaseInfoXMLFIleWithExtension)
             Me.Files = xmlFunction.GetReleaseFiles
             For Each ThisFile As ReleasedFile In Me.Files
                 'UNIMPLEMENTED: バージョンアップによって不要になったファイルがある可能性があるので、ローカルのファイルをフォルダから全削除
                 'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。
 
                 Dim Updaterfile As String
-                Updaterfile = Path.Combine(AppPath, ThisFile.LocalFilePath)
+                Updaterfile = Path.Combine(ApplicationPath, ThisFile.LocalFilePath)
 
                 Dim Serverfile As String
-                Serverfile = Path.Combine("http://", UpdateSite, ThisFile.ServerFilePath)
+                Serverfile = Path.Combine(My.Settings.ReleaseSite, ThisFile.ServerFilePath)
 
                 'UNIMPLEMENTED: できればダウンロード中のファイル名を表示したい。UIスレッドにアクセスする必要がある
                 'Label1.Text = ThisFile.Name & "をサーバーからダウンロードしています。" & vbCrLf & "完了までお待ちください。"
@@ -119,7 +127,7 @@ Public Class Release
             Next
             Return True
         Catch ex As Exception
-
+            Debug.WriteLine(ex.Message)
             Return False
         End Try
 

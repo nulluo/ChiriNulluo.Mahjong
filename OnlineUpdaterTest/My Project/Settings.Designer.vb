@@ -53,10 +53,10 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(),
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
-         Global.System.Configuration.DefaultSettingValueAttribute("0.0.0.1")>
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0.0.0.1")>  _
         Public Property LastUpdate() As String
             Get
                 Return CType(Me("LastUpdate"),String)
@@ -64,6 +64,42 @@ Namespace My
             Set
                 Me("LastUpdate") = value
             End Set
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("TestProgram.exe")>  _
+        Public ReadOnly Property ExeFileWithExtension() As String
+            Get
+                Return CType(Me("ExeFileWithExtension"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("UpdateID.xml")>  _
+        Public ReadOnly Property ServerReleaseInfoXMLFIleWithExtension() As String
+            Get
+                Return CType(Me("ServerReleaseInfoXMLFIleWithExtension"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://nulluo.x.fc2.com/AutoUpdate")>  _
+        Public ReadOnly Property ReleaseSite() As String
+            Get
+                Return CType(Me("ReleaseSite"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("UpdateLog.xml")>  _
+        Public ReadOnly Property LocalReleaseInfoXMLFIleWithExtension() As String
+            Get
+                Return CType(Me("LocalReleaseInfoXMLFIleWithExtension"),String)
+            End Get
         End Property
     End Class
 End Namespace

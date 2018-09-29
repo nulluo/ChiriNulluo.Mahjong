@@ -9,7 +9,7 @@ Public Class Launcher
     ''' 起動する。
     ''' </summary>
     Public Shared Sub Execute()
-        Shell(Path.Combine(AppPath, AppEXE), AppWinStyle.NormalFocus)
+        Shell(Path.Combine(Release.ApplicationPath, My.Settings.ExeFileWithExtension), AppWinStyle.NormalFocus)
         Application.Exit()
     End Sub
 
