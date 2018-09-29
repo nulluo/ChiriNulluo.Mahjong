@@ -8,42 +8,19 @@ Namespace View
     ''' </summary>
     Public Class DownloadForm
 
-        Public Property LocalUpdateXML As String
+        Private Property LocalUpdateXML As String
+        Private Property Release As Release = Release.Instance
 
-
-        Private Sub DownloadNewVersionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            DownLoadFiles()
+        Private Async Sub DownloadNewVersionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+            Await DownLoadFiles()
         End Sub
 
-        Private Async Sub DownLoadFiles()
+        Private Async Function DownLoadFiles() As Task
 
-            Dim _fileList As List(Of ReleasedFile)
-
-            Dim xmlFunction As New XmlReader(UpdateID & ".xml")
-            _fileList = xmlFunction.GetFiles
-            For Each ThisFile As ReleasedFile In _fileList
-                'UNIMPLEMENTED: バージョンアップによって不要になったファイルがある可能性があるので、ローカルのファイルをフォルダから全削除
-                'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。
-
-                Dim Updaterfile As String
-                Updaterfile = Path.Combine(AppPath, ThisFile.LocalFilePath)
-
-                Dim Serverfile As String
-                Serverfile = Path.Combine("http://", UpdateSite, ThisFile.ServerFilePath)
-
-                'UNIMPLEMENTED: できればダウンロード中のファイル名を表示したい。UIスレッドにアクセスする必要がある
-                'Label1.Text = ThisFile.Name & "をサーバーからダウンロードしています。" & vbCrLf & "完了までお待ちください。"
-
-                If File.Exists(Updaterfile) Then
-                    File.Delete(Updaterfile)
-                End If
-
-                Await DownLoader.DownloadFileAsync(Serverfile, Updaterfile)
-            Next
-
+            Dim _isDownloadSuccess As Boolean = Await Release.Download()
             Launcher.Execute()
 
-        End Sub
+        End Function
 
     End Class
 
