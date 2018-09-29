@@ -6,7 +6,7 @@ Namespace View
     ''' <summary>
     ''' 初期画面(最新バージョンの存在を確認しにサーバへ接続する間にユーザに表示する待機画面)
     ''' </summary>
-    Public Class DownloadNewVersionForm
+    Public Class DownloadForm
 
         Private xmlFunction As New XMLFunc.XmlFunctions
         Public Property LocalUpdateXML As String

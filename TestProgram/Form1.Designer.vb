@@ -40,9 +40,9 @@ Partial Class Form1
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(139, 91)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 12)
+        Me.Label2.Size = New System.Drawing.Size(87, 12)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "20.1.0.0"
+        Me.Label2.Text = "バージョンアップ前"
         '
         'Form1
         '

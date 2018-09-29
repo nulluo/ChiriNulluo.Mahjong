@@ -42,6 +42,8 @@ Namespace XMLFunc
         ''' <returns>アップデートログファイルから取得したfile要素の情報</returns>
         Public Function GetFiles() As List(Of FileDetails)
             Dim _files = New List(Of FileDetails)
+
+
             XMLSNode("updates/file")
             For Each Fileitem As XmlNode In nodelist
                 Dim ThisFile As New FileDetails

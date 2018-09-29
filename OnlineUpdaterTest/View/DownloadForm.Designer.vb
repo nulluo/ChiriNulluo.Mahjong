@@ -1,7 +1,7 @@
 ﻿
 Namespace View
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-    Partial Class InitialForm
+    Partial Class DownloadForm 
         Inherits System.Windows.Forms.Form
 
         'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
@@ -30,19 +30,19 @@ Namespace View
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(100, 23)
+            Me.Label1.Location = New System.Drawing.Point(159, 23)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(322, 12)
+            Me.Label1.Size = New System.Drawing.Size(189, 12)
             Me.Label1.TabIndex = 0
-            Me.Label1.Text = "ロード中です・・・最新バージョンがあるかサーバに問い合わせています"
+            Me.Label1.Text = "最新バージョンのダウンロード中です・・・"
             '
-            'InitialForm
+            'DownloadNewVersionForm
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(528, 60)
             Me.Controls.Add(Me.Label1)
-            Me.Name = "InitialForm"
+            Me.Name = "DownloadNewVersionForm"
             Me.Text = "キュアジャン"
             Me.ResumeLayout(False)
             Me.PerformLayout()

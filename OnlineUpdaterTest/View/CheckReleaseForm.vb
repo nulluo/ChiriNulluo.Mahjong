@@ -4,9 +4,9 @@ Imports System.Net.Http
 Namespace View
 
     ''' <summary>
-    ''' 初期画面(最新バージョンの存在を確認しにサーバへ接続する間にユーザに表示する待機画面)
+    ''' 最新バージョンの存在を確認しにサーバへ接続する間にユーザに表示する待機画面
     ''' </summary>
-    Public Class InitialForm
+    Public Class CheckReleaseForm
 
         Private XMLFunction As New XMLFunc.XmlFunctions
 
@@ -47,7 +47,7 @@ Namespace View
                     If MessageBox.Show("新しいバージョンがあります。ダウンロードしますか？", "アップデート",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.OK Then
                         '最新バージョンダウンロード画面へ進む
-                        Dim _nextForm As New DownloadNewVersionForm()
+                        Dim _nextForm As New DownloadForm()
                         Me.Hide()
                         _nextForm.Show()
                     Else
