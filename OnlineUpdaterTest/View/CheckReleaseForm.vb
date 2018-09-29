@@ -1,6 +1,4 @@
-﻿Imports System.IO
-Imports System.Net.Http
-
+﻿
 Namespace View
 
     ''' <summary>
@@ -8,41 +6,25 @@ Namespace View
     ''' </summary>
     Public Class CheckReleaseForm
 
-        Private XMLFunction As New XMLFunc.XmlFunctions
+        Private Property Release As Release = Release.Instance
 
         ''' <summary>
         ''' 画面ロード時処理
         ''' </summary>
-        Private Sub InitialForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            Dim _targetPath As String = Path.Combine(My.Application.Info.DirectoryPath, "UpdateLog.xml")
-            Dim _sourcePath As String = Path.Combine("http://", UpdateSite, UpdateID & ".xml")
+        Private Async Sub InitialForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-            CheckIfNewVersionExistsAsync(_sourcePath, _targetPath)
+            Await CheckIfNewVersionExistsAsync()
 
         End Sub
 
         ''' <summary>
         ''' 最新バージョンが存在するか、サーバに接続して確認する。
         ''' </summary>
-        ''' <param name="uri">最新バージョンが記載されたxmlファイルのURL</param>
-        ''' <param name="outputPath">xmlファイルをローカル保存するときのパス</param>
-        Private Async Sub CheckIfNewVersionExistsAsync(uri As String, outputPath As String)
-            Dim _client As New HttpClient()
-            Dim _response As HttpResponseMessage = Await _client.GetAsync(uri, HttpCompletionOption.ResponseHeadersRead)
+        Private Async Function CheckIfNewVersionExistsAsync() As Task
+            Try
 
-            'Webからファイルダウンロード実行
-            If Await DownLoader.DownloadFileAsync(uri, outputPath) Then
-
-                'バージョンが最新かどうか確認
-                'UpdateID.xmlの中から最新バージョン番号を取り出す。
-                XMLFunction.OpenXMLDoc(outputPath)
-                XMLFunction.XMLSNode("/updates")
-
-                Dim totalUpdates As String
-                totalUpdates = XMLFunction.GetNodeVal("total")
-
-                '前回アップデートのバージョン番号とサーバ側の最新バージョン番号を比較
-                If LastUpdate.LessThan(totalUpdates) Then
+                Dim _latestReleaseExists As Boolean = Await Release.IsNewerThanLocalFile()
+                If _latestReleaseExists Then
 
                     If MessageBox.Show("新しいバージョンがあります。ダウンロードしますか？", "アップデート",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.OK Then
@@ -53,16 +35,15 @@ Namespace View
                     Else
                         Launcher.Execute()
                     End If
+
                 Else
                     Launcher.Execute()
                 End If
-            Else
-                Launcher.Execute()
-            End If
+            Catch ex As Exception
+                Debug.WriteLine(ex.Message)
+            End Try
 
-
-
-        End Sub
+        End Function
 
     End Class
 

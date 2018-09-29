@@ -78,6 +78,7 @@
   <ItemGroup>
     <Compile Include="DownLoader.vb" />
     <Compile Include="Launcher.vb" />
+    <Compile Include="Release.vb" />
     <Compile Include="View\DebugForm.Designer.vb">
       <DependentUpon>DebugForm.vb</DependentUpon>
     </Compile>

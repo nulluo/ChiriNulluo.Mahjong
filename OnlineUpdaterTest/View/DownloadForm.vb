@@ -8,7 +8,6 @@ Namespace View
     ''' </summary>
     Public Class DownloadForm
 
-        Private xmlFunction As New XMLFunc.XmlFunctions
         Public Property LocalUpdateXML As String
 
 
@@ -18,12 +17,11 @@ Namespace View
 
         Private Async Sub DownLoadFiles()
 
-            Dim _fileList As List(Of FileDetails)
+            Dim _fileList As List(Of ReleasedFile)
 
-            'UNIMPLEMENTED: "UpdateLog.xml"がベタ書きなのよくない↓
-            xmlFunction.OpenXMLDoc("UpdateLog.xml")
+            Dim xmlFunction As New XMLFunc.XmlFunctions(UpdateID & ".xml")
             _fileList = xmlFunction.GetFiles
-            For Each ThisFile As FileDetails In _fileList
+            For Each ThisFile As ReleasedFile In _fileList
                 'UNIMPLEMENTED: バージョンアップによって不要になったファイルがある可能性があるので、ローカルのファイルをフォルダから全削除
                 'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。
 

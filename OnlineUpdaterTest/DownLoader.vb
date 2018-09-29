@@ -33,6 +33,7 @@ Public Class DownLoader
                 Return False
             End If
         Catch ex As Exception
+            Debug.WriteLine(ex.Message)
             Return False
         End Try
     End Function

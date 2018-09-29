@@ -6,13 +6,14 @@ Namespace XMLFunc
         Private nodelist As XmlNodeList
 
         ''' <summary>
-        ''' 指定されたXMLファイルを読み込む。
+        ''' コンストラクタ
         ''' </summary>
-        ''' <param name="FileName"></param>
-        Public Sub OpenXMLDoc(ByVal FileName As String)
+        ''' <param name="xmlfilePath">読込むXMLファイルのパス</param>
+        Public Sub New(xmlfilePath As String)
             xmldoc = New XmlDocument()
-            xmldoc.Load(FileName)
+            xmldoc.Load(xmlfilePath)
         End Sub
+
 
         ''' <summary>
         ''' XPath式と一致するノードのリストを選択する。
@@ -40,13 +41,13 @@ Namespace XMLFunc
         ''' アップデートログファイルからfile要素の情報をFileDetails型のリストで取得する。
         ''' </summary>
         ''' <returns>アップデートログファイルから取得したfile要素の情報</returns>
-        Public Function GetFiles() As List(Of FileDetails)
-            Dim _files = New List(Of FileDetails)
+        Public Function GetFiles() As List(Of ReleasedFile)
+            Dim _files = New List(Of ReleasedFile)
 
 
             XMLSNode("updates/file")
             For Each Fileitem As XmlNode In nodelist
-                Dim ThisFile As New FileDetails
+                Dim ThisFile As New ReleasedFile
                 ThisFile.Name = Fileitem.Attributes.GetNamedItem("name").Value
                 ThisFile.ServerFilePath = Fileitem.ChildNodes.Item(0).InnerText
                 ThisFile.LocalFilePath = Fileitem.ChildNodes.Item(1).InnerText

@@ -1,7 +1,7 @@
 ﻿''' <summary>
 ''' アップデートで配信するファイル1個分の情報
 ''' </summary>
-Public Class FileDetails
+Public Class ReleasedFile
 
     ''' <summary>
     ''' ファイル名
