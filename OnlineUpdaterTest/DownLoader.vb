@@ -29,7 +29,6 @@ Public Class DownLoader
                 Return True
             Else
                 'Webからファイル読込失敗した場合
-
                 Return False
             End If
         Catch ex As Exception

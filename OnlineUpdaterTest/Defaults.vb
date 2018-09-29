@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 
+'UNIMPLEMENTED: ModuleにPublic変数でもつとかキモいので、アプリケーション設定ファイルに移動したい
 Module Defaults
     'Alter the Defaults in this module to fit with each project that uses this updater.
 

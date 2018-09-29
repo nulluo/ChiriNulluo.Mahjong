@@ -29,7 +29,6 @@ Public Class Release
     Private Property Version As String
 
 
-    'UNIMPLEMENTED: Publicはまずくないか
     ''' <summary>
     ''' リリースに含まれるファイルのリスト
     ''' </summary>
@@ -100,7 +99,7 @@ Public Class Release
         Try
 
             Dim xmlFunction As New XmlReader(UpdateID & ".xml")
-            Me.Files = xmlFunction.GetFiles
+            Me.Files = xmlFunction.GetReleaseFiles
             For Each ThisFile As ReleasedFile In Me.Files
                 'UNIMPLEMENTED: バージョンアップによって不要になったファイルがある可能性があるので、ローカルのファイルをフォルダから全削除
                 'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。

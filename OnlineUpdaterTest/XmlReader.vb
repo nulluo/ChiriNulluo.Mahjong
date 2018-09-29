@@ -12,7 +12,6 @@ Public Class XmlReader
         xmldoc.Load(xmlfilePath)
     End Sub
 
-    'UNIMPLEMENTED: XMLノードを選択してから
     ''' <summary>
     ''' XPath式と一致するノードのリストを選択する。
     ''' </summary>
@@ -40,7 +39,7 @@ Public Class XmlReader
     ''' アップデートログファイルからfile要素の情報をFileDetails型のリストで取得する。
     ''' </summary>
     ''' <returns>アップデートログファイルから取得したfile要素の情報</returns>
-    Public Function GetFiles() As List(Of ReleasedFile)
+    Public Function GetReleaseFiles() As List(Of ReleasedFile)
         Dim _files = New List(Of ReleasedFile)
 
         For Each Fileitem As XmlNode In Me.GetNodes("updates/file")
