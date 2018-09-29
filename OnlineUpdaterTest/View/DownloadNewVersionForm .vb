@@ -20,6 +20,8 @@ Namespace View
 
             Dim _fileList As List(Of FileDetails)
 
+            'UNIMPLEMENTED: "UpdateLog.xml"がベタ書きなのよくない↓
+            xmlFunction.OpenXMLDoc("UpdateLog.xml")
             _fileList = xmlFunction.GetFiles
             For Each ThisFile As FileDetails In _fileList
                 'UNIMPLEMENTED: バージョンアップによって不要になったファイルがある可能性があるので、ローカルのファイルをフォルダから全削除
