@@ -66,15 +66,13 @@ Public Class Release
 
             If _isDownloadSuccess Then
 
-                Dim _xmlReader As New XMLFunc.XmlFunctions(UpdateID & ".xml")
+                Dim _xmlReader As New XmlReader(UpdateID & ".xml")
 
 
                 'バージョンが最新かどうか確認
                 'UpdateID.xmlの中から最新バージョン番号を取り出す。
-                _xmlReader.XMLSNode("/updates")
-
                 Dim totalUpdates As String
-                totalUpdates = _xmlReader.GetNodeVal("total")
+                totalUpdates = _xmlReader.GetAttributeValue("/updates", "total")
 
                 '前回アップデートのバージョン番号とサーバ側の最新バージョン番号を比較
                 If LastUpdate.LessThan(totalUpdates) Then
@@ -102,12 +100,7 @@ Public Class Release
 
     End Sub
 
-    ''' <summary>
-    ''' ダウンロードされたリリースプログラムを起動する。
-    ''' </summary>
-    Public Sub Execute()
 
-    End Sub
 #End Region
 
 End Class

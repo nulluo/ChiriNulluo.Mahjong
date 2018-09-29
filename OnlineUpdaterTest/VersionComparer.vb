@@ -9,7 +9,7 @@ Public Module VersionComparer
     ''' <param name="version0">バージョン番号0(0.0.0.0の形式)</param>
     ''' <param name="version1">バージョン番号1(0.0.0.0の形式)</param>
     ''' <returns>バージョン番号0がバージョン番号1と比較して、小さいときは-1、等しいときは0、大きいときは+1を返す。</returns>
-    Public Function Compare(version0 As String, version1 As String) As Integer
+    Private Function Compare(version0 As String, version1 As String) As Integer
         If Not version0.Contains(".") Then
             If Val(version0) < Val(version1) Then
                 Return 1

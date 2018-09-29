@@ -19,7 +19,7 @@ Namespace View
 
             Dim _fileList As List(Of ReleasedFile)
 
-            Dim xmlFunction As New XMLFunc.XmlFunctions(UpdateID & ".xml")
+            Dim xmlFunction As New XmlReader(UpdateID & ".xml")
             _fileList = xmlFunction.GetFiles
             For Each ThisFile As ReleasedFile In _fileList
                 'UNIMPLEMENTED: バージョンアップによって不要になったファイルがある可能性があるので、ローカルのファイルをフォルダから全削除

@@ -115,7 +115,7 @@
     <Compile Include="View\CheckReleaseForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="XmlFunc.vb" />
+    <Compile Include="XmlReader.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\DebugForm.resx">

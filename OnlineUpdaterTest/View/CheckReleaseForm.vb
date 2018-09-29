@@ -19,29 +19,26 @@ Namespace View
 
         ''' <summary>
         ''' 最新バージョンが存在するか、サーバに接続して確認する。
+        ''' 最新バージョンが存在しないか、または接続失敗の場合は現在のローカルexeを起動する
         ''' </summary>
         Private Async Function CheckIfNewVersionExistsAsync() As Task
-            Try
 
-                Dim _latestReleaseExists As Boolean = Await Release.IsNewerThanLocalFile()
-                If _latestReleaseExists Then
+            Dim _latestReleaseExists As Boolean = Await Release.IsNewerThanLocalFile()
+            If _latestReleaseExists Then
 
-                    If MessageBox.Show("新しいバージョンがあります。ダウンロードしますか？", "アップデート",
-                    MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.OK Then
-                        '最新バージョンダウンロード画面へ進む
-                        Dim _nextForm As New DownloadForm()
-                        Me.Hide()
-                        _nextForm.Show()
-                    Else
-                        Launcher.Execute()
-                    End If
-
+                If MessageBox.Show("新しいバージョンがあります。ダウンロードしますか？", "アップデート",
+                            MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.OK Then
+                    '最新バージョンダウンロード画面へ進む
+                    Dim _nextForm As New DownloadForm()
+                    Me.Hide()
+                    _nextForm.Show()
                 Else
                     Launcher.Execute()
                 End If
-            Catch ex As Exception
-                Debug.WriteLine(ex.Message)
-            End Try
+
+            Else
+                Launcher.Execute()
+            End If
 
         End Function
 
