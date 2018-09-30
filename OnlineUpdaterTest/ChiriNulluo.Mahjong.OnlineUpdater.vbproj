@@ -80,12 +80,6 @@
     <Compile Include="HttpClientFactory.vb" />
     <Compile Include="Launcher.vb" />
     <Compile Include="Release.vb" />
-    <Compile Include="View\DebugForm.Designer.vb">
-      <DependentUpon>DebugForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="View\DebugForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ReleasedFile.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -118,9 +112,6 @@
     <Compile Include="XmlReader.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\DebugForm.resx">
-      <DependentUpon>DebugForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
