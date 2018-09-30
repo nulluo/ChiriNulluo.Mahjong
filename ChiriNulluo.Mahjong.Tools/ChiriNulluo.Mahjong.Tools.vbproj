@@ -72,11 +72,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="View\CreateReleaseXMLForm.Designer.vb">
+      <DependentUpon>CreateReleaseXMLForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreateReleaseXMLForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="View\InitialForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InitialForm.Designer.vb">
+      <DependentUpon>InitialForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,6 +107,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CreateReleaseXMLForm.resx">
+      <DependentUpon>CreateReleaseXMLForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InitialForm.resx">
+      <DependentUpon>InitialForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
