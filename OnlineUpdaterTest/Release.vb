@@ -51,14 +51,13 @@ Public Class Release
     ''' ローカルファイルよりもバージョンが新しい場合にTrue,そうでない場合はFalse。
     ''' </summary>
     ''' <returns>ローカルファイルよりもバージョンが新しい場合にTrue,そうでない場合はFalse。</returns>
-    Public Async Function IsNewerThanLocalFile（） As Task(Of Boolean)
+    Public Async Function IsNewerThanLocalFileAsync() As Task(Of Boolean)
 
         Try
 
             '最新バージョンが記載されたxmlファイルのURL
             Dim _targetPath As String = Path.Combine(My.Application.Info.DirectoryPath, My.Settings.LocalReleaseInfoXMLFIleWithExtension)
 
-            'UNIMPLEMENTED: 強引なパス結合
             'xmlファイルをローカル保存するときのパス
             Dim _sourcePath As String = Path.Combine(My.Settings.ReleaseSite, My.Settings.ServerReleaseInfoXMLFIleWithExtension)
 
@@ -102,35 +101,52 @@ Public Class Release
     ''' <return>リリースファイルの全てがダウンロード成功した場合にTrue、そうでない場合はFalse。</return>
     Public Async Function Download() As Task(Of Boolean)
 
+        Dim _tempDirPath As String = Path.Combine(ApplicationPath, My.Settings.TempDir)
+        Dim _mainProgramDirPath As String = Path.Combine(ApplicationPath, My.Settings.MainProgramDir)
+
         Try
+            'ファイルダウンロード先のフォルダ「temp」を用意
+            If Directory.Exists(_tempDirPath) Then
+                Directory.Delete(_tempDirPath, True)
+            End If
+            Directory.CreateDirectory(_tempDirPath)
 
             Dim xmlFunction As New XmlReader(My.Settings.LocalReleaseInfoXMLFIleWithExtension)
             Me.Files = xmlFunction.GetReleaseFiles
             For Each ThisFile As ReleasedFile In Me.Files
-                'UNIMPLEMENTED: バージョンアップによって不要になったファイルがある可能性があるので、ローカルのファイルをフォルダから全削除
                 'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。
 
-                Dim Updaterfile As String
-                Updaterfile = Path.Combine(ApplicationPath, ThisFile.LocalFilePath)
+                Dim LocalFile As String
+                LocalFile = Path.Combine(ApplicationPath, My.Settings.TempDir, ThisFile.LocalFilePath)
 
                 Dim Serverfile As String
                 Serverfile = Path.Combine(My.Settings.ReleaseSite, ThisFile.ServerFilePath)
 
                 'UNIMPLEMENTED: できればダウンロード中のファイル名を表示したい。UIスレッドにアクセスする必要がある
                 'Label1.Text = ThisFile.Name & "をサーバーからダウンロードしています。" & vbCrLf & "完了までお待ちください。"
-                'UNIMPLEMENTED: 途中でネットワーク切断された時のために、ファイルはいったん別のフォルダにダウンロードしておいて、全ファイル落とせた時点で元ファイルと総入れ替えする方がよさそう
-                If File.Exists(Updaterfile) Then
-                    File.Delete(Updaterfile)
-                End If
 
-                Await DownLoader.DownloadFileAsync(Serverfile, Updaterfile)
+                Await DownLoader.DownloadFileAsync(Serverfile, LocalFile)
             Next
+
+            'フォルダ「temp」内に全てのリリースファイルがダウンロード完了した時点で実ファイルの置き換えを開始する
+            If Directory.Exists(_mainProgramDirPath) Then
+                Directory.Delete(_mainProgramDirPath, True)
+            End If
+
+            If Directory.Exists(_tempDirPath) Then
+                Directory.Move(_tempDirPath, _mainProgramDirPath)
+            End If
+
 
             My.Settings.LastUpdate = Me.Version
             Return True
         Catch ex As Exception
             Debug.WriteLine(ex.Message)
             Return False
+        Finally
+            If Directory.Exists(_tempDirpath) Then
+                Directory.Delete(_tempDirPath, True)
+            End If
         End Try
 
     End Function

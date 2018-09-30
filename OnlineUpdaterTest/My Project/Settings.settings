@@ -17,5 +17,11 @@
     <Setting Name="LocalReleaseInfoXMLFIleWithExtension" Type="System.String" Scope="Application">
       <Value Profile="(Default)">UpdateLog.xml</Value>
     </Setting>
+    <Setting Name="TempDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Temp</Value>
+    </Setting>
+    <Setting Name="MainProgramDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Game</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

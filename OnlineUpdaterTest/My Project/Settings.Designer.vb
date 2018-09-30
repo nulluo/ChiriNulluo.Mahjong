@@ -101,6 +101,24 @@ Namespace My
                 Return CType(Me("LocalReleaseInfoXMLFIleWithExtension"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Temp")>  _
+        Public ReadOnly Property TempDir() As String
+            Get
+                Return CType(Me("TempDir"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Game")>  _
+        Public ReadOnly Property MainProgramDir() As String
+            Get
+                Return CType(Me("MainProgramDir"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

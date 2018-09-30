@@ -1,4 +1,5 @@
-﻿
+﻿'UNIMPLEMENTED: エラーログはNLogで記録しておいた方が、トラブル対応の時役にたちそう…
+
 Namespace View
 
     ''' <summary>
@@ -23,7 +24,7 @@ Namespace View
         ''' </summary>
         Private Async Function CheckIfNewVersionExistsAsync() As Task
 
-            Dim _latestReleaseExists As Boolean = Await Release.IsNewerThanLocalFile()
+            Dim _latestReleaseExists As Boolean = Await Release.IsNewerThanLocalFileAsync()
             If _latestReleaseExists Then
 
                 If MessageBox.Show("新しいバージョンがあります。ダウンロードしますか？", "アップデート",
