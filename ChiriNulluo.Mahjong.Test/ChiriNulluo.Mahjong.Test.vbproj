@@ -135,10 +135,6 @@
       <Project>{b4feebb1-e103-4477-b436-080b99e1f5fc}</Project>
       <Name>ChiriNulluo.Mahjong.WinFormApplication</Name>
     </ProjectReference>
-    <ProjectReference Include="..\OnlineUpdaterTest\ChiriNulluo.Mahjong.OnlineUpdater.vbproj">
-      <Project>{7dcd1b8b-fb79-433a-8373-0d71602834e1}</Project>
-      <Name>ChiriNulluo.Mahjong.OnlineUpdater</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\Players\COM\" />
