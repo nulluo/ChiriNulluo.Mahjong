@@ -131,9 +131,17 @@
       <Project>{5f0056cc-9bff-4dfd-8acc-a93a0dc39b8c}</Project>
       <Name>ChiriNulluo.Mahjong.Precure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ChiriNulluo.Mahjong.Tools\ChiriNulluo.Mahjong.Tools.vbproj">
+      <Project>{6e63f583-20e5-4c53-91f2-59d4f9dbceb2}</Project>
+      <Name>ChiriNulluo.Mahjong.Tools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ChiriNulluo.Mahjong.WinFormApplication\ChiriNulluo.Mahjong.WinFormApplication.vbproj">
       <Project>{b4feebb1-e103-4477-b436-080b99e1f5fc}</Project>
       <Name>ChiriNulluo.Mahjong.WinFormApplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChiriNulluo.OnlineUpdater\ChiriNulluo.Mahjong.OnlineUpdater.vbproj">
+      <Project>{7dcd1b8b-fb79-433a-8373-0d71602834e1}</Project>
+      <Name>ChiriNulluo.Mahjong.OnlineUpdater</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
