@@ -125,6 +125,8 @@ Public Class Release
 
                 Await DownLoader.DownloadFileAsync(Serverfile, Updaterfile)
             Next
+
+            My.Settings.LastUpdate = Me.Version
             Return True
         Catch ex As Exception
             Debug.WriteLine(ex.Message)
