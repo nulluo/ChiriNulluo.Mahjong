@@ -77,7 +77,7 @@ Public Class Release
                 Me.Version = _xmlReader.GetAttributeValue("/updates", "total")
 
                 '前回アップデートのバージョン番号とサーバ側の最新バージョン番号を比較
-                If My.Settings.LastUpdate.LessThan(Me.Version) Then
+                If Me.GetCurrentLocalVersion.LessThan(Me.Version) Then
                     Return True
                 Else
                     Return False
@@ -138,7 +138,7 @@ Public Class Release
             End If
 
 
-            My.Settings.LastUpdate = Me.Version
+            'My.Settings.LastUpdate = Me.Version
             Return True
         Catch ex As Exception
             Debug.WriteLine(ex.Message)
@@ -151,6 +151,16 @@ Public Class Release
 
     End Function
 
+    ''' <summary>
+    ''' 現在のローカルEXEのバージョン番号を取得する。
+    ''' </summary>
+    ''' <returns>現在のローカルEXEのバージョン番号</returns>
+    Private Function GetCurrentLocalVersion() As String
+
+        Dim _localExeFilepath As String = Path.Combine(Release.ApplicationPath, My.Settings.MainProgramDir, My.Settings.ExeFileWithExtension)
+        Return System.Diagnostics.FileVersionInfo.GetVersionInfo(_localExeFilepath).FileVersion
+
+    End Function
 
 #End Region
 

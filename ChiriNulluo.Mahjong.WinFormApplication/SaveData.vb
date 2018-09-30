@@ -1,6 +1,9 @@
 ﻿Imports System.Xml
 Imports System.Text
 
+
+'UNIMPLEMENTED: SaveDataファイルは、他のexeその他実行環境内のファイルとはフォルダを別にする（Gameフォルダ内ではなく、専用のフォルダSaveDataを作ってそこに保存する。)詳細はキュアジャン-リリース手順.xlsxの「フォルダ構成」シート参照
+
 Public Class SaveData
 
     ''' <summary>
