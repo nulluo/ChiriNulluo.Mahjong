@@ -9,6 +9,7 @@ Namespace View
 
         Private _baseDirectory As String
         Private Const TamplateFileName As String = "UpdateIDTemplate.xml"
+        Private _xmlAccess As DataAccess.XMLAccess
 
         ''' <summary>
         ''' 指定したバージョン番号と実行ファイルの置かれたフォルダを使用して、リリース情報定義ファイルを作成する。
@@ -25,21 +26,33 @@ Namespace View
             End With
 
             If Me.SaveFileDialog1.ShowDialog() = DialogResult.OK Then
-                File.Copy(Path.Combine(My.Application.Info.DirectoryPath, TamplateFileName), Me.SaveFileDialog1.FileName)
+                Dim _saveFilePath As String = Me.SaveFileDialog1.FileName
+                'If File.Exists(_saveFilePath) Then
+                '    If MessageBox.Show("同名のファイルが存在します。上書きしますか？", "警告", MessageBoxButtons.YesNo) <> DialogResult.Yes Then
+                '        Return
+                '    End If
+                'End If
+                File.Copy(Path.Combine(My.Application.Info.DirectoryPath, TamplateFileName), _saveFilePath, True)
+                Me.LoadXML(_saveFilePath)
+                Me.CreateXMLOfReleaseFilesConstruction(_saveFilePath, "")
             End If
 
+        End Sub
+
+        Private Sub LoadXML(loadXMLFilePath As String)
+            Me._xmlAccess = New DataAccess.XMLAccess(loadXMLFilePath)
         End Sub
 
         ''' <summary>
         ''' 指定したフォルダのファイル・フォルダ構成からリリース定義XMLを作成する
         ''' </summary>
-        Private Sub CreateXMLOfReleaseFilesConstruction(rootDirectoryPath As String)
-
+        Private Sub CreateXMLOfReleaseFilesConstruction(xmlFilePath As String, rootDirectoryPath As String)
+            Me._xmlAccess.SetNodeAttributeValue("updates", "total", Me.VersionField.Text)
 
             ' このディレクトリ内のすべてのファイルを検索する
-            For Each stFilePath As String In System.IO.Directory.GetFiles(rootDirectoryPath)
-                'hStringCollection.Add(stFilePath)
-            Next stFilePath
+            'For Each stFilePath As String In System.IO.Directory.GetFiles(rootDirectoryPath)
+            '    'hStringCollection.Add(stFilePath)
+            'Next stFilePath
 
             ' このディレクトリ内のすべてのサブディレクトリを検索する (再帰)
             'For Each stDirPath As String In System.IO.Directory.GetDirectories(stRootPath)
@@ -56,6 +69,8 @@ Namespace View
             'hStringCollection.CopyTo(stReturns, 0)
 
             'Return stReturns
+
+            Me._xmlAccess.Save(xmlFilePath)
         End Sub
 
         Private Sub selectFolderButton_Click(sender As Object, e As EventArgs) Handles selectFolderButton.Click

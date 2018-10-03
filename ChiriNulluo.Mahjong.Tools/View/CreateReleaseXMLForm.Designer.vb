@@ -50,6 +50,7 @@
             Me.VersionField.Name = "VersionField"
             Me.VersionField.Size = New System.Drawing.Size(100, 19)
             Me.VersionField.TabIndex = 1
+            Me.VersionField.Text = "0001"
             '
             'Label1
             '
