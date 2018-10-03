@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<updates total ="">
+  <folders>
+  </folders>
+  <!--fildersタグの中のfilesタグの中にfileタグが入る仕様に変わったので読込コードも修正必要-->
+</updates>

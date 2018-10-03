@@ -28,9 +28,10 @@
             Me.Label1 = New System.Windows.Forms.Label()
             Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
             Me.TargetFolderField = New System.Windows.Forms.TextBox()
-            Me.Button2 = New System.Windows.Forms.Button()
+            Me.selectFolderButton = New System.Windows.Forms.Button()
             Me.Label2 = New System.Windows.Forms.Label()
             Me.Label3 = New System.Windows.Forms.Label()
+            Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
             Me.SuspendLayout()
             '
             'ExecuteButton
@@ -59,6 +60,10 @@
             Me.Label1.TabIndex = 2
             Me.Label1.Text = "version"
             '
+            'FolderBrowserDialog1
+            '
+            Me.FolderBrowserDialog1.Description = "リリースファイルが保存されいてるフォルダを指定してください。"
+            '
             'TargetFolderField
             '
             Me.TargetFolderField.Location = New System.Drawing.Point(86, 160)
@@ -66,14 +71,14 @@
             Me.TargetFolderField.Size = New System.Drawing.Size(282, 19)
             Me.TargetFolderField.TabIndex = 3
             '
-            'Button2
+            'selectFolderButton
             '
-            Me.Button2.Location = New System.Drawing.Point(360, 158)
-            Me.Button2.Name = "Button2"
-            Me.Button2.Size = New System.Drawing.Size(75, 23)
-            Me.Button2.TabIndex = 0
-            Me.Button2.Text = "参照"
-            Me.Button2.UseVisualStyleBackColor = True
+            Me.selectFolderButton.Location = New System.Drawing.Point(368, 157)
+            Me.selectFolderButton.Name = "selectFolderButton"
+            Me.selectFolderButton.Size = New System.Drawing.Size(75, 23)
+            Me.selectFolderButton.TabIndex = 0
+            Me.selectFolderButton.Text = "参照"
+            Me.selectFolderButton.UseVisualStyleBackColor = True
             '
             'Label2
             '
@@ -102,7 +107,7 @@
             Me.Controls.Add(Me.Label3)
             Me.Controls.Add(Me.Label2)
             Me.Controls.Add(Me.Label1)
-            Me.Controls.Add(Me.Button2)
+            Me.Controls.Add(Me.selectFolderButton)
             Me.Controls.Add(Me.VersionField)
             Me.Controls.Add(Me.ExecuteButton)
             Me.Name = "CreateReleaseXMLForm"
@@ -117,8 +122,9 @@
         Friend WithEvents Label1 As Label
         Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
         Friend WithEvents TargetFolderField As TextBox
-        Friend WithEvents Button2 As Button
+        Friend WithEvents selectFolderButton As Button
         Friend WithEvents Label2 As Label
         Friend WithEvents Label3 As Label
+        Friend WithEvents SaveFileDialog1 As SaveFileDialog
     End Class
 End Namespace
