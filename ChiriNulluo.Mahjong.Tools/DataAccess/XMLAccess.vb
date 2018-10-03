@@ -69,6 +69,28 @@ Namespace DataAccess
             Me.XMLDocument.Save(fileName)
         End Sub
 
+
+        ''' <summary>
+        ''' 指定したXPathに対して見つかった最初のノードを返します。
+        ''' </summary>
+        ''' <param name="xpath"> XPath式。</param>
+        ''' <returns>見つかった最初の <see cref="XmlNode" /> 。見つからない場合は <c>Nothing</c>を返す 。</returns>
+        Public Function GetNode(xpath As String) As XmlNode
+
+            Try
+                Dim _node = Me.XMLDocument.SelectSingleNode(xpath)
+                If _node IsNot Nothing Then
+                    Return _node
+                Else
+                    Return Nothing
+                End If
+
+            Catch ex As Exception
+                Return Nothing
+            End Try
+
+        End Function
+
     End Class
 
 End Namespace

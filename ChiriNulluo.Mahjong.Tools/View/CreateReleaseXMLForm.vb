@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.Xml
+Imports System.IO
 
 Namespace View
 
@@ -34,7 +35,9 @@ Namespace View
                 'End If
                 File.Copy(Path.Combine(My.Application.Info.DirectoryPath, TamplateFileName), _saveFilePath, True)
                 Me.LoadXML(_saveFilePath)
-                Me.CreateXMLOfReleaseFilesConstruction(_saveFilePath, "")
+                Me.CreateXMLOfReleaseFilesConstruction(_saveFilePath, Me.TargetFolderField.Text, "")
+
+                System.Diagnostics.Process.Start(_saveFilePath)
             End If
 
         End Sub
@@ -44,33 +47,52 @@ Namespace View
         End Sub
 
         ''' <summary>
-        ''' 指定したフォルダのファイル・フォルダ構成からリリース定義XMLを作成する
+        ''' 指定したフォルダのファイル・フォルダ構成からリリース定義XMLを作成する。
+        ''' rootDirectoryPathにdirectoryPathFromRootを追加したパスで指定されるフォルダの中のフォルダ・ファイル情報を再帰的にXMLファイルに書き込む
         ''' </summary>
-        Private Sub CreateXMLOfReleaseFilesConstruction(xmlFilePath As String, rootDirectoryPath As String)
-            Me._xmlAccess.SetNodeAttributeValue("updates", "total", Me.VersionField.Text)
+        ''' <param name="xmlFilePath">作成するXMLファイルのフルパス</param>
+        ''' <param name="rootDirectoryPath">リリースファイルが保存されているフォルダ(ルート)</param>
+        ''' <param name="directoryPathFromRoot">ルートからの相対パス</param>
+        Private Sub CreateXMLOfReleaseFilesConstruction(xmlFilePath As String, rootDirectoryPath As String, directoryPathFromRoot As String)
+            With Me._xmlAccess
+                .SetNodeAttributeValue("updates", "total", Me.VersionField.Text)
 
-            ' このディレクトリ内のすべてのファイルを検索する
-            'For Each stFilePath As String In System.IO.Directory.GetFiles(rootDirectoryPath)
-            '    'hStringCollection.Add(stFilePath)
-            'Next stFilePath
+                Dim _foldersNode As XmlNode = .GetNode("updates/folders")
+                Dim _folderElement As XmlElement = .XMLDocument.CreateElement("folder")
+                Dim _nameAttribute As XmlAttribute = .XMLDocument.CreateAttribute("name")
+                _nameAttribute.Value = directoryPathFromRoot
+                _folderElement.Attributes.Append(_nameAttribute)
+                _foldersNode.AppendChild(_folderElement)
+                Dim _filesElement As XmlElement = .XMLDocument.CreateElement("files")
+                _folderElement.AppendChild(_filesElement)
 
-            ' このディレクトリ内のすべてのサブディレクトリを検索する (再帰)
-            'For Each stDirPath As String In System.IO.Directory.GetDirectories(stRootPath)
-            'Dim stFilePathes As String() = GetFilesMostDeep(stDirPath, stPattern)
 
-            ' 条件に合致したファイルがあった場合は、ArrayList に加える
-            'If Not stFilePathes Is Nothing Then
-            'hStringCollection.AddRange(stFilePathes)
-            'End If
-            'Next stDirPath
+                ' このディレクトリ内のすべてのファイルを検索する
+                For Each _filePath As String In System.IO.Directory.GetFiles(rootDirectoryPath)
+                    Dim _fileElement As XmlElement = .XMLDocument.CreateElement("file")
+                    _fileElement.InnerText = CutRootDiretoryPath(_filePath)
+                    _filesElement.AppendChild(_fileElement)
+                Next _filePath
 
-            ' StringCollection を 1 次元の String 配列にして返す
-            'Dim stReturns As String() = New String(hStringCollection.Count - 1) {}
-            'hStringCollection.CopyTo(stReturns, 0)
+                ' このディレクトリ内のすべてのサブディレクトリを検索する (再帰)
+                'For Each stDirPath As String In System.IO.Directory.GetDirectories(stRootPath)
+                'Dim stFilePathes As String() = GetFilesMostDeep(stDirPath, stPattern)
 
-            'Return stReturns
+                ' 条件に合致したファイルがあった場合は、ArrayList に加える
+                'If Not stFilePathes Is Nothing Then
+                'hStringCollection.AddRange(stFilePathes)
+                'End If
+                'Next stDirPath
 
-            Me._xmlAccess.Save(xmlFilePath)
+                ' StringCollection を 1 次元の String 配列にして返す
+                'Dim stReturns As String() = New String(hStringCollection.Count - 1) {}
+                'hStringCollection.CopyTo(stReturns, 0)
+
+                'Return stReturns
+
+                .Save(xmlFilePath)
+
+            End With
         End Sub
 
         Private Sub selectFolderButton_Click(sender As Object, e As EventArgs) Handles selectFolderButton.Click
@@ -78,6 +100,20 @@ Namespace View
                 _baseDirectory = Me.FolderBrowserDialog1.SelectedPath
             End If
 
+        End Sub
+
+        ''' <summary>
+        ''' リリースファイル全てが保存されたフォルダをルートとし、
+        ''' ルートフォルダ内にあるフォルダ、ファイルのフルパスを、ルートを起点とする相対パスに変換します。
+        ''' </summary>
+        ''' <param name="fullPathFileName">フルパスで表したファイル名、フォルダ名</param>
+        ''' <returns>ルートからの相対パス</returns>
+        Private Function CutRootDiretoryPath(fullPathFileName As String) As String
+            Return fullPathFileName.Substring(_baseDirectory.Length)
+        End Function
+
+        Private Sub TargetFolderField_TextChanged(sender As Object, e As EventArgs) Handles TargetFolderField.TextChanged
+            Me._baseDirectory = DirectCast(sender, TextBox).Text
         End Sub
     End Class
 End Namespace
