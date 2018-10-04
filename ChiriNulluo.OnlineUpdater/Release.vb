@@ -115,22 +115,30 @@ Public Class Release
 
 
             Me.Folders = xmlFunction.GetReleasedFolders
-            'For Each ThisFile As ReleasedFolder In Me.Folders
-            '    'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。
-            '    '(1)フォルダを作成してからその中に配置するファイルをダウンロードする
+            For Each _thisFolder As ReleasedFolder In Me.Folders
+                'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。
+
+                '(1)まずはフォルダを作成する
+                Dim _localFolder As String
+                _localFolder = Path.Combine(ApplicationPath, My.Settings.TempDir, _thisFolder.Path)
+                Directory.CreateDirectory(_localFolder)
+
+                For Each _thisFile As ReleasedFile In _thisFolder.Files
+                    '(2)(1)で作成したフォルダ内に配置するファイルをダウンロードする
+                    Dim LocalFile As String
+                    LocalFile = Path.Combine(ApplicationPath, My.Settings.TempDir, _thisFile.LocalFilePath)
+
+                    Dim Serverfile As String
+                    Serverfile = Path.Combine(My.Settings.ReleaseSite, _thisFile.ServerFilePath)
+
+                    'UNIMPLEMENTED: できればダウンロード中のファイル名を表示したい。UIスレッドにアクセスする必要がある
+                    'Label1.Text = ThisFile.Name & "をサーバーからダウンロードしています。" & vbCrLf & "完了までお待ちください。"
+
+                    Await DownLoader.DownloadFileAsync(Serverfile, LocalFile)
+                Next
 
 
-            '    Dim LocalFile As String
-            '    LocalFile = Path.Combine(ApplicationPath, My.Settings.TempDir, ThisFile.LocalFilePath)
-
-            '    Dim Serverfile As String
-            '    Serverfile = Path.Combine(My.Settings.ReleaseSite, ThisFile.ServerFilePath)
-
-            '    'UNIMPLEMENTED: できればダウンロード中のファイル名を表示したい。UIスレッドにアクセスする必要がある
-            '    'Label1.Text = ThisFile.Name & "をサーバーからダウンロードしています。" & vbCrLf & "完了までお待ちください。"
-
-            '    Await DownLoader.DownloadFileAsync(Serverfile, LocalFile)
-            'Next
+            Next
 
             'フォルダ「temp」内に全てのリリースファイルがダウンロード完了した時点で実ファイルの置き換えを開始する
             If Directory.Exists(_mainProgramDirPath) Then

@@ -14,7 +14,7 @@ Public Class ReleasedFolder
     ''' このフォルダ直下に配置されるファイルのリスト
     ''' </summary>
     ''' <returns>このフォルダ直下に配置されるファイルのリスト</returns>
-    Private Property Files As New List(Of ReleasedFile)
+    Public ReadOnly Property Files As New List(Of ReleasedFile)
 
 
     Public Sub AddFile(item As ReleasedFile)
