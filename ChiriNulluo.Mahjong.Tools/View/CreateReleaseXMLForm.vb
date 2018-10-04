@@ -75,7 +75,7 @@ Namespace View
                     Dim _fileElement As XmlElement = .XMLDocument.CreateElement("file")
                     Dim _nameAttribute As XmlAttribute = .XMLDocument.CreateAttribute("name")
                     Dim _cutFilePath As String = CutRootDiretoryPath(_filePath)
-                    _nameAttribute.Value = _cutFilePath
+                    _nameAttribute.Value = Path.GetFileName(_filePath)
                     _fileElement.Attributes.Append(_nameAttribute)
 
                     Dim _serverElement As XmlElement = .XMLDocument.CreateElement("server")
@@ -99,7 +99,7 @@ Namespace View
 
         Private Sub selectFolderButton_Click(sender As Object, e As EventArgs) Handles selectFolderButton.Click
             If Me.FolderBrowserDialog1.ShowDialog(Me) = DialogResult.OK Then
-                _baseDirectory = Me.FolderBrowserDialog1.SelectedPath
+                Me.TargetFolderField.Text = Me.FolderBrowserDialog1.SelectedPath
             End If
 
         End Sub

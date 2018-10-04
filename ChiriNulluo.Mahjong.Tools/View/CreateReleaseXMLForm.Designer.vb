@@ -67,9 +67,9 @@
             '
             'TargetFolderField
             '
-            Me.TargetFolderField.Enabled = False
             Me.TargetFolderField.Location = New System.Drawing.Point(86, 160)
             Me.TargetFolderField.Name = "TargetFolderField"
+            Me.TargetFolderField.ReadOnly = True
             Me.TargetFolderField.Size = New System.Drawing.Size(282, 19)
             Me.TargetFolderField.TabIndex = 3
             Me.TargetFolderField.Text = "C:\Users\健太郎\Documents\Visual Studio 2015\Projects\01.Game\ChiriNulluo.Mahjong\Ch" &
