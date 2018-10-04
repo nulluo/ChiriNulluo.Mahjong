@@ -96,6 +96,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ReleaseFolder.vb" />
     <Compile Include="VersionComparer.vb" />
     <Compile Include="View\DownloadForm.Designer.vb">
       <DependentUpon>DownloadForm.vb</DependentUpon>

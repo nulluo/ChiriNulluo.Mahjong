@@ -36,20 +36,28 @@ Public Class XmlReader
     End Function
 
     ''' <summary>
-    ''' アップデートログファイルからfile要素の情報をFileDetails型のリストで取得する。
+    ''' アップデートログファイルからリリースするフォルダ、ファイルの情報をReleasedFolder型のリストで取得する。
     ''' </summary>
-    ''' <returns>アップデートログファイルから取得したfile要素の情報</returns>
-    Public Function GetReleaseFiles() As List(Of ReleasedFile)
-        Dim _files = New List(Of ReleasedFile)
+    ''' <returns>アップデートログファイルから取得したリリースするフォルダ、ファイルの情報</returns>
+    Public Function GetReleasedFolders() As List(Of ReleasedFolder)
+        Dim _folders = New List(Of ReleasedFolder)
 
-        For Each Fileitem As XmlNode In Me.GetNodes("updates/file")
-            Dim ThisFile As New ReleasedFile
-            ThisFile.Name = Fileitem.Attributes.GetNamedItem("name").Value
-            ThisFile.ServerFilePath = Fileitem.ChildNodes.Item(0).InnerText
-            ThisFile.LocalFilePath = Fileitem.ChildNodes.Item(1).InnerText
-            _files.Add(ThisFile)
+        For Each _folderNode As XmlNode In Me.GetNodes("updates/folders/folder")
+            Dim _thisFolder As New ReleasedFolder
+            _thisFolder.Path = _folderNode.Attributes.GetNamedItem("path").Value
+
+            For Each _fileNode As XmlNode In _folderNode.SelectNodes("files/file")
+                Dim _releasedFile As New ReleasedFile
+                _releasedFile.Name = _fileNode.Attributes("name").Value
+                _releasedFile.ServerFilePath = _fileNode.SelectSingleNode("server").InnerText
+                _releasedFile.LocalFilePath = _fileNode.SelectSingleNode("local").InnerText
+
+                _thisFolder.AddFile(_releasedFile)
+            Next
+
+            _folders.Add(_thisFolder)
         Next
-        Return _files
+        Return _folders
     End Function
 
 End Class

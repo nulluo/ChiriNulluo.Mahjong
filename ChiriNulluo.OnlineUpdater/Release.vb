@@ -38,10 +38,10 @@ Public Class Release
 
 
     ''' <summary>
-    ''' リリースに含まれるファイルのリスト
+    ''' このリリースに含まれる全てのフォルダのリスト
     ''' </summary>
-    ''' <returns>リリースに含まれるファイルのリスト</returns>
-    Private Property Files As List(Of ReleasedFile)
+    ''' <returns>このリリースに含まれる全てのフォルダのリスト</returns>
+    Private Property Folders As List(Of ReleasedFolder)
 
 #End Region
 
@@ -112,21 +112,25 @@ Public Class Release
             Directory.CreateDirectory(_tempDirPath)
 
             Dim xmlFunction As New XmlReader(My.Settings.LocalReleaseInfoXMLFIleWithExtension)
-            Me.Files = xmlFunction.GetReleaseFiles
-            For Each ThisFile As ReleasedFile In Me.Files
-                'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。
 
-                Dim LocalFile As String
-                LocalFile = Path.Combine(ApplicationPath, My.Settings.TempDir, ThisFile.LocalFilePath)
 
-                Dim Serverfile As String
-                Serverfile = Path.Combine(My.Settings.ReleaseSite, ThisFile.ServerFilePath)
+            Me.Folders = xmlFunction.GetReleasedFolders
+            'For Each ThisFile As ReleasedFolder In Me.Folders
+            '    'UNIMPLEMENTED: SaveData.xmlなど、削除してはいけないファイルは削除しない。
+            '    '(1)フォルダを作成してからその中に配置するファイルをダウンロードする
 
-                'UNIMPLEMENTED: できればダウンロード中のファイル名を表示したい。UIスレッドにアクセスする必要がある
-                'Label1.Text = ThisFile.Name & "をサーバーからダウンロードしています。" & vbCrLf & "完了までお待ちください。"
 
-                Await DownLoader.DownloadFileAsync(Serverfile, LocalFile)
-            Next
+            '    Dim LocalFile As String
+            '    LocalFile = Path.Combine(ApplicationPath, My.Settings.TempDir, ThisFile.LocalFilePath)
+
+            '    Dim Serverfile As String
+            '    Serverfile = Path.Combine(My.Settings.ReleaseSite, ThisFile.ServerFilePath)
+
+            '    'UNIMPLEMENTED: できればダウンロード中のファイル名を表示したい。UIスレッドにアクセスする必要がある
+            '    'Label1.Text = ThisFile.Name & "をサーバーからダウンロードしています。" & vbCrLf & "完了までお待ちください。"
+
+            '    Await DownLoader.DownloadFileAsync(Serverfile, LocalFile)
+            'Next
 
             'フォルダ「temp」内に全てのリリースファイルがダウンロード完了した時点で実ファイルの置き換えを開始する
             If Directory.Exists(_mainProgramDirPath) Then
