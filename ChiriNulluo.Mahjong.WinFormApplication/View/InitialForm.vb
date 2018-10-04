@@ -25,6 +25,9 @@ Namespace View
             Me.PlaysBGMMenuItem.Checked = Sounds.SoundManager.PlaysBGM
             Me.PlaysSEMenuItem.Checked = Sounds.SoundManager.PlaysSE
             Me.GameStartButton.Parent = Me
+
+
+            Me.Text = "キュアジャン Ver." & System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileVersion
         End Sub
 
         ''' <summary>

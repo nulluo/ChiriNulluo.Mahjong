@@ -73,6 +73,8 @@ Public Class SaveData
     End Sub
 
     Private Sub CreateNewSaveDataFile()
+        'UNIMPLEMENTED: ここでTemplateFileName(SaveDataTemplate.xml)はCureJong.exeと同フォルダではなく、CureJong.exeをキックしたChiriNulluo.Mahjong.OnlineUpdater.exeと同一フォルダに探しにいってる。
+        'UNIMPLEMENTED: 常にCureJOng.exeと同フォルダを観に行くようにするか、もしくは、ビルドしたらOnlineUpdater.exeと同じフォルダにSaveDataTemplate.xmlができるようにするかどちらか選べ
         System.IO.File.Copy(TemplateFileName, FileName)
     End Sub
 
