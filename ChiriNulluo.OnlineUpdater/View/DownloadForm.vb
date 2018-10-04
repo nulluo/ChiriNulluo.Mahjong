@@ -12,12 +12,12 @@ Namespace View
         Private Property Release As Release = Release.Instance
 
         Private Async Sub DownloadNewVersionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            Await DownLoadFiles()
+            Await DownLoadFilesAsync()
         End Sub
 
-        Private Async Function DownLoadFiles() As Task
+        Private Async Function DownLoadFilesAsync() As Task
             'UNIMPLEMENTED: 戻り値使って何かしないのかよ…
-            Dim _isDownloadSuccess As Boolean = Await Release.Download()
+            Dim _isDownloadSuccess As Boolean = Await Release.DownloadAsync()
             Launcher.Execute()
 
         End Function

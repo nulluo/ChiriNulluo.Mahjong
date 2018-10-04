@@ -99,7 +99,7 @@ Public Class Release
     ''' リリースファイル全てをダウンロードする。
     ''' </summary>
     ''' <return>リリースファイルの全てがダウンロード成功した場合にTrue、そうでない場合はFalse。</return>
-    Public Async Function Download() As Task(Of Boolean)
+    Public Async Function DownloadAsync() As Task(Of Boolean)
 
         Dim _tempDirPath As String = Path.Combine(ApplicationPath, My.Settings.TempDir)
         Dim _mainProgramDirPath As String = Path.Combine(ApplicationPath, My.Settings.MainProgramDir)
@@ -144,7 +144,7 @@ Public Class Release
             Debug.WriteLine(ex.Message)
             Return False
         Finally
-            If Directory.Exists(_tempDirpath) Then
+            If Directory.Exists(_tempDirPath) Then
                 Directory.Delete(_tempDirPath, True)
             End If
         End Try
