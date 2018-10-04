@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("TestProgram.exe")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("CureJong.exe")>  _
         Public ReadOnly Property ExeFileWithExtension() As String
             Get
                 Return CType(Me("ExeFileWithExtension"),String)
@@ -74,7 +74,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://nulluo.x.fc2.com/AutoUpdate")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://www.nulluo.shop/nulluo.shop/GameDownload/CureJong/AutoUpdate")>  _
         Public ReadOnly Property ReleaseSite() As String
             Get
                 Return CType(Me("ReleaseSite"),String)

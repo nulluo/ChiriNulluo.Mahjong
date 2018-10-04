@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="ExeFileWithExtension" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">TestProgram.exe</Value>
+      <Value Profile="(Default)">CureJong.exe</Value>
     </Setting>
     <Setting Name="ServerReleaseInfoXMLFIleWithExtension" Type="System.String" Scope="Application">
       <Value Profile="(Default)">UpdateID.xml</Value>
     </Setting>
     <Setting Name="ReleaseSite" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://nulluo.x.fc2.com/AutoUpdate</Value>
+      <Value Profile="(Default)">http://www.nulluo.shop/nulluo.shop/GameDownload/CureJong/AutoUpdate</Value>
     </Setting>
     <Setting Name="LocalReleaseInfoXMLFIleWithExtension" Type="System.String" Scope="Application">
       <Value Profile="(Default)">UpdateLog.xml</Value>
