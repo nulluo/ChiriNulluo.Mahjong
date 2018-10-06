@@ -74,7 +74,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://www.nulluo.shop/nulluo.shop/GameDownload/CureJong/AutoUpdate")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://nulluo.html.xdomain.jp/Games/CureJong/AutoUpdate")>  _
         Public ReadOnly Property ReleaseSite() As String
             Get
                 Return CType(Me("ReleaseSite"),String)

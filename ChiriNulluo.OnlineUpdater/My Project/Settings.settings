@@ -9,7 +9,7 @@
       <Value Profile="(Default)">UpdateID.xml</Value>
     </Setting>
     <Setting Name="ReleaseSite" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://www.nulluo.shop/nulluo.shop/GameDownload/CureJong/AutoUpdate</Value>
+      <Value Profile="(Default)">http://nulluo.html.xdomain.jp/Games/CureJong/AutoUpdate</Value>
     </Setting>
     <Setting Name="LocalReleaseInfoXMLFIleWithExtension" Type="System.String" Scope="Application">
       <Value Profile="(Default)">UpdateLog.xml</Value>
