@@ -26,7 +26,6 @@
             Me.ExecuteButton = New System.Windows.Forms.Button()
             Me.VersionField = New System.Windows.Forms.MaskedTextBox()
             Me.Label1 = New System.Windows.Forms.Label()
-            Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
             Me.TargetFolderField = New System.Windows.Forms.TextBox()
             Me.selectFolderButton = New System.Windows.Forms.Button()
             Me.Label2 = New System.Windows.Forms.Label()
@@ -60,10 +59,6 @@
             Me.Label1.Size = New System.Drawing.Size(42, 12)
             Me.Label1.TabIndex = 2
             Me.Label1.Text = "version"
-            '
-            'FolderBrowserDialog1
-            '
-            Me.FolderBrowserDialog1.Description = "リリースファイルが保存されいてるフォルダを指定してください。"
             '
             'TargetFolderField
             '
@@ -124,7 +119,6 @@
         Friend WithEvents ExecuteButton As Button
         Friend WithEvents VersionField As MaskedTextBox
         Friend WithEvents Label1 As Label
-        Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
         Friend WithEvents TargetFolderField As TextBox
         Friend WithEvents selectFolderButton As Button
         Friend WithEvents Label2 As Label

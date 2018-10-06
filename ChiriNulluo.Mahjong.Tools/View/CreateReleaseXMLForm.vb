@@ -1,5 +1,6 @@
 ﻿Imports System.Xml
 Imports System.IO
+Imports Microsoft.WindowsAPICodePack.Dialogs
 
 Namespace View
 
@@ -98,8 +99,12 @@ Namespace View
         End Sub
 
         Private Sub selectFolderButton_Click(sender As Object, e As EventArgs) Handles selectFolderButton.Click
-            If Me.FolderBrowserDialog1.ShowDialog(Me) = DialogResult.OK Then
-                Me.TargetFolderField.Text = Me.FolderBrowserDialog1.SelectedPath
+            Dim _dialog = New CommonOpenFileDialog("フォルダ選択")
+            _dialog.IsFolderPicker = True
+
+            If _dialog.ShowDialog() = CommonFileDialogResult.Ok Then
+                Me.TargetFolderField.Text = _dialog.FileName
+
             End If
 
         End Sub
