@@ -17,6 +17,14 @@
         ''' </summary>
         Public Const ShantenCountMax = 8
 
+#Region "パス"
+
+        Public Const IconDiffImageDir = "pictures\tileIcon\Diff"
+
+        Public Const IconEnlargedImageDir = "pictures\tileIcon\Enlarged"
+
+#End Region
+
     End Module
 
 End Namespace

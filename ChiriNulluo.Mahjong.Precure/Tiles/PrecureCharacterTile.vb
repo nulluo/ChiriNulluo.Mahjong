@@ -1,4 +1,6 @@
 ﻿Imports ChiriNulluo.Mahjong.Core.Tiles
+Imports System.Drawing
+Imports System.IO
 
 Namespace Tiles
 
@@ -41,13 +43,13 @@ Namespace Tiles
 
         Public ReadOnly Property Image As System.Drawing.Bitmap
             Get
-                Return DirectCast(My.Resources.ResourceManager.GetObject(String.Format("Precure{0:0000}", Me.ID)), System.Drawing.Bitmap)
+                Return New Bitmap(Path.Combine(Constants.IconDiffImageDir, String.Format("Precure{0:0000}.png", Me.ID)))
             End Get
         End Property
 
         Public ReadOnly Property EnlargedImage As System.Drawing.Bitmap
             Get
-                Return DirectCast(My.Resources.ResourceManager.GetObject(String.Format("TileEnlarged{0:0000}", Me.ID)), System.Drawing.Bitmap)
+                Return New Bitmap(Path.Combine(Constants.IconEnlargedImageDir, String.Format("TileEnlarged{0:0000}.png", Me.ID)))
             End Get
         End Property
 

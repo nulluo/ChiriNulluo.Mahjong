@@ -1,4 +1,6 @@
 ﻿Imports ChiriNulluo.Mahjong.Core.Tiles
+Imports System.IO
+Imports System.Drawing
 
 Namespace Tiles
 
@@ -22,9 +24,9 @@ Namespace Tiles
             _specialCharacterTilesList = _dataAccess.GetSpecialCharacterDataFromXML(Nothing, Nothing, Nothing, Nothing)
 
             Me._allCharacterTilesList = _dataAccess.GetCharacterDataFromXML(Nothing, Nothing, Nothing, Nothing, True)
+
             Me.AllCharacterTilesIDList.ForEach(Sub(x) TileImages.Add(x,
-                   DirectCast(My.Resources.ResourceManager.GetObject(String.Format("Precure{0:0000}", x)),
-                   System.Drawing.Bitmap)))
+                       New Bitmap(Path.Combine(Constants.IconDiffImageDir, String.Format("Precure{0:0000}.png", x)))))
 
             'Me.InitializeTileListForNewRound()
 
