@@ -493,7 +493,7 @@
     <Content Include="SaveDataTemplate.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sounds\BGM\Memory.mp3">
+    <Content Include="Sounds\BGM\8×8.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Sounds\DiscardTile.wav">
