@@ -393,7 +393,7 @@ Namespace View
             'BGM再生
             If Sounds.SoundManager.PlaysBGM Then
                 Me.mediaPlayer.URL = Path.Combine(My.Application.Info.DirectoryPath,
-                                              Constants.SoundFolder, "BGM\8×8.mp3")
+                                              Constants.SoundFolder, "BGM\8_8.mp3")
                 Me.mediaPlayer.settings.setMode("loop", True)
                 Me.mediaPlayer.controls.play()
                 Me.mediaPlayer.settings.volume = 10
