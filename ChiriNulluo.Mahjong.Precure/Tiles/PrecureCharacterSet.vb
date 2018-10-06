@@ -25,6 +25,7 @@ Namespace Tiles
 
             Me._allCharacterTilesList = _dataAccess.GetCharacterDataFromXML(Nothing, Nothing, Nothing, Nothing, True)
 
+            '※ 牌アイコンはリソースには含めない。(dllのサイズ肥大化を防ぐため)
             Me.AllCharacterTilesIDList.ForEach(Sub(x) TileImages.Add(x,
                        New Bitmap(Path.Combine(Constants.IconDiffImageDir, String.Format("Precure{0:0000}.png", x)))))
 

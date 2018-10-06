@@ -109,6 +109,201 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0000.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0101.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0102.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0103.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0200.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0201.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0202.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0203.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0300.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0301.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0302.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0303.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0304.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0305.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0306.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0400.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0401.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0402.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0403.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0404.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0500.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0501.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0502.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0503.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0504.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0600.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0601.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0602.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0603.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0604.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0605.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0700.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0701.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0702.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0703.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0704.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0705.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0706.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0800.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0801.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0802.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0803.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0804.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0805.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0900.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0901.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0902.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0903.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged0904.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1001.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1002.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1003.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1004.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1101.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1102.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1103.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1201.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1202.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1203.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1204.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1205.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1206.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1301.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1302.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1303.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\TileEnlarged1303.png" />
     <None Include="Resources\TileEnlarged1302.png" />
     <None Include="Resources\TileEnlarged1301.png" />
@@ -202,72 +397,201 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Pictures\tileIcon\Diff\Precure0101.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0102.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0103.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0201.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0202.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0301.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0302.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0303.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0304.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0305.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0306.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0401.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0402.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0403.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0404.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0501.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0502.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0503.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0504.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0601.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0602.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0603.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0604.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0701.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0702.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0703.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0704.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0705.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0801.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0802.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0803.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0804.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0805.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0901.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0902.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0903.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0904.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1001.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1002.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1003.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1004.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1101.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1102.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1103.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1201.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1202.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1203.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1204.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1205.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1206.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0203.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0200.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0300.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0605.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1000.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0800.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0706.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0700.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0600.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0500.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0400.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0000.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure0900.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1301.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1302.png" />
-    <None Include="Pictures\tileIcon\Diff\Precure1303.png" />
+    <None Include="Pictures\tileIcon\Diff\Precure0101.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0102.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0103.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0201.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0202.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0301.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0302.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0303.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0304.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0305.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0306.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0401.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0402.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0403.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0404.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0501.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0502.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0503.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0504.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0601.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0602.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0603.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0604.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0701.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0702.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0703.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0704.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0705.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0801.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0802.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0803.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0804.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0805.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0901.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0902.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0903.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0904.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1001.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1002.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1003.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1004.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1101.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1102.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1103.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1201.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1202.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1203.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1204.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1205.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1206.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0203.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0200.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0300.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0605.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0800.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0706.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0700.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0600.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0500.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0400.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0000.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure0900.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1301.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1302.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Pictures\tileIcon\Diff\Precure1303.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="NLog_LICENSE.txt" />
   </ItemGroup>
   <ItemGroup />
