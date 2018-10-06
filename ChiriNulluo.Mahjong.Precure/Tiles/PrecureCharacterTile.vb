@@ -44,14 +44,17 @@ Namespace Tiles
         Public ReadOnly Property Image As System.Drawing.Bitmap
             Get
                 '※ 牌アイコンはリソースには含めない。(dllのサイズ肥大化を防ぐため)
-                Return New Bitmap(Path.Combine(Constants.IconDiffImageDir, String.Format("Precure{0:0000}.png", Me.ID)))
+                Dim _path = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
+                                               Constants.IconDiffImageDir, String.Format("Precure{0:0000}.png", Me.ID))
+                Return New Bitmap(_path)
             End Get
         End Property
 
         Public ReadOnly Property EnlargedImage As System.Drawing.Bitmap
             Get
                 '※ 牌アイコンはリソースには含めない。(dllのサイズ肥大化を防ぐため)
-                Return New Bitmap(Path.Combine(Constants.IconEnlargedImageDir, String.Format("TileEnlarged{0:0000}.png", Me.ID)))
+                Return New Bitmap(Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
+                                               Constants.IconEnlargedImageDir, String.Format("TileEnlarged{0:0000}.png", Me.ID)))
             End Get
         End Property
 
