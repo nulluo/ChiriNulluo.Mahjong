@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>ChiriNulluo.Mahjong.WinFormApplication.My.MyApplication</StartupObject>
     <RootNamespace>ChiriNulluo.Mahjong.WinFormApplication</RootNamespace>
-    <AssemblyName>CureJong</AssemblyName>
+    <AssemblyName>CureJongMain</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>

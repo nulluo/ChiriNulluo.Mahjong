@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices
 
 ' アセンブリ属性の値を確認します
 
-<Assembly: AssemblyTitle("CureJong")>
+<Assembly: AssemblyTitle("CureJongMain")>
 <Assembly: AssemblyDescription("キュア☆ジャン")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("ChiriNulluo.Mahjong.WinFormTest")>

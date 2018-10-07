@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices
 
 ' アセンブリ属性の値を確認します
 
-<Assembly: AssemblyTitle("ChiriNulluo.Mahjong.OnlineUpdater")>
+<Assembly: AssemblyTitle("ChiriNulluo.OnlineUpdater")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("ChiriNulluo.Mahjong.OnlineUpdater")>

@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("CureJong.exe")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("CureJongMain.exe")>  _
         Public ReadOnly Property ExeFileWithExtension() As String
             Get
                 Return CType(Me("ExeFileWithExtension"),String)
