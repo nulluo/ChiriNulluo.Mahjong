@@ -35,7 +35,7 @@
             '
             'ExecuteButton
             '
-            Me.ExecuteButton.Location = New System.Drawing.Point(369, 232)
+            Me.ExecuteButton.Location = New System.Drawing.Point(369, 185)
             Me.ExecuteButton.Name = "ExecuteButton"
             Me.ExecuteButton.Size = New System.Drawing.Size(75, 23)
             Me.ExecuteButton.TabIndex = 0
@@ -44,17 +44,18 @@
             '
             'VersionField
             '
-            Me.VersionField.Location = New System.Drawing.Point(86, 86)
+            Me.VersionField.Location = New System.Drawing.Point(86, 154)
             Me.VersionField.Mask = "0.0.0.0"
             Me.VersionField.Name = "VersionField"
+            Me.VersionField.ReadOnly = True
             Me.VersionField.Size = New System.Drawing.Size(100, 19)
             Me.VersionField.TabIndex = 1
-            Me.VersionField.Text = "0001"
+            Me.VersionField.Text = "0000"
             '
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(28, 73)
+            Me.Label1.Location = New System.Drawing.Point(29, 142)
             Me.Label1.Name = "Label1"
             Me.Label1.Size = New System.Drawing.Size(42, 12)
             Me.Label1.TabIndex = 2
@@ -62,7 +63,7 @@
             '
             'TargetFolderField
             '
-            Me.TargetFolderField.Location = New System.Drawing.Point(86, 160)
+            Me.TargetFolderField.Location = New System.Drawing.Point(87, 101)
             Me.TargetFolderField.Name = "TargetFolderField"
             Me.TargetFolderField.ReadOnly = True
             Me.TargetFolderField.Size = New System.Drawing.Size(282, 19)
@@ -72,7 +73,7 @@
             '
             'selectFolderButton
             '
-            Me.selectFolderButton.Location = New System.Drawing.Point(368, 157)
+            Me.selectFolderButton.Location = New System.Drawing.Point(369, 98)
             Me.selectFolderButton.Name = "selectFolderButton"
             Me.selectFolderButton.Size = New System.Drawing.Size(75, 23)
             Me.selectFolderButton.TabIndex = 0
@@ -82,7 +83,7 @@
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Location = New System.Drawing.Point(28, 142)
+            Me.Label2.Location = New System.Drawing.Point(29, 83)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(179, 12)
             Me.Label2.TabIndex = 2
@@ -101,7 +102,7 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(582, 313)
+            Me.ClientSize = New System.Drawing.Size(538, 261)
             Me.Controls.Add(Me.TargetFolderField)
             Me.Controls.Add(Me.Label3)
             Me.Controls.Add(Me.Label2)

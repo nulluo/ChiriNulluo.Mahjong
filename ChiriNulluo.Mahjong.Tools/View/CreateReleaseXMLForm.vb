@@ -105,6 +105,7 @@ Namespace View
             If _dialog.ShowDialog() = CommonFileDialogResult.Ok Then
                 Me.TargetFolderField.Text = _dialog.FileName
 
+                Me.VersionField.Text = Me.GetFileVersionOfExe(_dialog.FileName)
             End If
 
         End Sub
@@ -126,5 +127,26 @@ Namespace View
         Private Sub TargetFolderField_TextChanged(sender As Object, e As EventArgs) Handles TargetFolderField.TextChanged
             Me._baseDirectory = DirectCast(sender, TextBox).Text
         End Sub
+
+        ''' <summary>
+        ''' 現在選択中のフォルダに存在するメイン実行ファイルのバージョンを取得する
+        ''' </summary>
+        ''' <returns></returns>
+        Private Function GetFileVersionOfExe(directoryPath As String) As String
+
+            Dim _filePath As String
+            _filePath = Path.Combine(directoryPath, My.Settings.MainProgramExeFileName)
+            If File.Exists(_filePath) Then
+                Return System.Diagnostics.FileVersionInfo.GetVersionInfo(_filePath).FileVersion
+            Else
+
+                MessageBox.Show("以下のファイルは見つからないため、バージョン番号が取得できませんでした。バージョン番号を0.0.0.0にリセットします" & vbCrLf & _filePath)
+                Return "0000"
+
+            End If
+
+        End Function
+
+
     End Class
 End Namespace
