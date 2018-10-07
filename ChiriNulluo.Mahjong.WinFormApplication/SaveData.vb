@@ -1,6 +1,6 @@
 ﻿Imports System.Xml
 Imports System.Text
-
+Imports System.IO
 
 'UNIMPLEMENTED: SaveDataファイルは、他のexeその他実行環境内のファイルとはフォルダを別にする（Gameフォルダ内ではなく、専用のフォルダSaveDataを作ってそこに保存する。)詳細はキュアジャン-リリース手順.xlsxの「フォルダ構成」シート参照
 
@@ -18,6 +18,9 @@ Public Class SaveData
     Private Const TrueString As String = "TRUE"
     Private Const FalseString As String = "FALSE"
 
+    Private ReadOnly Property ExecutingExeDir As String = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
+
+
 
     Private Shared _instance As SaveData
 
@@ -32,7 +35,7 @@ Public Class SaveData
     ''' セーブデータファイルを初期化する。実行環境にセーブデータファイルが存在しなければ新規作成する。
     ''' </summary>
     Public Sub InitializeSaveDataFile()
-        If Not System.IO.File.Exists(FileName) Then
+        If Not File.Exists(FileName) Then
             Me.CreateNewSaveDataFile()
         End If
 
@@ -73,9 +76,9 @@ Public Class SaveData
     End Sub
 
     Private Sub CreateNewSaveDataFile()
-        'UNIMPLEMENTED: ここでTemplateFileName(SaveDataTemplate.xml)はCureJong.exeと同フォルダではなく、CureJong.exeをキックしたChiriNulluo.Mahjong.OnlineUpdater.exeと同一フォルダに探しにいってる。
-        'UNIMPLEMENTED: 常にCureJOng.exeと同フォルダを観に行くようにするか、もしくは、ビルドしたらOnlineUpdater.exeと同じフォルダにSaveDataTemplate.xmlができるようにするかどちらか選べ
-        System.IO.File.Copy(TemplateFileName, FileName)
+
+        File.Copy(Me.AddExecutingBinaryDirName(TemplateFileName), Me.AddExecutingBinaryDirName(FileName))
+
     End Sub
 
     ''' <summary>
@@ -84,7 +87,7 @@ Public Class SaveData
     ''' <returns>存在しているセーブデータファイルのバージョンよりも、最新セーブデータファイルのバージョンが新しい場合はTrue,そうでなければFalse</returns>
     Private Function IsNewerVersionSaveDataReleased() As Boolean
         Dim _xmlDocument As New XmlDocument()
-        _xmlDocument.Load(FileName)
+        _xmlDocument.Load(Me.AddExecutingBinaryDirName(FileName))
 
         Dim _nodesList As XmlNodeList = Me.GetNodes(_xmlDocument, "saveData/latestVersion")
 
@@ -167,7 +170,7 @@ Public Class SaveData
     Private Function GetTemplateFileVersion() As String
 
         Dim _xmlDocumentTemplate As New XmlDocument()
-        _xmlDocumentTemplate.Load(TemplateFileName)
+        _xmlDocumentTemplate.Load(Me.AddExecutingBinaryDirName(TemplateFileName))
         Return Me.GetNodes(_xmlDocumentTemplate, "saveData/latestVersion")(0).InnerText
 
     End Function
@@ -193,6 +196,16 @@ Public Class SaveData
         Else
             Return defaultValue
         End If
+    End Function
+
+    ''' <summary>
+    ''' 実行中のCureJong.exeのフォルダパスをファイル名に付加して返す。
+    ''' </summary>
+    ''' <param name="fileName">ファイル名</param>
+    ''' <remarks>アップデータからキック起動された場合に、ファイル名だけだとCureJong.exeと同フォルダを探しにいかないのでこの処理が必要。</remarks>
+    ''' <returns>実行中のCureJong.exeのフォルダパスをファイル名に付加したフルパス。</returns>
+    Private Function AddExecutingBinaryDirName(fileName As String) As String
+        Return Path.Combine(Me.ExecutingExeDir, fileName)
     End Function
 
 
