@@ -17,8 +17,9 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ChiriNulluo.Mahjong.Core.xml</DocumentationFile>
+    <OutputPath>..\bin\Debug\Game\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
     <NoWarn>
     </NoWarn>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -29,8 +30,9 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ChiriNulluo.Mahjong.Core.xml</DocumentationFile>
+    <OutputPath>..\bin\Release\Game\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
     <NoWarn>
     </NoWarn>
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
