@@ -114,6 +114,12 @@
     <Compile Include="View\CheckReleaseForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\ReleaseNoteForm.Designer.vb">
+      <DependentUpon>ReleaseNoteForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReleaseNoteForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="XmlReader.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\CheckReleaseForm.resx">
       <DependentUpon>CheckReleaseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ReleaseNoteForm.resx">
+      <DependentUpon>ReleaseNoteForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +153,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Pictures\DLWaintingWindowBackGround1.gif" />
+    <None Include="Pictures\DLWaintingWindowBackGround2.gif" />
     <Content Include="UpdateLog.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>

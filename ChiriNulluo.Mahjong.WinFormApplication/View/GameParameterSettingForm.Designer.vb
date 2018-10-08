@@ -23,17 +23,30 @@
         'コード エディターを使って変更しないでください。
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GameParameterSettingForm))
             Me.Panel1 = New System.Windows.Forms.Panel()
             Me.moveDownButton = New System.Windows.Forms.Button()
             Me.moveUpButton = New System.Windows.Forms.Button()
             Me.Label7 = New System.Windows.Forms.Label()
             Me.Label1 = New System.Windows.Forms.Label()
             Me.wallPileGrid = New System.Windows.Forms.DataGridView()
+            Me.wallIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.WallNameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.WallSeriesIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.WallNumberColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Panel2 = New System.Windows.Forms.Panel()
             Me.humanHandGrid = New System.Windows.Forms.DataGridView()
+            Me.HumanHandIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.HumanHandNameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.HumanHandSeriesIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.HumanHandNumberColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Label2 = New System.Windows.Forms.Label()
             Me.Panel3 = New System.Windows.Forms.Panel()
             Me.comHandGrid = New System.Windows.Forms.DataGridView()
+            Me.COMHandIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.COMHandNameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.COMHandSeriesIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.COMHandNumberColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Label3 = New System.Windows.Forms.Label()
             Me.moveToWallFromHumanHandButton = New System.Windows.Forms.Button()
             Me.moveToWallFromCOMHandButton = New System.Windows.Forms.Button()
@@ -50,21 +63,9 @@
             Me.GroupBox3 = New System.Windows.Forms.GroupBox()
             Me.moveToHumanHandFromCOMHandButton = New System.Windows.Forms.Button()
             Me.Label6 = New System.Windows.Forms.Label()
-            Me.HumanHandIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.HumanHandNameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.HumanHandSeriesIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.HumanHandNumberColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.COMHandIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.COMHandNameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.COMHandSeriesIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.COMHandNumberColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
             Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
             Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
-            Me.wallIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.WallNameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.WallSeriesIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-            Me.WallNumberColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.Panel1.SuspendLayout()
             CType(Me.wallPileGrid, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.Panel2.SuspendLayout()
@@ -140,6 +141,36 @@
             Me.wallPileGrid.Size = New System.Drawing.Size(242, 454)
             Me.wallPileGrid.TabIndex = 7
             '
+            'wallIDColumn
+            '
+            Me.wallIDColumn.DataPropertyName = "ID"
+            Me.wallIDColumn.HeaderText = "ID"
+            Me.wallIDColumn.Name = "wallIDColumn"
+            Me.wallIDColumn.ReadOnly = True
+            Me.wallIDColumn.Width = 41
+            '
+            'WallNameColumn
+            '
+            Me.WallNameColumn.DataPropertyName = "Name"
+            Me.WallNameColumn.HeaderText = "Name"
+            Me.WallNameColumn.Name = "WallNameColumn"
+            Me.WallNameColumn.ReadOnly = True
+            Me.WallNameColumn.Width = 59
+            '
+            'WallSeriesIDColumn
+            '
+            Me.WallSeriesIDColumn.HeaderText = "SeriesID"
+            Me.WallSeriesIDColumn.Name = "WallSeriesIDColumn"
+            Me.WallSeriesIDColumn.ReadOnly = True
+            Me.WallSeriesIDColumn.Width = 73
+            '
+            'WallNumberColumn
+            '
+            Me.WallNumberColumn.HeaderText = "Number"
+            Me.WallNumberColumn.Name = "WallNumberColumn"
+            Me.WallNumberColumn.ReadOnly = True
+            Me.WallNumberColumn.Width = 69
+            '
             'Panel2
             '
             Me.Panel2.Controls.Add(Me.humanHandGrid)
@@ -163,6 +194,36 @@
             Me.humanHandGrid.RowTemplate.Height = 21
             Me.humanHandGrid.Size = New System.Drawing.Size(253, 454)
             Me.humanHandGrid.TabIndex = 9
+            '
+            'HumanHandIDColumn
+            '
+            Me.HumanHandIDColumn.DataPropertyName = "ID"
+            Me.HumanHandIDColumn.HeaderText = "ID"
+            Me.HumanHandIDColumn.Name = "HumanHandIDColumn"
+            Me.HumanHandIDColumn.ReadOnly = True
+            Me.HumanHandIDColumn.Width = 41
+            '
+            'HumanHandNameColumn
+            '
+            Me.HumanHandNameColumn.DataPropertyName = "Name"
+            Me.HumanHandNameColumn.HeaderText = "Name"
+            Me.HumanHandNameColumn.Name = "HumanHandNameColumn"
+            Me.HumanHandNameColumn.ReadOnly = True
+            Me.HumanHandNameColumn.Width = 59
+            '
+            'HumanHandSeriesIDColumn
+            '
+            Me.HumanHandSeriesIDColumn.HeaderText = "SeriesID"
+            Me.HumanHandSeriesIDColumn.Name = "HumanHandSeriesIDColumn"
+            Me.HumanHandSeriesIDColumn.ReadOnly = True
+            Me.HumanHandSeriesIDColumn.Width = 73
+            '
+            'HumanHandNumberColumn
+            '
+            Me.HumanHandNumberColumn.HeaderText = "Number"
+            Me.HumanHandNumberColumn.Name = "HumanHandNumberColumn"
+            Me.HumanHandNumberColumn.ReadOnly = True
+            Me.HumanHandNumberColumn.Width = 69
             '
             'Label2
             '
@@ -197,6 +258,36 @@
             Me.comHandGrid.RowTemplate.Height = 21
             Me.comHandGrid.Size = New System.Drawing.Size(232, 454)
             Me.comHandGrid.TabIndex = 9
+            '
+            'COMHandIDColumn
+            '
+            Me.COMHandIDColumn.DataPropertyName = "ID"
+            Me.COMHandIDColumn.HeaderText = "ID"
+            Me.COMHandIDColumn.Name = "COMHandIDColumn"
+            Me.COMHandIDColumn.ReadOnly = True
+            Me.COMHandIDColumn.Width = 41
+            '
+            'COMHandNameColumn
+            '
+            Me.COMHandNameColumn.DataPropertyName = "Name"
+            Me.COMHandNameColumn.HeaderText = "Name"
+            Me.COMHandNameColumn.Name = "COMHandNameColumn"
+            Me.COMHandNameColumn.ReadOnly = True
+            Me.COMHandNameColumn.Width = 59
+            '
+            'COMHandSeriesIDColumn
+            '
+            Me.COMHandSeriesIDColumn.HeaderText = "SeriesID"
+            Me.COMHandSeriesIDColumn.Name = "COMHandSeriesIDColumn"
+            Me.COMHandSeriesIDColumn.ReadOnly = True
+            Me.COMHandSeriesIDColumn.Width = 73
+            '
+            'COMHandNumberColumn
+            '
+            Me.COMHandNumberColumn.HeaderText = "Number"
+            Me.COMHandNumberColumn.Name = "COMHandNumberColumn"
+            Me.COMHandNumberColumn.ReadOnly = True
+            Me.COMHandNumberColumn.Width = 69
             '
             'Label3
             '
@@ -353,66 +444,6 @@
             Me.Label6.TabIndex = 17
             Me.Label6.Text = "←行ヘッダをクリックすると行を選択できます。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "　行を選択した状態で下の「牌の移動先」ボタンを押すと" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "　牌を移動させることができます"
             '
-            'HumanHandIDColumn
-            '
-            Me.HumanHandIDColumn.DataPropertyName = "ID"
-            Me.HumanHandIDColumn.HeaderText = "ID"
-            Me.HumanHandIDColumn.Name = "HumanHandIDColumn"
-            Me.HumanHandIDColumn.ReadOnly = True
-            Me.HumanHandIDColumn.Width = 41
-            '
-            'HumanHandNameColumn
-            '
-            Me.HumanHandNameColumn.DataPropertyName = "Name"
-            Me.HumanHandNameColumn.HeaderText = "Name"
-            Me.HumanHandNameColumn.Name = "HumanHandNameColumn"
-            Me.HumanHandNameColumn.ReadOnly = True
-            Me.HumanHandNameColumn.Width = 59
-            '
-            'HumanHandSeriesIDColumn
-            '
-            Me.HumanHandSeriesIDColumn.HeaderText = "SeriesID"
-            Me.HumanHandSeriesIDColumn.Name = "HumanHandSeriesIDColumn"
-            Me.HumanHandSeriesIDColumn.ReadOnly = True
-            Me.HumanHandSeriesIDColumn.Width = 73
-            '
-            'HumanHandNumberColumn
-            '
-            Me.HumanHandNumberColumn.HeaderText = "Number"
-            Me.HumanHandNumberColumn.Name = "HumanHandNumberColumn"
-            Me.HumanHandNumberColumn.ReadOnly = True
-            Me.HumanHandNumberColumn.Width = 69
-            '
-            'COMHandIDColumn
-            '
-            Me.COMHandIDColumn.DataPropertyName = "ID"
-            Me.COMHandIDColumn.HeaderText = "ID"
-            Me.COMHandIDColumn.Name = "COMHandIDColumn"
-            Me.COMHandIDColumn.ReadOnly = True
-            Me.COMHandIDColumn.Width = 41
-            '
-            'COMHandNameColumn
-            '
-            Me.COMHandNameColumn.DataPropertyName = "Name"
-            Me.COMHandNameColumn.HeaderText = "Name"
-            Me.COMHandNameColumn.Name = "COMHandNameColumn"
-            Me.COMHandNameColumn.ReadOnly = True
-            Me.COMHandNameColumn.Width = 59
-            '
-            'COMHandSeriesIDColumn
-            '
-            Me.COMHandSeriesIDColumn.HeaderText = "SeriesID"
-            Me.COMHandSeriesIDColumn.Name = "COMHandSeriesIDColumn"
-            Me.COMHandSeriesIDColumn.ReadOnly = True
-            Me.COMHandSeriesIDColumn.Width = 73
-            '
-            'COMHandNumberColumn
-            '
-            Me.COMHandNumberColumn.HeaderText = "Number"
-            Me.COMHandNumberColumn.Name = "COMHandNumberColumn"
-            Me.COMHandNumberColumn.ReadOnly = True
-            Me.COMHandNumberColumn.Width = 69
-            '
             'DataGridViewImageColumn1
             '
             Me.DataGridViewImageColumn1.HeaderText = "Image"
@@ -440,36 +471,6 @@
             Me.DataGridViewImageColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
             Me.DataGridViewImageColumn3.Width = 60
             '
-            'wallIDColumn
-            '
-            Me.wallIDColumn.DataPropertyName = "ID"
-            Me.wallIDColumn.HeaderText = "ID"
-            Me.wallIDColumn.Name = "wallIDColumn"
-            Me.wallIDColumn.ReadOnly = True
-            Me.wallIDColumn.Width = 41
-            '
-            'WallNameColumn
-            '
-            Me.WallNameColumn.DataPropertyName = "Name"
-            Me.WallNameColumn.HeaderText = "Name"
-            Me.WallNameColumn.Name = "WallNameColumn"
-            Me.WallNameColumn.ReadOnly = True
-            Me.WallNameColumn.Width = 59
-            '
-            'WallSeriesIDColumn
-            '
-            Me.WallSeriesIDColumn.HeaderText = "SeriesID"
-            Me.WallSeriesIDColumn.Name = "WallSeriesIDColumn"
-            Me.WallSeriesIDColumn.ReadOnly = True
-            Me.WallSeriesIDColumn.Width = 73
-            '
-            'WallNumberColumn
-            '
-            Me.WallNumberColumn.HeaderText = "Number"
-            Me.WallNumberColumn.Name = "WallNumberColumn"
-            Me.WallNumberColumn.ReadOnly = True
-            Me.WallNumberColumn.Width = 69
-            '
             'GameParameterSettingForm
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -487,6 +488,7 @@
             Me.Controls.Add(Me.Panel3)
             Me.Controls.Add(Me.Panel2)
             Me.Controls.Add(Me.Panel1)
+            Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.Name = "GameParameterSettingForm"
             Me.Text = "GameParameterSettingForm"
             Me.Panel1.ResumeLayout(False)

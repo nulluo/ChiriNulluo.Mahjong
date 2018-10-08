@@ -53,6 +53,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Pictures\CureJong.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
@@ -396,6 +399,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pictures\CureJong.ico" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -498,6 +502,8 @@
     <Content Include="NLog_LICENSE.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\CureJongIcon.png" />
+    <Content Include="Pictures\CureJongIcon_32.png" />
     <Content Include="Pictures\tileIcon\FallenTileBase.png" />
     <None Include="Pictures\tileIcon\FallenTileBaseSpecial.png" />
     <Content Include="Pictures\tileIcon\StoodTileBase.png" />
