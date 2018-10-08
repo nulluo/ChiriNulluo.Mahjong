@@ -21,8 +21,12 @@ Namespace View
                 With _yaku
 
                     Dim _tiles As New Pile
-                    For Each _tile As String In .TileSet
-                        _tiles.Add(New PreCureCharacterTile(_tile, String.Empty, String.Empty, Nothing))
+                    For Each _tileID As String In .TileSet
+                        Dim _seriesID As String = _tileID.Substring(0, 2)
+                        Dim _number As String = _tileID.Substring(2, 2)
+                        Dim _tile As PreCureCharacterTile = _xmlAccess.GetCharacterDataFromXML(_seriesID, _number, Nothing, Nothing, True)(0)
+
+                        _tiles.Add(_tile)
                     Next
 
                     'UNIMPLEMENTED: 説明文の多言語化
