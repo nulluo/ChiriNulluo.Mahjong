@@ -152,20 +152,24 @@ Namespace Facade
                 End If
             End If
 
-            'COMの捨て牌をプレイヤーがポン可能か？
-            If _handCheckerPlayer.CanMakeTripletIfTargetTileAdded(_discardedTile) Then
-                _result = _result Or RoundState.PlayerCanPongTileDiscardedByCOM
+            'COMの捨て牌をプレイヤーがポン可能か？(残りのツモ数が1以下の場合、鳴いても捨て牌する場所がないので鳴けない事に注意)
+            If Me.HumanPlayer.RestDrawCount > 1 Then
+                If _handCheckerPlayer.CanMakeTripletIfTargetTileAdded(_discardedTile) Then
+                    _result = _result Or RoundState.PlayerCanPongTileDiscardedByCOM
+                End If
             End If
 
-            'COMの捨て牌をプレイヤーがチー可能か？
-            With MatchManagerController.GetInstance.MatchManager.RoundManager
-                .PossibleTatsuListWhichCanMakeChowIfDiscaredTileAdded =
+            'COMの捨て牌をプレイヤーがチー可能か？(残りのツモ数が1以下の場合、鳴いても捨て牌する場所がないので鳴けない事に注意)
+            If Me.HumanPlayer.RestDrawCount > 1 Then
+                With MatchManagerController.GetInstance.MatchManager.RoundManager
+                    .PossibleTatsuListWhichCanMakeChowIfDiscaredTileAdded =
                 _handCheckerPlayer.GetPossibleTatsuListWhichCanMakeChowIfTargetTileAdded(_discardedTile)
-                If .PossibleTatsuListWhichCanMakeChowIfDiscaredTileAdded.Count > 0 Then
-                    _result = _result Or RoundState.PlayerCanChowTileDiscardedByCOM
-                End If
+                    If .PossibleTatsuListWhichCanMakeChowIfDiscaredTileAdded.Count > 0 Then
+                        _result = _result Or RoundState.PlayerCanChowTileDiscardedByCOM
+                    End If
+                End With
+            End If
 
-            End With
             Me.Result = _result
 
             Return _discardedTile

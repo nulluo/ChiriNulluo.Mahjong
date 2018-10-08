@@ -28,7 +28,7 @@ Namespace Tiles
             '※ 牌アイコンはリソースには含めない。(dllのサイズ肥大化を防ぐため)
             Me.AllCharacterTilesIDList.ForEach(Sub(x) TileImages.Add(x,
                        New Bitmap(Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
-                                         Constants.IconDiffImageDir, String.Format("Precure{0:0000}.png", 0)))))
+                                         Constants.IconDiffImageDir, String.Format("Precure{0:0000}.png", x)))))
 
             'Me.InitializeTileListForNewRound()
 
