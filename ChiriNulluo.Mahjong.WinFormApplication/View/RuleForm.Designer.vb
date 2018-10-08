@@ -131,6 +131,7 @@
             Me.ClientSize = New System.Drawing.Size(726, 552)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.Label5)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
             Me.Name = "RuleForm"
             Me.Text = "ルール説明"
             Me.GroupBox1.ResumeLayout(False)

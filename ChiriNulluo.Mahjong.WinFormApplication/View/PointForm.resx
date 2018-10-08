@@ -117,13 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 21</value>
+  </data>
   <data name="&gt;&gt;playerNameField.Name" xml:space="preserve">
     <value>playerNameField</value>
   </data>
   <data name="&gt;&gt;TwitterShareButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="DataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 150</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="&gt;&gt;DataGridView1.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="TwitterShareButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
   <data name="&gt;&gt;HorizontalRevealedHandPanel2.Name" xml:space="preserve">
     <value>HorizontalRevealedHandPanel2</value>
@@ -152,7 +158,7 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HorizontalRevealedHandPanel1.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
@@ -161,11 +167,11 @@
   <data name="HorizontalHandPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 30</value>
   </data>
-  <data name="HorizontalRevealedHandPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 30</value>
-  </data>
   <data name="HorizontalRevealedHandPanel0.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 80</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;playerNameField.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -183,8 +189,8 @@
   <data name="&gt;&gt;HorizontalHandPanel1.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>対戦結果表示</value>
+  <data name="&gt;&gt;pointField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>579, 219</value>
@@ -201,14 +207,14 @@
   <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>447, 150</value>
   </data>
-  <data name="&gt;&gt;HorizontalRevealedHandPanel1.Name" xml:space="preserve">
-    <value>HorizontalRevealedHandPanel1</value>
+  <data name="&gt;&gt;DataGridView1.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
   </data>
-  <data name="&gt;&gt;YakuNameColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="NextRoundButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>671, 436</value>
   </data>
   <data name="&gt;&gt;NextRoundButton.Name" xml:space="preserve">
     <value>NextRoundButton</value>
@@ -235,7 +241,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HorizontalRevealedHandPanel3.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -249,8 +255,8 @@
   <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="HorizontalRevealedHandPanel0.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -262,7 +268,7 @@
     <value>HorizontalHandPanel1</value>
   </data>
   <data name="&gt;&gt;HorizontalRevealedHandPanel0.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="pointField.Font" type="System.Drawing.Font, System.Drawing">
     <value>HG丸ｺﾞｼｯｸM-PRO, 15.75pt, style=Bold</value>
@@ -276,8 +282,8 @@
   <data name="pointField.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
-    <value>Label3</value>
+  <data name="HorizontalRevealedHandPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 30</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 21</value>
@@ -291,8 +297,8 @@
   <data name="&gt;&gt;HorizontalRevealedHandPanel0.Name" xml:space="preserve">
     <value>HorizontalRevealedHandPanel0</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>PointForm</value>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
   </data>
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -320,6 +326,9 @@
   </data>
   <data name="HorizontalHandPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>720, 80</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>814, 522</value>
   </data>
   <data name="HorizontalRevealedHandPanel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 80</value>
@@ -367,7 +376,7 @@
     <value>Button1</value>
   </data>
   <data name="&gt;&gt;HorizontalRevealedHandPanel2.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;HorizontalRevealedHandPanel0.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -377,9 +386,6 @@
   </data>
   <data name="HorizontalRevealedHandPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>485, 30</value>
-  </data>
-  <data name="NextRoundButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>671, 436</value>
   </data>
   <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -396,9 +402,6 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>PLAYER</value>
   </data>
-  <data name="&gt;&gt;DataGridView1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="&gt;&gt;HorizontalRevealedHandPanel3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -411,8 +414,8 @@
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>579, 150</value>
   </data>
-  <data name="&gt;&gt;pointField.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;HorizontalRevealedHandPanel1.Name" xml:space="preserve">
+    <value>HorizontalRevealedHandPanel1</value>
   </data>
   <data name="pointField.Location" type="System.Drawing.Point, System.Drawing">
     <value>619, 240</value>
@@ -420,11 +423,11 @@
   <data name="&gt;&gt;HorizontalRevealedHandPanel2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;HorizontalRevealedHandPanel3.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PointForm</value>
   </data>
   <data name="playerNameField.Text" xml:space="preserve">
     <value>Label1</value>
@@ -456,6 +459,9 @@
   <data name="YakuPointColumn.Width" type="System.Int32, mscorlib">
     <value>56</value>
   </data>
+  <data name="&gt;&gt;YakuNameColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 120</value>
   </data>
@@ -468,6 +474,9 @@
   <data name="&gt;&gt;Label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="TwitterShareButton.Text" xml:space="preserve">
+    <value>ツイートする！</value>
+  </data>
   <data name="TwitterShareButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>671, 307</value>
   </data>
@@ -477,8 +486,8 @@
   <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>HG丸ｺﾞｼｯｸM-PRO, 15.75pt</value>
   </data>
-  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>対戦結果表示</value>
   </data>
   <data name="&gt;&gt;HorizontalHandPanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -486,14 +495,14 @@
   <data name="playerNameField.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="ManualModeField.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 16</value>
   </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 21</value>
-  </data>
-  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
   </data>
   <data name="&gt;&gt;YakuPointColumn.Name" xml:space="preserve">
     <value>YakuPointColumn</value>
@@ -529,7 +538,7 @@
     <value>TwitterShareButton</value>
   </data>
   <data name="&gt;&gt;HorizontalHandPanel1.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.HorizontalHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="HorizontalHandPanel1.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>720, 80</value>
@@ -543,7 +552,7 @@
   <data name="NextRoundButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 35</value>
   </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="ManualModeField.TabIndex" type="System.Int32, mscorlib">
@@ -573,7 +582,4 @@
   <metadata name="YakuNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="TwitterShareButton.Text" xml:space="preserve">
-    <value>ツイートする！</value>
-  </data>
 </root>

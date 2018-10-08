@@ -179,6 +179,7 @@
             Me.Controls.Add(Me.HorizontalRevealedHandPanel1)
             Me.Controls.Add(Me.HorizontalRevealedHandPanel0)
             Me.Controls.Add(Me.HorizontalHandPanel1)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
             Me.Name = "PointForm"
             CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

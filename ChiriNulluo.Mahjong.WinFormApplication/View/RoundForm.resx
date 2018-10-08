@@ -941,7 +941,7 @@
     <value>openRuleFormButton</value>
   </data>
   <data name="&gt;&gt;openRuleFormButton.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.RichButton, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.RichButton, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;openRuleFormButton.Parent" xml:space="preserve">
     <value>$this</value>
@@ -961,11 +961,14 @@
   <data name="RiichiButton.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
+  <data name="RiichiButton.Text" xml:space="preserve">
+    <value>リーチ</value>
+  </data>
   <data name="&gt;&gt;RiichiButton.Name" xml:space="preserve">
     <value>RiichiButton</value>
   </data>
   <data name="&gt;&gt;RiichiButton.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.RichButton, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.RichButton, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RiichiButton.Parent" xml:space="preserve">
     <value>$this</value>
@@ -975,6 +978,12 @@
   </data>
   <data name="humanPlayerDiscardedPilePanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 438</value>
+  </data>
+  <data name="humanPlayerDiscardedPilePanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1152, 140</value>
+  </data>
+  <data name="humanPlayerDiscardedPilePanel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1152, 140</value>
   </data>
   <data name="humanPlayerDiscardedPilePanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1152, 140</value>
@@ -986,7 +995,7 @@
     <value>humanPlayerDiscardedPilePanel</value>
   </data>
   <data name="&gt;&gt;humanPlayerDiscardedPilePanel.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalDiscardedPilePanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalDiscardedPilePanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;humanPlayerDiscardedPilePanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1007,7 +1016,7 @@
     <value>comPlayerDiscardedPilePanel</value>
   </data>
   <data name="&gt;&gt;comPlayerDiscardedPilePanel.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalDiscardedPilePanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalDiscardedPilePanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;comPlayerDiscardedPilePanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1034,7 +1043,7 @@
     <value>comPlayerHandPanel</value>
   </data>
   <data name="&gt;&gt;comPlayerHandPanel.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;comPlayerHandPanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1055,7 +1064,7 @@
     <value>horizontalRevealedHandPanel3</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel3.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1082,7 +1091,7 @@
     <value>humanPlayerHandPanel</value>
   </data>
   <data name="&gt;&gt;humanPlayerHandPanel.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;humanPlayerHandPanel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1103,7 +1112,7 @@
     <value>horizontalRevealedHandPanel2</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel2.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1124,7 +1133,7 @@
     <value>horizontalRevealedHandPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel1.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1145,7 +1154,7 @@
     <value>horizontalRevealedHandPanel0</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel0.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel0.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1169,7 +1178,7 @@
     <value>TileDetailInfoPanel1</value>
   </data>
   <data name="&gt;&gt;TileDetailInfoPanel1.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.TileDetailInfoPanel, CureJong, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.TileDetailInfoPanel, CureJongMain, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TileDetailInfoPanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1189,6 +1198,15 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1176, 681</value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1192, 720</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1192, 705</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>Manual</value>
   </data>
@@ -1206,8 +1224,5 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RiichiButton.Text" xml:space="preserve">
-    <value>リーチ</value>
   </data>
 </root>

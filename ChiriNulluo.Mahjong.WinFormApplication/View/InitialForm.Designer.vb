@@ -44,7 +44,7 @@
             Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DebugToolStripMenuItem, Me.設定ToolStripMenuItem})
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
-            Me.MenuStrip1.Size = New System.Drawing.Size(300, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(316, 24)
             Me.MenuStrip1.TabIndex = 1
             Me.MenuStrip1.Text = "MenuStrip1"
             '
@@ -138,6 +138,7 @@
             Me.Controls.Add(Me.openRuleFormButton)
             Me.Controls.Add(Me.GameStartButton)
             Me.Controls.Add(Me.MenuStrip1)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
             Me.MainMenuStrip = Me.MenuStrip1
             Me.MaximizeBox = False
             Me.MaximumSize = New System.Drawing.Size(316, 363)

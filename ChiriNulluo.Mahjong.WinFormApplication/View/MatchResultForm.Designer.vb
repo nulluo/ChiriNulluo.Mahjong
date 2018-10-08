@@ -107,6 +107,7 @@
             Me.Controls.Add(Me.Label1)
             Me.Controls.Add(Me.talkWindowPictureBox)
             Me.Controls.Add(Me.PictureBox1)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
             Me.Name = "MatchResultForm"
             CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.talkWindowPictureBox, System.ComponentModel.ISupportInitialize).EndInit()

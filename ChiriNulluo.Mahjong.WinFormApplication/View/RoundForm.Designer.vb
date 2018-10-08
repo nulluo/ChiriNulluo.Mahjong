@@ -351,6 +351,7 @@
             Me.Controls.Add(Me.horizontalRevealedHandPanel1)
             Me.Controls.Add(Me.horizontalRevealedHandPanel0)
             Me.Controls.Add(Me.TileDetailInfoPanel1)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
             Me.Name = "RoundForm"
             CType(Me.BonusTIlePicture0, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.BonusTIlePicture1, System.ComponentModel.ISupportInitialize).EndInit()

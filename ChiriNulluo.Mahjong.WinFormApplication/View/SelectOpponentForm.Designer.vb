@@ -77,7 +77,7 @@
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-            Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131.0!))
+            Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134.0!))
             Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 3)
             Me.TableLayoutPanel1.Controls.Add(Me.ButtonMirai, 1, 2)
             Me.TableLayoutPanel1.Controls.Add(Me.ButtonKotoha, 1, 2)
@@ -180,7 +180,7 @@
             Me.Label7.ForeColor = System.Drawing.Color.Snow
             Me.Label7.Location = New System.Drawing.Point(315, 129)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(125, 100)
+            Me.Label7.Size = New System.Drawing.Size(128, 100)
             Me.Label7.TabIndex = 24
             Me.Label7.Text = "?"
             Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -193,7 +193,7 @@
             Me.Label5.ForeColor = System.Drawing.Color.Snow
             Me.Label5.Location = New System.Drawing.Point(315, 106)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(125, 20)
+            Me.Label5.Size = New System.Drawing.Size(128, 20)
             Me.Label5.TabIndex = 22
             Me.Label5.Text = "?"
             Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -219,7 +219,7 @@
             Me.Label1.ForeColor = System.Drawing.Color.Snow
             Me.Label1.Location = New System.Drawing.Point(315, 3)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(125, 100)
+            Me.Label1.Size = New System.Drawing.Size(128, 100)
             Me.Label1.TabIndex = 20
             Me.Label1.Text = "?"
             Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -276,6 +276,7 @@
             Me.ClientSize = New System.Drawing.Size(435, 333)
             Me.Controls.Add(Me.ManualModeField)
             Me.Controls.Add(Me.TableLayoutPanel1)
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
             Me.Name = "SelectOpponentForm"
             Me.Text = "対戦相手選択"
             Me.TableLayoutPanel1.ResumeLayout(False)
