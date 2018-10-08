@@ -34,6 +34,8 @@
             Me.Button1 = New System.Windows.Forms.Button()
             Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
             Me.GameStartButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
+            Me.ヘルプHToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.VersionInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,10 +43,10 @@
             '
             'MenuStrip1
             '
-            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DebugToolStripMenuItem, Me.設定ToolStripMenuItem})
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DebugToolStripMenuItem, Me.設定ToolStripMenuItem, Me.ヘルプHToolStripMenuItem})
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
-            Me.MenuStrip1.Size = New System.Drawing.Size(316, 24)
+            Me.MenuStrip1.Size = New System.Drawing.Size(300, 24)
             Me.MenuStrip1.TabIndex = 1
             Me.MenuStrip1.Text = "MenuStrip1"
             '
@@ -65,21 +67,21 @@
             '
             Me.設定ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PlaysBGMMenuItem, Me.PlaysSEMenuItem})
             Me.設定ToolStripMenuItem.Name = "設定ToolStripMenuItem"
-            Me.設定ToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
-            Me.設定ToolStripMenuItem.Text = "設定"
+            Me.設定ToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
+            Me.設定ToolStripMenuItem.Text = "設定(&O)"
             '
             'PlaysBGMMenuItem
             '
             Me.PlaysBGMMenuItem.CheckOnClick = True
             Me.PlaysBGMMenuItem.Name = "PlaysBGMMenuItem"
-            Me.PlaysBGMMenuItem.Size = New System.Drawing.Size(140, 22)
+            Me.PlaysBGMMenuItem.Size = New System.Drawing.Size(152, 22)
             Me.PlaysBGMMenuItem.Text = "BGMを鳴らす"
             '
             'PlaysSEMenuItem
             '
             Me.PlaysSEMenuItem.CheckOnClick = True
             Me.PlaysSEMenuItem.Name = "PlaysSEMenuItem"
-            Me.PlaysSEMenuItem.Size = New System.Drawing.Size(140, 22)
+            Me.PlaysSEMenuItem.Size = New System.Drawing.Size(152, 22)
             Me.PlaysSEMenuItem.Text = "SEを鳴らす"
             '
             'TwitterShareButton
@@ -126,6 +128,19 @@
             Me.GameStartButton.TabIndex = 2
             Me.GameStartButton.TabStop = False
             '
+            'ヘルプHToolStripMenuItem
+            '
+            Me.ヘルプHToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VersionInfoToolStripMenuItem})
+            Me.ヘルプHToolStripMenuItem.Name = "ヘルプHToolStripMenuItem"
+            Me.ヘルプHToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
+            Me.ヘルプHToolStripMenuItem.Text = "ヘルプ(&H)"
+            '
+            'バージョン情報ToolStripMenuItem
+            '
+            Me.VersionInfoToolStripMenuItem.Name = "バージョン情報ToolStripMenuItem"
+            Me.VersionInfoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.VersionInfoToolStripMenuItem.Text = "バージョン情報"
+            '
             'InitialForm
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -164,5 +179,7 @@
         Friend WithEvents openRuleFormButton As RichButton
         Friend WithEvents TwitterShareButton As Button
         Friend WithEvents Button1 As Button
+        Friend WithEvents ヘルプHToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents VersionInfoToolStripMenuItem As ToolStripMenuItem
     End Class
 End Namespace

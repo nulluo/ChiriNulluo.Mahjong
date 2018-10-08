@@ -261,6 +261,12 @@
     <Compile Include="View\TwitterShareForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\VersionInfoForm.Designer.vb">
+      <DependentUpon>VersionInfoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\VersionInfoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\WallPIleForm.Designer.vb">
       <DependentUpon>WallPIleForm.vb</DependentUpon>
     </Compile>
@@ -355,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\TwitterShareForm.resx">
       <DependentUpon>TwitterShareForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VersionInfoForm.resx">
+      <DependentUpon>VersionInfoForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\WallPIleForm.resx">
       <DependentUpon>WallPIleForm.vb</DependentUpon>
@@ -493,6 +502,7 @@
     <None Include="Pictures\tileIcon\FallenTileBaseSpecial.png" />
     <Content Include="Pictures\tileIcon\StoodTileBase.png" />
     <None Include="Pictures\tileIcon\StoodTileBaseSpecial.png" />
+    <None Include="Pictures\tileIcon\TileStood0101.png" />
     <Content Include="Pictures\tileIcon\TileStoodBack.png" />
     <None Include="Resources\Button_0.gif" />
     <Content Include="Resources\InitialForm_Back.gif" />
