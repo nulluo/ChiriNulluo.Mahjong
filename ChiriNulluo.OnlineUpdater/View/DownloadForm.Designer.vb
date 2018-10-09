@@ -25,6 +25,7 @@ Namespace View
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+            Me.CancelButton = New System.Windows.Forms.Button()
             CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
@@ -38,11 +39,21 @@ Namespace View
             Me.PictureBox1.TabIndex = 1
             Me.PictureBox1.TabStop = False
             '
+            'CancelButton
+            '
+            Me.CancelButton.Location = New System.Drawing.Point(442, 26)
+            Me.CancelButton.Name = "CancelButton"
+            Me.CancelButton.Size = New System.Drawing.Size(75, 23)
+            Me.CancelButton.TabIndex = 2
+            Me.CancelButton.Text = "キャンセル"
+            Me.CancelButton.UseVisualStyleBackColor = True
+            '
             'DownloadForm
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(529, 61)
+            Me.Controls.Add(Me.CancelButton)
             Me.Controls.Add(Me.PictureBox1)
             Me.Name = "DownloadForm"
             Me.Text = "しばらくお待ちください"
@@ -52,5 +63,6 @@ Namespace View
         End Sub
 
         Friend WithEvents PictureBox1 As PictureBox
+        Friend WithEvents CancelButton As Button
     End Class
 End Namespace

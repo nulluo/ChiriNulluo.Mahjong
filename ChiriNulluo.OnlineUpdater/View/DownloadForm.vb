@@ -22,6 +22,10 @@ Namespace View
 
         End Function
 
+        Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
+            Launcher.Execute()
+
+        End Sub
     End Class
 
 End Namespace
