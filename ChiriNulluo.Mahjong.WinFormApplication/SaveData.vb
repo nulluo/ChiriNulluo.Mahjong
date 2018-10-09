@@ -35,7 +35,8 @@ Public Class SaveData
     ''' セーブデータファイルを初期化する。実行環境にセーブデータファイルが存在しなければ新規作成する。
     ''' </summary>
     Public Sub InitializeSaveDataFile()
-        If Not File.Exists(FileName) Then
+        If Not File.Exists(Me.AddExecutingBinaryDirName(FileName)) Then
+            MessageBox.Show("SaveDataFile存在しないと判定された")
             Me.CreateNewSaveDataFile()
         End If
 
