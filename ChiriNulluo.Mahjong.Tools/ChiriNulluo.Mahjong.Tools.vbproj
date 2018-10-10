@@ -87,6 +87,12 @@
     <Compile Include="View\CreateReleaseXMLForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\DisplayTilesForm.Designer.vb">
+      <DependentUpon>DisplayTilesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\DisplayTilesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\InitialForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="View\SelectTilesForm.Designer.vb">
+      <DependentUpon>SelectTilesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\SelectTilesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -120,8 +132,14 @@
     <EmbeddedResource Include="View\CreateReleaseXMLForm.resx">
       <DependentUpon>CreateReleaseXMLForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DisplayTilesForm.resx">
+      <DependentUpon>DisplayTilesForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\InitialForm.resx">
       <DependentUpon>InitialForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SelectTilesForm.resx">
+      <DependentUpon>SelectTilesForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +159,20 @@
     <Content Include="UpdateIDTemplate.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChiriNulluo.Mahjong.Core\ChiriNulluo.Mahjong.Core.vbproj">
+      <Project>{6f1b2390-4809-4d03-a4f5-7733364165d0}</Project>
+      <Name>ChiriNulluo.Mahjong.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChiriNulluo.Mahjong.Precure\ChiriNulluo.Mahjong.Precure.vbproj">
+      <Project>{5f0056cc-9bff-4dfd-8acc-a93a0dc39b8c}</Project>
+      <Name>ChiriNulluo.Mahjong.Precure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChiriNulluo.Mahjong.WinFormApplication\ChiriNulluo.Mahjong.WinFormApplication.vbproj">
+      <Project>{b4feebb1-e103-4477-b436-080b99e1f5fc}</Project>
+      <Name>ChiriNulluo.Mahjong.WinFormApplication</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

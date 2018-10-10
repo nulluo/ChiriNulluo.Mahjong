@@ -24,30 +24,42 @@
         'コード エディターを使って変更しないでください。
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Me.Button1 = New System.Windows.Forms.Button()
+            Me.OpenCreateReleaseXMLButton = New System.Windows.Forms.Button()
+            Me.OpenSelectTilesButton = New System.Windows.Forms.Button()
             Me.SuspendLayout()
             '
-            'Button1
+            'OpenCreateReleaseXMLButton
             '
-            Me.Button1.Location = New System.Drawing.Point(69, 40)
-            Me.Button1.Name = "Button1"
-            Me.Button1.Size = New System.Drawing.Size(125, 34)
-            Me.Button1.TabIndex = 0
-            Me.Button1.Text = "CreateReleaseXML"
-            Me.Button1.UseVisualStyleBackColor = True
+            Me.OpenCreateReleaseXMLButton.Location = New System.Drawing.Point(69, 40)
+            Me.OpenCreateReleaseXMLButton.Name = "OpenCreateReleaseXMLButton"
+            Me.OpenCreateReleaseXMLButton.Size = New System.Drawing.Size(125, 34)
+            Me.OpenCreateReleaseXMLButton.TabIndex = 0
+            Me.OpenCreateReleaseXMLButton.Text = "CreateReleaseXML"
+            Me.OpenCreateReleaseXMLButton.UseVisualStyleBackColor = True
+            '
+            'OpenSelectTilesButton
+            '
+            Me.OpenSelectTilesButton.Location = New System.Drawing.Point(69, 95)
+            Me.OpenSelectTilesButton.Name = "OpenSelectTilesButton"
+            Me.OpenSelectTilesButton.Size = New System.Drawing.Size(125, 35)
+            Me.OpenSelectTilesButton.TabIndex = 1
+            Me.OpenSelectTilesButton.Text = "DisplayTilesButton"
+            Me.OpenSelectTilesButton.UseVisualStyleBackColor = True
             '
             'Form1
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(284, 261)
-            Me.Controls.Add(Me.Button1)
+            Me.Controls.Add(Me.OpenSelectTilesButton)
+            Me.Controls.Add(Me.OpenCreateReleaseXMLButton)
             Me.Name = "Form1"
             Me.Text = "Form1"
             Me.ResumeLayout(False)
 
         End Sub
 
-        Friend WithEvents Button1 As Button
+        Friend WithEvents OpenCreateReleaseXMLButton As Button
+        Friend WithEvents OpenSelectTilesButton As Button
     End Class
 End Namespace
