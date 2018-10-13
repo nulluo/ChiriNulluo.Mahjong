@@ -399,6 +399,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pictures\3DVersion256.png" />
+    <Content Include="Pictures\3DVersion32.png" />
+    <Content Include="Pictures\3DVersion48.png" />
+    <Content Include="Pictures\3DVersion64.png" />
+    <Content Include="Pictures\CureJong2.ico" />
     <Content Include="Pictures\CureJong.ico" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
