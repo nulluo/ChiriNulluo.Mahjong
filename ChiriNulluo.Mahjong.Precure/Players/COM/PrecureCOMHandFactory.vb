@@ -12,9 +12,9 @@ Namespace Players.COM
 #Region "確率パラメタ"
 
         ''' <summary>
-        ''' 配牌時大技（MaxHeart/SS三暗刻）が入っている確率
+        ''' 配牌時大技（青キュア一色）が入っている確率
         ''' </summary>
-        Private Const MHAndSSSanAnkoRate As Integer = 3
+        Private Const AllBlueCureRate As Integer = 99
 
         ''' <summary>
         ''' 配牌時、テンパイ手が入っている確率
@@ -63,9 +63,9 @@ Namespace Players.COM
             Dim _randomNumber As Integer = (New Random()).Next(100)
 
             Select Case _randomNumber
-                Case 0 To MHAndSSSanAnkoRate
-                    Return Me.GetMaxHeartSplashStarSanAnko()
-                Case MHAndSSSanAnkoRate + 1 To MHAndSSSanAnkoRate + ReadyHandStartRate
+                Case 0 To AllBlueCureRate
+                    Return Me.GetAllBlueCures()
+                Case AllBlueCureRate + 1 To AllBlueCureRate + ReadyHandStartRate
                     Return Me.GetOrthodoxReadyHandAtRandom
                 Case Else
                     Return Nothing
@@ -73,22 +73,22 @@ Namespace Players.COM
 
         End Function
 
-        Private Function GetMaxHeartSplashStarSanAnko() As List(Of String)
+        Private Function GetAllBlueCures() As List(Of String)
             Dim _idList As New List(Of String)
             With _idList
-                .Add("0101")
-                .Add("0101")
-                .Add("0101")
-                .Add("0102")
-                .Add("0102")
-                .Add("0102")
-                .Add("0103")
-                .Add("0103")
-                .Add("0103")
-                .Add("0301")
-                .Add("0301")
-                .Add("0302")
-                .Add("0302")
+                .Add("0305")
+                .Add("0305")
+                .Add("0305")
+                .Add("0502")
+                .Add("0502")
+                .Add("0502")
+                .Add("0705")
+                .Add("0705")
+                .Add("0705")
+                .Add("0902")
+                .Add("0902")
+                .Add("1302")
+                .Add("1302")
             End With
             Return _idList
 
