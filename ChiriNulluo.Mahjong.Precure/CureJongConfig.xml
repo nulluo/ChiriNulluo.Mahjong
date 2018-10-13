@@ -818,6 +818,7 @@
         <ID>1001</ID>
         <ID>1101</ID>
         <ID>1201</ID>
+        <ID>1301</ID>
       </TileSet>  
     </Yaku> 
     <Yaku>
@@ -834,6 +835,7 @@
         <ID>0902</ID>
         <ID>1002</ID>
         <ID>1203</ID>
+        <ID>1302</ID>
       </TileSet>  
     </Yaku> 
     <Yaku>
@@ -864,6 +866,7 @@
         <ID>0903</ID>
         <ID>1003</ID>
         <ID>1202</ID>
+        <ID>1303</ID>
       </TileSet>
     </Yaku>
     <Yaku>
