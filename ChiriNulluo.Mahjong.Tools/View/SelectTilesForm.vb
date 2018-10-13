@@ -10,9 +10,8 @@ Namespace View
 
             Dim precureList As List(Of PreCureCharacterTile) = Me.PrecureXMLAccess.GetCharacterDataFromXML(Nothing, Nothing, Nothing, Nothing, True)
 
-            Dim query = From x In precureList
-                        Order By x.ID
-                        Select New With {.Value = x, .Display = x.ID & " : " & x.Name}
+            Dim query = precureList.OrderBy(Function(x) x.ID).Select(
+                            Function(x) New With {.Value = x, .Display = x.ID & " : " & x.Name})
 
             With Me.PrecuresComboBox
                 .DataSource = query.ToList

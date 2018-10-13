@@ -79,14 +79,14 @@
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(284, 261)
+            Me.ClientSize = New System.Drawing.Size(298, 261)
             Me.Controls.Add(Me.Button1)
             Me.Controls.Add(Me.RemoveButton)
             Me.Controls.Add(Me.AddTIleButton)
             Me.Controls.Add(Me.PrecuresComboBox)
             Me.Controls.Add(Me.ListBox1)
             Me.Name = "SelectTilesForm"
-            Me.Text = "SelectTilesForm"
+            Me.Text = "並べて表示する牌を選んで"
             Me.ResumeLayout(False)
 
         End Sub
