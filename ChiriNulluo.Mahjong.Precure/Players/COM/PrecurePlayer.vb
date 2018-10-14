@@ -11,7 +11,7 @@ Namespace Players
             Me.ID = id
             Me.DisplayName = displayName
 
-            Me.COMStrategy = New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount, COMDiscardTileStrategy.ToDecreaseShantenCount, 20)
+            Me.COMStrategy = New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount, New COMHaipaiStrategy(), 20)
         End Sub
 
         Public Sub New(id As String, displayName As String, comstrategy As COMStrategy)

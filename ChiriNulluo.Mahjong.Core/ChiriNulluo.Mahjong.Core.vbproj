@@ -88,9 +88,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Players\COM\COMDiscardTileStrategy.vb" />
+    <Compile Include="Players\COM\COMHaipaiStrategy.vb" />
     <Compile Include="Players\COM\COMPlayer.vb" />
     <Compile Include="Players\COM\COMPlayerAlgorithm.vb" />
     <Compile Include="Players\COM\COMStrategy.vb" />
+    <Compile Include="Players\COM\COMHaipaiTiles.vb" />
     <Compile Include="Players\HumanPlayer.vb" />
     <Compile Include="Players\Player.vb" />
     <Compile Include="PropertyComparer.vb" />
