@@ -1,33 +1,27 @@
 ﻿Namespace Players.COM
-    Public Enum COMStrategy
+    Public Class COMStrategy
 
-        'UNIMPLEMENTED：ふるまいは「毎回ツモギリする」になっているので「Random」という名称は不適切では？
+        Public Sub New(comDiscardTileStrategy As COMDiscardTileStrategy)
+            Me.COMDiscardTileStrategy = comDiscardTileStrategy
+            Me.HaipaiStrategy = comDiscardTileStrategy
+            Me.RiichiRate = 20
+        End Sub
+
+        Public Sub New(comDiscardTileStrategy As COMDiscardTileStrategy, haipaiStrategy As COMDiscardTileStrategy, riichiRate As Integer)
+            Me.COMDiscardTileStrategy = comDiscardTileStrategy
+            Me.HaipaiStrategy = haipaiStrategy
+            Me.RiichiRate = riichiRate
+        End Sub
+
+        Public Property COMDiscardTileStrategy As COMDiscardTileStrategy
+
+        Public Property HaipaiStrategy As COMDiscardTileStrategy
+
         ''' <summary>
-        ''' 完全にランダムに牌を切る
+        ''' テンパイした時に立直をかける確率(単位:%)
         ''' </summary>
-        Random
+        ''' <returns>テンパイした時に立直をかける確率(単位:%)</returns>
+        Public Property RiichiRate As Integer
 
-        ''' <summary>
-        ''' テンパイで配牌された後、残りの1枚を引くことを目指す
-        ''' </summary>
-        ToCompleteDealtReadyHand
-
-        ''' <summary>
-        ''' イーシャンテンで配牌された後、残りの2枚を引くことを目指す
-        ''' </summary>
-        ToCompleteDealtHandOneStepAwayFromReady
-
-        ''' <summary>
-        ''' 向聴数が減少する場合、牌を捨ててアガリを目指す
-        ''' </summary>
-        ToDecreaseShantenCount
-
-        'UNIMPLEMENTED: デバッグ用のモードなのでリリースコードに残すべきかは要検討
-        ''' <summary>
-        ''' アガリ牌が出たり、ツモったりしても一度目は見逃して、わざとフリテンになる。
-        ''' それ以外は<c>ToDecreaseShantenCount</c>と同じ挙動をする。(COMのフリテンテスト専用)
-        ''' </summary>
-        ToBeFritenForTest
-
-    End Enum
+    End Class
 End Namespace

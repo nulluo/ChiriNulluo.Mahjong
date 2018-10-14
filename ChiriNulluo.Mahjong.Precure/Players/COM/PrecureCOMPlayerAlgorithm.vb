@@ -12,7 +12,10 @@ Namespace Players.COM
         Private _comPlayer As COMPlayer
         Private _roundManager As RoundManager
 
-        Public Sub New(comPlayer As COMPlayer, roundManager As RoundManager, Optional strategy As COMStrategy = COMStrategy.Random)
+        Public Sub New(comPlayer As COMPlayer, roundManager As RoundManager, Optional strategy As COMStrategy = Nothing)
+            If strategy Is Nothing Then
+                strategy = New COMStrategy(COMDiscardTileStrategy.Random)
+            End If
             _strategy = strategy
             _comPlayer = comPlayer
             _roundManager = roundManager
@@ -20,13 +23,13 @@ Namespace Players.COM
 
         Public Function ChooseDiscardTile() As Tile Implements COMPlayerAlgorithm.ChooseDiscardTile
 
-            Select Case _strategy
-                Case COMStrategy.Random
+            Select Case _strategy.COMDiscardTileStrategy
+                Case COMDiscardTileStrategy.Random
                     '常に末尾の牌を切る
                     Return _comPlayer.Hand.MainTiles.Last
-                Case COMStrategy.ToCompleteDealtReadyHand
+                Case COMDiscardTileStrategy.ToCompleteDealtReadyHand
                     Return _comPlayer.Hand.TileDrawnBefore
-                Case COMStrategy.ToCompleteDealtHandOneStepAwayFromReady
+                Case COMDiscardTileStrategy.ToCompleteDealtHandOneStepAwayFromReady
                     Dim _handChecker As New PrecureHandChecker(_comPlayer.Hand)
 
                     'テンパイになっている時はツモギリ
@@ -44,7 +47,7 @@ Namespace Players.COM
                         End If
                     End If
 
-                Case COMStrategy.ToDecreaseShantenCount, COMStrategy.ToBeFritenForTest
+                Case COMDiscardTileStrategy.ToDecreaseShantenCount, COMDiscardTileStrategy.ToBeFritenForTest
                     'テンパイになっている時はツモギリ
                     Dim _handChecker As New PrecureHandChecker(_comPlayer.Hand)
                     If _handChecker.IsReady Then
@@ -80,20 +83,20 @@ Namespace Players.COM
         End Function
 
         Public Sub DealInitialHand(wallPile As WallPile) Implements COMPlayerAlgorithm.DealInitialHand
-            Select Case _strategy
-                Case COMStrategy.Random
+            Select Case _strategy.COMDiscardTileStrategy
+                Case COMDiscardTileStrategy.Random
                     'UNIMPLEMENTED：このモードは無限ループで処理オチを起こす。今はCOMStrategy.Randomという値が入ってくる箇所がないからバグが顕在化してないだけ
                     Me._roundManager.DealInitialHand(Me._comPlayer)
 
-                Case COMStrategy.ToCompleteDealtReadyHand
+                Case COMDiscardTileStrategy.ToCompleteDealtReadyHand
                     Dim _comHandFactory As New PrecureCOMHandFactory(Me._roundManager)
                     _comHandFactory.DealReadyHand(Me._comPlayer)
 
-                Case COMStrategy.ToCompleteDealtHandOneStepAwayFromReady
+                Case COMDiscardTileStrategy.ToCompleteDealtHandOneStepAwayFromReady
                     Dim _comHandFactory As New PrecureCOMHandFactory(Me._roundManager)
                     _comHandFactory.DealHandNeedingTwoTIlesToComplete(Me._comPlayer)
 
-                Case COMStrategy.ToDecreaseShantenCount
+                Case COMDiscardTileStrategy.ToDecreaseShantenCount
                     Dim _comHandFactory As New PrecureCOMHandFactory(Me._roundManager)
                     _comHandFactory.DealReadyHand(Me._comPlayer)
 

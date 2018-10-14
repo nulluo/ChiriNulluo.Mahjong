@@ -13,22 +13,22 @@ Public NotInheritable Class MatchManagerController
         'Me.MatchManager = New MatchManager(1, 1)
         'Me.InnerInitializeMatch(COMStrategy.ToCompleteDealtReadyHand)
 
-        Me.InnerInitializeMatch(COMStrategy.ToDecreaseShantenCount)
+        Me.InnerInitializeMatch(New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount))
 
         'Me.InnerInitializeMatch(COMStrategy.ToBeFritenForTest)
     End Sub
 
     Private Sub New(comStrategy As COMStrategy)
         'Me.MatchManager = New MatchManager(1, 1)
-        If comStrategy = COMStrategy.ToCompleteDealtHandOneStepAwayFromReady Then
-            Me.InnerInitializeMatch(COMStrategy.ToCompleteDealtHandOneStepAwayFromReady)
-        ElseIf comStrategy = comStrategy.ToDecreaseShantenCount
-            Me.InnerInitializeMatch(COMStrategy.ToDecreaseShantenCount)
+        If comStrategy.COMDiscardTileStrategy = COMDiscardTileStrategy.ToCompleteDealtHandOneStepAwayFromReady Then
+            Me.InnerInitializeMatch(New COMStrategy(COMDiscardTileStrategy.ToCompleteDealtHandOneStepAwayFromReady))
+        ElseIf comStrategy.COMDiscardTileStrategy = COMDiscardTileStrategy.ToDecreaseShantenCount Then
+            Me.InnerInitializeMatch(New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount))
             'Me.InnerInitializeMatch(COMStrategy.ToBeFritenForTest)
 
         Else
             'UNIMPLEMENTED：COMStrategy.Randomの場合も向聴数減少型のアルゴリズムになる事に注意（COMStrategy.Randomの場合の挙動が現在バグっているため）
-            Me.InnerInitializeMatch(COMStrategy.ToDecreaseShantenCount)
+            Me.InnerInitializeMatch(New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount))
         End If
 
     End Sub
@@ -80,7 +80,7 @@ Public NotInheritable Class MatchManagerController
         Dim _com = DirectCast(Me.MatchManager.RoundManager.PlayersList(1), Players.COM.COMPlayer)
 
         '_com.Algorithm = New PrecureCOMPlayerAlgorithm(_com, Me.MatchManager.RoundManager, COMStrategy.ToBeFritenForTest)
-        _com.Algorithm = New PrecureCOMPlayerAlgorithm(_com, Me.MatchManager.RoundManager, COMStrategy.ToDecreaseShantenCount)
+        _com.Algorithm = New PrecureCOMPlayerAlgorithm(_com, Me.MatchManager.RoundManager, New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount))
         _com.PreviousShantenCount = 8
         'UNIMPLEMENTED: ここで  chirnulluo.mahjong.precure.ShantenCountMaxにアクセスしたいのだがうまくいかない
         'UNIMPLEMENTED: 仮に初期のPreviousShantenCountを8にしているが、配牌時の向聴数を計算してPreviousShantenCountプロパティを初期化するようにしないと、最初のツモで必ず牌を手から出して捨ててしまう

@@ -14,7 +14,7 @@ Namespace Players.COM
         ''' <summary>
         ''' 配牌時大技（青キュア一色）が入っている確率
         ''' </summary>
-        Private Const AllBlueCureRate As Integer = 99
+        Private Const AllBlueCureRate As Integer = 2
 
         ''' <summary>
         ''' 配牌時、テンパイ手が入っている確率

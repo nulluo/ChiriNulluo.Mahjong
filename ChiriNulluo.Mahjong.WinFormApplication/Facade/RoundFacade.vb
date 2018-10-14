@@ -32,7 +32,7 @@ Namespace Facade
                 MatchManagerController.GetInstance.InitializeRound(humanHand, comHand, wallPile, revealedBonusTiles, unrevealedBonusTiles)
             Else
                 'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
-                MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToDecreaseShantenCount)
+                MatchManagerController.GetInstance.InitializeRound(New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount))
                 'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToBeFritenForTest)
                 MatchManagerController.GetInstance.MatchManager.RoundManager.ShuffleWall()
             End If
@@ -107,7 +107,7 @@ Namespace Facade
             'アガリ判定
             Dim _handChecker As New PrecureHandChecker(Me.COMPlayer.Hand)
             If _handChecker.IsCompleted() Then
-                If DirectCast(Me.COMPlayer.Algorithm, Precure.Players.COM.PrecureCOMPlayerAlgorithm).strategy = COMStrategy.ToBeFritenForTest Then
+                If DirectCast(Me.COMPlayer.Algorithm, Precure.Players.COM.PrecureCOMPlayerAlgorithm).strategy.COMDiscardTileStrategy = COMDiscardTileStrategy.ToBeFritenForTest Then
                     'フリテンテスト用Strategyを採用している場合
                     If Me.COMPlayer.IgnoredWinningTileCount = 0 Then
                         Me.COMPlayer.IgnoredWinningTileCount += 1
