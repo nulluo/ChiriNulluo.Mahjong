@@ -15,7 +15,7 @@ Namespace Players
                 Case "Mirai"
                     _opponentCharacter = New PrecurePlayer("Mirai", "朝比奈みらい")
                 Case "Riko"
-                    _opponentCharacter = New PrecurePlayer("Riko", "十六夜リコ")
+                    _opponentCharacter = New PrecurePlayer("Riko", "十六夜リコ", GetStrategyOfRiko())
                 Case "Kotoha"
                     _opponentCharacter = New PrecurePlayer("Kotoha", "花海ことは", GetStrategyOfKotoha())
                 Case Else
@@ -45,6 +45,15 @@ Namespace Players
         End Function
 
 
+#End Region
+
+#Region "十六夜リコ"
+        Private Shared Function GetStrategyOfRiko() As COMStrategy
+            Dim _haipaiStrategy As New COMHaipaiStrategy
+            Dim _strategy = New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount, _haipaiStrategy, 0, False)
+
+            Return _strategy
+        End Function
 #End Region
 
     End Class

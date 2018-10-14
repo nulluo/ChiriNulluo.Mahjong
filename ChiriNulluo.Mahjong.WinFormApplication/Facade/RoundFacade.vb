@@ -3,6 +3,7 @@ Imports ChiriNulluo.Mahjong.Core.Players
 Imports ChiriNulluo.Mahjong.Core.Players.COM
 Imports ChiriNulluo.Mahjong.Core.Tiles
 Imports ChiriNulluo.Mahjong.Precure.HandChecker
+Imports ChiriNulluo.Mahjong.Precure.Players.COM
 Imports ChiriNulluo.Mahjong.Precure.Tiles
 Imports ChiriNulluo.Mahjong.WinFormApplication.Constants
 Imports ChiriNulluo.Mahjong.WinFormApplication.Logging
@@ -344,7 +345,7 @@ Namespace Facade
 
             Dim _random As New System.Random()
             'UNIMPLEMENTED: 本来はCOMPlayerの戦略ごとに異なるロジックで決定する。取り合えず一律で1/5の確率でリーチさせてる
-            Return (_random.Next(5) = 0)
+            Return (DirectCast(Me.COMPlayer.Algorithm, PrecureCOMPlayerAlgorithm).strategy.RiichiRate >= _random.Next(99))
 
         End Function
 
