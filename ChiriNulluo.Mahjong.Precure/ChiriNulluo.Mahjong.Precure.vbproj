@@ -98,6 +98,7 @@
     <Compile Include="Players\COM\PrecureCOMPlayerAlgorithm.vb" />
     <Compile Include="DataAccess\PrecureXMLAccess.vb" />
     <Compile Include="Players\COM\PrecurePlayer.vb" />
+    <Compile Include="Players\COM\PrecurePlayerFactory.vb" />
     <Compile Include="Suits\PrecureSuit.vb" />
     <Compile Include="Tiles\PrecureCharacterTile.vb" />
     <Compile Include="Tiles\PrecureCharacterSet.vb" />

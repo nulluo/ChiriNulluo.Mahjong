@@ -34,7 +34,8 @@ Namespace Players.COM
         ''' <param name="comPlayer">COMプレイヤー</param>
         Public Sub DealReadyHand(comPlayer As COMPlayer)
 
-            Dim _readyHand As List(Of String) = Me.GetReadyHandAtRandom()
+            'UNIMPLEMENTED: メソッドチェーンが長すぎるので内部の仕組みを知り過ぎている感がある。ちゃんと移譲を使ってください。
+            Dim _readyHand As List(Of String) = DirectCast(comPlayer.Algorithm, PrecureCOMPlayerAlgorithm).strategy.COMHaipaiStrategy.GetHaipaiTiles()
 
             If _readyHand Is Nothing Then
                 For i As Integer = 0 To 13 - 1

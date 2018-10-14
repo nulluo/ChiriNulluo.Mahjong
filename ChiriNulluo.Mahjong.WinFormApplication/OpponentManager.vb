@@ -21,6 +21,10 @@ Friend Class OpponentManager
         Me.Opponent = precurePlayer
     End Sub
 
+    Public Function GetOpponent() As PrecurePlayer
+        Return Me.Opponent
+    End Function
+
 
     Public ReadOnly Property GetScriptLose() As String
         Get

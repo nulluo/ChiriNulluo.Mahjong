@@ -83,24 +83,8 @@ Namespace Players.COM
         End Function
 
         Public Sub DealInitialHand(wallPile As WallPile) Implements COMPlayerAlgorithm.DealInitialHand
-            Select Case _strategy.COMDiscardTileStrategy
-                Case COMDiscardTileStrategy.Random
-                    'UNIMPLEMENTED：このモードは無限ループで処理オチを起こす。今はCOMStrategy.Randomという値が入ってくる箇所がないからバグが顕在化してないだけ
-                    Me._roundManager.DealInitialHand(Me._comPlayer)
-
-                Case COMDiscardTileStrategy.ToCompleteDealtReadyHand
-                    Dim _comHandFactory As New PrecureCOMHandFactory(Me._roundManager)
-                    _comHandFactory.DealReadyHand(Me._comPlayer)
-
-                Case COMDiscardTileStrategy.ToCompleteDealtHandOneStepAwayFromReady
-                    Dim _comHandFactory As New PrecureCOMHandFactory(Me._roundManager)
-                    _comHandFactory.DealHandNeedingTwoTIlesToComplete(Me._comPlayer)
-
-                Case COMDiscardTileStrategy.ToDecreaseShantenCount
-                    Dim _comHandFactory As New PrecureCOMHandFactory(Me._roundManager)
-                    _comHandFactory.DealReadyHand(Me._comPlayer)
-
-            End Select
+            Dim _comHandFactory As New PrecureCOMHandFactory(Me._roundManager)
+            _comHandFactory.DealReadyHand(Me._comPlayer)
         End Sub
     End Class
 

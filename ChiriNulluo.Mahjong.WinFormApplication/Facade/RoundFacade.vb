@@ -32,7 +32,7 @@ Namespace Facade
                 MatchManagerController.GetInstance.InitializeRound(humanHand, comHand, wallPile, revealedBonusTiles, unrevealedBonusTiles)
             Else
                 'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
-                MatchManagerController.GetInstance.InitializeRound(New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount))
+                MatchManagerController.GetInstance.InitializeRound(MatchManagerController.GetInstance.OpponentManager.GetOpponent.COMStrategy)
                 'MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToBeFritenForTest)
                 MatchManagerController.GetInstance.MatchManager.RoundManager.ShuffleWall()
             End If
