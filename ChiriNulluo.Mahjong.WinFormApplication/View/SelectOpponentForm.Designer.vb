@@ -54,7 +54,7 @@
             Me.LabelEas.Name = "LabelEas"
             Me.LabelEas.Size = New System.Drawing.Size(94, 20)
             Me.LabelEas.TabIndex = 2
-            Me.LabelEas.Text = "イース"
+            Me.LabelEas.Text = "イース(普通)"
             Me.LabelEas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label2
@@ -77,7 +77,7 @@
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-            Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134.0!))
+            Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137.0!))
             Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 3)
             Me.TableLayoutPanel1.Controls.Add(Me.ButtonMirai, 1, 2)
             Me.TableLayoutPanel1.Controls.Add(Me.ButtonKotoha, 1, 2)
@@ -112,7 +112,7 @@
             Me.Label3.Name = "Label3"
             Me.Label3.Size = New System.Drawing.Size(94, 25)
             Me.Label3.TabIndex = 32
-            Me.Label3.Text = "みらい"
+            Me.Label3.Text = "みらい(普通)"
             Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'ButtonMirai
@@ -146,7 +146,7 @@
             Me.LabelMirai.Name = "LabelMirai"
             Me.LabelMirai.Size = New System.Drawing.Size(94, 25)
             Me.LabelMirai.TabIndex = 29
-            Me.LabelMirai.Text = "ことは"
+            Me.LabelMirai.Text = "ことは(強い)"
             Me.LabelMirai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'ButtonRiko
@@ -169,7 +169,7 @@
             Me.LabelRiko.Name = "LabelRiko"
             Me.LabelRiko.Size = New System.Drawing.Size(94, 25)
             Me.LabelRiko.TabIndex = 26
-            Me.LabelRiko.Text = "リコ"
+            Me.LabelRiko.Text = "リコ(弱い)"
             Me.LabelRiko.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label7
@@ -180,7 +180,7 @@
             Me.Label7.ForeColor = System.Drawing.Color.Snow
             Me.Label7.Location = New System.Drawing.Point(315, 129)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(128, 100)
+            Me.Label7.Size = New System.Drawing.Size(131, 100)
             Me.Label7.TabIndex = 24
             Me.Label7.Text = "?"
             Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -193,7 +193,7 @@
             Me.Label5.ForeColor = System.Drawing.Color.Snow
             Me.Label5.Location = New System.Drawing.Point(315, 106)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(128, 20)
+            Me.Label5.Size = New System.Drawing.Size(131, 20)
             Me.Label5.TabIndex = 22
             Me.Label5.Text = "?"
             Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -219,7 +219,7 @@
             Me.Label1.ForeColor = System.Drawing.Color.Snow
             Me.Label1.Location = New System.Drawing.Point(315, 3)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(128, 100)
+            Me.Label1.Size = New System.Drawing.Size(131, 100)
             Me.Label1.TabIndex = 20
             Me.Label1.Text = "?"
             Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -228,13 +228,13 @@
             '
             Me.LabelRegina.AutoSize = True
             Me.LabelRegina.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.LabelRegina.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 11.0!)
+            Me.LabelRegina.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
             Me.LabelRegina.ForeColor = System.Drawing.Color.Snow
             Me.LabelRegina.Location = New System.Drawing.Point(109, 106)
             Me.LabelRegina.Name = "LabelRegina"
             Me.LabelRegina.Size = New System.Drawing.Size(94, 20)
             Me.LabelRegina.TabIndex = 1
-            Me.LabelRegina.Text = "レジーナ"
+            Me.LabelRegina.Text = "レジーナ(普通)"
             Me.LabelRegina.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'ButtonEas

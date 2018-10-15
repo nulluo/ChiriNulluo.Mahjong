@@ -25,6 +25,8 @@ Namespace View
         Private Sub DisplayTilesForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
             Dim i As Integer = 0
 
+            Dim _stringArrayText As String = ""
+
             For Each _tile As PreCureCharacterTile In Me.TilesList
                 Dim _pictureBox = New PictureBox()
                 With _pictureBox
@@ -34,11 +36,13 @@ Namespace View
                     .BorderStyle = BorderStyle.Fixed3D
                     .BackgroundImage = _tile.Image
                 End With
+
+                _stringArrayText &= """,""" & _tile.ID
                 Me.Controls.Add(_pictureBox)
                 i += 1
             Next
 
-
+            Me.TextBox1.Text = _stringArrayText
         End Sub
     End Class
 End Namespace
