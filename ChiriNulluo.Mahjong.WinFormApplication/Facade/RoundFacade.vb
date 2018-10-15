@@ -38,8 +38,8 @@ Namespace Facade
                 MatchManagerController.GetInstance.MatchManager.RoundManager.ShuffleWall()
             End If
 #Else
-        MatchManagerController.GetInstance.InitializeRound(COMStrategy.ToCompleteDealtReadyHand)
-        MatchManagerController.GetInstance.MatchManager.RoundManager.ShuffleWall()
+            MatchManagerController.GetInstance.InitializeRound(MatchManagerController.GetInstance.OpponentManager.GetOpponent.COMStrategy)
+            MatchManagerController.GetInstance.MatchManager.RoundManager.ShuffleWall()
 #End If
             For Each _player As Core.Players.Player In MatchManagerController.GetInstance.PlayersList
                 If TypeOf _player Is Core.Players.HumanPlayer Then
