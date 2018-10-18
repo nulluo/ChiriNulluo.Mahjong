@@ -8,21 +8,21 @@ Namespace Players.COM
 
         Private Property RoundManager As RoundManager
         Private Shared logger As NLog.Logger = NLog.LogManager.GetCurrentClassLogger()
+        Private Property COMHaipaiStrategy As COMHaipaiStrategy
 
-#Region "確率パラメタ"
+        'UNIMPLEMENTED: 確率の保持はCOMHaipaiStrategyに寄せる
+        '#Region "確率パラメタ"
 
-        ''' <summary>
-        ''' 配牌時大技（青キュア一色）が入っている確率
-        ''' </summary>
-        Private Const AllBlueCureRate As Integer = 2
+        '        ''' <summary>
+        '        ''' 配牌時大技（青キュア一色）が入っている確率
+        '        ''' </summary>
+        '        Private Const AllBlueCureRate As Integer = 2
 
-        ''' <summary>
-        ''' 配牌時、テンパイ手が入っている確率
-        ''' </summary>
-        Private Const ReadyHandStartRate As Integer = 20
-
-
-#End Region
+        '        ''' <summary>
+        '        ''' 配牌時、テンパイ手が入っている確率
+        '        ''' </summary>
+        '        Private Const ReadyHandStartRate As Integer = 20
+        '#End Region
 
         Public Sub New(roundManager As RoundManager)
             Me.RoundManager = roundManager
@@ -33,9 +33,11 @@ Namespace Players.COM
         ''' </summary>
         ''' <param name="comPlayer">COMプレイヤー</param>
         Public Sub DealReadyHand(comPlayer As COMPlayer)
-
             'UNIMPLEMENTED: メソッドチェーンが長すぎるので内部の仕組みを知り過ぎている感がある。ちゃんと移譲を使ってください。
-            Dim _readyHand As List(Of String) = DirectCast(comPlayer.Algorithm, PrecureCOMPlayerAlgorithm).strategy.COMHaipaiStrategy.GetHaipaiTiles()
+            Me.COMHaipaiStrategy = DirectCast(comPlayer.Algorithm, PrecureCOMPlayerAlgorithm).strategy.COMHaipaiStrategy
+
+
+            Dim _readyHand As List(Of String) = Me.GetHaipaiTiles()
 
             If _readyHand Is Nothing Then
                 For i As Integer = 0 To 13 - 1
@@ -56,45 +58,44 @@ Namespace Players.COM
             End If
         End Sub
 
-        ''' <summary>
-        ''' テンパイした状態の手牌のプリキュアIDのリストをランダムに生成して返します。
-        ''' </summary>
-        ''' <returns>テンパイした状態の手牌のプリキュアIDのリスト</returns>
-        Private Function GetReadyHandAtRandom() As List(Of String)
-            Dim _randomNumber As Integer = (New Random()).Next(100)
+        '''' <summary>
+        '''' テンパイした状態の手牌のプリキュアIDのリストをランダムに生成して返します。
+        '''' </summary>
+        '''' <returns>テンパイした状態の手牌のプリキュアIDのリスト</returns>
+        'Private Function GetReadyHandAtRandom() As List(Of String)
+        '    Dim _randomNumber As Integer = (New Random()).Next(100)
 
-            Select Case _randomNumber
-                Case 0 To AllBlueCureRate
-                    Return Me.GetAllBlueCures()
-                Case AllBlueCureRate + 1 To AllBlueCureRate + ReadyHandStartRate
-                    Return Me.GetOrthodoxReadyHandAtRandom
-                Case Else
-                    Return Nothing
-            End Select
+        '    Select Case _randomNumber
+        '        Case 0 To AllBlueCureRate
+        '            Return Me.GetAllBlueCures()
+        '        Case AllBlueCureRate + 1 To AllBlueCureRate + ReadyHandStartRate
+        '            Return Me.GetOrthodoxReadyHandAtRandom
+        '        Case Else
+        '            Return Nothing
+        '    End Select
 
-        End Function
+        'End Function
 
-        Private Function GetAllBlueCures() As List(Of String)
-            Dim _idList As New List(Of String)
-            With _idList
-                .Add("0305")
-                .Add("0305")
-                .Add("0305")
-                .Add("0502")
-                .Add("0502")
-                .Add("0502")
-                .Add("0705")
-                .Add("0705")
-                .Add("0705")
-                .Add("0902")
-                .Add("0902")
-                .Add("1302")
-                .Add("1302")
-            End With
-            Return _idList
+        'Private Function GetAllBlueCures() As List(Of String)
+        '    Dim _idList As New List(Of String)
+        '    With _idList
+        '        .Add("0305")
+        '        .Add("0305")
+        '        .Add("0305")
+        '        .Add("0502")
+        '        .Add("0502")
+        '        .Add("0502")
+        '        .Add("0705")
+        '        .Add("0705")
+        '        .Add("0705")
+        '        .Add("0902")
+        '        .Add("0902")
+        '        .Add("1302")
+        '        .Add("1302")
+        '    End With
+        '    Return _idList
 
-        End Function
-
+        'End Function
 
         'UNIMPLEMENTED：プリキュア牌固有のアルゴリズムになっているが、本来はもっと汎用的な処理として実装可能してCoreに入れるべき機能である
         ''' <summary>
@@ -156,39 +157,75 @@ Namespace Players.COM
             Return _idList
         End Function
 
+        '''' <summary>
+        '''' イーシャンテンの手を配牌します。
+        '''' </summary>
+        'Public Sub DealHandNeedingTwoTIlesToComplete(comPlayer As COMPlayer)
+        '    Dim _handNeedingTwoTIlesToComplete As List(Of String) = Me.GetOrthodoxReadyHandAtRandom()
+
+        '    With _handNeedingTwoTIlesToComplete
+        '        If _handNeedingTwoTIlesToComplete Is Nothing Then
+        '            For i As Integer = 0 To 13 - 1
+        '                Me.RoundManager.DrawTile(comPlayer)
+        '            Next
+        '        Else
+        '            'イーシャンテンなのでテンパイ手から一個除外する
+        '            .Remove(.Last)
+        '            For Each _id As String In _handNeedingTwoTIlesToComplete
+
+        '                'Me.RoundManager.TryMoveTile(_id, RoundManager.WallPile, comPlayer.Hand)
+
+        '                '山から手牌に牌を加える
+        '                Dim _pickedTile As Tile = Me.RoundManager.PickOutTileFromPile(_id, RoundManager.WallPile)
+        '                If _pickedTile Is Nothing Then
+        '                    '牌を引くのに失敗した（現在山に存在しない牌IDを指定した）場合、ログにエラー情報を吐く
+        '                    logger.Error(" MoveTile Failed.[ID:" & _id & "] WallPile -> COM Hand")
+        '                Else
+        '                    comPlayer.Hand.DrawTile(_pickedTile)
+        '                End If
+
+        '            Next
+        '            '1個除外した分、もう一枚引いておく
+        '            Me.RoundManager.DrawTile(comPlayer)
+        '        End If
+        '    End With
+
+        'End Sub
+
+
         ''' <summary>
-        ''' イーシャンテンの手を配牌します。
+        ''' 出現確率に対応して、配牌を取得する。もしランダム配牌設定の場合はNothingを返す。
         ''' </summary>
-        Public Sub DealHandNeedingTwoTIlesToComplete(comPlayer As COMPlayer)
-            Dim _handNeedingTwoTIlesToComplete As List(Of String) = Me.GetReadyHandAtRandom()
+        ''' <returns></returns>
+        Public Function GetHaipaiTiles() As List(Of String)
 
-            With _handNeedingTwoTIlesToComplete
-                If _handNeedingTwoTIlesToComplete Is Nothing Then
-                    For i As Integer = 0 To 13 - 1
-                        Me.RoundManager.DrawTile(comPlayer)
-                    Next
+            If Me.COMHaipaiStrategy.IsRandom Then
+                Return Nothing
+            End If
+
+            Dim r As New System.Random()
+            Dim randomValue = r.Next(Me.COMHaipaiStrategy.SumAppearanceRate())
+            Dim _subTotalAppearanceRate As Integer = 0
+
+            For Each _haipai As COMHaipaiTiles In Me.COMHaipaiStrategy.HaipaiList
+                If randomValue < _haipai.AppearanceRate Then
+                    Return _haipai.TileIDs
                 Else
-                    'イーシャンテンなのでテンパイ手から一個除外する
-                    .Remove(.Last)
-                    For Each _id As String In _handNeedingTwoTIlesToComplete
-
-                        'Me.RoundManager.TryMoveTile(_id, RoundManager.WallPile, comPlayer.Hand)
-
-                        '山から手牌に牌を加える
-                        Dim _pickedTile As Tile = Me.RoundManager.PickOutTileFromPile(_id, RoundManager.WallPile)
-                        If _pickedTile Is Nothing Then
-                            '牌を引くのに失敗した（現在山に存在しない牌IDを指定した）場合、ログにエラー情報を吐く
-                            logger.Error(" MoveTile Failed.[ID:" & _id & "] WallPile -> COM Hand")
-                        Else
-                            comPlayer.Hand.DrawTile(_pickedTile)
-                        End If
-
-                    Next
-                    '1個除外した分、もう一枚引いておく
-                    Me.RoundManager.DrawTile(comPlayer)
+                    randomValue -= _haipai.AppearanceRate
                 End If
-            End With
+            Next
 
-        End Sub
+            If randomValue < Me.COMHaipaiStrategy.PerfectRandomRate Then
+                Return Nothing
+            Else
+                randomValue -= Me.COMHaipaiStrategy.PerfectRandomRate
+            End If
+
+            If randomValue < Me.COMHaipaiStrategy.RandomTenpaiRate Then
+                Return Me.GetOrthodoxReadyHandAtRandom
+            End If
+
+            Return Nothing
+        End Function
     End Class
 End Namespace

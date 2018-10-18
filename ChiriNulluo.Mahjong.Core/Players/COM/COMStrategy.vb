@@ -1,13 +1,23 @@
 ﻿Namespace Players.COM
     Public Class COMStrategy
 
+        ''' <summary>
+        ''' コンストラクタ(テンパイ時リーチ確率は100%, 配牌は完全ランダム)
+        ''' </summary>
+        ''' <param name="comDiscardTileStrategy"></param>
         Public Sub New(comDiscardTileStrategy As COMDiscardTileStrategy)
             Me.COMDiscardTileStrategy = comDiscardTileStrategy
             Me.COMHaipaiStrategy = New COMHaipaiStrategy()
-            Me.RiichiRate = 20
+            Me.RiichiRate = 100
         End Sub
 
-        Public Sub New(comDiscardTileStrategy As COMDiscardTileStrategy, comHaipaiStrategy As COMHaipaiStrategy, riichiRate As Integer, Optional avoidNoYakusChombo As Boolean = True)
+        ''' <summary>
+        ''' 
+        ''' </summary>
+        ''' <param name="comDiscardTileStrategy"></param>
+        ''' <param name="comHaipaiStrategy"></param>
+        ''' <param name="riichiRate">テンパイした時に立直をかける確率(単位:%)</param>
+        Public Sub New(comDiscardTileStrategy As COMDiscardTileStrategy, comHaipaiStrategy As COMHaipaiStrategy, riichiRate As Integer)
             Me.COMDiscardTileStrategy = comDiscardTileStrategy
             Me.COMHaipaiStrategy = comHaipaiStrategy
             Me.RiichiRate = riichiRate

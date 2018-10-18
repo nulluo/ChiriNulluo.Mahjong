@@ -11,11 +11,28 @@
         ''' <summary>
         ''' 一定確率で積み込み配牌する場合のコンストラクタ
         ''' </summary>
-        ''' <param name="haipaiList"></param>
-        Public Sub New(randomRate As Integer, haipaiList As List(Of COMHaipaiTiles))
+        ''' <param name="haipaiList">一定の確率に従って配られる配牌の牌リスト</param>
+        ''' <param name="perfectRandomRate">HaipaiListからではなく、完全にランダムな組み合わせの牌が配られる確率</param>
+        ''' <remarks>～Rateの値はそれぞれ0以上の整数値をとる。この値に比例して出現確率が定まる</remarks>
+        Public Sub New(perfectRandomRate As Integer, haipaiList As List(Of COMHaipaiTiles))
             Me.IsRandom = False
             Me.HaipaiList = haipaiList
-            Me.RandomRate = randomRate
+            Me.PerfectRandomRate = perfectRandomRate
+        End Sub
+
+        ''' <summary>
+        ''' 一定確率で積み込み配牌する場合のコンストラクタ
+        ''' </summary>
+        ''' <param name="haipaiList">一定の確率に従って配られる配牌の牌リスト</param>
+        ''' <param name="perfectRandomRate">HaipaiListからではなく、完全にランダムな組み合わせの牌が配られる確率</param>
+        ''' <param name="randomTenpaiRate">HaipaiListからではなく、ランダムな一向聴手の手牌が配られる確率</param>
+        ''' <remarks>～Rateの値はそれぞれ0以上の整数値をとる。この値に比例して出現確率が定まる</remarks>
+        Public Sub New(perfectRandomRate As Integer, randomTenpaiRate As Integer, haipaiList As List(Of COMHaipaiTiles))
+            Me.IsRandom = False
+            Me.HaipaiList = haipaiList
+            Me.PerfectRandomRate = perfectRandomRate
+            Me.RandomTenpaiRate = randomTenpaiRate
+            'Me.RandomIishantenRate = randomIishantenRate
         End Sub
 
 
@@ -25,40 +42,30 @@
         Public Property IsRandom As Boolean
 
         ''' <summary>
-        ''' HaipaiListからではなく、ランダム組み合わせの牌が配られる確率(0以上の整数値。この値に比例して出現確率が定まる)
+        ''' HaipaiListからではなく、完全にランダムな組み合わせの牌が配られる確率(0以上の整数値。この値に比例して出現確率が定まる)
         ''' </summary>
         ''' <returns></returns>
-        Public Property RandomRate As Integer
-
+        Public Property PerfectRandomRate As Integer = 0
 
         ''' <summary>
-        ''' 出現確率に対応して、配牌を取得する。もしランダム配牌設定の場合はNothingを返す。
+        ''' HaipaiListからではなく、ランダムなテンパイ手の手牌が配られる確率(0以上の整数値。この値に比例して出現確率が定まる)
         ''' </summary>
         ''' <returns></returns>
-        Public Function GetHaipaiTiles() As List(Of String)
+        Public Property RandomTenpaiRate As Integer = 0
 
-            If IsRandom Then
-                Return Nothing
-            End If
+        'UNIMPLEMENTED: ―向聴は面倒なのでオミット
+        '''' <summary>
+        '''' HaipaiListからではなく、ランダムな一向聴手の手牌が配られる確率(0以上の整数値。この値に比例して出現確率が定まる)
+        '''' </summary>
+        '''' <returns></returns>
+        'Public Property RandomIishantenRate As Integer = 0
 
-            Dim r As New System.Random()
-            Dim randomValue = r.Next(Me.SumAppearanceRate())
-            Dim _subTotalAppearanceRate As Integer = 0
 
-            For Each _haipai As COMHaipaiTiles In HaipaiList
-                If randomValue < _haipai.AppearanceRate Then
-                    Return _haipai.TileIDs
-                Else
-                    randomValue -= _haipai.AppearanceRate
-                End If
-            Next
-            Return Nothing
-        End Function
 
         Public Property HaipaiList As New List(Of COMHaipaiTiles)
 
-        Private Function SumAppearanceRate() As Integer
-            Return HaipaiList.Sum(Function(x) x.AppearanceRate) + Me.RandomRate
+        Public Function SumAppearanceRate() As Integer
+            Return HaipaiList.Sum(Function(x) x.AppearanceRate) + Me.PerfectRandomRate + Me.RandomTenpaiRate
         End Function
 
 
