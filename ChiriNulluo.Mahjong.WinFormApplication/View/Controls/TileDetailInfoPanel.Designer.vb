@@ -55,7 +55,7 @@
             '
             Me.NumberLabel.AutoSize = True
             Me.NumberLabel.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-            Me.NumberLabel.Location = New System.Drawing.Point(369, 8)
+            Me.NumberLabel.Location = New System.Drawing.Point(360, 127)
             Me.NumberLabel.Name = "NumberLabel"
             Me.NumberLabel.Size = New System.Drawing.Size(26, 21)
             Me.NumberLabel.TabIndex = 1
@@ -93,7 +93,7 @@
             Me.Controls.Add(Me.NameLabel)
             Me.Controls.Add(Me.EnlargedImage)
             Me.Name = "TileDetailInfoPanel"
-            Me.Size = New System.Drawing.Size(430, 180)
+            Me.Size = New System.Drawing.Size(430, 155)
             CType(Me.EnlargedImage, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
