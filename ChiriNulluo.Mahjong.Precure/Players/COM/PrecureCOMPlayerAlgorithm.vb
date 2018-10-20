@@ -84,7 +84,7 @@ Namespace Players.COM
 
         Public Sub DealInitialHand(wallPile As WallPile) Implements COMPlayerAlgorithm.DealInitialHand
             Dim _comHandFactory As New PrecureCOMHandFactory(Me._roundManager)
-            _comHandFactory.DealReadyHand(Me._comPlayer)
+            _comHandFactory.DealInitialHand(Me._comPlayer)
         End Sub
     End Class
 

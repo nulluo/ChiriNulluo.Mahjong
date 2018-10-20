@@ -35,5 +35,12 @@ Namespace View
             _nextForm.Show()
             Me.Close()
         End Sub
+
+        Private Sub SpecialTileField_CheckedChanged(sender As Object, e As EventArgs) Handles IncluedesSpecialTileField.CheckedChanged, NotIncluedesSpecialTileField.CheckedChanged
+
+        End Sub
+
+
+
     End Class
 End Namespace

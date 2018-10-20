@@ -28,6 +28,10 @@
             Me.AddTIleButton = New System.Windows.Forms.Button()
             Me.RemoveButton = New System.Windows.Forms.Button()
             Me.Button1 = New System.Windows.Forms.Button()
+            Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+            Me.IncluedesSpecialTileField = New System.Windows.Forms.RadioButton()
+            Me.NotIncluedesSpecialTileField = New System.Windows.Forms.RadioButton()
+            Me.GroupBox1.SuspendLayout()
             Me.SuspendLayout()
             '
             'ListBox1
@@ -75,11 +79,45 @@
             Me.Button1.Text = "OK"
             Me.Button1.UseVisualStyleBackColor = True
             '
+            'GroupBox1
+            '
+            Me.GroupBox1.Controls.Add(Me.NotIncluedesSpecialTileField)
+            Me.GroupBox1.Controls.Add(Me.IncluedesSpecialTileField)
+            Me.GroupBox1.Location = New System.Drawing.Point(294, 57)
+            Me.GroupBox1.Name = "GroupBox1"
+            Me.GroupBox1.Size = New System.Drawing.Size(108, 86)
+            Me.GroupBox1.TabIndex = 4
+            Me.GroupBox1.TabStop = False
+            Me.GroupBox1.Text = "特殊牌を"
+            '
+            'IncluedesSpecialTileField
+            '
+            Me.IncluedesSpecialTileField.AutoSize = True
+            Me.IncluedesSpecialTileField.Location = New System.Drawing.Point(7, 20)
+            Me.IncluedesSpecialTileField.Name = "IncluedesSpecialTileField"
+            Me.IncluedesSpecialTileField.Size = New System.Drawing.Size(54, 16)
+            Me.IncluedesSpecialTileField.TabIndex = 0
+            Me.IncluedesSpecialTileField.TabStop = True
+            Me.IncluedesSpecialTileField.Text = "含める"
+            Me.IncluedesSpecialTileField.UseVisualStyleBackColor = True
+            '
+            'NotIncluedesSpecialTileField
+            '
+            Me.NotIncluedesSpecialTileField.AutoSize = True
+            Me.NotIncluedesSpecialTileField.Location = New System.Drawing.Point(7, 54)
+            Me.NotIncluedesSpecialTileField.Name = "NotIncluedesSpecialTileField"
+            Me.NotIncluedesSpecialTileField.Size = New System.Drawing.Size(65, 16)
+            Me.NotIncluedesSpecialTileField.TabIndex = 0
+            Me.NotIncluedesSpecialTileField.TabStop = True
+            Me.NotIncluedesSpecialTileField.Text = "含めない"
+            Me.NotIncluedesSpecialTileField.UseVisualStyleBackColor = True
+            '
             'SelectTilesForm
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(298, 261)
+            Me.ClientSize = New System.Drawing.Size(437, 261)
+            Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.Button1)
             Me.Controls.Add(Me.RemoveButton)
             Me.Controls.Add(Me.AddTIleButton)
@@ -87,6 +125,8 @@
             Me.Controls.Add(Me.ListBox1)
             Me.Name = "SelectTilesForm"
             Me.Text = "並べて表示する牌を選んで"
+            Me.GroupBox1.ResumeLayout(False)
+            Me.GroupBox1.PerformLayout()
             Me.ResumeLayout(False)
 
         End Sub
@@ -96,5 +136,8 @@
         Friend WithEvents AddTIleButton As Button
         Friend WithEvents RemoveButton As Button
         Friend WithEvents Button1 As Button
+        Friend WithEvents GroupBox1 As GroupBox
+        Friend WithEvents NotIncluedesSpecialTileField As RadioButton
+        Friend WithEvents IncluedesSpecialTileField As RadioButton
     End Class
 End Namespace

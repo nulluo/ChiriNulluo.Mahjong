@@ -29,13 +29,12 @@ Namespace Players.COM
         End Sub
 
         ''' <summary>
-        ''' テンパイの手を配牌します。
+        ''' COMの初手を配牌します。（一向聴の場合は12枚しか配られないのでこのメソッド呼び出し後に牌を追加で山からツモります。）
         ''' </summary>
         ''' <param name="comPlayer">COMプレイヤー</param>
-        Public Sub DealReadyHand(comPlayer As COMPlayer)
+        Public Sub DealInitialHand(comPlayer As COMPlayer)
             'UNIMPLEMENTED: メソッドチェーンが長すぎるので内部の仕組みを知り過ぎている感がある。ちゃんと移譲を使ってください。
             Me.COMHaipaiStrategy = DirectCast(comPlayer.Algorithm, PrecureCOMPlayerAlgorithm).strategy.COMHaipaiStrategy
-
 
             Dim _readyHand As List(Of String) = Me.GetHaipaiTiles()
 
@@ -56,6 +55,12 @@ Namespace Players.COM
 
                 Next
             End If
+
+            '13牌に満たない場合は追加で引く
+            While comPlayer.Hand.TotalCount < 13
+                Me.RoundManager.DrawTile(comPlayer)
+            End While
+
         End Sub
 
         '''' <summary>
@@ -157,40 +162,21 @@ Namespace Players.COM
             Return _idList
         End Function
 
-        '''' <summary>
-        '''' イーシャンテンの手を配牌します。
-        '''' </summary>
-        'Public Sub DealHandNeedingTwoTIlesToComplete(comPlayer As COMPlayer)
-        '    Dim _handNeedingTwoTIlesToComplete As List(Of String) = Me.GetOrthodoxReadyHandAtRandom()
+        ''' <summary>
+        ''' イーシャンテンの手を配牌します。
+        ''' </summary>
+        Public Function DealHandNeedingTwoTIlesToComplete() As List(Of String)
 
-        '    With _handNeedingTwoTIlesToComplete
-        '        If _handNeedingTwoTIlesToComplete Is Nothing Then
-        '            For i As Integer = 0 To 13 - 1
-        '                Me.RoundManager.DrawTile(comPlayer)
-        '            Next
-        '        Else
-        '            'イーシャンテンなのでテンパイ手から一個除外する
-        '            .Remove(.Last)
-        '            For Each _id As String In _handNeedingTwoTIlesToComplete
+            Dim _handNeedingTwoTIlesToComplete As List(Of String) = Me.GetOrthodoxReadyHandAtRandom()
 
-        '                'Me.RoundManager.TryMoveTile(_id, RoundManager.WallPile, comPlayer.Hand)
+            With _handNeedingTwoTIlesToComplete
+                'イーシャンテンなのでテンパイ手から一個除外する
+                .Remove(.Last)
+            End With
 
-        '                '山から手牌に牌を加える
-        '                Dim _pickedTile As Tile = Me.RoundManager.PickOutTileFromPile(_id, RoundManager.WallPile)
-        '                If _pickedTile Is Nothing Then
-        '                    '牌を引くのに失敗した（現在山に存在しない牌IDを指定した）場合、ログにエラー情報を吐く
-        '                    logger.Error(" MoveTile Failed.[ID:" & _id & "] WallPile -> COM Hand")
-        '                Else
-        '                    comPlayer.Hand.DrawTile(_pickedTile)
-        '                End If
+            Return _handNeedingTwoTIlesToComplete
 
-        '            Next
-        '            '1個除外した分、もう一枚引いておく
-        '            Me.RoundManager.DrawTile(comPlayer)
-        '        End If
-        '    End With
-
-        'End Sub
+        End Function
 
 
         ''' <summary>
@@ -223,6 +209,14 @@ Namespace Players.COM
 
             If randomValue < Me.COMHaipaiStrategy.RandomTenpaiRate Then
                 Return Me.GetOrthodoxReadyHandAtRandom
+            Else
+                randomValue -= Me.COMHaipaiStrategy.RandomTenpaiRate
+            End If
+
+            If randomValue < Me.COMHaipaiStrategy.RandomIishantenRate Then
+                Return Me.DealHandNeedingTwoTIlesToComplete
+            Else
+                randomValue -= Me.COMHaipaiStrategy.RandomIishantenRate
             End If
 
             Return Nothing

@@ -14,7 +14,7 @@
         ''' <param name="haipaiList">一定の確率に従って配られる配牌の牌リスト</param>
         ''' <param name="perfectRandomRate">HaipaiListからではなく、完全にランダムな組み合わせの牌が配られる確率</param>
         ''' <remarks>～Rateの値はそれぞれ0以上の整数値をとる。この値に比例して出現確率が定まる</remarks>
-        Public Sub New(perfectRandomRate As Integer, haipaiList As List(Of COMHaipaiTiles))
+        Public Sub New(haipaiList As List(Of COMHaipaiTiles), perfectRandomRate As Integer)
             Me.IsRandom = False
             Me.HaipaiList = haipaiList
             Me.PerfectRandomRate = perfectRandomRate
@@ -27,12 +27,12 @@
         ''' <param name="perfectRandomRate">HaipaiListからではなく、完全にランダムな組み合わせの牌が配られる確率</param>
         ''' <param name="randomTenpaiRate">HaipaiListからではなく、ランダムな一向聴手の手牌が配られる確率</param>
         ''' <remarks>～Rateの値はそれぞれ0以上の整数値をとる。この値に比例して出現確率が定まる</remarks>
-        Public Sub New(perfectRandomRate As Integer, randomTenpaiRate As Integer, haipaiList As List(Of COMHaipaiTiles))
+        Public Sub New(haipaiList As List(Of COMHaipaiTiles), perfectRandomRate As Integer, randomTenpaiRate As Integer, Optional randomIishantenRate As Integer = 0)
             Me.IsRandom = False
             Me.HaipaiList = haipaiList
             Me.PerfectRandomRate = perfectRandomRate
             Me.RandomTenpaiRate = randomTenpaiRate
-            'Me.RandomIishantenRate = randomIishantenRate
+            Me.RandomIishantenRate = randomIishantenRate
         End Sub
 
 
@@ -53,12 +53,12 @@
         ''' <returns></returns>
         Public Property RandomTenpaiRate As Integer = 0
 
-        'UNIMPLEMENTED: ―向聴は面倒なのでオミット
+
         '''' <summary>
         '''' HaipaiListからではなく、ランダムな一向聴手の手牌が配られる確率(0以上の整数値。この値に比例して出現確率が定まる)
         '''' </summary>
         '''' <returns></returns>
-        'Public Property RandomIishantenRate As Integer = 0
+        Public Property RandomIishantenRate As Integer = 0
 
 
 

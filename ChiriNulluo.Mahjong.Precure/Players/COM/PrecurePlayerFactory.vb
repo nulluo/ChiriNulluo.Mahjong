@@ -42,7 +42,7 @@ Namespace Players
             End With
 
             Dim _haipaiStrategy As COMHaipaiStrategy
-            _haipaiStrategy = New COMHaipaiStrategy(60, 30, _haipaiTilesList)
+            _haipaiStrategy = New COMHaipaiStrategy(_haipaiTilesList, 60, 30)
 
             Dim _strategy = New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount,
                                             _haipaiStrategy, riichiRate:=100)
@@ -81,7 +81,7 @@ Namespace Players
             End With
 
             Dim _haipaiStrategy As COMHaipaiStrategy
-            _haipaiStrategy = New COMHaipaiStrategy(50, 10, _haipaiTilesList)
+            _haipaiStrategy = New COMHaipaiStrategy(_haipaiTilesList, 50, 10)
 
             Dim _strategy = New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount,
                                             _haipaiStrategy, riichiRate:=100)
@@ -92,18 +92,13 @@ Namespace Players
 
 
 #Region "ルールー"
-        'キャラ特徴：イーシャンテン手が初手に来ることが多い
+        'キャラ特徴：ランダムなイーシャンテン手が必ず初手にくる。それ以外の固定的な積み込み要素は一切なし。
 
         Private Shared Function GetStrategyOfRuru() As COMStrategy
             Dim _haipaiTilesList As New List(Of COMHaipaiTiles)
-            With _haipaiTilesList
-                .Add(New COMHaipaiTiles(5, "0101", "0101", "0101", "0301", "0301", "0301", "0801", "0801", "0801", "0901", "0901", "1301", "1301")) 'オールピンクキュア
-
-
-            End With
 
             Dim _haipaiStrategy As COMHaipaiStrategy
-            _haipaiStrategy = New COMHaipaiStrategy(30, 10, _haipaiTilesList)
+            _haipaiStrategy = New COMHaipaiStrategy(_haipaiTilesList, 0, 0, 10)
 
             Dim _strategy = New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount,
                                             _haipaiStrategy, riichiRate:=100)
