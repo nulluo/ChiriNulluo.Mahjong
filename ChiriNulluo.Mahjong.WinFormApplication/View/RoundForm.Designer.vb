@@ -217,6 +217,7 @@
             'BonusTIlePicture3
             '
             Me.BonusTIlePicture3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.BonusTIlePicture3.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.SecretBonusTile
             resources.ApplyResources(Me.BonusTIlePicture3, "BonusTIlePicture3")
             Me.BonusTIlePicture3.Name = "BonusTIlePicture3"
             Me.BonusTIlePicture3.TabStop = False
@@ -224,6 +225,7 @@
             'BonusTIlePicture4
             '
             Me.BonusTIlePicture4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.BonusTIlePicture4.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.SecretBonusTile
             resources.ApplyResources(Me.BonusTIlePicture4, "BonusTIlePicture4")
             Me.BonusTIlePicture4.Name = "BonusTIlePicture4"
             Me.BonusTIlePicture4.TabStop = False
@@ -231,6 +233,7 @@
             'BonusTIlePicture5
             '
             Me.BonusTIlePicture5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+            Me.BonusTIlePicture5.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.SecretBonusTile
             resources.ApplyResources(Me.BonusTIlePicture5, "BonusTIlePicture5")
             Me.BonusTIlePicture5.Name = "BonusTIlePicture5"
             Me.BonusTIlePicture5.TabStop = False

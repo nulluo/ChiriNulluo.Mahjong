@@ -33,9 +33,11 @@
             Me.comPointField = New System.Windows.Forms.Label()
             Me.Label4 = New System.Windows.Forms.Label()
             Me.Label3 = New System.Windows.Forms.Label()
+            Me.TwitterShareButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
             CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.talkWindowPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox2.SuspendLayout()
+            CType(Me.TwitterShareButton, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'PictureBox1
@@ -98,10 +100,21 @@
             resources.ApplyResources(Me.Label3, "Label3")
             Me.Label3.Name = "Label3"
             '
+            'TwitterShareButton
+            '
+            resources.ApplyResources(Me.TwitterShareButton, "TwitterShareButton")
+            Me.TwitterShareButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
+            Me.TwitterShareButton.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
+            Me.TwitterShareButton.Name = "TwitterShareButton"
+            Me.TwitterShareButton.PushedImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
+            Me.TwitterShareButton.TabStop = False
+            '
             'MatchResultForm
             '
             resources.ApplyResources(Me, "$this")
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+            Me.BackColor = System.Drawing.Color.Pink
+            Me.Controls.Add(Me.TwitterShareButton)
             Me.Controls.Add(Me.GroupBox2)
             Me.Controls.Add(Me.exitButton)
             Me.Controls.Add(Me.Label1)
@@ -113,6 +126,7 @@
             CType(Me.talkWindowPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupBox2.ResumeLayout(False)
             Me.GroupBox2.PerformLayout()
+            CType(Me.TwitterShareButton, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
@@ -126,5 +140,6 @@
         Friend WithEvents comPointField As Label
         Friend WithEvents Label4 As Label
         Friend WithEvents Label3 As Label
+        Friend WithEvents TwitterShareButton As RichButton
     End Class
 End Namespace

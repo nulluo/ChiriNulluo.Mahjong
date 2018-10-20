@@ -132,6 +132,9 @@
   <data name="comPointField.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
+  <data name="&gt;&gt;TwitterShareButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Label3.Text" xml:space="preserve">
     <value>COM</value>
   </data>
@@ -150,8 +153,8 @@
   <data name="comPointField.Location" type="System.Drawing.Point, System.Drawing">
     <value>250, 25</value>
   </data>
-  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MatchResultForm</value>
   </data>
   <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -159,8 +162,8 @@
   <data name="comPointField.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 39</value>
   </data>
-  <data name="exitButton.Text" xml:space="preserve">
-    <value>タイトルに戻る</value>
+  <data name="&gt;&gt;TwitterShareButton.Name" xml:space="preserve">
+    <value>TwitterShareButton</value>
   </data>
   <data name="exitButton.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -201,6 +204,9 @@
   <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="talkWindowPictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>420, 119</value>
   </data>
@@ -211,10 +217,13 @@
     <value>89, 37</value>
   </data>
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;Label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TwitterShareButton.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
   </data>
   <data name="&gt;&gt;humanPointField.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -240,14 +249,17 @@
   <data name="&gt;&gt;comPointField.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;TwitterShareButton.Type" xml:space="preserve">
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.RichButton, CureJongMain, Version=0.1.2.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="Label3.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="&gt;&gt;talkWindowPictureBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -273,14 +285,14 @@
   <data name="&gt;&gt;comPointField.Parent" xml:space="preserve">
     <value>GroupBox2</value>
   </data>
+  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 52</value>
+  </data>
   <data name="&gt;&gt;GroupBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;humanPointField.Name" xml:space="preserve">
     <value>humanPointField</value>
-  </data>
-  <data name="&gt;&gt;GroupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -300,6 +312,9 @@
   <data name="humanPointField.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 39</value>
   </data>
+  <data name="exitButton.Text" xml:space="preserve">
+    <value>タイトルに戻る</value>
+  </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
@@ -312,8 +327,8 @@
   <data name="comPointField.Text" xml:space="preserve">
     <value>*****</value>
   </data>
-  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 52</value>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="GroupBox2.Text" xml:space="preserve">
     <value>Score</value>
@@ -324,17 +339,11 @@
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 76</value>
   </data>
-  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
   <data name="exitButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>469, 333</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MatchResultForm</value>
-  </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>キュア☆ジャン[プロトタイプ版]</value>
@@ -370,10 +379,16 @@
     <value>Label4</value>
   </data>
   <data name="&gt;&gt;exitButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;exitButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TwitterShareButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 333</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>659, 394</value>
@@ -381,14 +396,17 @@
   <data name="&gt;&gt;humanPointField.Parent" xml:space="preserve">
     <value>GroupBox2</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GroupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 27.75pt</value>
   </data>
   <data name="&gt;&gt;talkWindowPictureBox.Name" xml:space="preserve">
     <value>talkWindowPictureBox</value>
+  </data>
+  <data name="&gt;&gt;TwitterShareButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 37</value>

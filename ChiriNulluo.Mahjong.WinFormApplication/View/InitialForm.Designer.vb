@@ -32,14 +32,14 @@
             Me.PlaysSEMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.ヘルプHToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.VersionInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-            Me.TwitterShareButton = New System.Windows.Forms.Button()
-            Me.Button1 = New System.Windows.Forms.Button()
             Me.LogTestButton = New System.Windows.Forms.Button()
             Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
             Me.GameStartButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
+            Me.TwitterShareButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
             Me.MenuStrip1.SuspendLayout()
             CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.TwitterShareButton, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'MenuStrip1
@@ -98,25 +98,6 @@
             Me.VersionInfoToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
             Me.VersionInfoToolStripMenuItem.Text = "バージョン情報"
             '
-            'TwitterShareButton
-            '
-            Me.TwitterShareButton.Location = New System.Drawing.Point(12, 249)
-            Me.TwitterShareButton.Name = "TwitterShareButton"
-            Me.TwitterShareButton.Size = New System.Drawing.Size(102, 35)
-            Me.TwitterShareButton.TabIndex = 42
-            Me.TwitterShareButton.Text = "Twitterでシェア"
-            Me.TwitterShareButton.UseVisualStyleBackColor = True
-            '
-            'Button1
-            '
-            Me.Button1.Location = New System.Drawing.Point(158, 249)
-            Me.Button1.Name = "Button1"
-            Me.Button1.Size = New System.Drawing.Size(110, 35)
-            Me.Button1.TabIndex = 43
-            Me.Button1.Text = "TwitterSheaTest"
-            Me.Button1.UseVisualStyleBackColor = True
-            Me.Button1.Visible = False
-            '
             'LogTestButton
             '
             Me.LogTestButton.Location = New System.Drawing.Point(222, 141)
@@ -151,6 +132,18 @@
             Me.GameStartButton.TabIndex = 2
             Me.GameStartButton.TabStop = False
             '
+            'TwitterShareButton
+            '
+            Me.TwitterShareButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
+            Me.TwitterShareButton.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
+            Me.TwitterShareButton.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.TwitterShareButton.Location = New System.Drawing.Point(5, 251)
+            Me.TwitterShareButton.Name = "TwitterShareButton"
+            Me.TwitterShareButton.PushedImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
+            Me.TwitterShareButton.Size = New System.Drawing.Size(121, 35)
+            Me.TwitterShareButton.TabIndex = 41
+            Me.TwitterShareButton.TabStop = False
+            '
             'InitialForm
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -159,7 +152,6 @@
             Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
             Me.ClientSize = New System.Drawing.Size(296, 320)
             Me.Controls.Add(Me.LogTestButton)
-            Me.Controls.Add(Me.Button1)
             Me.Controls.Add(Me.TwitterShareButton)
             Me.Controls.Add(Me.openRuleFormButton)
             Me.Controls.Add(Me.GameStartButton)
@@ -177,6 +169,7 @@
             Me.MenuStrip1.PerformLayout()
             CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.TwitterShareButton, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -189,10 +182,9 @@
         Friend WithEvents PlaysSEMenuItem As ToolStripMenuItem
         Friend WithEvents GameStartButton As RichButton
         Friend WithEvents openRuleFormButton As RichButton
-        Friend WithEvents TwitterShareButton As Button
-        Friend WithEvents Button1 As Button
         Friend WithEvents ヘルプHToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents VersionInfoToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents LogTestButton As Button
+        Friend WithEvents TwitterShareButton As RichButton
     End Class
 End Namespace

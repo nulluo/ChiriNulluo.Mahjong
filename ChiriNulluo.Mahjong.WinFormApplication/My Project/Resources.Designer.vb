@@ -972,6 +972,16 @@ Namespace My.Resources
         '''<summary>
         '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         '''</summary>
+        Friend ReadOnly Property SecretBonusTile() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("SecretBonusTile", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
         Friend ReadOnly Property StoodTileBase() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("StoodTileBase", resourceCulture)
@@ -1088,6 +1098,16 @@ Namespace My.Resources
         Friend ReadOnly Property TileToNextDraw() As String
             Get
                 Return ResourceManager.GetString("TileToNextDraw", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property TwitterShare() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("TwitterShare", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
     End Module

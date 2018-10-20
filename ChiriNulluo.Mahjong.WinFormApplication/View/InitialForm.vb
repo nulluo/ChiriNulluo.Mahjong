@@ -66,12 +66,6 @@ Namespace View
         End Sub
 
 
-
-        Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-            Dim _form As New TwitterShareForm(Me, IO.Path.Combine(My.Application.Info.DirectoryPath, "logs", "ScreenShot.gif"))
-            _form.Show()
-        End Sub
-
         Private Sub VersionInfoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VersionInfoToolStripMenuItem.Click
             Dim _nextForm As New View.VersionInfoForm()
             _nextForm.ShowDialog()
