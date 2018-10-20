@@ -79,14 +79,17 @@ Namespace View
             'ベースとなる白牌のImageオブジェクト取得
             Dim _baseImage As Image
 
-            If DirectCast(tile, Precure.Tiles.PreCureCharacterTile).IsSpecial Then
+            Dim _targetTile = DirectCast(tile, Precure.Tiles.PreCureCharacterTile)
+
+            If _targetTile.IsSpecial Then
                 _baseImage = My.Resources.FallenTileBaseSpecial
             Else
                 _baseImage = My.Resources.FallenTileBase
             End If
 
-            If True Then
-                _baseImage = CreateColorCorrectedImage(_baseImage, 1.0, 0.7, 0.7, 0, 0, 0)
+            '立直宣言牌の場合は強調表示をする
+            If _targetTile.IsTileAfterRiichi Then
+                _baseImage = CreateColorCorrectedImage(_baseImage, 1.1, 0.6, 0.6, 0, 0, 0)
             End If
 
             Dim _g As Graphics = Graphics.FromImage(_baseImage)

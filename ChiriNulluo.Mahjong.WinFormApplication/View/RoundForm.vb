@@ -194,6 +194,9 @@ Namespace View
                 Me.riichiImageCOM.Visible = True
             End If
 
+            If Me.COMPlayer.RiichiDone Then
+                _tileDiscardedByCOM.IsTileAfterRiichi = True
+            End If
 
             Dim _choiceMessages As New List(Of String)
 
@@ -288,7 +291,7 @@ Namespace View
             'リーチ実行済みの場合はオートツモを有効にする。(ただし、リプレイモードの場合はオートツモしない)
             If Me.HumanPlayer.RiichiDone AndAlso
             Not Replay.ReplayDataManager.CurrentState = ReplayModeState.Running Then
-
+                _tileToDiscard.IsTileAfterRiichi = True
                 Me.RiichiAutoDrawTimer.Enabled = True
             End If
 

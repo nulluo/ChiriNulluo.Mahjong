@@ -11,6 +11,12 @@
         Property Name As String
 
         ''' <summary>
+        ''' 立直宣言をした後の捨て牌である場合はTrue,そうでなければFalse。
+        ''' </summary>
+        ''' <returns></returns>
+        Property IsTileAfterRiichi As Boolean = False
+
+        ''' <summary>
         ''' ポンまたはチーによって副露されているかどうかを設定または取得します。
         ''' </summary>
         ''' <returns>ポンまたはチーによって副露されているかどうか。</returns>
