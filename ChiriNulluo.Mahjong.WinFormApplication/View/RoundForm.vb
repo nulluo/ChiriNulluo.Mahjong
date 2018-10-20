@@ -186,11 +186,11 @@ Namespace View
             End If
 
             'COMが牌を1枚捨てる
+
             Dim _tileDiscardedByCOM = Me.Facade.DiscardCOMPlayersTile()
             If Me.Facade.Result.HasFlag(RoundState.COMDeclaredRiichi) Then
                 Me.Facade.RiichiCOM()
                 Me.OpenCOMRiichiForm()
-                Me.Facade.Result = RoundState.Undetermined
                 Me.riichiImageCOM.Visible = True
             End If
 
