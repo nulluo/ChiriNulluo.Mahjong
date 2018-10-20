@@ -344,7 +344,6 @@ Namespace Facade
         Private Function DecidesToRiichi() As Boolean
 
             Dim _random As New System.Random()
-            'UNIMPLEMENTED: 本来はCOMPlayerの戦略ごとに異なるロジックで決定する。取り合えず一律で1/5の確率でリーチさせてる
             Return (DirectCast(Me.COMPlayer.Algorithm, PrecureCOMPlayerAlgorithm).strategy.RiichiRate >= _random.Next(99))
 
         End Function

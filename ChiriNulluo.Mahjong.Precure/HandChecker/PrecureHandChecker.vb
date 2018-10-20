@@ -608,7 +608,7 @@ Namespace HandChecker
         Private Function IsAccomplishedIrregularYaku(riichiDone As Boolean, yakuName As String) As Boolean
 
             Select Case yakuName
-                Case "ツモ"
+                Case "ツモあがり"
                     Return (Not Me.Hand.PongOrChowOrRonDone)
                 Case "リーチ"
                     Return riichiDone

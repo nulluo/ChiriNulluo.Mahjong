@@ -59,7 +59,7 @@ Namespace Players
 
         Private Shared Function GetStrategyOfRiko() As COMStrategy
             Dim _haipaiStrategy As New COMHaipaiStrategy
-            Dim _strategy = New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount, _haipaiStrategy, 5)
+            Dim _strategy = New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount, _haipaiStrategy, 1)
 
             Return _strategy
         End Function
