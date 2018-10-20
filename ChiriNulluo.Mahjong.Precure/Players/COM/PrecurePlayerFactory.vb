@@ -18,6 +18,8 @@ Namespace Players
                     _opponentCharacter = New PrecurePlayer("Riko", "十六夜リコ", GetStrategyOfRiko())
                 Case "Kotoha"
                     _opponentCharacter = New PrecurePlayer("Kotoha", "花海ことは", GetStrategyOfKotoha())
+                Case "Ruru"
+                    _opponentCharacter = New PrecurePlayer("Ruru", "ルールー", GetStrategyOfRuru())
                 Case Else
                     _opponentCharacter = Nothing
             End Select
@@ -80,6 +82,28 @@ Namespace Players
 
             Dim _haipaiStrategy As COMHaipaiStrategy
             _haipaiStrategy = New COMHaipaiStrategy(50, 10, _haipaiTilesList)
+
+            Dim _strategy = New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount,
+                                            _haipaiStrategy, riichiRate:=100)
+
+            Return _strategy
+        End Function
+#End Region
+
+
+#Region "ルールー"
+        'キャラ特徴：イーシャンテン手が初手に来ることが多い
+
+        Private Shared Function GetStrategyOfRuru() As COMStrategy
+            Dim _haipaiTilesList As New List(Of COMHaipaiTiles)
+            With _haipaiTilesList
+                .Add(New COMHaipaiTiles(5, "0101", "0101", "0101", "0301", "0301", "0301", "0801", "0801", "0801", "0901", "0901", "1301", "1301")) 'オールピンクキュア
+
+
+            End With
+
+            Dim _haipaiStrategy As COMHaipaiStrategy
+            _haipaiStrategy = New COMHaipaiStrategy(30, 10, _haipaiTilesList)
 
             Dim _strategy = New COMStrategy(COMDiscardTileStrategy.ToDecreaseShantenCount,
                                             _haipaiStrategy, riichiRate:=100)

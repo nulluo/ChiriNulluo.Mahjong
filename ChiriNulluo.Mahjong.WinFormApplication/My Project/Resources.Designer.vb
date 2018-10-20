@@ -325,6 +325,51 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  あなたの勝利する確率は…0.001%以下…それでも、まだ続けるのですか？ に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptRuruDraw() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptRuruDraw", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  私はルールー、正式名称クライアス製アンドロイドRUR-9500…敵を排除します… に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptRuruGameStart() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptRuruGameStart", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  そんな……私のAIは完璧のはず…なぜ… に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptRuruLose() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptRuruLose", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  ツモりました、マスター に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptRuruWinDraw() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptRuruWinDraw", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  ロンです…… に類似しているローカライズされた文字列を検索します。
+        '''</summary>
+        Friend ReadOnly Property CharacterScriptRuruWinRon() As String
+            Get
+                Return ResourceManager.GetString("CharacterScriptRuruWinRon", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         '''</summary>
         Friend ReadOnly Property Face_Eas01() As System.Drawing.Bitmap
@@ -470,6 +515,36 @@ Namespace My.Resources
         Friend ReadOnly Property Face_Riko03() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Face_Riko03", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property Face_Ruru01() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Face_Ruru01", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property Face_Ruru02() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Face_Ruru02", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property Face_Ruru03() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Face_Ruru03", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

@@ -403,10 +403,14 @@
     <Content Include="Pictures\3DVersion32.png" />
     <Content Include="Pictures\3DVersion48.png" />
     <Content Include="Pictures\3DVersion64.png" />
+    <None Include="Pictures\charaFace\Face_Ruru01.png" />
+    <None Include="Pictures\charaFace\Face_Ruru02.png" />
+    <None Include="Pictures\charaFace\Face_Ruru03.png" />
     <Content Include="Pictures\CureJong2.ico" />
     <Content Include="Pictures\CureJong.ico" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="素材提供元.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

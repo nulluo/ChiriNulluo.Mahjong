@@ -27,10 +27,11 @@
             Me.LabelEas = New System.Windows.Forms.Label()
             Me.Label2 = New System.Windows.Forms.Label()
             Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-            Me.Label3 = New System.Windows.Forms.Label()
+            Me.ButtonRuru = New System.Windows.Forms.Button()
+            Me.LabelMirai = New System.Windows.Forms.Label()
             Me.ButtonMirai = New System.Windows.Forms.Button()
             Me.ButtonKotoha = New System.Windows.Forms.Button()
-            Me.LabelMirai = New System.Windows.Forms.Label()
+            Me.LabelKotoha = New System.Windows.Forms.Label()
             Me.ButtonRiko = New System.Windows.Forms.Button()
             Me.LabelRiko = New System.Windows.Forms.Label()
             Me.Label7 = New System.Windows.Forms.Label()
@@ -77,14 +78,15 @@
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
             Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-            Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143.0!))
-            Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 3)
-            Me.TableLayoutPanel1.Controls.Add(Me.ButtonMirai, 1, 2)
-            Me.TableLayoutPanel1.Controls.Add(Me.ButtonKotoha, 1, 2)
+            Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105.0!))
+            Me.TableLayoutPanel1.Controls.Add(Me.ButtonRuru, 2, 0)
             Me.TableLayoutPanel1.Controls.Add(Me.LabelMirai, 0, 3)
+            Me.TableLayoutPanel1.Controls.Add(Me.ButtonMirai, 1, 2)
+            Me.TableLayoutPanel1.Controls.Add(Me.ButtonKotoha, 2, 2)
+            Me.TableLayoutPanel1.Controls.Add(Me.LabelKotoha, 1, 3)
             Me.TableLayoutPanel1.Controls.Add(Me.ButtonRiko, 0, 2)
             Me.TableLayoutPanel1.Controls.Add(Me.LabelRiko, 3, 2)
-            Me.TableLayoutPanel1.Controls.Add(Me.Label7, 1, 2)
+            Me.TableLayoutPanel1.Controls.Add(Me.Label7, 3, 2)
             Me.TableLayoutPanel1.Controls.Add(Me.Label5, 3, 1)
             Me.TableLayoutPanel1.Controls.Add(Me.Label4, 2, 1)
             Me.TableLayoutPanel1.Controls.Add(Me.Label1, 3, 0)
@@ -99,21 +101,31 @@
             Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
             Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
             Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-            Me.TableLayoutPanel1.Size = New System.Drawing.Size(416, 260)
+            Me.TableLayoutPanel1.Size = New System.Drawing.Size(417, 260)
             Me.TableLayoutPanel1.TabIndex = 0
             '
-            'Label3
+            'ButtonRuru
             '
-            Me.Label3.AutoSize = True
-            Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.Label3.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 11.0!)
-            Me.Label3.ForeColor = System.Drawing.Color.Snow
-            Me.Label3.Location = New System.Drawing.Point(109, 232)
-            Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(94, 25)
-            Me.Label3.TabIndex = 32
-            Me.Label3.Text = "みらい(普通)"
-            Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.ButtonRuru.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.ButtonRuru.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.Face_Ruru01
+            Me.ButtonRuru.Location = New System.Drawing.Point(212, 6)
+            Me.ButtonRuru.Name = "ButtonRuru"
+            Me.ButtonRuru.Size = New System.Drawing.Size(94, 94)
+            Me.ButtonRuru.TabIndex = 33
+            Me.ButtonRuru.UseVisualStyleBackColor = True
+            '
+            'LabelMirai
+            '
+            Me.LabelMirai.AutoSize = True
+            Me.LabelMirai.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.LabelMirai.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 11.0!)
+            Me.LabelMirai.ForeColor = System.Drawing.Color.Snow
+            Me.LabelMirai.Location = New System.Drawing.Point(109, 232)
+            Me.LabelMirai.Name = "LabelMirai"
+            Me.LabelMirai.Size = New System.Drawing.Size(94, 25)
+            Me.LabelMirai.TabIndex = 32
+            Me.LabelMirai.Text = "みらい(普通)"
+            Me.LabelMirai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'ButtonMirai
             '
@@ -136,18 +148,18 @@
             Me.ButtonKotoha.TabIndex = 30
             Me.ButtonKotoha.UseVisualStyleBackColor = True
             '
-            'LabelMirai
+            'LabelKotoha
             '
-            Me.LabelMirai.AutoSize = True
-            Me.LabelMirai.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.LabelMirai.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 11.0!)
-            Me.LabelMirai.ForeColor = System.Drawing.Color.Snow
-            Me.LabelMirai.Location = New System.Drawing.Point(212, 232)
-            Me.LabelMirai.Name = "LabelMirai"
-            Me.LabelMirai.Size = New System.Drawing.Size(94, 25)
-            Me.LabelMirai.TabIndex = 29
-            Me.LabelMirai.Text = "ことは(強い)"
-            Me.LabelMirai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            Me.LabelKotoha.AutoSize = True
+            Me.LabelKotoha.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.LabelKotoha.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 11.0!)
+            Me.LabelKotoha.ForeColor = System.Drawing.Color.Snow
+            Me.LabelKotoha.Location = New System.Drawing.Point(212, 232)
+            Me.LabelKotoha.Name = "LabelKotoha"
+            Me.LabelKotoha.Size = New System.Drawing.Size(94, 25)
+            Me.LabelKotoha.TabIndex = 29
+            Me.LabelKotoha.Text = "ことは(強い)"
+            Me.LabelKotoha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'ButtonRiko
             '
@@ -180,7 +192,7 @@
             Me.Label7.ForeColor = System.Drawing.Color.Snow
             Me.Label7.Location = New System.Drawing.Point(315, 129)
             Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(137, 100)
+            Me.Label7.Size = New System.Drawing.Size(99, 100)
             Me.Label7.TabIndex = 24
             Me.Label7.Text = "?"
             Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -193,7 +205,7 @@
             Me.Label5.ForeColor = System.Drawing.Color.Snow
             Me.Label5.Location = New System.Drawing.Point(315, 106)
             Me.Label5.Name = "Label5"
-            Me.Label5.Size = New System.Drawing.Size(137, 20)
+            Me.Label5.Size = New System.Drawing.Size(99, 20)
             Me.Label5.TabIndex = 22
             Me.Label5.Text = "?"
             Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -202,24 +214,24 @@
             '
             Me.Label4.AutoSize = True
             Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.Label4.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Bold)
+            Me.Label4.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 9.0!)
             Me.Label4.ForeColor = System.Drawing.Color.Snow
             Me.Label4.Location = New System.Drawing.Point(212, 106)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(94, 20)
             Me.Label4.TabIndex = 21
-            Me.Label4.Text = "?"
+            Me.Label4.Text = "ルールー(強い)"
             Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             '
             'Label1
             '
-            Me.Label1.AutoSize = True
+            Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
             Me.Label1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Bold)
             Me.Label1.ForeColor = System.Drawing.Color.Snow
             Me.Label1.Location = New System.Drawing.Point(315, 3)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(137, 100)
+            Me.Label1.Size = New System.Drawing.Size(99, 100)
             Me.Label1.TabIndex = 20
             Me.Label1.Text = "?"
             Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -273,7 +285,7 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.SystemColors.GrayText
-            Me.ClientSize = New System.Drawing.Size(435, 333)
+            Me.ClientSize = New System.Drawing.Size(438, 333)
             Me.Controls.Add(Me.ManualModeField)
             Me.Controls.Add(Me.TableLayoutPanel1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -295,13 +307,14 @@
         Friend WithEvents ManualModeField As CheckBox
         Public WithEvents ButtonEas As Button
         Friend WithEvents ButtonRiko As Button
-        Friend WithEvents LabelMirai As Label
+        Friend WithEvents LabelKotoha As Label
         Friend WithEvents ButtonKotoha As Button
         Friend WithEvents ButtonMirai As Button
-        Friend WithEvents Label3 As Label
+        Friend WithEvents LabelMirai As Label
         Friend WithEvents Label7 As Label
         Friend WithEvents Label5 As Label
         Friend WithEvents Label4 As Label
         Friend WithEvents Label1 As Label
+        Friend WithEvents ButtonRuru As Button
     End Class
 End Namespace
