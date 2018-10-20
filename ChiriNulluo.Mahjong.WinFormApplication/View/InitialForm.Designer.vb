@@ -105,13 +105,12 @@
             Me.TwitterShareButton.TabIndex = 42
             Me.TwitterShareButton.Text = "Twitterでシェア"
             Me.TwitterShareButton.UseVisualStyleBackColor = True
-            Me.TwitterShareButton.Visible = False
             '
             'Button1
             '
-            Me.Button1.Location = New System.Drawing.Point(158, 261)
+            Me.Button1.Location = New System.Drawing.Point(158, 249)
             Me.Button1.Name = "Button1"
-            Me.Button1.Size = New System.Drawing.Size(113, 23)
+            Me.Button1.Size = New System.Drawing.Size(110, 35)
             Me.Button1.TabIndex = 43
             Me.Button1.Text = "TwitterSheaTest"
             Me.Button1.UseVisualStyleBackColor = True
@@ -147,7 +146,7 @@
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
             Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-            Me.ClientSize = New System.Drawing.Size(300, 324)
+            Me.ClientSize = New System.Drawing.Size(296, 320)
             Me.Controls.Add(Me.Button1)
             Me.Controls.Add(Me.TwitterShareButton)
             Me.Controls.Add(Me.openRuleFormButton)

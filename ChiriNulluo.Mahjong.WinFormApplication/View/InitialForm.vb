@@ -59,7 +59,7 @@ Namespace View
 
         Private Sub TwitterShareButton_Click(sender As Object, e As EventArgs) Handles TwitterShareButton.Click
             'ブラウザで開く
-            System.Diagnostics.Process.Start("http://twitter.com/share?url=http://www.geocities.jp/nero021/programming/CureJong/CureJong.htm&text=%e3%81%93%e3%81%ae%e3%82%b2%e3%83%bc%e3%83%a0%e3%82%81%e3%81%a3%e3%81%a1%e3%82%83%e9%9d%a2%e7%99%bd%e3%81%84%e3%81%a7%ef%bc%81%e3%81%bf%e3%82%93%e3%81%aa%e3%82%82%e3%82%84%e3%82%8d%e3%81%86%ef%bc%81")
+            System.Diagnostics.Process.Start("http://twitter.com/share?url=https://nulluo.github.io/ChiriNulluo.Game.WebSite/CureJong/index.html&text=%e5%90%8c%e4%ba%ba%e3%82%b2%e3%83%bc%e3%83%a0%e3%81%af%e3%81%93%e3%82%8c%e3%82%92%e3%82%84%e3%81%a3%e3%81%a6%e3%82%8b%e3%82%88%ef%bc%81%e4%bb%8a%e5%ba%a6%e3%81%ae%e3%83%97%e3%83%aa%e3%82%ad%e3%83%a5%e3%82%a2%e3%82%b2%e3%83%bc%e3%81%af%e3%83%9e%e3%83%bc%e3%82%b8%e3%83%a3%e3%83%b3%ef%bc%81%20%23%e3%82%ad%e3%83%a5%e3%82%a2%e3%82%b8%e3%83%a3%e3%83%b3")
 
         End Sub
 
