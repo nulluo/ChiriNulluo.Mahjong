@@ -1,0 +1,42 @@
+﻿■「キュアジャン」で使用させて頂いた素材の作成者様です。(敬称略)
+
+■素材提供者の方々以外にも、Twitter、マストドンなどのSNSで知り合った多くの方々に、
+　ゲーム制作について技術的なアドバイスを頂いたり、テストプレイをして頂いたり、
+　多大なご協力を頂きました。
+
+■「キュアジャン」制作のためにお力を貸していただいた全ての方々に、この場でお礼を申し上げます。
+　まことにありがとうございました。
+
+
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　奇々浦ヌル夫
+
+■グラフィック
+　j9mz23
+　https://twitter.com/j9mz23
+
+　EGAMI
+　https://twitter.com/vivid_fox
+
+　霞田亜斗
+　https://twitter.com/_custard_
+
+
+■サウンド
+　On-Jin ～音人～
+　https://on-jin.com/
+
+　Sparrow Tune
+　https://dova-s.jp/_contents/author/profile274.html
+
+
+■フォント
+　Itou Hiroki
+　http://itouhiro.hatenablog.com/entry/20130602/font
+
+　dwuk
+　http://www.dwuk.jp/font/font-mot.html
+
+■ライブラリ
+　NLog
+　同梱の"NLog_LICENSE.txt"を参照ください。
+
