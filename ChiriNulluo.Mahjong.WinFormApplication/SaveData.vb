@@ -36,7 +36,7 @@ Public Class SaveData
     ''' </summary>
     Public Sub InitializeSaveDataFile()
         If Not File.Exists(Me.AddExecutingBinaryDirName(FileName)) Then
-            MessageBox.Show("SaveDataFile存在しないと判定された")
+            'MessageBox.Show("SaveDataFile存在しないと判定された")
             Me.CreateNewSaveDataFile()
         End If
 
