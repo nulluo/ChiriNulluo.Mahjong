@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;comPointField.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>17</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -184,7 +184,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>16</value>
   </data>
   <data name="humanPointField.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -217,7 +217,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;humanPointField.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -250,7 +250,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -283,7 +283,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>25</value>
   </data>
   <data name="OpponentLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -316,7 +316,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;OpponentLabel.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>28</value>
   </data>
   <data name="endRoundButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -352,7 +352,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;endRoundButton.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>24</value>
   </data>
   <data name="allTilesOpenField.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -391,7 +391,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;allTilesOpenField.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="restDrawCountField.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -424,7 +424,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;restDrawCountField.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="restRoundsField.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -457,7 +457,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;restRoundsField.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <metadata name="RiichiAutoDrawTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -484,7 +484,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BonusTIlePicture0.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>26</value>
   </data>
   <data name="BonusTIlePicture1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -508,7 +508,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BonusTIlePicture1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="BonusTIlePicture2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -532,7 +532,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BonusTIlePicture2.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -565,7 +565,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>31</value>
   </data>
   <data name="PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -592,7 +592,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>32</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -625,7 +625,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -658,7 +658,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -691,7 +691,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="riichiImageHuman.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -756,7 +756,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;riichiImageHuman.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="riichiImageCOM.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -821,7 +821,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;riichiImageCOM.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="TestShantenButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -851,7 +851,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TestShantenButton1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="BonusTIlePicture3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -875,7 +875,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BonusTIlePicture3.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="BonusTIlePicture4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -899,7 +899,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BonusTIlePicture4.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>19</value>
   </data>
   <data name="BonusTIlePicture5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -923,7 +923,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BonusTIlePicture5.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>18</value>
   </data>
   <data name="openRuleFormButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -941,13 +941,13 @@
     <value>openRuleFormButton</value>
   </data>
   <data name="&gt;&gt;openRuleFormButton.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.RichButton, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.RichButton, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;openRuleFormButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;openRuleFormButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="RiichiButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -968,13 +968,13 @@
     <value>RiichiButton</value>
   </data>
   <data name="&gt;&gt;RiichiButton.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.RichButton, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.RichButton, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RiichiButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RiichiButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="humanPlayerDiscardedPilePanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 414</value>
@@ -995,13 +995,13 @@
     <value>humanPlayerDiscardedPilePanel</value>
   </data>
   <data name="&gt;&gt;humanPlayerDiscardedPilePanel.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalDiscardedPilePanel, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalDiscardedPilePanel, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;humanPlayerDiscardedPilePanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;humanPlayerDiscardedPilePanel.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>27</value>
   </data>
   <data name="comPlayerDiscardedPilePanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 95</value>
@@ -1016,13 +1016,13 @@
     <value>comPlayerDiscardedPilePanel</value>
   </data>
   <data name="&gt;&gt;comPlayerDiscardedPilePanel.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalDiscardedPilePanel, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalDiscardedPilePanel, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;comPlayerDiscardedPilePanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;comPlayerDiscardedPilePanel.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>29</value>
   </data>
   <data name="comPlayerHandPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 5</value>
@@ -1043,16 +1043,16 @@
     <value>comPlayerHandPanel</value>
   </data>
   <data name="&gt;&gt;comPlayerHandPanel.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalHandPanel, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalHandPanel, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;comPlayerHandPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;comPlayerHandPanel.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>30</value>
   </data>
   <data name="horizontalRevealedHandPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>601, 588</value>
+    <value>541, 563</value>
   </data>
   <data name="horizontalRevealedHandPanel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 80</value>
@@ -1064,13 +1064,13 @@
     <value>horizontalRevealedHandPanel3</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel3.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel3.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>3</value>
   </data>
   <data name="humanPlayerHandPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 563</value>
@@ -1091,16 +1091,16 @@
     <value>humanPlayerHandPanel</value>
   </data>
   <data name="&gt;&gt;humanPlayerHandPanel.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalHandPanel, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalHandPanel, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;humanPlayerHandPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;humanPlayerHandPanel.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>34</value>
   </data>
   <data name="horizontalRevealedHandPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>745, 588</value>
+    <value>705, 563</value>
   </data>
   <data name="horizontalRevealedHandPanel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 80</value>
@@ -1112,16 +1112,16 @@
     <value>horizontalRevealedHandPanel2</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel2.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel2.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>2</value>
   </data>
   <data name="horizontalRevealedHandPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>889, 588</value>
+    <value>869, 563</value>
   </data>
   <data name="horizontalRevealedHandPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 80</value>
@@ -1133,16 +1133,16 @@
     <value>horizontalRevealedHandPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel1.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel1.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>1</value>
   </data>
   <data name="horizontalRevealedHandPanel0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1033, 588</value>
+    <value>1033, 563</value>
   </data>
   <data name="horizontalRevealedHandPanel0.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 80</value>
@@ -1154,13 +1154,13 @@
     <value>horizontalRevealedHandPanel0</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel0.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.HorizontalRevealedHandPanel, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel0.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalRevealedHandPanel0.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>0</value>
   </data>
   <data name="TileDetailInfoPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>363, 241</value>
@@ -1178,13 +1178,13 @@
     <value>TileDetailInfoPanel1</value>
   </data>
   <data name="&gt;&gt;TileDetailInfoPanel1.Type" xml:space="preserve">
-    <value>ChiriNulluo.Mahjong.WinFormApplication.View.TileDetailInfoPanel, CureJongMain, Version=0.1.1.27, Culture=neutral, PublicKeyToken=null</value>
+    <value>ChiriNulluo.Mahjong.WinFormApplication.View.TileDetailInfoPanel, CureJongMain, Version=0.1.1.28, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TileDetailInfoPanel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TileDetailInfoPanel1.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>33</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

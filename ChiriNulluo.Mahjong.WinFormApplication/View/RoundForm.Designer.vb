@@ -316,6 +316,10 @@
             resources.ApplyResources(Me, "$this")
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.Green
+            Me.Controls.Add(Me.horizontalRevealedHandPanel0)
+            Me.Controls.Add(Me.horizontalRevealedHandPanel1)
+            Me.Controls.Add(Me.horizontalRevealedHandPanel2)
+            Me.Controls.Add(Me.horizontalRevealedHandPanel3)
             Me.Controls.Add(Me.TestShantenButton1)
             Me.Controls.Add(Me.openRuleFormButton)
             Me.Controls.Add(Me.RiichiButton)
@@ -344,13 +348,9 @@
             Me.Controls.Add(Me.comPlayerDiscardedPilePanel)
             Me.Controls.Add(Me.comPlayerHandPanel)
             Me.Controls.Add(Me.Label7)
-            Me.Controls.Add(Me.horizontalRevealedHandPanel3)
-            Me.Controls.Add(Me.humanPlayerHandPanel)
             Me.Controls.Add(Me.PictureBox1)
-            Me.Controls.Add(Me.horizontalRevealedHandPanel2)
-            Me.Controls.Add(Me.horizontalRevealedHandPanel1)
-            Me.Controls.Add(Me.horizontalRevealedHandPanel0)
             Me.Controls.Add(Me.TileDetailInfoPanel1)
+            Me.Controls.Add(Me.humanPlayerHandPanel)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
             Me.Name = "RoundForm"
             CType(Me.BonusTIlePicture0, System.ComponentModel.ISupportInitialize).EndInit()
