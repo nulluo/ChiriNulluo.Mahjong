@@ -18,8 +18,10 @@ Namespace View
 
 #If DEBUG Then
             Me.DebugToolStripMenuItem.Visible = True
+            me.LogTestButton.Visible=True
 #Else
             Me.DebugToolStripMenuItem.Visible = False
+            Me.LogTestButton.Visible = False
 #End If
 
             Me.PlaysBGMMenuItem.Checked = Sounds.SoundManager.PlaysBGM
@@ -74,6 +76,11 @@ Namespace View
             Dim _nextForm As New View.VersionInfoForm()
             _nextForm.ShowDialog()
 
+        End Sub
+
+        Private Sub LogTestButton_Click(sender As Object, e As EventArgs) Handles LogTestButton.Click
+            Dim logger As NLog.Logger = NLog.LogManager.GetCurrentClassLogger()
+            logger.Trace("test")
         End Sub
     End Class
 End Namespace

@@ -11,6 +11,7 @@ Namespace Logging
 #End Region
 
         Public Sub Write(processTypeID As String, processID As String, player As String, remark As String, ParamArray parameters() As String)
+#If DEBUG Then
             If Replay.ReplayDataManager.CurrentState = ReplayModeState.NormalModeSinceMatchStarted Then
                 Dim _logMessage As String
                 _logMessage = MatchManager.MatchID & ","
@@ -27,6 +28,7 @@ Namespace Logging
                 'マッチ内ログNoカウントアップ
                 MatchManager.LogNoInMatch += 1
             End If
+#End If
         End Sub
     End Class
 

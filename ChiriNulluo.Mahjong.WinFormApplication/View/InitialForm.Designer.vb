@@ -34,6 +34,7 @@
             Me.VersionInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.TwitterShareButton = New System.Windows.Forms.Button()
             Me.Button1 = New System.Windows.Forms.Button()
+            Me.LogTestButton = New System.Windows.Forms.Button()
             Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
             Me.GameStartButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
             Me.MenuStrip1.SuspendLayout()
@@ -116,6 +117,16 @@
             Me.Button1.UseVisualStyleBackColor = True
             Me.Button1.Visible = False
             '
+            'LogTestButton
+            '
+            Me.LogTestButton.Location = New System.Drawing.Point(222, 141)
+            Me.LogTestButton.Name = "LogTestButton"
+            Me.LogTestButton.Size = New System.Drawing.Size(75, 23)
+            Me.LogTestButton.TabIndex = 44
+            Me.LogTestButton.Text = "LogTest"
+            Me.LogTestButton.UseVisualStyleBackColor = True
+            Me.LogTestButton.Visible = False
+            '
             'openRuleFormButton
             '
             Me.openRuleFormButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton1
@@ -147,6 +158,7 @@
             Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
             Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
             Me.ClientSize = New System.Drawing.Size(296, 320)
+            Me.Controls.Add(Me.LogTestButton)
             Me.Controls.Add(Me.Button1)
             Me.Controls.Add(Me.TwitterShareButton)
             Me.Controls.Add(Me.openRuleFormButton)
@@ -181,5 +193,6 @@
         Friend WithEvents Button1 As Button
         Friend WithEvents ヘルプHToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents VersionInfoToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents LogTestButton As Button
     End Class
 End Namespace
