@@ -23,12 +23,14 @@
         'コード エディターを使って変更しないでください。
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+            Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
             Me.WallPileDataGridView = New System.Windows.Forms.DataGridView()
             Me.seriesIDColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.numberColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.nameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
             Me.idColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+            Me.moveUpButton = New System.Windows.Forms.Button()
+            Me.moveDownButton = New System.Windows.Forms.Button()
             CType(Me.WallPileDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
@@ -36,19 +38,19 @@
             '
             Me.WallPileDataGridView.AllowUserToAddRows = False
             Me.WallPileDataGridView.AllowUserToDeleteRows = False
-            DataGridViewCellStyle1.BackColor = System.Drawing.Color.Red
-            Me.WallPileDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-            Me.WallPileDataGridView.Anchor = System.Windows.Forms.AnchorStyles.None
+            DataGridViewCellStyle2.BackColor = System.Drawing.Color.Red
+            Me.WallPileDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+            Me.WallPileDataGridView.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
             Me.WallPileDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
             Me.WallPileDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
             Me.WallPileDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.seriesIDColumn, Me.numberColumn, Me.nameColumn, Me.idColumn})
-            Me.WallPileDataGridView.Location = New System.Drawing.Point(13, 10)
+            Me.WallPileDataGridView.Location = New System.Drawing.Point(12, 40)
             Me.WallPileDataGridView.Name = "WallPileDataGridView"
             Me.WallPileDataGridView.ReadOnly = True
-            Me.WallPileDataGridView.RowHeadersVisible = False
+            Me.WallPileDataGridView.RowHeadersWidth = 24
             Me.WallPileDataGridView.RowTemplate.Height = 80
             Me.WallPileDataGridView.ShowCellToolTips = False
-            Me.WallPileDataGridView.Size = New System.Drawing.Size(94, 403)
+            Me.WallPileDataGridView.Size = New System.Drawing.Size(118, 373)
             Me.WallPileDataGridView.TabIndex = 33
             '
             'seriesIDColumn
@@ -83,14 +85,33 @@
             Me.idColumn.ReadOnly = True
             Me.idColumn.Visible = False
             '
+            'moveUpButton
+            '
+            Me.moveUpButton.Location = New System.Drawing.Point(16, 13)
+            Me.moveUpButton.Name = "moveUpButton"
+            Me.moveUpButton.Size = New System.Drawing.Size(55, 23)
+            Me.moveUpButton.TabIndex = 34
+            Me.moveUpButton.Text = "↑(&U)"
+            Me.moveUpButton.UseVisualStyleBackColor = True
+            '
+            'moveDownButton
+            '
+            Me.moveDownButton.Location = New System.Drawing.Point(85, 13)
+            Me.moveDownButton.Name = "moveDownButton"
+            Me.moveDownButton.Size = New System.Drawing.Size(45, 23)
+            Me.moveDownButton.TabIndex = 35
+            Me.moveDownButton.Text = "↓(&D)"
+            Me.moveDownButton.UseVisualStyleBackColor = True
+            '
             'WallPIleForm
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(120, 422)
+            Me.ClientSize = New System.Drawing.Size(142, 422)
             Me.ControlBox = False
+            Me.Controls.Add(Me.moveDownButton)
+            Me.Controls.Add(Me.moveUpButton)
             Me.Controls.Add(Me.WallPileDataGridView)
-            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
             Me.MaximizeBox = False
             Me.MinimizeBox = False
             Me.Name = "WallPIleForm"
@@ -105,6 +126,8 @@
         Friend WithEvents numberColumn As DataGridViewTextBoxColumn
         Friend WithEvents nameColumn As DataGridViewTextBoxColumn
         Friend WithEvents idColumn As DataGridViewTextBoxColumn
+        Friend WithEvents moveUpButton As Button
+        Friend WithEvents moveDownButton As Button
     End Class
 
 End Namespace
