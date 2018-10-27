@@ -82,7 +82,7 @@ Namespace View
             '白牌にキャラ絵・テキストを描画
             'Dim _diffImage As Image = My.Resources.ResourceManager.GetObject(String.Format("Precure{0:0000}", tile.ID))
             Dim _diffImage As Bitmap = DirectCast(tile, Precure.Tiles.PreCureCharacterTile).Image
-            _g.DrawImage(_diffImage, 0, 3)
+            _g.DrawImage(_diffImage, 0, 3, 48, 53)
 
             'リソース解放
             _diffImage.Dispose()
