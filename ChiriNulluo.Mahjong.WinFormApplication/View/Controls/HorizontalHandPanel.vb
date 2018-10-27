@@ -173,7 +173,7 @@ Namespace View
                 End If
 
                 _g = Graphics.FromImage(_baseImage)
-                _g.DrawImage(_diffImage, 0, 3)
+                _g.DrawImage(_diffImage, 0, 3, 48, 53)
             End If
 
             'リソース解放
