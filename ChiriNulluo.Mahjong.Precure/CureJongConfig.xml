@@ -321,6 +321,18 @@
       <Name>輝木ほまれ</Name>
       <CureName>キュアエトワール</CureName>
     </Precure>
+    <Precure>
+      <TileSuitID>13</TileSuitID>
+      <Number>04</Number>
+      <Name>愛崎えみる</Name>
+      <CureName>キュアマシェリ</CureName>
+    </Precure>
+    <Precure>
+      <TileSuitID>13</TileSuitID>
+      <Number>05</Number>
+      <Name>ルールー・アムール</Name>
+      <CureName>キュアアムール</CureName>
+    </Precure>
   </Precures>
   <SpecialCharacters>
     <SpecialCharacter>
@@ -382,6 +394,11 @@
       <TileSuitID>09</TileSuitID>
       <Number>00</Number>
       <Name>クイーンミラージュ</Name>
+    </SpecialCharacter>
+    <SpecialCharacter>
+      <TileSuitID>10</TileSuitID>
+      <Number>00</Number>
+      <Name>トワイライト</Name>
     </SpecialCharacter>
   </SpecialCharacters>
   <TileSuits>
@@ -453,7 +470,7 @@
       <TileSuit>
         <TileSuitID>13</TileSuitID>
         <TileSuitName>ＨＵＧっと！プリキュア</TileSuitName>
-        <TotalTilesCount>3</TotalTilesCount>
+        <TotalTilesCount>5</TotalTilesCount>
       </TileSuit>
   </TileSuits>
   <Yakus>
@@ -637,11 +654,13 @@
     <Yaku>
       <Name>Hugプリ全員集合！</Name>
       <Type>1</Type>
-      <Point>500</Point>
+      <Point>1000</Point>
       <TileSet>
         <ID>1301</ID>
         <ID>1302</ID>
         <ID>1303</ID>
+        <ID>1304</ID>
+        <ID>1305</ID>
       </TileSet>
     </Yaku>
     <!-- オール〇〇(作品名)-->    
@@ -761,6 +780,7 @@
       <Type>2</Type>
       <Point>5000</Point>
       <TileSet>
+        <ID>1000</ID>
         <ID>1001</ID>
         <ID>1002</ID>
         <ID>1003</ID>
@@ -790,7 +810,7 @@
         <ID>1206</ID>
       </TileSet>
     </Yaku> 
-    <!--<Yaku>
+    <Yaku>
       <Name>オールHugプリ</Name>
       <Type>2</Type>
       <Point>5000</Point>
@@ -798,8 +818,10 @@
         <ID>1301</ID>
         <ID>1302</ID>
         <ID>1303</ID>
+        <ID>1304</ID>
+        <ID>1305</ID>
       </TileSet>
-    </Yaku>-->    
+    </Yaku>    
   <!-- オール〇〇(イメージカラー)-->
     <Yaku>
       <Name>オールピンクキュア</Name>
@@ -849,6 +871,7 @@
         <ID>0805</ID>
         <ID>1004</ID>
         <ID>1205</ID>
+        <ID>1304</ID>
       </TileSet>  
     </Yaku>
     <Yaku>
@@ -869,7 +892,7 @@
         <ID>1303</ID>
       </TileSet>
     </Yaku>
-    <Yaku>
+    <!--<Yaku>
       <Name>オール白キュア</Name>
       <Type>2</Type>
       <Point>25000</Point>
@@ -879,8 +902,8 @@
         <ID>0602</ID>
         <ID>0706</ID>
       </TileSet>  
-    </Yaku> 
-    <Yaku>
+    </Yaku>--> 
+    <!--<Yaku>
       <Name>オール緑キュア</Name>
       <Type>2</Type>
       <Point>20000</Point>
@@ -890,7 +913,7 @@
         <ID>1103</ID>
         <ID>1206</ID>
       </TileSet>  
-    </Yaku> 
+    </Yaku>--> 
     <Yaku>
       <Name>オール紫キュア</Name>
       <Type>2</Type>
@@ -902,6 +925,7 @@
         <ID>0904</ID>
         <ID>1102</ID>
         <ID>1204</ID>
+        <ID>1305</ID>
       </TileSet>  
     </Yaku>
     <!--ボーナス牌-->
@@ -922,6 +946,7 @@
         <ID>0706</ID>
         <ID>0800</ID>
         <ID>0900</ID>
+        <ID>1000</ID>
       </TileSet>
     </Yaku>
     <!--<Yaku>
@@ -934,6 +959,7 @@
         <ID>0400</ID>
         <ID>0800</ID>
         <ID>0900</ID>
+        <ID>1000</ID>
       </TileSet>  
     </Yaku>--> 
     

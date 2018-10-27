@@ -16,7 +16,7 @@ Namespace HandChecker
 
         'Private Shared Property NumsPerPrecureList As New SortedList(Of String, Integer)
 
-        Public Const TileMax As Integer = 65 - 12 + 6
+        Public Const TileMax As Integer = 68 - 13 + 6
 
 
         ''' <summary>

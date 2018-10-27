@@ -121,11 +121,11 @@ Namespace Players.COM
                 Dim _suitID As Integer = _rand.Next(_tileSuitsCount)
 
                 Select Case _suitID
-                    Case 1, 11, 13
+                    Case 1, 11
                         _choiceOfChow = 1
-                    Case 4, 5, 6, 9, 10
+                    Case 4, 5, 6, 9
                         _choiceOfChow = 2
-                    Case 7, 8
+                    Case 7, 8, 10, 13
                         _choiceOfChow = 3
                     Case 3, 12
                         _choiceOfChow = 4

@@ -12,7 +12,7 @@ Namespace HandChecker
     Public Class PrecureHandChecker
 
         'UNIMPLEMENTED: とりあえず仮にここにベタがきするが、本来はPrecureXMLDataAccessクラスでXMLから取得しないとだめです
-        Private CharacterNumPerSeries() As Integer = {1, 3, 4, 7, 5, 5, 6, 7, 6, 5, 4, 3, 6, 3}
+        Private CharacterNumPerSeries() As Integer = {1, 3, 4, 7, 5, 5, 6, 7, 6, 5, 5, 3, 6, 5}
 
         'UNIMPLEMENTED：深く考えずにコンストラクタ実装してしまったが、静的メソッドしかもたないNotInheritableなクラスでいい気がする
         ''' <summary>
