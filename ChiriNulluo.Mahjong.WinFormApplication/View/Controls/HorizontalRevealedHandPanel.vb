@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports ChiriNulluo.Mahjong.Core.Tiles
+Imports ChiriNulluo.Mahjong.Precure.Tiles
 
 Namespace View
     'UNIMPLEMENTED：もっと抽象化すればこのクラスは、Coreに入れられるはず
@@ -47,7 +48,7 @@ Namespace View
         ''' <param name="pictureBoxID">描画対象のPictureBoxのインデックス</param>
         Private Sub SetTileImage(tile As Tile, pictureBoxID As Integer)
             'PictureBox1に表示
-            Me.TilePictureList(pictureBoxID).Image = Me.GetTileImage(tile)
+            Me.TilePictureList(pictureBoxID).Image = DirectCast(tile, PreCureCharacterTile).FallenTileImage
         End Sub
 
         ''' <summary>
@@ -67,28 +68,6 @@ Namespace View
 
             End If
         End Sub
-
-        Private Function GetTileImage(tile As Tile) As Image
-            'ベースとなる白牌のImageオブジェクト取得
-            Dim _baseImage As Image
-            If DirectCast(tile, Precure.Tiles.PreCureCharacterTile).IsSpecial Then
-                _baseImage = My.Resources.FallenTileBaseSpecial
-            Else
-                _baseImage = My.Resources.FallenTileBase
-            End If
-
-            Dim _g As Graphics = Graphics.FromImage(_baseImage)
-
-            '白牌にキャラ絵・テキストを描画
-            'Dim _diffImage As Image = My.Resources.ResourceManager.GetObject(String.Format("Precure{0:0000}", tile.ID))
-            Dim _diffImage As Bitmap = DirectCast(tile, Precure.Tiles.PreCureCharacterTile).Image
-            _g.DrawImage(_diffImage, 0, 3, 48, 53)
-
-            'リソース解放
-            _diffImage.Dispose()
-            _g.Dispose()
-            Return _baseImage
-        End Function
 
         ''' <summary>
         ''' モデルであるHandの内容が変化したイベントを捕捉して牌の画像を更新する

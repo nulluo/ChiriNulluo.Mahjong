@@ -708,9 +708,9 @@ Namespace View
         ''' </summary>
         Private Sub DisplayRevealedBonusTIlePictures()
             'UNIMPLEMENTED: 0,4,8というインデックスを知っているのは内部を知り過ぎている感じ
-            Me.BonusTIlePicture0.Image = PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesList(0).Image
-            Me.BonusTIlePicture1.Image = PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesList(4).Image
-            Me.BonusTIlePicture2.Image = PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesList(8).Image
+            Me.BonusTIlePicture0.Image = PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesList(0).IconImage
+            Me.BonusTIlePicture1.Image = PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesList(4).IconImage
+            Me.BonusTIlePicture2.Image = PrecureCharacterSet.GetInstance.CurrentRoundRevealedBonusTilesList(8).IconImage
         End Sub
 
         ''' <summary>
@@ -720,9 +720,9 @@ Namespace View
 
             If visible Then
                 'UNIMPLEMENTED: 12,16,20というインデックスを知っているのは内部を知り過ぎている感じ
-                Me.BonusTIlePicture3.Image = PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesList(0).Image
-                Me.BonusTIlePicture4.Image = PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesList(4).Image
-                Me.BonusTIlePicture5.Image = PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesList(8).Image
+                Me.BonusTIlePicture3.Image = PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesList(0).IconImage
+                Me.BonusTIlePicture4.Image = PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesList(4).IconImage
+                Me.BonusTIlePicture5.Image = PrecureCharacterSet.GetInstance.CurrentRoundUnrevealedBonusTilesList(8).IconImage
             Else
                 Me.BonusTIlePicture3.Image = Nothing
                 Me.BonusTIlePicture4.Image = Nothing

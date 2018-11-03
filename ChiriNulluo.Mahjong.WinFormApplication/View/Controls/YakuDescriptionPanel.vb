@@ -30,7 +30,7 @@ Namespace View
             Dim i As Integer = 0
             For Each _tile As Tile In tiles
                 Dim _pictureBox As PictureBox = DirectCast(Me.Controls.Find("tilePicture" & i, True)(0), PictureBox)
-                _pictureBox.Image = Me.GetTileImage(_tile)
+                _pictureBox.Image = DirectCast(_tile, PreCureCharacterTile).FallenTileImage
                 i += 1
             Next
 
@@ -41,38 +41,6 @@ Namespace View
 
         End Sub
 
-
-        Private Function GetTileImage(tile As Tile) As Image
-            'ベースとなる白牌のImageオブジェクト取得
-            Dim _baseImage As Image
-            If DirectCast(tile, Precure.Tiles.PreCureCharacterTile).IsSpecial Then
-                _baseImage = My.Resources.StoodTileBaseSpecial
-            Else
-                _baseImage = My.Resources.StoodTileBase
-            End If
-
-
-            Dim _g As Graphics = Graphics.FromImage(_baseImage)
-
-            '白牌にキャラ絵・テキストを描画
-
-            'こう書くと、↓g.DrawImageする時にエラーになる
-            'Dim _diffImage As Bitmap = Precure.Tiles.PrecureCharacterSet.GetInstance.TileImages(tile.ID)
-
-            '↓プロジェクト内のリソースを使うとエラーなしに動く
-            'Dim _diffImage As Bitmap = My.Resources.ResourceManager.GetObject(String.Format("Precure{0:0000}", tile.ID))
-
-            '↓PreCureCharacterTile.ImageはPrecureCharacterSet.TileImagesと内部実装が異なるのでこれなら動く
-            Dim _diffImage As Bitmap = DirectCast(tile, Precure.Tiles.PreCureCharacterTile).Image
-
-            _g.DrawImage(_diffImage, 0, 23, 48, 53)
-
-            'リソース解放
-            _diffImage.Dispose()
-            _g.Dispose()
-            Return _baseImage
-
-        End Function
 
     End Class
 End Namespace

@@ -523,10 +523,6 @@
     </Content>
     <Content Include="Pictures\CureJongIcon.png" />
     <Content Include="Pictures\CureJongIcon_32.png" />
-    <Content Include="Pictures\tileIcon\FallenTileBase.png" />
-    <None Include="Pictures\tileIcon\FallenTileBaseSpecial.png" />
-    <Content Include="Pictures\tileIcon\StoodTileBase.png" />
-    <None Include="Pictures\tileIcon\StoodTileBaseSpecial.png" />
     <None Include="Pictures\tileIcon\TileStood0101.png" />
     <Content Include="Pictures\tileIcon\TileStoodBack.png" />
     <None Include="Resources\Button_0.gif" />

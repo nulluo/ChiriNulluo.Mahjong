@@ -23,6 +23,8 @@
 
         Public Const IconEnlargedImageDir = "pictures\tileIcon\Enlarged"
 
+        Public Const IconTilePartsDir = "pictures\tileIcon\TileParts"
+
 #End Region
 
     End Module

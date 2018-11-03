@@ -325,6 +325,18 @@
     <Content Include="Pictures\tileIcon\Enlarged\TileEnlarged1305.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Pictures\tileIcon\TileParts\FallenTileBase.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\TileParts\FallenTileBaseSpecial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\TileParts\StoodTileBase.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\tileIcon\TileParts\StoodTileBaseSpecial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\TileEnlarged1303.png" />
     <None Include="Resources\TileEnlarged1302.png" />
     <None Include="Resources\TileEnlarged1301.png" />

@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports ChiriNulluo.Mahjong.Core.Tiles
+Imports ChiriNulluo.Mahjong.Precure.Tiles
 
 Namespace View
     'UNIMPLEMENTED：もっと抽象化すればこのクラスは、Coreに入れられるはず
@@ -104,7 +105,11 @@ Namespace View
         ''' <param name="IsStood">牌が立っている場合はTrue,牌を倒している場合はFalse</param>
         Private Sub SetTileImage(tile As Tile, pictureBoxID As Integer, Optional IsStood As Boolean = True)
             'PictureBox1に表示
-            Me.TilePictureList(pictureBoxID).Image = Me.GetTileImage(tile, IsStood)
+            If IsStood Then
+                Me.TilePictureList(pictureBoxID).Image = DirectCast(tile, PreCureCharacterTile).StoodTileImage
+            Else
+                Me.TilePictureList(pictureBoxID).Image = DirectCast(tile, PreCureCharacterTile).FallenTileImage
+            End If
 
         End Sub
 
@@ -139,93 +144,6 @@ Namespace View
             End If
         End Sub
 
-        ''' <param name="IsStood">牌が立っている場合はTrue,牌を倒している場合はFalse</param>
-        Private Function GetTileImage(tile As Tile, Optional IsStood As Boolean = True) As Image
-            'ベースとなる白牌のImageオブジェクト取得
-            Dim _baseImage As Image
-            Dim _g As Graphics
-
-            'こう書くと、↓g.DrawImageする時にエラーになる
-            'Dim _diffImage As Bitmap = Precure.Tiles.PrecureCharacterSet.GetInstance.TileImages(tile.ID)
-
-            '↓プロジェクト内のリソースを使うとエラーなしに動く
-            'Dim _diffImage As Bitmap = My.Resources.ResourceManager.GetObject(String.Format("Precure{0:0000}", tile.ID))
-
-            '↓PreCureCharacterTile.ImageはPrecureCharacterSet.TileImagesと内部実装が異なるのでこれなら動く
-            Dim _diffImage As Bitmap = DirectCast(tile, Precure.Tiles.PreCureCharacterTile).Image
-
-            '白牌にキャラ絵・テキストを描画
-
-            If IsStood Then
-                If DirectCast(tile, Precure.Tiles.PreCureCharacterTile).IsSpecial Then
-                    _baseImage = My.Resources.StoodTileBaseSpecial
-                Else
-                    _baseImage = My.Resources.StoodTileBase
-                End If
-
-                _g = Graphics.FromImage(_baseImage)
-                _g.DrawImage(_diffImage, 0, 23, 48, 53)
-            Else
-                If DirectCast(tile, Precure.Tiles.PreCureCharacterTile).IsSpecial Then
-                    _baseImage = My.Resources.FallenTileBaseSpecial
-                Else
-                    _baseImage = My.Resources.FallenTileBase
-                End If
-
-                _g = Graphics.FromImage(_baseImage)
-                _g.DrawImage(_diffImage, 0, 3, 48, 53)
-            End If
-
-            'リソース解放
-            _diffImage.Dispose()
-            _g.Dispose()
-
-            Return _baseImage
-        End Function
-
-        ''' <summary>
-        ''' 牌を強調表示するかどうかを設定する。
-        ''' </summary>
-        ''' <param name="tileID"></param>
-        ''' <remarks>ツモってきた牌のマークなどに使用する</remarks>
-        Public Sub SetTileMarked(marked As Boolean, targetTile As Tile)
-            If Me.DataSource IsNot Nothing Then
-
-                Dim _tileFound As Boolean = False
-                Dim _pictureBoxID As Integer = 0
-                For Each _tile As Tile In Me.DataSource
-                    If _tile Is targetTile Then
-                        _tileFound = True
-                        Exit For
-                    End If
-                    _pictureBoxID += 1
-                Next
-
-                If _tileFound Then
-
-                    Dim _bmp As Image = GetTileImage(targetTile)
-                    Dim _newBmp As Image
-                    If marked Then
-                        _newBmp = CreateColorCorrectedImage(_bmp, 0.6, 1.4, 0.6, 0, 0, 0)
-                        _bmp.Dispose()
-                    Else
-                        _newBmp = _bmp
-                    End If
-
-                    With Me.TilePictureList(_pictureBoxID)
-                        If .Image IsNot Nothing Then
-                            .Image.Dispose()
-                        End If
-                        .Image = _newBmp
-                    End With
-
-                End If
-
-            End If
-
-
-        End Sub
-
         ''' <summary>
         ''' 牌の裏面を表示する
         ''' </summary>
@@ -252,48 +170,6 @@ Namespace View
             Next
 
         End Sub
-
-        ''' <summary>
-        ''' 指定した画像の色を補正した画像を取得する
-        ''' </summary>
-        ''' <param name="img">色の補正をする画像</param>
-        ''' <param name="rScale">赤に掛ける倍率</param>
-        ''' <param name="gScale">緑に掛ける倍率</param>
-        ''' <param name="bScale">青に掛ける倍率</param>
-        ''' <param name="rAdd">赤に対する加算</param>
-        ''' <param name="gAdd">緑に対する加算</param>
-        ''' <param name="bAdd">青に対する加算</param>
-        ''' <returns></returns>
-        Private Shared Function CreateColorCorrectedImage(
-            ByVal img As Image, ByVal rScale As Single,
-            ByVal gScale As Single, ByVal bScale As Single,
-            ByVal rAdd As Single, gAdd As Single, bAdd As Single) As Image
-
-            '補正された画像の描画先となるImageオブジェクトを作成
-            Dim newImg As New Bitmap(img.Width, img.Height)
-            'newImgのGraphicsオブジェクトを取得
-            Using g = Graphics.FromImage(newImg)
-                'ColorMatrixオブジェクトの作成
-                '指定された倍率を掛けるための行列を指定する
-                Dim cm As New System.Drawing.Imaging.ColorMatrix(New Single()() _
-                {New Single() {rScale, 0, 0, 0, 0},
-                 New Single() {0, gScale, 0, 0, 0},
-                 New Single() {0, 0, bScale, 0, 0},
-                 New Single() {0, 0, 0, 1, 0},
-                 New Single() {rAdd, gAdd, bAdd, 0, 1}})
-
-                'ImageAttributesオブジェクトの作成
-                Dim ia As New System.Drawing.Imaging.ImageAttributes()
-                'ColorMatrixを設定する
-                ia.SetColorMatrix(cm)
-
-                'ImageAttributesを使用して描画
-                g.DrawImage(img, New Rectangle(0, 0, img.Width, img.Height),
-                        0, 0, img.Width, img.Height, GraphicsUnit.Pixel, ia)
-            End Using
-            Return newImg
-        End Function
-
 
         ''' <summary>
         ''' モデルであるHandの内容が変化したイベントを捕捉して牌の画像を更新する
