@@ -31,10 +31,10 @@ Namespace View
                 Dim _pictureBox = New PictureBox()
                 With _pictureBox
                     .Location = New Point(FirstTileLocationX + TileWidth * i, FirstTileLocationY)
-                    .BackColor = Color.Red
+                    '.BackColor = Color.Red
                     .Size = New System.Drawing.Size(48, 80)
-                    .BorderStyle = BorderStyle.Fixed3D
-                    .BackgroundImage = _tile.Image
+                    .BorderStyle = BorderStyle.None
+                    .BackgroundImage = _tile.StoodTileImage
                 End With
 
                 _stringArrayText &= """,""" & _tile.ID
