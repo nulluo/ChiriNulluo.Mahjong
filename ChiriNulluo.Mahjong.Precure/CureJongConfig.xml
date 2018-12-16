@@ -477,7 +477,7 @@
     <!--手牌依存型非定型役-->
     <Yaku>
       <Name>プリキュアオールスターズDX</Name>
-      <Type>5</Type>
+      <Type>69</Type>
       <Point>10000</Point>
       <TileSet>
         <ID>0101</ID>
@@ -499,7 +499,7 @@
     <!--プリキュアスーパースターズ-->
     <Yaku>
       <Name>プリキュアスーパースターズ！</Name>
-      <Type>1</Type>
+      <Type>65</Type>
       <Point>9000</Point>
       <TileSet>
         <ID>1101</ID>

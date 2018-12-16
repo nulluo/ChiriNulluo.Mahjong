@@ -522,6 +522,15 @@ Namespace HandChecker
             Dim _yakuList As List(Of Core.Yaku.Yaku) = _xmlAccess.GetYakuDataFromXML()
 
             Dim _table = Me.GetYakuTable()
+
+            '他と重複しない役が含まれているか検証
+            Me.FillYakuDataWhichCannotOverlapWithTheOtherYaku(_yakuList, _table)
+            If _table.Rows.Count > 0 Then
+                '他と重複しない役が含まれていた場合は、その役以外の特点は加算しないで関数を抜ける
+                Return _table
+            End If
+
+
             '特殊役の判定結果をDataTableに追加
             Me.FillAccomplishedIrregularYakus(riichiDone, _table)
 
@@ -633,6 +642,27 @@ Namespace HandChecker
 
             Return _point
         End Function
+
+        ''' <summary>
+        ''' 成立している役のうち、他の役と重複しない役が存在する場合はその役をDataTableに追加する。存在しない場合は何もしない。
+        ''' </summary>
+        ''' <param name="yakuList">役のリスト</param>
+        ''' <param name="table">役の情報を格納するDataTable</param>
+        ''' <remarks>他の役と重複しない役が複数同時に成立することは無いことを前提に、最初に見つかったCannotOverlapWithOtherYakuな役を返している。
+        ''' 改修によって、複数のCannotOverlapWithOtherYakuな役が同時に成立する場合、両者のうち優先度の高い役を返すように修正する必要がある。</remarks>
+        Private Sub FillYakuDataWhichCannotOverlapWithTheOtherYaku(yakuList As List(Of Yaku), table As DataTable)
+            For Each _yaku As Yaku In yakuList
+                If _yaku.Type.HasFlag(YakuType.CannotOverlapWithOtherYaku) AndAlso _yaku.IsAccomplished(Me.Hand) Then
+                    Dim _row As DataRow = table.NewRow()
+                    _row("YakuName") = _yaku.Name
+                    _row("Point") = _yaku.Point
+                    _row("YakuType") = _yaku.Type
+                    table.Rows.Add(_row)
+                    Return
+                End If
+            Next
+
+        End Sub
 #End Region
 
 

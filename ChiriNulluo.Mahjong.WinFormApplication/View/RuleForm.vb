@@ -40,6 +40,10 @@ Namespace View
                         _description = "手配に以下のどれかの牌が含まれている。(1枚につき300点加算される)"
                     End If
 
+                    If .Type.HasFlag(YakuType.CannotOverlapWithOtherYaku) Then
+                        _description &= vbCrLf & "他の役とは重複しません。"
+                    End If
+
                     Dim _panel As New YakuDescriptionPanel(.Name, .Point, _description, _tiles)
                     _panel.Location = New Point(PanelMargin, HeaderHeight + (PanelMargin + PanelHeight) * _index)
                     Me.Controls.Add(_panel)
