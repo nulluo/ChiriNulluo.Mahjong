@@ -4,7 +4,6 @@ Imports ChiriNulluo.Mahjong.Precure.DataAccess
 Imports ChiriNulluo.Mahjong.Core.Players
 Imports ChiriNulluo.Mahjong.Precure.Tiles
 Imports ChiriNulluo.Mahjong.WinFormApplication.Constants
-Imports ChiriNulluo.Mahjong.Precure.Yaku
 
 Namespace View
 

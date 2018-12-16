@@ -37,6 +37,12 @@ Namespace Yaku
         ''' </summary>
         BonusTile = &H20
 
+        ''' <summary>
+        ''' 他の役と重複しない役
+        ''' </summary>
+        CannotOverlapWithOtherYaku = &H40
+
+
     End Enum
 
 End Namespace

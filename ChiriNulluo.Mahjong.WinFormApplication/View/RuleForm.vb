@@ -32,15 +32,13 @@ Namespace View
                     'UNIMPLEMENTED: 説明文の多言語化
                     Dim _description As String
 
-                    Select Case .Type
-                        Case YakuType.SpecificTileSetIsSubSetOfHand
-                            _description = "手牌に以下の全ての牌が含まれている"
-
-                        Case YakuType.HandIsSubSetOfSpecificTileSet
-                            _description = "手牌全てが以下の牌のどれかである"
-                            'UNIMPLEMENTED: ボーナス牌の説明が"手牌全てが以下の牌のどれかである"になっており、おかしい
-
-                    End Select
+                    If .Type.HasFlag(YakuType.SpecificTileSetIsSubSetOfHand) Then
+                        _description = "手牌に以下の全ての牌が含まれている"
+                    ElseIf .Type.HasFlag(YakuType.HandIsSubSetOfSpecificTileSet) Then
+                        _description = "手牌全てが以下の牌のどれかである"
+                    ElseIf .Type.HasFlag(YakuType.BonusTile) Then
+                        _description = "手配に以下のどれかの牌が含まれている。(1枚につき300点加算される)"
+                    End If
 
                     Dim _panel As New YakuDescriptionPanel(.Name, .Point, _description, _tiles)
                     _panel.Location = New Point(PanelMargin, HeaderHeight + (PanelMargin + PanelHeight) * _index)
