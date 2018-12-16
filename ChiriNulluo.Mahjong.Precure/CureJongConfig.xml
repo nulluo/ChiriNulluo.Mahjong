@@ -496,9 +496,9 @@
         <ID>0403</ID>
       </TileSet>
     </Yaku>
-    <!--プリキュアドリームスターズ-->
+    <!--プリキュアスーパースターズ-->
     <Yaku>
-      <Name>プリキュアドリームスターズ！</Name>
+      <Name>プリキュアスーパースターズ！</Name>
       <Type>1</Type>
       <Point>9000</Point>
       <TileSet>
@@ -917,7 +917,7 @@
     <Yaku>
       <Name>オール紫キュア</Name>
       <Type>2</Type>
-      <Point>10000</Point>
+      <Point>15000</Point>
       <TileSet>
         <ID>0306</ID>
         <ID>0504</ID>
