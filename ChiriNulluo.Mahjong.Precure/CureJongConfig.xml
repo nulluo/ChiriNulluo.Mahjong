@@ -520,7 +520,7 @@
     <Yaku>
       <Name>MaxHeart全員集合！</Name>
       <Type>1</Type>
-      <Point>500</Point>
+      <Point>1000</Point>
       <TileSet>
         <ID>0101</ID>
         <ID>0102</ID>
@@ -530,7 +530,7 @@
     <Yaku>
       <Name>SplashStar全員集合！</Name>
       <Type>1</Type>
-      <Point>3000</Point>
+      <Point>2000</Point>
       <TileSet>
         <ID>0201</ID>
         <ID>0202</ID>
@@ -539,7 +539,7 @@
     <Yaku>
       <Name>5gogo!全員集合！</Name>
       <Type>1</Type>
-      <Point>1000</Point>
+      <Point>1500</Point>
       <TileSet>
         <ID>0301</ID>
         <ID>0302</ID>
@@ -552,7 +552,7 @@
     <Yaku>
       <Name>フレッシュ全員集合！</Name>
       <Type>1</Type>
-      <Point>1000</Point>
+      <Point>1500</Point>
       <TileSet>
         <ID>0401</ID>
         <ID>0402</ID>
@@ -563,7 +563,7 @@
     <Yaku>
       <Name>ハートキャッチ全員集合！</Name>
       <Type>1</Type>
-      <Point>1000</Point>
+      <Point>1500</Point>
       <TileSet>
         <ID>0501</ID>
         <ID>0502</ID>
@@ -574,7 +574,7 @@
     <Yaku>
       <Name>スイート全員集合！</Name>
       <Type>1</Type>
-      <Point>1000</Point>
+      <Point>1500</Point>
       <TileSet>
         <ID>0601</ID>
         <ID>0602</ID>
@@ -585,7 +585,7 @@
     <Yaku>
       <Name>スマイル全員集合！</Name>
       <Type>1</Type>
-      <Point>1000</Point>
+      <Point>1500</Point>
       <TileSet>
         <ID>0701</ID>
         <ID>0702</ID>
@@ -597,7 +597,7 @@
     <Yaku>
       <Name>ドキドキ！全員集合！</Name>
       <Type>1</Type>
-      <Point>1000</Point>
+      <Point>1500</Point>
       <TileSet>
         <ID>0801</ID>
         <ID>0802</ID>
@@ -609,7 +609,7 @@
     <Yaku>
       <Name>ハピネスチャージ全員集合！</Name>
       <Type>1</Type>
-      <Point>1000</Point>
+      <Point>1500</Point>
       <TileSet>
         <ID>0901</ID>
         <ID>0902</ID>
@@ -620,7 +620,7 @@
     <Yaku>
       <Name>Go!プリンセス全員集合！</Name>
       <Type>1</Type>
-      <Point>1000</Point>
+      <Point>1500</Point>
       <TileSet>
         <ID>1001</ID>
         <ID>1002</ID>
@@ -631,7 +631,7 @@
     <Yaku>
       <Name>魔法つかい全員集合！</Name>
       <Type>1</Type>
-      <Point>500</Point>
+      <Point>1000</Point>
       <TileSet>
         <ID>1101</ID>
         <ID>1102</ID>
@@ -641,7 +641,7 @@
     <Yaku>
       <Name>プリアラ全員集合！</Name>
       <Type>1</Type>
-      <Point>1000</Point>
+      <Point>1500</Point>
       <TileSet>
         <ID>1201</ID>
         <ID>1202</ID>
@@ -654,7 +654,7 @@
     <Yaku>
       <Name>Hugプリ全員集合！</Name>
       <Type>1</Type>
-      <Point>1000</Point>
+      <Point>1500</Point>
       <TileSet>
         <ID>1301</ID>
         <ID>1302</ID>
@@ -932,7 +932,7 @@
     <Yaku>
       <Name>ボーナス牌</Name>
       <Type>48</Type>
-      <Point>100</Point>
+      <Point>300</Point>
       <TileSet>
         <ID>0000</ID>
         <ID>0200</ID>
