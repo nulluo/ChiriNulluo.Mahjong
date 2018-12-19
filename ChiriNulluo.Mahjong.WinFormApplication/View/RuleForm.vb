@@ -37,7 +37,7 @@ Namespace View
                     ElseIf .Type.HasFlag(YakuType.HandIsSubSetOfSpecificTileSet) Then
                         _description = "手牌全てが以下の牌のどれかである"
                     ElseIf .Type.HasFlag(YakuType.BonusTile) Then
-                        _description = "手配に以下のどれかの牌が含まれている。(1枚につき300点加算される)"
+                        _description = "手牌に以下のどれかの牌が含まれている。(1枚につき300点加算される)"
                     End If
 
                     If .Type.HasFlag(YakuType.CannotOverlapWithOtherYaku) Then
