@@ -418,12 +418,7 @@
     <None Include="Pictures\SystemUI\TwitterShare.png" />
     <None Include="Resources\Icon1.ico" />
     <None Include="Resources\CureJong3.ico" />
-    <Content Include="素材提供元.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="説明書.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="Resources\CureJong4.ico" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
