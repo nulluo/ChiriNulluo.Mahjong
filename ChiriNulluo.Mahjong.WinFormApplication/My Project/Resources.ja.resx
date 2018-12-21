@@ -118,39 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CharacterScriptEasWinRon" xml:space="preserve">
-    <value>ロン！[TEST]</value>
+    <value>ロン！</value>
     <comment>キャラクター台詞</comment>
   </data>
   <data name="CharacterScriptReginaGameStart" xml:space="preserve">
-    <value>あたしに勝てると思ってるの？[TEST]</value>
+    <value>あたしに勝てると思ってるの？</value>
     <comment>キャラクター台詞</comment>
   </data>
   <data name="CharacterScriptReginaDraw" xml:space="preserve">
-    <value>まだまだ、これからよ[TEST]</value>
+    <value>まだまだ、これからよ</value>
     <comment>キャラクター台詞</comment>
   </data>
   <data name="CharacterScriptEasLose" xml:space="preserve">
-    <value>チッ･･･お前の勝ちだ[TEST]</value>
+    <value>チッ･･･お前の勝ちだ</value>
     <comment>キャラクター台詞</comment>
   </data>
   <data name="CharacterScriptEasWinDraw" xml:space="preserve">
-    <value>無様な･･･無駄な時間だったな[TEST]</value>
+    <value>無様な･･･無駄な時間だったな</value>
     <comment>キャラクター台詞</comment>
   </data>
   <data name="CharacterScriptEasDraw" xml:space="preserve">
-    <value>引き分けだ･･･次は勝つ[TEST]</value>
+    <value>引き分けだ･･･次は勝つ</value>
     <comment>キャラクター台詞</comment>
   </data>
   <data name="CharacterScriptReginaLose" xml:space="preserve">
-    <value>ふんだ！あんたなんかよりマナの方がずーっと強いんだから！[TEST]</value>
+    <value>ふんだ！あんたなんかよりマナの方がずーっと強いんだから！</value>
     <comment>キャラクター台詞</comment>
   </data>
   <data name="CharacterScriptReginaWinDraw" xml:space="preserve">
-    <value>あっがりー！！[TEST]</value>
+    <value>あっがりー！！</value>
     <comment>キャラクター台詞</comment>
   </data>
   <data name="CharacterScriptReginaWinRon" xml:space="preserve">
-    <value>その牌よ！ロンー！！[TEST]</value>
+    <value>その牌よ！ロンー！！</value>
     <comment>キャラクター台詞</comment>
   </data>
   <data name="LabelGameTitle" xml:space="preserve">
@@ -186,7 +186,7 @@
     <comment>システム台詞</comment>
   </data>
   <data name="CharacterScriptEasGameStart" xml:space="preserve">
-    <value>ゲームなど･･･くだらん[TEST]</value>
+    <value>ゲームなど･･･くだらん</value>
   </data>
   <data name="TileToNextDraw" xml:space="preserve">
     <value>次に引く牌</value>
