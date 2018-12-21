@@ -26,13 +26,15 @@
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BaseForm))
             Me.SuspendLayout()
             '
-            'FormBase
+            'BaseForm
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(284, 261)
+            Me.DataBindings.Add(New System.Windows.Forms.Binding("Location", Global.ChiriNulluo.Mahjong.WinFormApplication.My.MySettings.Default, "BaseFormLocation", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-            Me.Name = "FormBase"
+            Me.Location = Global.ChiriNulluo.Mahjong.WinFormApplication.My.MySettings.Default.BaseFormLocation
+            Me.Name = "BaseForm"
             Me.Text = "キュア☆ジャン"
             Me.ResumeLayout(False)
 
