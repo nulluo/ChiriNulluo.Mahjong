@@ -91,7 +91,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  引き分けだ･･･次は勝つ[TEST] に類似しているローカライズされた文字列を検索します。
+        '''  引き分けだ･･･次は勝つ に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptEasDraw() As String
             Get
@@ -100,7 +100,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  ゲームなど･･･くだらん[TEST] に類似しているローカライズされた文字列を検索します。
+        '''  ゲームなど･･･くだらん に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptEasGameStart() As String
             Get
@@ -109,7 +109,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  チッ･･･お前の勝ちだ[TEST] に類似しているローカライズされた文字列を検索します。
+        '''  チッ･･･お前の勝ちだ に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptEasLose() As String
             Get
@@ -118,7 +118,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  無様な･･･無駄な時間だったな[TEST] に類似しているローカライズされた文字列を検索します。
+        '''  無様な･･･無駄な時間だったな に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptEasWinDraw() As String
             Get
@@ -127,7 +127,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  ロン！[TEST] に類似しているローカライズされた文字列を検索します。
+        '''  ロン！ に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptEasWinRon() As String
             Get
@@ -226,7 +226,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  まだまだ、これからよ[TEST] に類似しているローカライズされた文字列を検索します。
+        '''  まだまだ、これからよ に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptReginaDraw() As String
             Get
@@ -235,7 +235,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  あたしに勝てると思ってるの？[TEST] に類似しているローカライズされた文字列を検索します。
+        '''  あたしに勝てると思ってるの？ に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptReginaGameStart() As String
             Get
@@ -253,7 +253,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  あっがりー！！[TEST] に類似しているローカライズされた文字列を検索します。
+        '''  あっがりー！！ に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptReginaWinDraw() As String
             Get
@@ -262,7 +262,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  その牌よ！ロンー！！[TEST] に類似しているローカライズされた文字列を検索します。
+        '''  その牌よ！ロンー！！ に類似しているローカライズされた文字列を検索します。
         '''</summary>
         Friend ReadOnly Property CharacterScriptReginaWinRon() As String
             Get

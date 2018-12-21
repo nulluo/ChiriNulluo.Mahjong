@@ -59,5 +59,15 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  (アイコン) に類似した型 System.Drawing.Icon のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property CureJong3() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CureJong3", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
     End Module
 End Namespace
