@@ -38,5 +38,5 @@
 
 ■ライブラリ
 　NLog
-　同梱の"NLog_LICENSE.txt"を参照ください。
+　"Game"フォルダ内の"NLog_LICENSE.txt"を参照ください。
 
