@@ -87,6 +87,14 @@ Namespace Facade
             If _handChecker.IsCompleted() Then
                 If Me.View.ConfirmFinish = My.Resources.LabelYes Then
                     Me.Result = RoundState.PlayerWinByTileDrawnByPlayer
+
+                    'ツモの発声
+                    If Sounds.SoundManager.PlaysSE Then
+                        Dim _player = New System.Media.SoundPlayer(Path.Combine(My.Application.Info.DirectoryPath,
+                                                                    Constants.VoiceFolder, "1177_tsumo.wav"))
+                        _player.Play()
+                    End If
+
                     Me.View.EndRound(True)
                 End If
             ElseIf Me.HumanPlayer.RestDrawCount <= 0 Then

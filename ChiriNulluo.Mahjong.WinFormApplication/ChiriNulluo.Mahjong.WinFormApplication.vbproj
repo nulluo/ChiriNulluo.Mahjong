@@ -414,6 +414,21 @@
     <Content Include="Pictures\3DVersion32.png" />
     <Content Include="Pictures\3DVersion48.png" />
     <Content Include="Pictures\3DVersion64.png" />
+    <Content Include="Sounds\voice\1176_riichi.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\voice\1177_tsumo.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\voice\1178_ron.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\voice\1179_chi.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\voice\1180_pon.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Pictures\charaFace\Face_Ruru01.png" />
     <None Include="Pictures\charaFace\Face_Ruru02.png" />
     <None Include="Pictures\charaFace\Face_Ruru03.png" />

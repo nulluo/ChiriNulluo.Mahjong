@@ -4,6 +4,7 @@
 
         Public Const PrecreImageFolder As String = "pictures\tileIcon"
         Public Const SoundFolder As String = "Sounds"
+        Public Const VoiceFolder As String = "Sounds\voice"
 
         Public Const MaxDrawTimes2PlayersMatch As Integer = 49
 

@@ -1,4 +1,4 @@
-﻿■「キュアジャン」で使用させて頂いた素材の作成者様です。(敬称略)
+﻿■「キュアジャン」で使用させて頂いた素材の作成者様です。
 
 ■素材提供者の方々以外にも、Twitter、マストドンなどのSNSで知り合った多くの方々に、
 　ゲーム制作について技術的なアドバイスを頂いたり、テストプレイをして頂いたり、
@@ -9,31 +9,52 @@
 
 
 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　奇々浦ヌル夫
-
-■グラフィック
-　j9mz23
+■牌アイコン
+　j9mz23様
 　https://twitter.com/j9mz23
 
-　EGAMI
+■キャラクターグラフィック
+　EGAMI様
 　https://twitter.com/vivid_fox
 
-　霞田亜斗
+　霞田亜斗様
 　https://twitter.com/_custard_
 
 
 ■サウンド
-　On-Jin ～音人～
+　On-Jin ～音人～様
 　https://on-jin.com/
 
-　Sparrow Tune
+　Sparrow Tune様
 　https://dova-s.jp/_contents/author/profile274.html
 
+■麻雀ボイス
+　ノタの森 様
+  http://notanomori.net/
+	
+	音素材 No.1176 麻雀用語「リーチ」のセリフ。少女の声色
+	http://notanomori.net/sound/1176/
+
+	音素材 No.1177 麻雀用語「ツモ」のセリフ。少女の声色
+	http://notanomori.net/sound/1177/
+
+	音素材 No.1178 麻雀用語「ロン」のセリフ。少女の声色
+	http://notanomori.net/sound/1178/
+
+	音素材 No.1179 麻雀用語「チー」のセリフ。少女の声色
+	http://notanomori.net/sound/1179/
+
+	音素材 No.1180 麻雀用語「ポン」のセリフ。少女の声色
+	http://notanomori.net/sound/1180/
+
+	上記素材はいずれもクリエイティブ・コモンズ 表示 3.0 非移植 ライセンス(CC BY 3.0)にて使用しております。
+	https://creativecommons.org/licenses/by/3.0/deed.ja
 
 ■フォント
-　Itou Hiroki
+　Itou Hiroki様
 　http://itouhiro.hatenablog.com/entry/20130602/font
 
-　dwuk
+　dwuk様
 　http://www.dwuk.jp/font/font-mot.html
 
 ■ライブラリ
