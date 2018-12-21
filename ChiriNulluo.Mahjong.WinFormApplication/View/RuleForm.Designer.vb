@@ -1,7 +1,7 @@
 ﻿Namespace View
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class RuleForm
-        Inherits System.Windows.Forms.Form
+        Inherits BaseForm
 
         'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
         <System.Diagnostics.DebuggerNonUserCode()>

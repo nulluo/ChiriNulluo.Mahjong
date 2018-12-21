@@ -157,6 +157,12 @@
     <Compile Include="View\Controls\YakuDescriptionPanel.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="View\BaseForm.Designer.vb">
+      <DependentUpon>BaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\BaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\FormTransition.vb" />
     <Compile Include="View\MatchResultForm.Designer.vb">
       <DependentUpon>MatchResultForm.vb</DependentUpon>
@@ -312,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Controls\YakuDescriptionPanel.resx">
       <DependentUpon>YakuDescriptionPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BaseForm.resx">
+      <DependentUpon>BaseForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MatchResultForm.ja.resx">
       <DependentUpon>MatchResultForm.vb</DependentUpon>

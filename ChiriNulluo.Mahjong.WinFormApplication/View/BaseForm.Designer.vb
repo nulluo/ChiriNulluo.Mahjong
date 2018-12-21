@@ -1,7 +1,7 @@
 ﻿Namespace View
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-    Partial Class CharacterIDTestForm
-        Inherits BaseForm
+    Partial Class BaseForm
+        Inherits System.Windows.Forms.Form
 
         'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
         <System.Diagnostics.DebuggerNonUserCode()>
@@ -23,15 +23,17 @@
         'コード エディターを使って変更しないでください。
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BaseForm))
             Me.SuspendLayout()
             '
-            'CharacterIDTestForm
+            'FormBase
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(284, 261)
-            Me.Name = "CharacterIDTestForm"
-            Me.Text = "CharacterIDTestForm"
+            Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+            Me.Name = "FormBase"
+            Me.Text = "キュア☆ジャン"
             Me.ResumeLayout(False)
 
         End Sub

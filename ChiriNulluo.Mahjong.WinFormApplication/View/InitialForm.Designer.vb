@@ -1,7 +1,7 @@
 ﻿Namespace View
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class InitialForm
-        Inherits System.Windows.Forms.Form
+        Inherits BaseForm
 
         'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
         <System.Diagnostics.DebuggerNonUserCode()>
@@ -33,13 +33,13 @@
             Me.ヘルプHToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.VersionInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.LogTestButton = New System.Windows.Forms.Button()
+            Me.TwitterShareButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
             Me.openRuleFormButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
             Me.GameStartButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
-            Me.TwitterShareButton = New ChiriNulluo.Mahjong.WinFormApplication.View.RichButton()
             Me.MenuStrip1.SuspendLayout()
+            CType(Me.TwitterShareButton, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.TwitterShareButton, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'MenuStrip1
@@ -108,6 +108,18 @@
             Me.LogTestButton.UseVisualStyleBackColor = True
             Me.LogTestButton.Visible = False
             '
+            'TwitterShareButton
+            '
+            Me.TwitterShareButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
+            Me.TwitterShareButton.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
+            Me.TwitterShareButton.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.TwitterShareButton.Location = New System.Drawing.Point(5, 251)
+            Me.TwitterShareButton.Name = "TwitterShareButton"
+            Me.TwitterShareButton.PushedImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
+            Me.TwitterShareButton.Size = New System.Drawing.Size(121, 35)
+            Me.TwitterShareButton.TabIndex = 41
+            Me.TwitterShareButton.TabStop = False
+            '
             'openRuleFormButton
             '
             Me.openRuleFormButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.RuleButton1
@@ -132,18 +144,6 @@
             Me.GameStartButton.TabIndex = 2
             Me.GameStartButton.TabStop = False
             '
-            'TwitterShareButton
-            '
-            Me.TwitterShareButton.HoverImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
-            Me.TwitterShareButton.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
-            Me.TwitterShareButton.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.TwitterShareButton.Location = New System.Drawing.Point(5, 251)
-            Me.TwitterShareButton.Name = "TwitterShareButton"
-            Me.TwitterShareButton.PushedImage = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.TwitterShare
-            Me.TwitterShareButton.Size = New System.Drawing.Size(121, 35)
-            Me.TwitterShareButton.TabIndex = 41
-            Me.TwitterShareButton.TabStop = False
-            '
             'InitialForm
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -157,19 +157,17 @@
             Me.Controls.Add(Me.GameStartButton)
             Me.Controls.Add(Me.MenuStrip1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-            Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MainMenuStrip = Me.MenuStrip1
             Me.MaximizeBox = False
             Me.MaximumSize = New System.Drawing.Size(316, 363)
             Me.MinimizeBox = False
             Me.MinimumSize = New System.Drawing.Size(316, 363)
             Me.Name = "InitialForm"
-            Me.Text = "キュア☆ジャン(プロトタイプ版)"
             Me.MenuStrip1.ResumeLayout(False)
             Me.MenuStrip1.PerformLayout()
+            CType(Me.TwitterShareButton, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.openRuleFormButton, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GameStartButton, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.TwitterShareButton, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
