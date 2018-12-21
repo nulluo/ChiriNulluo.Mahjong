@@ -150,6 +150,12 @@ Namespace View
         Private Sub DrawCOMPlayersTile()
             Me.Facade.DrawCOMPlayersTile()
             If Me.Facade.Result = RoundState.PlayerLoseByTileDrawnByCOM Then
+                'ツモの発声
+                If Sounds.SoundManager.PlaysSE Then
+                    Dim _player = New System.Media.SoundPlayer(Path.Combine(My.Application.Info.DirectoryPath,
+                                                                    Constants.VoiceFolder, "1177_tsumo.wav"))
+                    _player.Play()
+                End If
                 Me.EndRound(True)
             End If
         End Sub
@@ -174,6 +180,12 @@ Namespace View
             'COMがロン可能な牌をHUMANが捨てた場合
             If Me.Facade.Result = RoundState.PlayerLoseByTileDiscardedByPlayer Then
                 'UNIMPLEMENTED：負けた時の音楽を鳴らす
+                'ロンの発声
+                If Sounds.SoundManager.PlaysSE Then
+                    Dim _player = New System.Media.SoundPlayer(Path.Combine(My.Application.Info.DirectoryPath,
+                                                                    Constants.VoiceFolder, "1178_ron.wav"))
+                    _player.Play()
+                End If
                 Me.EndRound(True, _tileToDiscard)
                 Return
             End If
@@ -192,6 +204,13 @@ Namespace View
                 Me.Facade.RiichiCOM()
                 Me.OpenCOMRiichiForm()
                 Me.riichiImageCOM.Visible = True
+
+                'リーチの発声
+                If Sounds.SoundManager.PlaysSE Then
+                    Dim _player = New System.Media.SoundPlayer(Path.Combine(My.Application.Info.DirectoryPath,
+                                                            Constants.VoiceFolder, "1176_riichi.wav"))
+                    _player.Play()
+                End If
             End If
 
             If Me.COMPlayer.RiichiDone Then
@@ -239,6 +258,13 @@ Namespace View
                                 _mediaPlayer.Play()
                             End If
 
+                            'ロンの発声
+                            If Sounds.SoundManager.PlaysSE Then
+                                Dim _player = New System.Media.SoundPlayer(Path.Combine(My.Application.Info.DirectoryPath,
+                                                                    Constants.VoiceFolder, "1178_ron.wav"))
+                                _player.Play()
+                            End If
+
                             Me.EndRound(True, _tileDiscardedByCOM)
                             '人間がロン上がりした場合、処理を中断する
 
@@ -253,6 +279,14 @@ Namespace View
                         Me.HumanPlayer.Pong(_tileDiscardedByCOM)
                         Me.BindRevealedTilesToPanel(Me.HumanPlayer)
                         Me.RiichiButton.Visible = False
+
+                        'ポンの発声
+                        If Sounds.SoundManager.PlaysSE Then
+                            Dim _player = New System.Media.SoundPlayer(Path.Combine(My.Application.Info.DirectoryPath,
+                                                                    Constants.VoiceFolder, "1180_pon.wav"))
+                            _player.Play()
+                        End If
+
                         Return
 
                     Case My.Resources.LabelChow
@@ -276,6 +310,14 @@ Namespace View
                         Me.Facade.Chow(Me.HumanPlayer, _myTile0, _myTile1, _tileDiscardedByCOM)
                         Me.BindRevealedTilesToPanel(Me.HumanPlayer)
                         Me.RiichiButton.Visible = False
+
+                        'チーの発声
+                        If Sounds.SoundManager.PlaysSE Then
+                            Dim _player = New System.Media.SoundPlayer(Path.Combine(My.Application.Info.DirectoryPath,
+                                                                    Constants.VoiceFolder, "1179_chi.wav"))
+                            _player.Play()
+                        End If
+
                         Return
 
                     Case My.Resources.LabelPass
@@ -383,6 +425,13 @@ Namespace View
             'UNIMPLEMENTED: ここだけRoundFacadeからではなく、RoundFormから直接ReplayLoggerを使用しているのが気持ち悪い
             LogFactory.GetReplayLogger.Write(My.Resources.IDProcessTypeUA, My.Resources.IDProcessRiichi,
                    _riichiPlayer, String.Empty, String.Empty)
+
+            'リーチの発声
+            If Sounds.SoundManager.PlaysSE Then
+                Dim _player = New System.Media.SoundPlayer(Path.Combine(My.Application.Info.DirectoryPath,
+                                                        Constants.VoiceFolder, "1176_riichi.wav"))
+                _player.Play()
+            End If
 
         End Sub
 #End Region
