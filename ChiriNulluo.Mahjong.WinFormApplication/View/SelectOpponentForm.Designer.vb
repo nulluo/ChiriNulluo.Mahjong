@@ -48,7 +48,7 @@
             Me.LabelEas.Dock = System.Windows.Forms.DockStyle.Fill
             Me.LabelEas.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 11.0!)
             Me.LabelEas.ForeColor = System.Drawing.Color.Snow
-            Me.LabelEas.Location = New System.Drawing.Point(114, 106)
+            Me.LabelEas.Location = New System.Drawing.Point(6, 106)
             Me.LabelEas.Name = "LabelEas"
             Me.LabelEas.Size = New System.Drawing.Size(99, 20)
             Me.LabelEas.TabIndex = 2
@@ -121,9 +121,9 @@
             '
             Me.ButtonRuru.Dock = System.Windows.Forms.DockStyle.Fill
             Me.ButtonRuru.Image = Global.ChiriNulluo.Mahjong.WinFormApplication.My.Resources.Resources.Face_Ruru01
-            Me.ButtonRuru.Location = New System.Drawing.Point(6, 109)
+            Me.ButtonRuru.Location = New System.Drawing.Point(222, 6)
             Me.ButtonRuru.Name = "ButtonRuru"
-            Me.ButtonRuru.Size = New System.Drawing.Size(99, 14)
+            Me.ButtonRuru.Size = New System.Drawing.Size(101, 94)
             Me.ButtonRuru.TabIndex = 33
             Me.ButtonRuru.UseVisualStyleBackColor = True
             '
@@ -133,9 +133,9 @@
             Me.LabelRegina.Dock = System.Windows.Forms.DockStyle.Fill
             Me.LabelRegina.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
             Me.LabelRegina.ForeColor = System.Drawing.Color.Snow
-            Me.LabelRegina.Location = New System.Drawing.Point(222, 106)
+            Me.LabelRegina.Location = New System.Drawing.Point(114, 106)
             Me.LabelRegina.Name = "LabelRegina"
-            Me.LabelRegina.Size = New System.Drawing.Size(101, 20)
+            Me.LabelRegina.Size = New System.Drawing.Size(99, 20)
             Me.LabelRegina.TabIndex = 1
             Me.LabelRegina.Text = "レジーナ(強い)"
             Me.LabelRegina.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -146,9 +146,11 @@
             Me.LabelRuru.Dock = System.Windows.Forms.DockStyle.Fill
             Me.LabelRuru.Font = New System.Drawing.Font("HG丸ｺﾞｼｯｸM-PRO", 9.0!)
             Me.LabelRuru.ForeColor = System.Drawing.Color.Snow
-            Me.LabelRuru.Location = New System.Drawing.Point(222, 3)
+            Me.LabelRuru.Location = New System.Drawing.Point(222, 106)
+            Me.LabelRuru.MaximumSize = New System.Drawing.Size(101, 20)
+            Me.LabelRuru.MinimumSize = New System.Drawing.Size(101, 20)
             Me.LabelRuru.Name = "LabelRuru"
-            Me.LabelRuru.Size = New System.Drawing.Size(101, 100)
+            Me.LabelRuru.Size = New System.Drawing.Size(101, 20)
             Me.LabelRuru.TabIndex = 21
             Me.LabelRuru.Text = "ルールー(強い)"
             Me.LabelRuru.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -243,6 +245,8 @@
             Me.Controls.Add(Me.ManualModeField)
             Me.Controls.Add(Me.TableLayoutPanel1)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+            Me.MaximumSize = New System.Drawing.Size(486, 372)
+            Me.MinimumSize = New System.Drawing.Size(486, 372)
             Me.Name = "SelectOpponentForm"
             Me.Text = "対戦相手選択"
             Me.TableLayoutPanel1.ResumeLayout(False)
